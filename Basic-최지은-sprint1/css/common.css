@@ -1,0 +1,96 @@
+a {
+  text-decoration: none;
+  color: #f3f4f6;
+}
+a.btn {
+  background-color: #3692ff;
+}
+a.btn:hover {
+  background-color: #1967d6;
+}
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+.main span {
+  font-weight: 700;
+}
+h2 {
+  font-size: 2.5rem;
+}
+
+section:not(.main) {
+  background-color: #cfe5ff;
+  height: 33rem;
+}
+
+.intro,
+.ending {
+  padding-top: 4.2rem;
+}
+
+.intro > div,
+.ending > div {
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 50rem;
+}
+.intro > div {
+  height: 100%;
+  background-image: url("../image/Img_home_top.png");
+}
+.intro > div,
+.ending > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.intro h2 {
+  margin-bottom: 2.1rem;
+}
+.intro .shopping {
+  display: block;
+  line-height: 3.5rem;
+  border-radius: 2.5rem;
+  text-align: center;
+  width: 21rem;
+}
+
+.main img {
+  max-width: 36.75rem;
+  width: 100%;
+}
+.main .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+  padding: 7rem 0;
+}
+.main .card.right {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.card_info {
+  max-width: 21rem;
+}
+.card_info span {
+  display: block;
+  font-size: 1.125rem;
+  color: #3692ff;
+  margin-bottom: 1.4rem;
+}
+.card_info h2 {
+  margin-bottom: 2.8rem;
+}
+.card_info p {
+  font-size: 1.5rem;
+}
+
+.ending > div {
+  background-image: url("../image/Img_home_bottom.png");
+}
