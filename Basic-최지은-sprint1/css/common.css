@@ -1,17 +1,3 @@
-a {
-  text-decoration: none;
-  color: #f3f4f6;
-}
-a.btn {
-  background-color: #3692ff;
-}
-a.btn:hover {
-  background-color: #1967d6;
-}
-img {
-  width: 100%;
-}
-
 h1,
 h2,
 .main span {

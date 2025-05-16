@@ -4,9 +4,22 @@
   font-family: "Pretendard";
   color: #374151;
 }
-.max_Width_container {
+.width_container {
   max-width: 70rem;
   margin: 0 auto;
+}
+
+a {
+  color: #f3f4f6;
+}
+a.btn {
+  background-color: #3692ff;
+}
+a.btn:hover {
+  background-color: #1967d6;
+}
+img {
+  width: 100%;
 }
 
 header {
@@ -23,7 +36,7 @@ header > div {
   padding: 1.4rem 0;
 }
 
-header h1 img {
+header .logo_img {
   max-width: 2.5rem;
   max-height: 2.5rem;
   width: 100%;
@@ -61,11 +74,11 @@ footer .sns {
   flex-basis: 7.5rem;
 }
 footer .faq,
-footer .sns ol {
+footer .sns_inner {
   display: flex;
   gap: 0.625rem;
 }
-footer .sns ol {
+footer .sns_inner {
   justify-content: flex-end;
 }
 @media screen and (max-width: 1920px) {
