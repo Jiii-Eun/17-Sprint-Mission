@@ -1,3 +1,68 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+:root {
+  --primary-100-color: #3692ff;
+  --secondary-700-color: ;
+}
 * {
   box-sizing: border-box;
+}
+body {
+  font-family: pretendard, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1 {
+  margin: 0;
+}
+@font-face {
+  src: url("./public/font/ROKAF_Sans_Medium.otf") format("opentype"),
+    url("./public/font/ROKAF_Sans_Medium.ttf") format("truetype");
+  font-family: "ROKAF_Sans_Medium";
+  font-weight: normal;
+  font-style: normal;
+}
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dfdfdf;
+  padding: 9px 0;
+}
+.navbar {
+  display: flex;
+  width: 1120px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.navbar__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.navbar__logo {
+  width: 50px;
+  height: 50px;
+}
+.navbar__title {
+  font-size: 25.63px;
+  font-weight: 700;
+  font-family: "ROKAF_Sans_Medium";
+  color: var(--primary-100-color);
+}
+.navbar__login-btn {
+  width: 128px;
+  height: 48px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  padding: 12px 23px;
+  border-radius: 8px;
+  border: none;
+  color: #f3f4f6;
+  background-color: var(--primary-100-color);
 }
