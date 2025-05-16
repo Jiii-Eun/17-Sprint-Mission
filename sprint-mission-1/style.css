@@ -84,11 +84,13 @@ h1 h2 h3 h4 h5 h6 {
   padding-bottom: 60px;
   gap: 32px;
 }
+.section-blue__container__bottom {
+  margin-bottom: 168px;
+}
 .section-title {
   font-weight: 700;
   font-size: 40px;
   line-height: 140%;
-  letter-spacing: 2%;
   color: var(--secondary-700-color);
 }
 .section-blue__btn {
