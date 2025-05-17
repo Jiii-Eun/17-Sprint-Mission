@@ -1,22 +1,44 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Pretendard";
-  color: #374151;
+  font-family: "Pretendard", sans-serif;
 }
+:root {
+  --primary-100: #3692FF;
+  --primary-200: #1967D6;
+  --primary-300: #1251AA;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --error-red: #f74747;
+}
+
 .width_container {
   max-width: 70rem;
   margin: 0 auto;
 }
 
-a {
-  color: #f3f4f6;
+a,
+.btn {
+  color: var(--gray-100);
 }
-a.btn {
-  background-color: #3692ff;
+.text_tall{
+  line-height: 3.5rem;
+}
+.btn.text_tall{
+  border-radius: 2.5rem;
+}
+.btn {
+  background-color: var(--primary-100);
 }
 a.btn:hover {
-  background-color: #1967d6;
+  background-color: var(--primary-200);
 }
 img {
   width: 100%;
@@ -41,14 +63,19 @@ header .logo_img {
   max-height: 2.5rem;
   width: 100%;
 }
-header a.logo {
+a.logo {
   display: flex;
   align-items: center;
-  color: #3692ff;
-  white-space: nowrap;
-  font-size: 2rem;
   gap: 1rem;
 }
+h1{
+  color: var(--primary-100);
+  white-space: nowrap;
+}
+header h1{
+  font-size: 2rem;
+}
+
 header a.login {
   display: block;
   max-width: 8rem;
@@ -60,7 +87,7 @@ header a.login {
 }
 
 footer {
-  background-color: #111872;
+  background-color: var(--gray-900);
 }
 footer > div {
   display: flex;
@@ -74,18 +101,16 @@ footer .sns {
   flex-basis: 7.5rem;
 }
 footer .faq,
-footer .sns_inner {
+footer .sns_wrapper {
   display: flex;
   gap: 0.625rem;
 }
-footer .sns_inner {
+footer .sns_wrapper {
   justify-content: flex-end;
 }
+
 @media screen and (max-width: 1920px) {
   header {
     padding: 0 12.5rem;
-  }
-  section {
-    padding: 0 12rem;
   }
 }
