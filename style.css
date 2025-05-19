@@ -2,8 +2,7 @@
 @import url('~@noonnu/rokaf-sans-medium');
 
 * {
-  box-sizing: border-box;
-  
+  box-sizing: border-box; 
 }
 
 body {
@@ -13,12 +12,12 @@ body {
 }
 
 .sidebar, .header-all, .content, 
-.footer {
+.footer, .bottom-all {
   max-width: 1920px;
 }
 
 nav {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -26,7 +25,8 @@ nav {
   height: 70px;
   background-color: #ffffff;
   margin: 0 auto;
-  padding: 9.5px 400px;
+  padding: 9.5px 200px;
+  min-width: 375px;
 }
 
 .logo {
@@ -37,6 +37,7 @@ nav {
 .logo-title {
   font-family: ROKAFSansMedium;
   display: flex;
+  white-space: nowrap;
   justify-content: center;
   align-items: center; 
   gap: 10px;
@@ -57,25 +58,29 @@ nav {
 
 .sidebar {
   width: 100%; 
-  height: 51px;
-  max-width: 1920px;
+  height: 51px; 
   margin: 0 auto;
   background-color: #FFFFFF;
-  display: flex;
+  display: flex; 
   justify-content: space-between; 
 }
 
+
 .login-btn {
-  display: inline-block;
+  display: inline-flex;
+  padding: 12px 23px;
   background-color: #3692FF;
-  padding: 11px 43px;
   border-radius: 8px;
-  border-style: none;
+  border: none;
   color: #F3F4F6;
-  font-size: 26px;
+  font-size: 1rem;
   font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
   text-decoration: none;
 }
+
 
 .login-btn:hover {
   cursor: pointer;
@@ -92,17 +97,19 @@ header ,.bottom-banner{
   padding: 200px 405px 0 450px;
   display: flex;
   margin: 0 auto;
+  width: 100%;
   justify-content: center; 
 }
 
 .header-title {
+  margin-top: 40px;
   font-size: 40px;
   font-weight: 700;
   line-height: 140%;
 }
 
 .header-btn {
-  display: inline-block;
+  display: inline-flex;
   width: 357px;
   height: 56px;
   padding: 12px 124px;
@@ -112,8 +119,9 @@ header ,.bottom-banner{
   text-decoration: none;
   color: #ffffff;
   font-size: 20px;
-  font-weight: 600; 
-  line-height: 32px;
+  font-weight: 600;  
+  justify-content: center;
+  align-items: center;
   min-width: 240px;
   min-height: 48px;
 } 
@@ -126,6 +134,8 @@ main {
   margin-top: 138px;
   margin-bottom: 120px;
 }
+ 
+
 
 .content {
   width: 988px;
@@ -181,6 +191,7 @@ main {
 }
 
 .bottom-title {
+  white-space: nowrap;
   font-size: 40px;
   font-weight: 700;
   line-height: 140%;
@@ -192,14 +203,16 @@ footer{
 }
 
 .footer {
-  height: 10rem;
   display: flex;
+  width: 1120px;
+  height: 20px;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 400px 108px;
+  padding: 32px 0 108px;
   gap: 366.5px;
   flex: 1 1 auto;  
   margin: 0 auto;
+  white-space: nowrap;
 } 
 
 .footer p {
