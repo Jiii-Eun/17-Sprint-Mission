@@ -1,0 +1,190 @@
+*{
+    box-sizing:border-box;
+}
+
+
+.one{
+    margin:0 auto;
+    height:70px;
+    padding:9px 400px 9px 400px;
+
+}
+.two{
+    width:1120px;
+    height:51px;
+    display:flex;
+    justify-content:space-between;
+
+
+}
+.three{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+.four{
+    height:40px;
+    width:40px;
+}
+.five{
+    color:#3692ff;
+    font-size:25.63px;
+    font-weight:700;
+}
+.six{
+    background-color:#3692ff;
+    width:128px;
+    height:48px;
+    font-size:16px;
+    font-weight:600;
+    border:none;
+    border-radius:8px; 
+    color:#f3f4f6;
+}
+.seven{
+    height:540px;
+    width:1920px;
+    position:relative;
+    background-color:#cfe5ff;
+    
+}
+
+.eight{
+    position:absolute;
+    top:200px;
+    left:405px;
+    width:1110px;
+    height:340px;
+    display:flex;
+
+}
+
+.nine{
+    width:357px;
+    height:260px;
+    display:flex;
+    flex-direction:column;
+}
+.ten{
+    font-size:40px;
+    font-weight:700;
+}
+.first{
+    background-color:#3692ff;
+    border-radius:40px;
+    border:none;
+    margin-top:32px;
+    margin-bottom:60px;
+    height:56px;
+    width:357px;
+    color:#ffffff;
+    font-size:20px;
+    font-weight:600;
+}
+.second{
+    width:746px;
+    height:340px;
+}
+.special{
+    width:988px;
+    height:444px;
+    margin:138px 466px 138px;
+    display:flex;
+    padding:1px;
+}
+.third{
+ width:579px;
+ height:444px;
+ flex-shrink:0px;
+}
+.fourth{
+    margin:103px 23.5px 103px 64px;
+    width:298px;
+    height:238px;
+
+}
+.fifth{
+    margin:0px 226px 12px 0px;
+
+    color:#3692ff;
+    font-size:18px;
+    font-weight:800;
+    flex-grow:1;
+    flex-shrink:0;
+}
+.sixth{
+    
+    font-size:40px;
+    font-weight:700;
+    color:#374151;
+    margin:12px auto 24px 0px;
+    flex-grow:1;
+    flex-shrink:0;
+}
+.seventh{
+    
+    margin-top:24px;
+    font-size:24px;
+    font-weight:500;
+    color:#374151;
+    flex-grow:1;
+    flex-shrink:0;
+}
+.big{
+    width:100%;
+    height:720px;
+
+}
+.eighth{
+    margin-top:138px;
+    width:1920px;
+    height:540px;
+    background-color: #cfe5ff;
+}
+.ninth{
+    width:1110px;
+    height:397px;
+    display:flex;
+    margin:143px auto 0px 405px;
+}
+.tenth{
+    font-size:40px;
+    font-weight:700;
+    color:#374151;
+}
+.last{
+    height:397px;
+    width:746px;
+
+}
+.lastone{
+    background-color:#111827;
+    height:160px;
+    width:1920px;
+
+}
+.lasttwo{
+    display:flex;
+    justify-content:space-between;
+    width:1120px;
+    height:20px;
+    margin:32px 400px 108px 400px;
+    padding:1px;
+    margin-top:0px;
+    align-items:center;
+}
+.word{
+    font-size:16px;
+    font-weight:400;
+    color:#9ca3af;
+}
+.wordtwo{
+    font-size:16px;
+    font-weight:400;
+    color:#e5e7eb;
+}
+a{
+    color:#ffffff;
+    text-decoration:none;
+    cursor:pointer;
+}
