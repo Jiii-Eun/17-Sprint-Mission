@@ -29,6 +29,9 @@ nav {
 .logo {
   width: 40px;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-title {
@@ -42,11 +45,11 @@ nav {
 }
 
 .title {
-  font-size: 25.63px;
+  font-size: clamp(1.5rem, 2.2vw, 1.8rem);
   font-weight: 700;
   line-height: 100%;
   color: #3692FF;
-  text-decoration: none;
+  text-decoration: none; 
 }
 
 .title:hover ,.logo:hover{
@@ -96,7 +99,7 @@ header ,.bottom-banner{
 
 .header-title {
   margin-top: 40px;
-  font-size: 40px;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   font-weight: 700;
   line-height: 140%;
 }
@@ -169,7 +172,7 @@ main {
 }
 
 .content .content-title {
-  font-size: 40px;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   font-weight: 700;
   line-height: 140%;
   color: #374151;
@@ -177,7 +180,7 @@ main {
 }
 
 .content .content-description {
-  font-size: 24px;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   font-weight: 500;
   line-height: 32px;
   color: #374151;
@@ -196,7 +199,7 @@ main {
 
 .bottom-title {
   white-space: nowrap;
-  font-size: 40px;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   font-weight: 700;
   line-height: 140%;
 }
