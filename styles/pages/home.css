@@ -1,6 +1,5 @@
-@import url(./common.css);
-@import url(./reset.css);
-@import url(./header.css);
+@import url(../common/common.css);
+@import url(../common/header.css);
 
 .section-blue {
   display: flex;
