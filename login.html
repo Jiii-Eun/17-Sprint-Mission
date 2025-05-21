@@ -19,17 +19,17 @@
           <form action="/login">
             <div class="user_input">
               <div class="email_input">
-                <label>이메일</label>
-                <input type="email" class="text_tall"/>
+                <label for="user_email">이메일</label>
+                <input class="text_tall" id="user_email" type="email"/>
               </div>
               <div class="password_input">
-                <label>비밀번호</label>
+                <label for="user_password">비밀번호</label>
                 <div class="password_view">
-                  <input type="password" class="text_tall" />
+                  <input class="text_tall" id="user_password" type="password" />
                   <span class="material-symbols-outlined password_icon">visibility_off</span>
                 </div>
               </div>
-              <input type="submit" value="로그인" class="auth btn text_tall" />
+              <button type="submit" class="auth btn text_tall">로그인</button>
             </div>
           </form>
           <div class="simple_login">
