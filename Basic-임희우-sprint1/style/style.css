@@ -1,0 +1,151 @@
+header {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  padding: 0 200px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #DFDFDF;
+  gap: 10px;
+  background-color: #FFFFFF;
+}
+
+.header-login-link {
+  width: 128px;
+  height: 48px;
+  padding: 12px 23px;
+  border-radius: 8px;
+}
+
+.blue-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3692FF;
+  color: #F3F4F5;
+  white-space: nowrap;
+}
+
+.banner {
+  display: flex;
+  align-items: end;
+  width: 100%;
+  height: 540px;
+  background-color: #CFE5FF;
+}
+
+.banner-text {
+  font-size: 40px;
+}
+
+.banner-inner-box {
+  display: flex;
+  margin: 0 auto;
+  gap: 7px;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-text-and-btn-container {
+  display: flex;
+  padding-bottom: 60px;
+  gap: 32px;
+  flex-direction: column;
+}
+
+.top-banner-items-link {
+  border-radius: 40px;
+  padding: 16px 124px;
+}
+
+.banner-img {
+  max-width: 746px;
+  width: 65%;
+}
+
+.cards {
+  max-width: 1000px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.card-container {
+  padding: 138px 0;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 64px;
+  border-radius: 12px;
+  background-color: #FCFCFC;
+}
+
+.card-img {
+  max-width: 100%;
+  width: 50%;
+  border-radius: 12px;
+}
+
+.card-right-part {
+  max-width: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-title-type {
+  font-size: clamp(0vw, 1vw ,18px);
+  font-weight: 800;
+  color: #3692FF;
+}
+
+.card-title {
+  font-size: clamp(0vw,3vw,40px);
+  font-weight: 700;
+  color: #374151;
+}
+
+.card-text {
+  font-size: clamp(0vw,2vw,24px);
+  font-weight: 500;
+  color: #374151;
+}
+
+.card-container:nth-child(2) .card {
+  flex-direction: row-reverse;
+}
+
+.card-container:nth-child(2) .card-right-part {
+  text-align: end;
+}
+
+footer {
+  width: 100%;
+  height: 160px;
+  padding: 32px 200px;
+  background-color: #111827;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.footer-text-color {
+  color: #9CA3AF;
+}
+
+.privacy-and-faq {
+  display: flex;
+  gap: 30px;
+}
+
+.sns {
+  display: inline-flex;
+  gap: 12px;
+}
