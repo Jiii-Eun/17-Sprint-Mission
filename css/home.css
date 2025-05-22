@@ -1,0 +1,245 @@
+:root {
+  font-size: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+  display: inline-block;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+  height: 70px;
+  padding: 10px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 150px;
+}
+
+.nav-login {
+  background-color: #3691ff;
+  color: white;
+  border-radius: 10px;
+  width: 110px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  user-select: none;
+}
+
+.banner1-container,
+.banner2-container {
+  width: 100vw;
+  height: auto; 
+  overflow: hidden;
+  background-color: transparent;
+  display: block;
+}
+
+.banner1-container img,
+.banner2-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+.main-container img {
+  width: 100%;
+  max-width: 700px;
+  margin: 120px auto;
+  display: block;
+}
+
+footer {
+  background-color: #111827;
+  padding: 25px 80px;
+  color: #9ca3af;
+}
+
+.footer-nav {
+  margin: 0;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 230px;
+}
+
+.contact-email a {
+  color: #9ca3af;
+}
+
+.contact-else {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-else a {
+  color: #e5e7eb;
+}
+
+.contact-icon {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-icon a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contact-icon .Facebook {
+  background-image: url(../img/ic_facebook.png);
+}
+
+.contact-icon .Twitter {
+  background-image: url(../img/ic_twitter.png);
+}
+
+.contact-icon .Youtube {
+  background-image: url(../img/ic_youtube.png);
+}
+
+.contact-icon .Instagram {
+  background-image: url(../img/ic_instagram.png);
+}
+
+/* 모바일 */
+@media (max-width: 767px) {
+  :root {
+    font-size: 12px;
+  }
+  .nav-container {
+    padding: 10px 20px;
+  }
+
+  .nav-logo {
+    width: 120px;
+  }
+
+  .nav-login {
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .main-container img {
+    max-width: 100%;
+    margin: 60px auto;
+  }
+
+  .banner1-container,
+  .banner2-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-nav div {
+    width: auto;
+    max-width: 320px;
+  }
+
+  .contact-else {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .contact-else a {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .contact-icon a {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* 태블릿 */
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    font-size: 13px;
+  }
+
+  .nav-container {
+    padding: 10px 100px;
+  }
+
+  .nav-logo {
+    width: 130px;
+  }
+
+  .nav-login {
+    width: 100px;
+    height: 42px;
+    line-height: 42px;
+  }
+
+  .main-container img {
+    max-width: 600px;
+    margin: 100px auto;
+  }
+
+  .banner1-container,
+  .banner2-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer-nav {
+    gap: 150px;
+  }
+}
