@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/pages/sign.css" />
+    <title>판다마켓</title>
+  </head>
+  <body>
+    <div class="sign">
+      <div class="sign__header">
+        <img
+          class="sign__logo"
+          src="./assets/imgs/panda_icon_small.svg"
+          alt="판다마켓 로고"
+        />
+        <h1 class="sign__title"><a href="/">판다마켓</a></h1>
+      </div>
+      <form class="sign__form">
+        <div class="sign__input-wrapper">
+          <label for="email" class="sign__label">이메일</label>
+          <input
+            type="email"
+            id="email"
+            class="sign__input"
+            placeholder="이메일을 입력하세요"
+            required
+          />
+        </div>
+        <div class="sign__input-wrapper">
+          <label for="password" class="sign__label">비밀번호</label>
+          <input
+            type="password"
+            id="password"
+            class="sign__input"
+            placeholder="비밀번호를 입력하세요"
+            required
+          />
+          <img
+            class="sign__visibility-icon"
+            src="/assets/icons/ic_visibility_off.svg"
+            alt="비밀번호 보이기 아이콘"
+          />
+        </div>
+        <button type="submit" class="sign__btn">로그인</button>
+        <section class="sign__sns-login-wrapper">
+          <span class="sign__sns-login-text">간편 로그인하기</span>
+          <div>
+            <a href="https://www.google.com/" class="sign__sns-login-btn">
+              <img
+                class="sign__sns-icon"
+                src="./assets/icons/ic_google.svg"
+                alt="구글 아이콘"
+              />
+            </a>
+            <a
+              href="https://www.kakaocorp.com/page/"
+              class="sign__sns-sign-btn"
+            >
+              <img
+                class="sign__sns-icon"
+                src="./assets/icons/ic_kakao.svg"
+                alt="카카오톡 아이콘"
+              />
+            </a>
+          </div>
+        </section>
+        <div class="sign__signup-guide">
+          판다마켓이 처음이신가요?
+          <a class="sign__signup-link" href="/signup.html">회원가입</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

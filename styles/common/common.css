@@ -1,0 +1,17 @@
+@import url(./font.css);
+@import url(./reset.css);
+:root {
+  --primary-color: #3692ff;
+  --gray-900-color: #111827;
+  --gray-800-color: #1f2937;
+  --gray-700-color: #374151;
+  --gray-600-color: #4b5563;
+  --gray-500-color: #6b7280;
+  --gray-400-color: #9ca3af;
+  --gray-200-color: #e5e7eb;
+  --gray-100-color: #f3f4f6;
+  --gray-50-color: #f9fafb;
+}
+body {
+  font-family: pretendard, sans-serif;
+}
