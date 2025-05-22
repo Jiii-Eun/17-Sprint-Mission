@@ -1,0 +1,283 @@
+/* 기본 리셋 및 공통 스타일 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+  line-height: 1.6;
+  background-color: #fbfbfb;
+  color: #1f2937;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+/* GNB */
+.gnb {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 1000;
+  height: 70px;
+}
+
+.gnb-inner {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 10vw, 200px);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: block;
+}
+
+.logo img {
+  width: auto;
+  height: 100%;
+  display: block;
+}
+
+.login-btn {
+  background-color: #3692ff;
+  color: white;
+  padding: 0.8rem 1.4rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+/* 히어로 섹션 */
+.hero {
+  background-color: #cee4ff;
+}
+
+.hero-container {
+  max-width: 1920px;
+  padding-top: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.hero-text {
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+}
+
+
+.hero-text h1 {
+  font-size: 40px;
+  line-height: 140%;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background-color: #3692ff;
+  color: #F9FAFB;
+  padding: 16px 124px;
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.hero-img {
+  flex-shrink: 1;
+  width: 746px;
+  height: 340px;
+}
+
+/* 중간 기능 섹션 */
+.features {
+/*  padding: clamp(4rem, 8vw, 8rem) clamp(20px, 10vw, 200px); */
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  background: #FCFCFC;
+  justify-content: center;
+  align-items: center;
+  ;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  flex-wrap: wrap;
+  max-width: 1920px;
+}
+
+.feature.reverse {
+  flex-direction: row-reverse;
+}
+
+.feature-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.feature.reverse .feature-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.feature-text .label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3692ff;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.feature-text h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.feature-text p {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  color: #4b5563;
+}
+
+.feature img {
+  flex: 1;
+  max-width: 579px;
+  width: 579px; 
+  height: 444px;
+  min-width: 300px;
+}
+
+/* 신뢰 섹션 */
+.trust {
+  background-color: #cee4ff;
+}
+
+.trust-inner {
+  max-width: 1920px;
+  width: 1110px;
+  padding-top: 143px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.trust-text {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.trust-text h2 {
+  font-family: Pretendard;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #374151;  
+  display: flex;
+  align-items: center;
+}
+
+.trust-img {
+  width: 746px;
+  height: 340px;
+  flex-shrink: 1;
+}
+
+.footer {
+  background-color: #111827;
+  color: #9ca3af;
+  padding: 2rem clamp(20px, 10vw, 200px);
+  height: 160px;
+}
+
+.footer-inner {
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.footer-links a {
+  margin-right: 1.5rem;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.social a {
+  margin-left: 0.8rem;
+}
+
+.social img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  transition: opacity 0.3s ease;
+}
+
+.social img:hover {
+  opacity: 0.8;
+}
+
+/* 반응형 레이아웃 */
+@media (max-width: 768px) {
+  .gnb-inner,
+  .hero-inner,
+  .footer-inner,
+  .feature {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .login-btn {
+    margin-top: 0.5rem;
+  }
+
+  .footer-links {
+    margin: 1rem 0;
+  }
+}
