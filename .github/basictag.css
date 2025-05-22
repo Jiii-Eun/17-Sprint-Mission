@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+section {
+  width: 1920px;
+  padding: 138px 466px;
+  gap: 10px;
+}
+
+figure {
+  background-color: #cfe5ff;
+  height: 540px;
+}
+
+figure p {
+  color: #374151;
+  font-size: 40px;
+  font-family: Pretendard, sans-serif;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
+footer {
+  background-color: #111827;
+  height: 160px;
+}
+
+footer img {
+  width: 20px;
+  height: 20px;
+}
