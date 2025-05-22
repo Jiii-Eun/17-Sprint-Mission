@@ -1,0 +1,226 @@
+* {
+    /* 좌우, 상하에 마진이 생겨서 진행해봄 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    /* 전체적인 크기를? 지정해주기 위함 */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-container {
+    width: 100px;
+    height:35px;
+    cursor: pointer;
+}
+
+.login {
+    width: 90px;
+    height:35px;
+    margin-top: 7px;
+    margin-bottom: 3px;
+}
+
+.login:hover {
+    cursor: pointer;
+}
+
+.hometop {
+    background-color: #dbeafe;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 80px;
+}
+
+.hometop-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    bottom: 80px;
+}
+
+.top_text {
+    color: #4F4F4F;
+    font-size: 24px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.show {
+    width: 220px;
+}
+
+.show:hover {
+    cursor: pointer;
+}
+
+.hi {
+    width: 500px;
+    height: 250px;
+}
+
+.middle {
+    margin-top: 85px;
+    margin-bottom: 85px;
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    text-align:right;
+    gap: 15px;
+}
+
+.container3 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.blue {
+    color: #3692FF;
+}
+
+.content {
+    line-height: 35px;
+    color: #4F4F4F;
+    font-size: 24px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.content2 {
+    margin-top: 7px;
+    line-height: 23px;
+    color: #4F4F4F;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    background-color: #FCFCFC;
+    width: 660px;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.box2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    background-color: #FCFCFC;
+    width: 660px;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.box3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    background-color: #FCFCFC;
+    width: 660px;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.items {
+    width: 370px;
+    height: 290px;
+}
+
+.gray {
+    background-color: #FCFAFA;
+    height: 85px;
+}
+
+.bottom {
+    background-color: #dbeafe;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 80px;
+}
+
+.bottom-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom_text {
+    color: #4F4F4F;
+    font-size: 24px;
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    position: relative;
+    bottom: 40px;
+}
+
+.twopanda {
+    width: 500px;
+    height: 255px;
+}
+
+.footer {
+    background-color: #111827;
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 25px;
+}
+
+.codeit {
+    color: #B3B3B3;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #D1D1D1;
+}
+
+.policy {
+    display: flex;
+    gap: 30px;
+}
+
+.social img {
+    margin-right: 10px;
+}
