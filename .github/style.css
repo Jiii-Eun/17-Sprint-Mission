@@ -1,0 +1,247 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.top {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  max-width: 1920px;
+  height: 70px;
+  border-bottom: #dfdfdf solid 1px;
+  padding: 9px 200px;
+}
+
+.topheader {
+  display: flex;
+  width: 1120px;
+  margin: 0 auto;
+  height: 51px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 0px;
+}
+
+.top img {
+  height: 51px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.loginbutton {
+  background-color: #3692ff;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-family: pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0;
+  width: 128px;
+  height: 48px;
+}
+
+.loginbutton:hover {
+  background-color: #1967d6;
+}
+
+figure {
+  background-color: #cfe5ff;
+  height: 540px;
+}
+
+.panda {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 0 0;
+  padding-top: 200px;
+  gap: 7px;
+  max-width: 1920px;
+  height: 540px;
+}
+
+.panda img {
+  width: 746px;
+  height: 340px;
+}
+
+.panda_left {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
+  gap: 32px;
+}
+
+figure p {
+  color: #374151;
+  font-size: 40px;
+  font-family: Pretendard, sans-serif;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
+.gotosee {
+  border-radius: 40px;
+  width: 357px;
+  height: 56px;
+  padding: 16px 124px;
+  font-family: "pretendard", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #f9fafb;
+  border-style: none;
+  background-color: #3692ff;
+}
+
+.gotosee:hover {
+  background-color: #1967d6;
+}
+
+section {
+  width: 1920px;
+  padding: 138px 466px;
+  gap: 10px;
+}
+
+.section_card {
+  background-color: #fcfcfc;
+  width: 988px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+
+.section_card img {
+  border-radius: 12px;
+  width: 579px;
+  height: 444px;
+  overflow: hidden;
+}
+
+.section_text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-right: 24px;
+}
+
+.first {
+  padding-right: 66px;
+}
+
+.middle {
+  align-items: flex-end;
+  padding: 0 0 0 66px;
+}
+
+.middle p {
+  text-align: right;
+}
+
+.section_text :nth-child(1) {
+  color: #3692ff;
+  font-size: 18px;
+  font-family: "Abhaya Libre ExtraBold", sans-serif;
+  font-weight: 800;
+  line-height: 26px;
+  letter-spacing: 0%;
+}
+
+.section_text :nth-child(2) {
+  height: 112px;
+  color: #374151;
+  font-size: 40px;
+  font-family: "pretendard", sans-serif;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: 12px;
+}
+
+.section_text :nth-child(3) {
+  color: #374151;
+  font-size: 24px;
+  font-family: "pretendard", sans-serif;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0%;
+}
+
+.panda_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 143px;
+  margin: 0px auto 0 0;
+  gap: 69px;
+  max-width: 1920px;
+}
+
+.panda_bottom_left p {
+  padding-bottom: 60px;
+  gap: 10px;
+}
+
+.panda_bottom img {
+  width: 746px;
+  height: 397px;
+}
+
+footer {
+  background-color: #111827;
+  height: 160px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 400px;
+  gap: 10px;
+  width: 1920px;
+}
+
+.footer div {
+  font-family: Pretendard, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: center;
+}
+
+.footer :nth-child(1) {
+  color: #9ca3af;
+}
+
+.footer :nth-child(2) {
+  display: flex;
+  gap: 30px;
+  color: #9ca3af;
+}
+
+.footer :nth-child(3) {
+  display: flex;
+  width: 116px;
+  gap: 12px;
+}
+
+footer img {
+  width: 20px;
+  height: 20px;
+}
+
+a {
+  text-decoration: none;
+}
