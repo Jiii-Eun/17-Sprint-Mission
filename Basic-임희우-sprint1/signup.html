@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>판다마켓 로그인</title>
+    <title>판다마켓 회원가입</title>
     <link rel="stylesheet" href="style/reset.css" />
     <link rel="stylesheet" href="style/login.css" />
   </head>
@@ -21,6 +21,14 @@
                 type="email"
                 name="email"
                 placeholder="이메일 입력"
+              />
+              <label class="input-type-txt">닉네임</label>
+              <input
+                id="nickname"
+                class="input-box"
+                type="text"
+                name="nickname"
+                placeholder="닉네임 입력"
               />
               <label class="input-type-txt">비밀번호</label>
               <div class="password-wrap">
@@ -40,7 +48,25 @@
                   />
                 </button>
               </div>
-              <input class="login-submit-btn" type="submit" value="로그인" />
+              <label class="input-type-txt">비밀번호 확인</label>
+              <div class="password-wrap">
+                <input
+                  id="password-check"
+                  class="input-box"
+                  type="text"
+                  name="password-check"
+                  placeholder="비밀번호 다시 입력"
+                />
+                <button type="button" class="visibility-btn">
+                  <img
+                    class="visibility-img"
+                    src="images/btn_visibility_on.png
+                  "
+                    alt="비밀번호 덮기기"
+                  />
+                </button>
+              </div>
+              <input class="login-submit-btn" type="submit" value="회원가입" />
             </div>
           </form>
           <div class="simple-container">
@@ -63,8 +89,8 @@
             </div>
           </div>
           <h6 class="signup-desc">
-            판다마켓이 처음이신가요?<a class="sign-up-link" href="./signup.html"
-              >회원가입</a
+            이미 회원이신가요?<a class="sign-up-link" href="./login.html"
+              >로그인</a
             >
           </h6>
         </div>
