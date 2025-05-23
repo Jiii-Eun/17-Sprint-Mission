@@ -60,10 +60,14 @@
 }
 .sign__visibility-icon {
   position: absolute;
+  background-image: url("/assets/icons/ic_visibility_off.svg");
+  background-position: center;
+  background-size: cover;
   right: 15px;
   bottom: 16px;
   width: 24px;
   height: 24px;
+  cursor: pointer;
 }
 .sign__btn {
   width: 100%;
