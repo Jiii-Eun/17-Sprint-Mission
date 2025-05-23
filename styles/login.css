@@ -51,8 +51,11 @@
   cursor: pointer; 
 }
 
-.email h2, .pwd h2, .nickname h2 {
+label {
   margin: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+
 }
 
 .email-input, .pwd-input, .nickname-input {
@@ -69,7 +72,6 @@
   margin-top: 16px;
   margin-bottom: 24px;
 }
- 
 
 .login-btn {
   width: 100%;

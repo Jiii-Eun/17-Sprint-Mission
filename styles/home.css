@@ -226,6 +226,7 @@ footer {
 
     .content .img {
       width: 100%;
+      
     }
 
     .content-box {
@@ -247,7 +248,9 @@ footer {
       align-items: center;
       justify-content: space-between;
       height: 100%;
-      padding-top: 201px;
+      padding-top: 201px; 
+      padding-right: 0;
+      padding-left: 0;
     }
 
     footer {
