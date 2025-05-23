@@ -15,14 +15,14 @@
   align-items: center;
   gap: 25px;
   width: 100%;
-  margin-bottom: 35px;
+  margin-bottom: 2.125rem;
 }
 .sign__logo {
-  width: 103px;
-  height: 103px;
+  width: 6.25rem;
+  height: 6.25rem;
 }
 .sign__title {
-  font-size: 66px;
+  font-size: 4.125rem;
   font-weight: 700;
   font-family: "ROKAF_Sans_Medium";
   color: var(--primary-color);
@@ -44,17 +44,17 @@
   cursor: pointer;
 }
 .sign__label {
-  font-size: 18px;
+  font-size: var(--font-size-500);
   font-weight: 700;
-  line-height: 26px;
+  line-height: 1.5rem;
 }
 .sign__input {
-  width: 640px;
-  height: 56px;
+  width: 40rem;
+  height: 3.5rem;
   padding: 0 20px;
   border: none;
   border-radius: 12px;
-  font-size: 16px;
+  font-size: var(--font-size-400);
   font-weight: 400;
   background-color: var(--gray-100-color);
 }
@@ -63,20 +63,20 @@
   background-image: url("/assets/icons/ic_visibility_off.svg");
   background-position: center;
   background-size: cover;
-  right: 15px;
-  bottom: 16px;
-  width: 24px;
-  height: 24px;
+  right: 1rem;
+  bottom: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   cursor: pointer;
 }
 .sign__btn {
   width: 100%;
-  padding: 16px 124px;
+  padding: 1rem 7.75rem;
   border-radius: 40px;
   border: none;
-  font-size: 20px;
+  font-size: var(--font-size-500);
   font-weight: 600;
-  line-height: 32px;
+  line-height: 2rem;
   color: var(--gray-100-color);
   background-color: var(--primary-color);
   cursor: pointer;
@@ -87,32 +87,32 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 16px 23px;
+  padding: 1rem 1.5rem;
   gap: 20px;
   border-radius: 8px;
   background-color: #e6f2ff;
 }
 .sign__sns-login-text {
-  font-size: 16px;
+  font-size: var(--font-size-400);
   font-weight: 500;
   color: var(--gray-800-color);
 }
 .sign__sns-icon {
-  width: 42px;
-  height: 42px;
+  width: 2.625rem;
+  height: 2.625rem;
   background-color: #e6f2ff;
   cursor: pointer;
 }
 .sign__signup-guide {
   width: 100%;
   color: var(--gray-800-color);
-  font-size: 14px;
+  font-size: var(--font-size-400);
   text-align: center;
 }
 .sign__signup-link {
   font-weight: 500;
   color: var(--primary-color);
   text-decoration: underline;
-  margin-left: 5px;
+  margin-left: 0.3125rem;
 }
 /* todo: 요소간 gap 수정하기 */
