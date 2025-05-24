@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  --gray50: #F9FAFB;
+  --gray100: #F3F4F6;
+  --gray200: #E5E7EB;
+  --gray400: #9CA3AF;
+  --gray500: #6B7280;
+  --gray600: #4B5563;
+  --gray700: #374151;
+  --gray800: #1F2937;
+  --gray900: #111827;
+  --blue: #3692FF;
+}
+
+body {
+  width: 100%;
+  min-width: 1024px;
+  max-width: 1920px;
+  height: 100%;
+  margin: 120px auto;
+}
+
+.login_box {
+  margin: 0 auto;
+  width: 640px;
+}
+
+.login_head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  width: 103px;
+  height: 103px;
+}
+
+.title {
+  font-size: 66px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--blue);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  gap: 20px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+input, button, .simple_login {
+  border: 1px solid #FFFFFF;
+  width: 100%;
+}
+
+input, button {
+  height: 56px;
+}
+
+input {
+  background-color: var(--gray100);
+  border-radius: 14px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.password_box {
+  position: relative;
+}
+
+.checking_eyes {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+button {
+  background-color: var(--blue);
+  border-radius: 24px;
+  color: var(--gray100);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.simple_login {
+  height: 74px;
+  background-color: #E6F2FF;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 20px;
+}
+
+.link_icon {
+  text-decoration: none;
+}
+
+.img_ic {
+  width: 42px;
+  height: 42px;
+  margin-left: 8px;
+}
+
+.signup_link {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
+#linkup {
+  color: var(--blue);
+}
