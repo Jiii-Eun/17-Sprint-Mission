@@ -16,7 +16,7 @@ a {
     text-decoration: none;
 }
 
-.top {
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -198,7 +198,7 @@ a {
     height: 255px;
 }
 
-.footer {
+footer {
     background-color: #111827;
     height: 160px;
     display: flex;
