@@ -31,6 +31,8 @@
     font-style: normal;
   }
 
+/* 공통 CSS */
+
 #wrapper {
     display: flex;
     flex-flow: column nowrap;
@@ -38,50 +40,50 @@
     box-sizing: border-box;
 }
 
-/* 데스크톱용 CSS */
-
 .nav {
     width: 100%;
-    height: 70px;
 }
 
 .gnb {
     display: flex;
-    width: 1120px;
-    height: 70px;
-    margin: 0 auto;
     justify-content: space-between;
     align-items: center;
+    width: 66%;
+    margin: 0 auto;
 }
 
 .logo_btn {
-    width: 153px;
-    height: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14.5%;
 }
 
-.logo_img {
+.logo_btn img {
+    display: block;
     width: 100%;
     height: auto;
 }
 
 .login_btn {
     display: flex;
-    width: 128px;
-    height: 48px;
     justify-content: center;
     align-items: center;
+    width: 11.5%;
     background-color: #3692FF;
     border-radius: 8px;
     font-family: 'Pretendard' sans-serif;
-    font-size: 1rem;
     font-weight: 600;
     color: #F3F4F6;
     text-decoration: none;
 }
 
+.login_btn:hover {
+    background-color: #1967D6;
+}
+
 .header {
     width: 100%;
-    height: 540px;
     background-color: #CFE5FF;
 }
 
@@ -89,128 +91,123 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    width: 1120px;
-    height: 540px;
+    width: 66%;
+    height: 100%;
     margin: 0 auto;
+    position: relative;
 }
 
 .header_textbox {
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    width: 357px;
+    width: auto;
     height: auto;
-    margin-bottom: 100px;
+    position: absolute;
+    z-index: 1;
 }
 
 .header_txt {
     font-family: 'Pretendard' sans-serif;
-    font-size: 2.5rem;
     font-weight: 700;
     color: #374151;
-    line-height: 1.4;
 }
 
 .header_btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 357px;
-    height: 56px;
     background-color: #3692FF;
     border-radius: 150px;
     font-family: 'Pretendard' sans-serif;
-    font-size: 1.25rem;
     font-weight: 600;
     color: #F3F4F6;
     text-decoration: none;
 }
 
-.header_img {
-    width: 746px;
-    height: 340px;
+.header_btn:hover {
+    background-color: #1967D6;
+}
+
+.header_imgbox {
+    width: 66%;
+    position: absolute;
+    right: 0;
+}
+
+.header_imgbox img{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .contents_container {
-    width: 100%;
-    height: auto;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: auto;
 }
 
-.contents_box{
+.contents_box {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 720px;
 }
 
 .contents_card {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 70px;
-    width: 988px;
-    height: 444px;
+    width: 59%;
     margin: 0 auto;
     background-color: #FCFCFC;
-    border-radius: 12px;
     overflow: hidden;
 }
 
+.card_imgbox {
+    width: 58.5%;
+}
+
 .card_img {
-    width: 588px;
+    max-width: 100%;
     height: auto;
-    cursor: pointer;
+    display: block;
 }
 
 .card_textbox {
     display: flex;
     flex-direction: column;
-    gap: 25px;
 }
 
 .card_textbox span {
     font-family: 'Pretendard' sans-serif;
-    font-size: 1rem;
     font-weight: 800;
     color: #3692FF;
 }
 
 .card_textbox h2 {
     font-family: 'Pretendard' sans-serif;
-    font-size: 2.5rem;
     font-weight: 700;
     color: #374151;
-    line-height: 1.4;
     cursor: pointer;
 }
 
 .card_textbox p {
     font-family: 'Pretendard' sans-serif;
-    font-size: 1.5rem;
     font-weight: 500;
     color: #374151;
-    line-height: 1.3;
 }
 
 .contents_card.card2 {
     justify-content: flex-end;
-    gap: 60px;
 }
 
 .card2_txt_span, .card2_txt_h2, .card2_txt_p {
     text-align: right;
 }
 
-.contents_card.card3 {
-    gap: 32px;
-}
-
 .marketing {
     width: 100%;
-    height: 540px;
     background-color: #CFE5FF;
 }
 
@@ -218,37 +215,39 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    width: 1120px;
-    height: 540px;
+    width: 66%;
+    height: 100%;
     margin: 0 auto;
+    position: relative;
 }
 
 .marketing_txt {
-    font-family: 'Pretendard' sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #374151;
-    line-height: 1.4;
-    margin-bottom: 170px;
+    position: absolute;
+    z-index: 1;
 }
 
-.header_img {
-    width: 746px;
-    height: 340px;
+.marketing_imgbox {
+    width: 66%;
+    position: absolute;
+    right: 0;
+}
+
+.marketing_imgbox img{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .footer {
     width: 100%;
-    height: 160px;
     background-color: #111827;
 }
 
 .footer_container {
     display: flex;
     justify-content: space-between;
-    width: 1120px;
+    width: 66%;
     margin: 0 auto;
-    padding: 30px;
 }
 
 .footer_info {
@@ -261,7 +260,6 @@
 .footer_menu {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
 }
 
 .footer_menu a {
@@ -274,5 +272,137 @@
 
 .footer_sns {
     display: flex;
-    gap: 12px;
+}
+
+/* 데스크탑용 CSS */
+
+@media (min-width: 1024px) {
+    .nav {
+        height: 68px;
+    }
+
+    .gnb {
+        padding: 0 200px;
+        height: 68px;
+    }
+
+    .logo_btn {
+        height: 48px;
+    }
+
+    .login_btn {
+        height: 48px;
+        font-size: 1rem;
+    }
+
+    .header {
+        height: 540px;
+    }
+
+    .header_textbox {
+        gap: 25px;
+        margin-bottom: 95px;
+    }
+
+    .header_txt {
+        font-size: 2.5rem;
+        line-height: 1.4;
+    }
+
+    .header_btn {
+        width: 350px;
+        height: 56px;
+        font-size: 1.25rem;
+    }
+
+    .contents_box {
+        height: 720px;
+    }
+
+    .contents_card {
+        gap: 5.5%;
+        border-radius: 15px;
+    }
+
+    .card_textbox {
+        margin: 20px;
+        gap: 30px;
+    }
+
+    .card_textbox span {
+        font-size: 1rem;
+    }
+
+    .card_textbox h2 {
+        font-size: 2.5rem;
+        line-height: 1.4;
+    }
+
+    .card_textbox p {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .contents_card.card2 {
+        gap: 45px;
+    }
+
+    .contents_card.card3 {
+        gap: 20px;
+    }
+
+    .marketing {
+        height: 540px;
+    }
+
+    .marketing_txt {
+        font-family: 'Pretendard' sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #374151;
+        line-height: 1.4;
+        margin-bottom: 168px;
+    }
+
+    .header_img {
+        height: 340px;
+    }
+
+    .footer {
+        height: 160px;
+    }
+
+    .footer_container {
+        padding: 30px;
+    }
+
+    .footer_menu {
+        gap: 30px;
+    }
+
+    .footer_sns {
+        gap: 12px;
+    }
+}
+
+/* 태블릿용 CSS */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .gnb {
+        display: flex;
+    }
+
+    .header {
+        height: 300px;
+    }
+
+    .marketing {
+        height: 300px;
+    }
+}
+
+/* 모바일용 CSS */
+
+@media (max-width: 767px) {
+
 }
