@@ -29,14 +29,21 @@ header {
     cursor: pointer;
 }
 
-.login {
+.login-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 90px;
     height:35px;
+    background-color: #3692FF;
     margin-top: 7px;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 13px;
+    border-radius: 8px;
 }
 
-.login:hover {
+.login-button:hover {
     cursor: pointer;
 }
 
@@ -64,11 +71,19 @@ header {
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-.show {
+.looking-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 220px;
+    height: 38px;
+    background-color: #3692FF;
+    color: white;
+    font-size: 13px;
+    border-radius: 40px;
 }
 
-.show:hover {
+.looking-button:hover {
     cursor: pointer;
 }
 
