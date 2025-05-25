@@ -10,6 +10,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 a {
@@ -68,7 +69,6 @@ header {
 .top_text {
     color: #4F4F4F;
     font-size: 24px;
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .looking-button {
@@ -127,14 +127,12 @@ header {
     line-height: 35px;
     color: #4F4F4F;
     font-size: 24px;
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .content2 {
     margin-top: 7px;
     line-height: 23px;
     color: #4F4F4F;
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .box1 {
@@ -202,7 +200,6 @@ header {
 .bottom_text {
     color: #4F4F4F;
     font-size: 24px;
-    font-family: 'Noto Sans KR', sans-serif;
     display: flex;
     position: relative;
     bottom: 40px;
