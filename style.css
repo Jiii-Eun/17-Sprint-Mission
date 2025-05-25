@@ -56,7 +56,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 14.5%;
 }
 
 .logo_btn img {
@@ -69,7 +68,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 11.5%;
     background-color: #3692FF;
     border-radius: 8px;
     font-family: 'Pretendard' sans-serif;
@@ -110,6 +108,7 @@
     font-family: 'Pretendard' sans-serif;
     font-weight: 700;
     color: #374151;
+    line-height: 1.4;
 }
 
 .header_btn {
@@ -129,7 +128,6 @@
 }
 
 .header_imgbox {
-    width: 66%;
     position: absolute;
     right: 0;
 }
@@ -158,14 +156,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 59%;
     margin: 0 auto;
     background-color: #FCFCFC;
     overflow: hidden;
-}
-
-.card_imgbox {
-    width: 58.5%;
 }
 
 .card_img {
@@ -202,7 +195,7 @@
     justify-content: flex-end;
 }
 
-.card2_txt_span, .card2_txt_h2, .card2_txt_p {
+.text_box2 {
     text-align: right;
 }
 
@@ -222,12 +215,15 @@
 }
 
 .marketing_txt {
+    font-family: 'Pretendard' sans-serif;
+    font-weight: 700;
+    color: #374151;
+    line-height: 1.4;
     position: absolute;
     z-index: 1;
 }
 
 .marketing_imgbox {
-    width: 66%;
     position: absolute;
     right: 0;
 }
@@ -248,6 +244,7 @@
     justify-content: space-between;
     width: 66%;
     margin: 0 auto;
+    padding: 30px;
 }
 
 .footer_info {
@@ -282,15 +279,15 @@
     }
 
     .gnb {
-        padding: 0 200px;
         height: 68px;
     }
 
     .logo_btn {
-        height: 48px;
+        width: 14.5%;
     }
 
     .login_btn {
+        width: 11.5%;
         height: 48px;
         font-size: 1rem;
     }
@@ -306,7 +303,6 @@
 
     .header_txt {
         font-size: 2.5rem;
-        line-height: 1.4;
     }
 
     .header_btn {
@@ -315,17 +311,25 @@
         font-size: 1.25rem;
     }
 
+    .header_imgbox {
+        width: 66%;
+    }
+
     .contents_box {
         height: 720px;
     }
 
     .contents_card {
-        gap: 5.5%;
+        width: 59%;
+        gap: 8%;
         border-radius: 15px;
     }
 
+    .card_imgbox {
+        width: 58.5%;
+    }
+
     .card_textbox {
-        margin: 20px;
         gap: 30px;
     }
 
@@ -344,11 +348,11 @@
     }
 
     .contents_card.card2 {
-        gap: 45px;
+        gap: 6%;
     }
 
     .contents_card.card3 {
-        gap: 20px;
+        gap: 3%;
     }
 
     .marketing {
@@ -356,24 +360,16 @@
     }
 
     .marketing_txt {
-        font-family: 'Pretendard' sans-serif;
         font-size: 2.5rem;
-        font-weight: 700;
-        color: #374151;
-        line-height: 1.4;
         margin-bottom: 168px;
     }
 
-    .header_img {
-        height: 340px;
+    .marketing_imgbox {
+        width: 66%;
     }
 
     .footer {
         height: 160px;
-    }
-
-    .footer_container {
-        padding: 30px;
     }
 
     .footer_menu {
@@ -388,16 +384,111 @@
 /* 태블릿용 CSS */
 
 @media (min-width: 768px) and (max-width: 1023px) {
+    .nav {
+        height: 68px;
+    }
+
     .gnb {
-        display: flex;
+        height: 68px;
+    }
+
+    .logo_btn {
+        width: 22.5%;
+        height: 48px;
+    }
+
+    .login_btn {
+        width: 17.5%;
+        height: 48px;
+        font-size: 1rem;
     }
 
     .header {
-        height: 300px;
+        height: 420px;
+    }
+
+    .header_textbox {
+        gap: 18px;
+        margin-bottom: 95px;
+    }
+
+    .header_txt {
+        font-size: 2.15rem;
+    }
+
+    .header_btn {
+        width: 264px;
+        height: 50px;
+        font-size: 1.125rem;
+    }
+
+    .header_imgbox {
+        width: 75%;
+    }
+
+    .contents_box {
+        height: 520px;
+    }
+
+    .contents_card {
+        width: 65%;
+        gap: 9%;
+        border-radius: 15px;
+    }
+
+    .card_imgbox {
+        width: 54%;
+    }
+
+    .card_textbox {
+        gap: 27px;
+    }
+
+    .card_textbox span {
+        font-size: 0.9rem;
+    }
+
+    .card_textbox h2 {
+        font-size: 1.95rem;
+        line-height: 1.3;
+    }
+
+    .card_textbox p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .contents_card.card2 {
+        gap: 6.5%;
+    }
+
+    .contents_card.card3 {
+        gap: 6%;
     }
 
     .marketing {
-        height: 300px;
+        height: 420px;
+    }
+
+    .marketing_txt {
+        font-size: 2.15rem;
+        margin-bottom: 168px;
+    }
+
+    .marketing_imgbox {
+        width: 70%;
+    }
+
+    .footer {
+        height: 150px;
+    }
+
+    .footer_menu {
+        gap: 20px;
+    }
+
+    .footer_sns {
+        gap: 10px;
     }
 }
 
