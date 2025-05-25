@@ -172,6 +172,7 @@ header {
 }
 
 .items {
+    display: block;
     width: 370px;
     height: 290px;
 }
