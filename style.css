@@ -100,20 +100,20 @@ header {
     gap: 160px;
 }
 
-.container1 {
+.hot-item-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.container2 {
+.search-container {
     display: flex;
     flex-direction: column;
     text-align:right;
     gap: 15px;
 }
 
-.container3 {
+.register-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
