@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+#wrapper {
+    width: 640px;
+    border: 1px solid red;
+}
+
+.logo {
+    display: block;
+    width: 396px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.logo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.login_formbox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.email_label, .password_label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #1F2937;
+}
+
+.email_label, .password_label {
+    margin-bottom: 25px;
+}
+
+.email_label_p, .password_label_p {
+    margin-bottom: 15px;
+}
+
+.email_label input, .password_label input {
+    height: 56px;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #1F2937;
+    background-color: #F3F4F6;
+    border: none;
+    border-radius: 12px;
+    padding: 0 25px;
+}
+
+.password_btn {
+    display: none;
+}
+
+
