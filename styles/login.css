@@ -1,0 +1,116 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 231px auto;
+  width: 640px;
+  height: 618px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.39rem;
+}
+
+.title h1 {
+  font-size: 4.1rem;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.email {
+  display: flex;
+  flex-direction: column; 
+}
+
+.pwd {
+  display: flex;
+  flex-direction: column;
+}
+
+.pwd-content {
+  position: relative; 
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.pwd-input {
+  margin: 0;
+}
+
+.eye {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 16px;  
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer; 
+}
+
+label {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+
+}
+
+.email-input, .pwd-input, .nickname-input {
+  width: 100%;
+  height: 3.5rem;
+  background-color: var(--gray100);
+  border: none;
+  border-radius: 12px; 
+  font-size: 1rem;
+  padding: 16px 24px 14px;
+}
+
+.email-input, .nickname-input {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.login-btn {
+  width: 100%;
+  border-radius: 40px;
+  height: 3.5rem;
+  font-size: 1.25rem;
+}
+
+.section {
+  width: 100%;
+  background-color: #E6F2FF;
+  margin: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 23px;
+  border-radius: 8px;
+}
+.section h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.sns a {
+  margin-right: 16px;
+}
+
+.sign-up-message {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.message a {
+  color: var(--blue);
+}
