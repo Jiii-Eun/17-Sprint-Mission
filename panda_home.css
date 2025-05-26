@@ -1,35 +1,23 @@
-*{
-    box-sizing: border-box;
-}
-
-a{
-    text-decoration: none;
-}
-
-html{
-    word-break: keep-all;
-    font-family: Pretendard, sans-serif;
-    
+.nav{
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 body{
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
+    padding-top: 60px;
 }
 
-.container {
-  max-width: 1400px;   /* 최대 너비 제한 */
-  margin: 0 auto;      /* 양쪽 자동 여백 → 가운데 정렬 */
-  padding: 0 40px;     /* 안쪽 여백 */
-}
-
-.nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 5px 0;
+.btn_buy, .btn_login, .footer_sns a, .footer_center a{
+    cursor: pointer;
 }
 
 #logo_panda {
@@ -44,17 +32,22 @@ body{
     align-items: center;
 }
 
+.logo_link{
+    display: flex;
+    align-items: center;
+}
+
 .btn_login{
-    background-color: #3692FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background-color: var(--blue);
     font-size: 15px;
     border: none;
     padding: 0 40px;
     border-radius: 10px;
     height: 40px;
-}
-
-.btn_login a{
-    color: #ffffff;
 }
 
 .home_section{
@@ -93,17 +86,17 @@ body{
 }
 
 .btn_buy{
-    background-color: #3692FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background-color: var(--blue);
     font-size: 16px;
     text-align: center;
     border: none;
     padding: 10px 70px;
     border-radius: 50px;
     height: 40px;
-}
-
-.btn_buy a{
-    color: #ffffff;
 }
 
 .about_section{
@@ -146,7 +139,7 @@ body{
 }
 
 .label{
-    color: #3692FF;
+    color: var(--blue);
     font-weight: 1000;
     font-size: 24px;
     margin: 0;
@@ -220,6 +213,18 @@ article h1{
     margin-top: 0;
 }
 
+.home_footer_center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 20px;
+}
+
 .footer_sns{
     gap: 10px;
 }
@@ -245,8 +250,4 @@ article h1{
     display: flex;
     gap: 20px;
     align-items: center;
-}
-
-.btn_buy, .btn_login, .footer_sns a, .footer_center a{
-    cursor: pointer;
 }
