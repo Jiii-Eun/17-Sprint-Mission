@@ -1,50 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/woff2/Pretendard-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-  }
-
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/woff2/Pretendard-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/woff2/Pretendard-SemiBold.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/woff2/Pretendard-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/woff2/Pretendard-ExtraBold.woff2') format('woff2');
-    font-weight: 800;
-    font-style: normal;
-  }
-
 /* 공통 CSS */
 
 #wrapper {
     display: flex;
     flex-flow: column nowrap;
     width: 100%;
-    box-sizing: border-box;
 }
 
 .nav {
