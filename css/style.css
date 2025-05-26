@@ -1,0 +1,589 @@
+/* 공통 CSS */
+
+#wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 68px;
+}
+
+.gnb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 66%;
+    margin: 0 auto;
+}
+
+.logo_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_btn img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.login_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3692FF;
+    border-radius: 8px;
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 600;
+    color: #F3F4F6;
+    text-decoration: none;
+}
+
+.login_btn:hover {
+    background-color: #1967D6;
+}
+
+.header {
+    width: 100%;
+    background-color: #CFE5FF;
+}
+
+.header_container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 66%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header_textbox {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+}
+
+.header_txt {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 700;
+    color: #374151;
+    line-height: 1.4;
+}
+
+.header_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3692FF;
+    border-radius: 150px;
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 600;
+    color: #F3F4F6;
+    text-decoration: none;
+}
+
+.header_btn:hover {
+    background-color: #1967D6;
+}
+
+.header_imgbox {
+    position: absolute;
+    right: 0;
+}
+
+.header_imgbox img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.contents_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.contents_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contents_card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #FCFCFC;
+    overflow: hidden;
+}
+
+.card_img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card_textbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.card_textbox span {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 800;
+    color: #3692FF;
+}
+
+.card_textbox h2 {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 700;
+    color: #374151;
+    cursor: pointer;
+}
+
+.card_textbox p {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 500;
+    color: #374151;
+}
+
+.contents_card.card2 {
+    justify-content: flex-end;
+}
+
+.text_box2 {
+    text-align: right;
+}
+
+.marketing {
+    width: 100%;
+    background-color: #CFE5FF;
+}
+
+.marketing_container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 66%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.marketing_txt {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 700;
+    color: #374151;
+    line-height: 1.4;
+    position: absolute;
+    z-index: 1;
+}
+
+.marketing_imgbox {
+    position: absolute;
+    right: 0;
+}
+
+.marketing_imgbox img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.footer {
+    width: 100%;
+    background-color: #111827;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    width: 66%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.footer_info {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    color: #9CA3AF;
+}
+
+.footer_menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_menu a {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #E5E7EB;
+    text-decoration: none;
+}
+
+.footer_sns {
+    display: flex;
+}
+
+.footer_sns a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 데스크탑용 CSS */
+
+@media (min-width: 1024px) {
+    .nav {
+        height: 68px;
+    }
+
+    .logo_btn {
+        width: 14.5%;
+    }
+
+    .login_btn {
+        width: 11.5%;
+        height: 48px;
+        font-size: 1rem;
+    }
+
+    .header {
+        height: 540px;
+    }
+
+    .header_textbox {
+        gap: 25px;
+        margin-bottom: 95px;
+    }
+
+    .header_txt {
+        font-size: 2.5rem;
+    }
+
+    .header_btn {
+        width: 350px;
+        height: 56px;
+        font-size: 1.25rem;
+    }
+
+    .header_imgbox {
+        width: 66%;
+    }
+
+    .contents_box {
+        height: 720px;
+    }
+
+    .contents_card {
+        width: 59%;
+        gap: 8%;
+        border-radius: 15px;
+    }
+
+    .card_imgbox {
+        width: 58.5%;
+    }
+
+    .card_textbox {
+        gap: 30px;
+    }
+
+    .card_textbox span {
+        font-size: 1rem;
+    }
+
+    .card_textbox h2 {
+        font-size: 2.5rem;
+        line-height: 1.4;
+    }
+
+    .card_textbox p {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .contents_card.card2 {
+        gap: 6%;
+    }
+
+    .contents_card.card3 {
+        gap: 3%;
+    }
+
+    .marketing {
+        height: 540px;
+    }
+
+    .marketing_txt {
+        font-size: 2.5rem;
+        margin-bottom: 168px;
+    }
+
+    .marketing_imgbox {
+        width: 66%;
+    }
+
+    .footer {
+        height: 160px;
+    }
+
+    .footer_info {
+        font-size: 1rem;
+    }
+
+    .footer_menu {
+        gap: 30px;
+    }
+
+    .footer_sns {
+        gap: 12px;
+    }
+}
+
+/* 태블릿용 CSS */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .logo_btn {
+        width: 22.5%;
+    }
+
+    .login_btn {
+        width: 17.5%;
+        height: 48px;
+        font-size: 1rem;
+    }
+
+    .header {
+        height: 420px;
+    }
+
+    .header_textbox {
+        gap: 18px;
+        margin-bottom: 95px;
+    }
+
+    .header_txt {
+        font-size: 2.15rem;
+    }
+
+    .header_btn {
+        width: 264px;
+        height: 48px;
+        font-size: 1.125rem;
+    }
+
+    .header_imgbox {
+        width: 75%;
+    }
+
+    .contents_box {
+        height: 520px;
+    }
+
+    .contents_card {
+        width: 66%;
+        gap: 10%;
+        border-radius: 15px;
+    }
+
+    .card_imgbox {
+        width: 54%;
+    }
+
+    .card_textbox {
+        gap: 27px;
+    }
+
+    .card_textbox span {
+        font-size: 0.9rem;
+    }
+
+    .card_textbox h2 {
+        font-size: 1.95rem;
+        line-height: 1.3;
+    }
+
+    .card_textbox p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .contents_card.card2 {
+        gap: 6.5%;
+    }
+
+    .contents_card.card3 {
+        gap: 6%;
+    }
+
+    .marketing {
+        height: 420px;
+    }
+
+    .marketing_txt {
+        font-size: 2.15rem;
+        margin-bottom: 168px;
+    }
+
+    .marketing_imgbox {
+        width: 70%;
+    }
+
+    .footer {
+        height: 150px;
+    }
+
+    .footer_info {
+        font-size: 1rem;
+    }
+
+    .footer_menu {
+        gap: 20px;
+    }
+
+    .footer_sns {
+        gap: 10px;
+    }
+}
+
+/* 모바일용 CSS */
+
+@media (max-width: 767px) {
+    .logo_btn {
+        width: 27%;
+    }
+
+    .login_btn {
+        width: 19.5%;
+        height: 44px;
+        font-size: 0.95rem;
+    }
+
+    .header {
+        height: 430px;
+    }
+    
+    .header_textbox {
+        align-items: center;
+        gap: 18px;
+        width: 100%;
+        position: absolute;
+        top: 52px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .header_txt {
+        font-size: 1.8rem;
+    }
+
+    .header_txt br {
+        display: none;
+    }
+
+    .header_btn {
+        width: 196px;
+        height: 44px;
+        font-size: 0.95rem;
+    }
+
+    .header_imgbox {
+        width: 100%;
+        bottom: 0;
+    }
+
+    .contents_box {
+        height: 420px;
+    }
+
+    .contents_card {
+        width: 66%;
+        gap: 8.5%;
+        border-radius: 15px;
+    }
+
+    .card_imgbox {
+        width: 52%;
+    }
+
+    .card_textbox {
+        gap: 13px;
+    }
+
+    .card_textbox span {
+        font-size: 0.9rem;
+    }
+
+    .card_textbox h2 {
+        font-size: 1.65rem;
+        line-height: 1.3;
+    }
+
+    .card_textbox p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .contents_card.card2 {
+        gap: 5%;
+    }
+
+    .contents_card.card3 {
+        gap: 5%;
+    }
+
+    .text_box2 h2, .text_box3 h2 {
+        font-size: 1.6rem;
+    }
+
+    .marketing {
+        height: 430px;
+    }
+
+    .marketing_txt {
+        align-items: center;
+        position: absolute;
+        top: 43px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 1.95rem;
+    }
+
+    .marketing_imgbox {
+        width: 100%;
+    }
+
+    .footer {
+        height: 140px;
+    }
+
+    .footer_info, .footer_menu a{
+        font-size: 0.95rem;
+    }
+
+    .footer_menu {
+        gap: 14px;
+    }
+
+    .footer_sns {
+        gap: 9px;
+    }
+}
