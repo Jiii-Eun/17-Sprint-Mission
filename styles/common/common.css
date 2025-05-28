@@ -94,6 +94,8 @@
 @media screen and (max-width: 48rem) {
   :root {
     --navbar-margin: 0 var(--spacing-md);
+    --section-blue-img-width: min(100%, 32rem);
+    --section-blue-height: 33.75rem;
     --section-blue-container-margin: 2.5rem 0 0;
     --section-blue-container-bottom-margin: 0;
     --section-main-img-width: 21.5rem;
