@@ -13,16 +13,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: var(--spacing-lg);
   width: 100%;
-  margin-bottom: 2.125rem;
+  margin-bottom: var(--sign-header-margin-bottom);
 }
 .sign__logo {
-  width: 6.25rem;
-  height: 6.25rem;
+  width: var(--sign-logo-width);
+  height: var(--sign-logo-width);
 }
 .sign__title {
-  font-size: 4.125rem;
+  font-size: var(--sign-title-font-size);
   font-weight: 700;
   font-family: "ROKAF_Sans_Medium";
   color: var(--primary-color);
@@ -32,7 +32,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  width: var(--sign-form-width);
+  gap: var(--spacing-lg);
+  padding: var(--sign-form-padding);
 }
 .sign__input-wrapper {
   position: relative;
@@ -40,7 +42,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 12px;
+  gap: var(--spacing-sm);
   cursor: pointer;
 }
 .sign__label {
@@ -49,20 +51,16 @@
   line-height: 1.5rem;
 }
 .sign__input {
-  width: 40rem;
-  height: 3.5rem;
-  padding: 0 20px;
+  width: var(--sign-input-width);
+  height: var(--sign-input-height);
+  padding: var(--sign-input-padding);
   border: none;
-  border-radius: 12px;
+  border-radius: var(--border-radius-sm);
   font-size: var(--font-size-400);
   font-weight: 400;
   background-color: var(--gray-100-color);
 }
 @media screen and (max-width: 75rem) {
-  .sign__form {
-    width: 100%;
-    padding: 0 40px;
-  }
   .sign__input {
     width: 100%;
   }
@@ -72,9 +70,7 @@
 }
 @media screen and (max-width: 48rem) {
   .sign__form {
-    padding: 0 16px;
     box-sizing: content-box;
-    width: min(100%, 25rem);
   }
   .sign__label {
     font-size: var(--font-size-400);
@@ -83,11 +79,7 @@
     font-size: var(--font-size-900);
   }
   .sign__header {
-    gap: 10px;
-  }
-  .sign__logo {
-    width: 3.2rem;
-    height: 3.2rem;
+    gap: var(--spacing-sm);
   }
 }
 .sign__visibility-icon {
@@ -97,14 +89,14 @@
   background-size: cover;
   right: 1rem;
   bottom: 1rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: var(--font-size-600);
+  height: var(--font-size-600);
   cursor: pointer;
 }
 .sign__btn {
   width: 100%;
-  padding: 1rem 7.75rem;
-  border-radius: 40px;
+  padding: var(--sign-btn-padding);
+  border-radius: var(--border-radius-lg);
   border: none;
   font-size: var(--font-size-500);
   font-weight: 600;
@@ -119,9 +111,9 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem 1.5rem;
-  gap: 20px;
-  border-radius: 8px;
+  padding: var(--sign-sns-login-wrapper-padding);
+  gap: var(--spacing-lg);
+  border-radius: var(--border-radius-xs);
   background-color: #e6f2ff;
 }
 .sign__sns-login-text {
@@ -130,8 +122,8 @@
   color: var(--gray-800-color);
 }
 .sign__sns-icon {
-  width: 2.625rem;
-  height: 2.625rem;
+  width: var(--sign-sns-icon-width);
+  height: var(--sign-sns-icon-width);
   background-color: #e6f2ff;
   cursor: pointer;
 }
@@ -145,5 +137,5 @@
   font-weight: 500;
   color: var(--primary-color);
   text-decoration: underline;
-  margin-left: 0.3125rem;
+  margin-left: var(--spacing-xs);
 }
