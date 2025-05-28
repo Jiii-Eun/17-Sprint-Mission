@@ -69,9 +69,6 @@
   }
 }
 @media screen and (max-width: 48rem) {
-  .sign__form {
-    box-sizing: content-box;
-  }
   .sign__label {
     font-size: var(--font-size-400);
   }
