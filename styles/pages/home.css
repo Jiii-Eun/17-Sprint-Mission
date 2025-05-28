@@ -63,9 +63,6 @@
   .section-blue__title {
     font-size: var(--font-size-800);
   }
-  .section-blue__img {
-    width: 100%;
-  }
 }
 .section-main {
   display: flex;
