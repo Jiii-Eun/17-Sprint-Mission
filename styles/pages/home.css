@@ -1,5 +1,6 @@
 @import url(../common/common.css);
 @import url(../common/header.css);
+@import url(../common/footer.css);
 
 .section-blue {
   display: flex;
@@ -145,53 +146,5 @@
   }
   .section-main__hot-badge {
     font-size: var(--font-size-400);
-  }
-}
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  background-color: #111827;
-}
-.footer__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: var(--footer-container-padding);
-  font-size: var(--font-size-400);
-  font-weight: 400;
-}
-.footer__copyright {
-  color: var(--gray-400-color);
-  padding-top: var(--footer-copyright-padding-top);
-}
-.footer__info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--spacing-xl);
-  color: var(--gray-200-color);
-}
-.footer__sns-icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--sapcing-sm);
-}
-.footer__sns-icon {
-  width: var(--font-size-500);
-  height: var(--font-size-500);
-}
-@media screen and (max-width: 48rem) {
-  .footer__container {
-    flex-wrap: wrap;
-  }
-  .footer__copyright {
-    order: 3;
-    width: 100%;
-    padding-top: 36px;
   }
 }
