@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Pretendard;
+    font-family:  "Pretendard Variable", Pretendard, sans-serif;
 }
 
 .header {
@@ -14,6 +14,11 @@
     padding: 0 200px;
     background-color: #ffffff;
     border-bottom: 1px solid #DFDFDF;
+    position: fixed;
+}
+
+.header img {
+   width: 153px;
 }
 
 .login_button {
@@ -32,6 +37,7 @@
 
 .login_button:hover {
     background-color: #1251AA;
+    cursor: pointer;
 }
 
 .banner_top {
@@ -78,13 +84,17 @@
     background-color: #1251AA;
 }
 
-.home_contaner {
+.home_container {
     width: 988px;
     display: flex;
     align-items: center;
     margin: 0 auto;
     padding: 138px 0;
     gap: 64px;
+}
+
+.home_container img {
+  width: 50%
 }
 
 .home_preface {
@@ -137,6 +147,7 @@
     gap: 10px;
     display: flex;
     justify-content: space-between;
+    
 }
 
 .foot_text {
@@ -162,3 +173,129 @@
     display: flex;
     gap: 12px;
 }
+
+@media (min-wdith: 744px) {
+  .header {
+    padding: 10px 24px 9px;
+  }
+}
+
+
+
+
+
+
+/* 로그인, 회원가입 페이지 */
+
+.body {
+  background-color: #FCFCFC;
+}
+
+.container {
+  margin: 231px auto;
+  height: 849px;
+  width: 640px;
+}
+
+.login_icon {
+  margin: 0 auto 40px;
+  width: 396px;
+  height: 132px;
+  background-image: url(images/logo/panda-market-logo.png);
+  background-size: cover;
+}
+
+.login_box {
+  text-align: left;
+  width: 100%;
+}
+
+.login_container {
+  
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #1F2937;
+  
+
+}
+
+#login-email, #login-password, #login-username, #login-password-check {
+  background-color: #F3F4F6;
+  border: 2px #F3F4F6;
+  width: 100%;
+  height: 56px;
+  border-radius: 12px;
+  padding: 16px 484px 12px 24px;
+  margin: 16px 0 24px;
+}
+
+input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #1F2937;
+  
+}
+
+.login_button_login-html {
+  background-color: #3692FF;
+  border: 0px ;
+  width: 100%;
+  height: 56px;
+  border-radius: 40px;
+  padding: 16px 124px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  color: #F3F4F6;
+}
+
+.login_button_login-html:hover {
+    background-color: #1251AA;
+    cursor: pointer;
+}
+
+.social_login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 74px;
+  border-radius: 8px;
+  padding: 16px 23px;
+  background-color: #e6f2ff;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #1F2937;
+}
+.social_login a {
+  margin-inline-start: 16px;
+}
+
+.signup_in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #1F2937;
+}
+
+.signup_in a {
+  text-decoration: none;
+  line-height: 24px;
+  margin-left: 4px;
+  color: #3692FF;
+}
+/* .login_box_email {
+  border: 1px solid rgb(228, 229, 237);
+  border-radius: 8px;
+  display: inline-flex;
+  outline: none;
+} */
