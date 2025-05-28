@@ -36,6 +36,8 @@ header {
   padding: 0 200px;
   background-color: #ffffff;
   border-bottom: 1px solid #dfdfdf;
+  position: sticky;
+  top: 0;
 }
 
 footer {
