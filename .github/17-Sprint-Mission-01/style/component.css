@@ -42,22 +42,27 @@
 
 /********* btn style *********/
 
-a[class*="btn-"] {
+a[class*="btn-"],
+button[class*="btn-"] {
   display: inline-block;
   background-color: var(--primary-100);
   color: var(--Secondary-gray-50);
   font-weight: 600;
 }
-a[class*="btn-"]:hover {
+a[class*="btn-"]:hover,
+button[class*="btn-"]:hover {
   background-color: var(--primary-200);
 }
-a[class*="btn-"]:active {
+a[class*="btn-"]:active,
+button[class*="btn-"]:active {
   background-color: var(--primary-300);
 }
-a[class*="btn-"]:is(.inactive) {
+a[class*="btn-"]:is(.inactive),
+button[class*="btn-"]:is(.inactive) {
   background-color: var(--Secondary-gray-400);
 }
-a[class*="btn-"]:is(.outline) {
+a[class*="btn-"]:is(.outline),
+button[class*="btn-"]:is(.outline) {
   border: 1px solid var(--primary-100);
   background-color: var(--Secondary-gray-50);
   color: var(--primary-100);
@@ -85,4 +90,18 @@ a[class*="btn-"]:is(.outline) {
   border-radius: 0.8rem;
   font-size: 1.6rem;
   line-height: 2.6rem;
+}
+
+/********* input style *********/
+
+label {
+  display: block;
+}
+input {
+  border: 0;
+  background-color: var(--Secondary-gray-100);
+  outline-color: var(--primary-100);
+}
+input[type="password"]:has(.btn_visibility) {
+  padding-right: 7rem;
 }

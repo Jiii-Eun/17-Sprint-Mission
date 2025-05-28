@@ -51,7 +51,10 @@ input,
 label {
   line-height: 1.1;
 }
-
+button {
+  border: 0;
+  cursor: pointer;
+}
 /* 제목에 대한 text-wrap을 balance로 설정합니다. */
 h1,
 h2,
@@ -71,6 +74,20 @@ img,
 picture {
   max-width: 100%;
   display: block;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+}
+legend {
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 0;
+  height: 0;
+  line-height: 0;
 }
 
 /* input 및 button 항목들이 글꼴을 상속하도록 합니다. */
