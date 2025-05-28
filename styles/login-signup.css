@@ -53,6 +53,20 @@
   background-color: #f3f4f6;
   padding: 10px;
   border-style: none;
+  width: 100%;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-wrapper img {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 25%;
+  right: 10px;
 }
 
 .login-btn,
