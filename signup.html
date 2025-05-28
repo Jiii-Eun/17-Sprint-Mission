@@ -12,29 +12,37 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
     <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/login.css" />
+    <link rel="stylesheet" href="styles/login-signup.css" />
   </head>
 
   <body>
-    <div id="loginPage" class="login-page">
-      <a href="/" class="login-img">
-        <img src="images/logo.png" alt="판다마켓" class="login-log" />
+    <div id="signupPage" class="signup-page">
+      <a href="/" class="signup-img">
+        <img src="images/logo.png" alt="판다마켓" class="signup-logo" />
       </a>
-      <div class="login-content">
-        <form action="/login" method="POST" class="login-form">
+      <div class="signup-content">
+        <form action="/signup" method="POST" class="signup-form">
           <div class="form-group">
             <label for="userId">이메일</label>
             <input id="userId" type="email" name="email" />
           </div>
           <div class="form-group">
+            <label for="nickname">닉네임</label>
+            <input id="nickname" type="text" name="text" />
+          </div>
+          <div class="form-group">
             <label for="password">비밀번호</label>
             <input id="password" type="password" name="password" />
           </div>
-          <a href="login.html" class="login-btn button">로그인</a>
+          <div class="form-group">
+            <label for="passwordCheck">비밀번호 확인</label>
+            <input id="passwordCheck" type="text" name="text" />
+          </div>
+          <a href="login.html" class="signup-btn button">회원가입</a>
         </form>
         <div class="simple-login">
           간편 로그인하기
-          <div class="login-icon-group">
+          <div class="signup-icon-group">
             <a href="https://www.google.com/"
               ><img src="images/google.png" alt="google-icon"
             /></a>
@@ -43,8 +51,8 @@
             /></a>
           </div>
         </div>
-        <div class="footer-sign-up">
-          판다마켓이 처음이신가요?<a href="/signup.html">회원가입</a>
+        <div class="footer-login-up">
+          이미 회원이신가요?<a href="/login.html">로그인</a>
         </div>
       </div>
     </div>
