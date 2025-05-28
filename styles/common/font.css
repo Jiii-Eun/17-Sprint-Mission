@@ -1,8 +1,7 @@
 @font-face {
   font-family: "ROKAF_Sans_Medium";
   font-weight: 400;
-  src: url("/assets/fonts/ROKAF_Sans/ROKAF_Sans_Medium.otf") format("opentype"),
-    url("/assets/fonts/ROKAF_Sans/ROKAF_Sans_Medium.ttf") format("truetype");
+  src: url("/assets/fonts/ROKAF_Sans/ROKAF_Sans_Medium.ttf") format("truetype");
 }
 @font-face {
   font-family: "pretendard";
