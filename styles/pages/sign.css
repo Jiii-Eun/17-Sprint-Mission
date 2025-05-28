@@ -58,6 +58,38 @@
   font-weight: 400;
   background-color: var(--gray-100-color);
 }
+@media screen and (max-width: 75rem) {
+  .sign__form {
+    width: 100%;
+    padding: 0 40px;
+  }
+  .sign__input {
+    width: 100%;
+  }
+  .sign__input-wrapper {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .sign__form {
+    padding: 0 16px;
+    box-sizing: content-box;
+    width: min(100%, 25rem);
+  }
+  .sign__label {
+    font-size: var(--font-size-400);
+  }
+  .sign__title {
+    font-size: var(--font-size-900);
+  }
+  .sign__header {
+    gap: 10px;
+  }
+  .sign__logo {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
 .sign__visibility-icon {
   position: absolute;
   background-image: url("/assets/icons/ic_visibility_off.svg");
@@ -115,4 +147,3 @@
   text-decoration: underline;
   margin-left: 0.3125rem;
 }
-/* todo: 요소간 gap 수정하기 */
