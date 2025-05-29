@@ -11,7 +11,102 @@
   --gray-200-color: #e5e7eb;
   --gray-100-color: #f3f4f6;
   --gray-50-color: #f9fafb;
+
+  /* Typography */
+  --font-primary: "pretendard", sans-serif;
+  --font-secondary: "ROKAF_Sans_Medium", sans-serif;
+
+  --font-size-300: 0.75rem; /* 12px */
+  --font-size-400: 1rem; /* 16px, base */
+  --font-size-450: 1.125rem; /* 18px */
+  --font-size-500: 1.25rem; /* 20px,*/
+  --font-size-600: 1.5rem; /* 24px */
+  --font-size-700: 1.75rem; /* 28px */
+  --font-size-800: 2rem; /* 32px */
+  --font-size-900: 2.25rem; /* 36px */
+  --font-size-1000: 2.5rem; /* 40px */
+
+  /* spacing */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --spacing-xxxl: 128px;
+
+  /* border-radius */
+  --border-radius-xs: 8px;
+  --border-radius-sm: 12px;
+  --border-radius-md: 20px;
+  --border-radius-lg: 40px;
+
+  /* 배너 및 콘텐츠 크기 */
+  --navbar-btn-width: 8rem;
+  --navbar-btn-height: 3rem;
+
+  --section-blue-height: 33.75rem;
+  --section-blue-img-width: 42rem;
+  --section-main-height: 45rem;
+  --section-main-wrapper-width: 62rem;
+  --section-main-img-width: 35.625rem;
+
+  --sign-form-width: unset;
+  --sign-logo-width: 6.25rem;
+  --sign-title-font-size: 4.125rem;
+  --sign-input-width: 40rem;
+  --sign-input-height: 3.5rem;
+  --sign-sns-icon-width: 2.625rem;
+
+  /* 여백 및 간격 */
+  --header-padding: 9px 0;
+  --navbar-margin: 0 200px;
+
+  --section-blue-container-margin: 0 0 3.75rem;
+  --section-blue-container-bottom-margin: 0 0 10rem;
+  --section-main-margin: 0;
+  --section-main_wrapper-padding: 0;
+
+  --footer-container-padding: 2rem 6.5rem 6.75rem;
+  --footer-copyright-padding-top: 0;
+
+  --sign-form-padding: 0;
+  --sign-header-margin-bottom: 2.125rem;
+  --sign-input-padding: 0 20px;
+  --sign-btn-padding: 1rem 7.75rem;
+  --sign-sns-login-wrapper-padding: 1rem 1.5rem;
+}
+
+@media screen and (max-width: 75rem) {
+  :root {
+    --navbar-margin: 0 var(--spacing-lg);
+    --section-blue-height: 48rem;
+    --section-blue-container-margin: 5rem 0 0;
+    --section-blue-container-bottom-margin: 5rem 0 0;
+    --section-main-margin: 1.875rem 0;
+    --section-main_wrapper-padding: var(--spacing-xl);
+    --section-main-img-width: 43.5rem;
+
+    --sign-form-width: 100%;
+    --sign-form-padding: 0 40px;
+  }
+}
+@media screen and (max-width: 48rem) {
+  :root {
+    --navbar-margin: 0 var(--spacing-md);
+    --section-blue-img-width: min(100%, 32rem);
+    --section-blue-height: 33.75rem;
+    --section-blue-container-margin: 2.5rem 0 0;
+    --section-blue-container-bottom-margin: 0;
+    --section-main-img-width: 21.5rem;
+    --footer-container-padding: var(--spacing-xl);
+    --footer-copyright-padding-top: 36px;
+
+    --sign-form-padding: 0 var(--spacing-md);
+    --sign-form-width: min(100%, 25rem);
+    --sign-logo-width: 3.2rem;
+  }
 }
 body {
-  font-family: pretendard, sans-serif;
+  font-family: var(--font-primary);
 }

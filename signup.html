@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/pages/sign.css" />
     <title>판다마켓</title>
+    <link rel="icon" href="./assets/icons/favicon.png" type="image/x-icon" />
   </head>
   <body>
     <div class="sign">
@@ -14,7 +15,9 @@
           src="./assets/imgs/panda_icon_small.svg"
           alt="판다마켓 로고"
         />
-        <h1 class="sign__title"><a href="/">판다마켓</a></h1>
+        <h1 class="sign__title">
+          <a href="/" aria-label="홈으로 이동">판다마켓</a>
+        </h1>
       </div>
       <form class="sign__form">
         <div class="sign__input-wrapper">
@@ -61,11 +64,11 @@
             placeholder="비밀번호를 다시 입력하세요"
             required
           />
-          <img
+          <button
             class="sign__visibility-icon"
-            src="/assets/icons/ic_visibility_off.svg"
-            alt="비밀번호 보이기 아이콘"
-          />
+            aria-label="비밀번호 표시"
+            type="button"
+          ></button>
         </div>
         <button type="submit" class="sign__btn">회원가입</button>
         <section class="sign__sns-login-wrapper">
@@ -76,11 +79,13 @@
                 class="sign__sns-icon"
                 src="./assets/icons/ic_google.svg"
                 alt="구글 아이콘"
+                aria-label="구글 계정으로 로그인"
               />
             </a>
             <a
               href="https://www.kakaocorp.com/page/"
               class="sign__sns-sign-btn"
+              aria-label="카카오톡 계정으로 로그인"
             >
               <img
                 class="sign__sns-icon"
@@ -92,7 +97,12 @@
         </section>
         <div class="sign__signup-guide">
           이미 회원이신가요?
-          <a class="sign__signup-link" href="/login.html">로그인</a>
+          <a
+            class="sign__signup-link"
+            href="/login.html"
+            aria-label="로그인 화면으로 이동"
+            >로그인</a
+          >
         </div>
       </form>
     </div>

@@ -5,6 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/pages/home.css" />
     <title>판다마켓</title>
+    <link rel="icon" href="./assets/icons/favicon.png" type="image/x-icon" />
+    <!-- Primary Meta Tags -->
+    <title>판다마켓</title>
+    <meta name="title" content="판다마켓" />
+    <meta name="description" content="일상의 모든 물건을 거래해보세요" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta
+      property="og:url"
+      content="https://awkward-panda-market.netlify.app/"
+    />
+    <meta property="og:title" content="판다마켓" />
+    <meta property="og:description" content="일상의 모든 물건을 거래해보세요" />
+    <meta property="og:image" content="https://i.imgur.com/ORYlHQw.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://awkward-panda-market.netlify.app/"
+    />
+    <meta property="twitter:image" content="https://i.imgur.com/ORYlHQw.png" />
+    <meta property="twitter:title" content="판다마켓" />
+    <meta
+      property="twitter:description"
+      content="일상의 모든 물건을 거래해보세요"
+    />
   </head>
   <body>
     <header class="header">
@@ -15,9 +46,16 @@
             src="./assets/imgs/panda_icon_small.svg"
             alt="판다마켓 로고"
           />
-          <h1 class="navbar__title"><a href="/">판다마켓</a></h1>
+          <h1 class="navbar__title">
+            <a href="/" aria-label="홈으로 이동">판다마켓</a>
+          </h1>
         </div>
-        <a class="navbar__login-btn" href="./login.html">로그인</a>
+        <a
+          class="navbar__login-btn"
+          href="./login.html"
+          aria-label="로그인 화면으로 이동"
+          >로그인</a
+        >
       </nav>
     </header>
     <section class="section-blue">
@@ -26,7 +64,12 @@
           일상의 모든 물건을<br />
           거래해 보세요
         </h1>
-        <a class="section-blue__btn" href="./items.html">구경하러 가기</a>
+        <a
+          class="section-blue__btn"
+          href="./items.html"
+          aria-label="거래 화면으로 이동"
+          >구경하러 가기</a
+        >
       </div>
       <img
         class="section-blue__img"
@@ -103,29 +146,47 @@
       <div class="footer__container">
         <span class="footer__copyright">©codeit - 2024</span>
         <div class="footer__info">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="faq.html">FAQ</a>
+          <a href="privacy.html" aria-label="개인정보 관리 정책 화면으로 이동"
+            >Privacy Policy</a
+          >
+          <a href="faq.html" aria-label="FAQ 화면으로 이동">FAQ</a>
         </div>
         <div class="footer__sns-icons">
-          <a href="https://www.facebook.com" target="_blank"
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="페이스북 페이지로 이동"
             ><img
               class="footer__sns-icon"
               src="./assets/icons/ic_facebook.svg"
               alt="페이스북 아이콘"
           /></a>
-          <a href="https://www.x.com" target="_blank"
+          <a
+            href="https://www.x.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="트위터 페이지로 이동"
             ><img
               class="footer__sns-icon"
               src="./assets/icons/ic_twitter.svg"
               alt="트위터 아이콘"
           /></a>
-          <a href="https://www.youtube.com" target="_blank"
+          <a
+            href="https://www.youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="유튜브 페이지로 이동"
             ><img
               class="footer__sns-icon"
               src="./assets/icons/ic_youtube.svg"
               alt="유튜브 아이콘"
           /></a>
-          <a href="https://www.instagram.com" target="_blank"
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="인스타그램 페이지로 이동"
             ><img
               class="footer__sns-icon"
               src="./assets/icons/ic_instagram.svg"
