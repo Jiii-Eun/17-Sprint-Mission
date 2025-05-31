@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>판다마켓 로그인</title>
+    <title>판다마켓 회원가입입</title>
     <link rel="stylesheet" href="login.css" />
   </head>
   <body>
@@ -25,6 +25,18 @@
         </div>
 
         <div class="form-group">
+          <label for="nickname">닉네임</label>
+          <input
+            type="text"
+            id="nickname"
+            name="nickname"
+            placeholder="닉네임을 입력하세요"
+            required
+            autocomplete="nickname"
+          />
+        </div>
+
+        <div class="form-group">
           <label for="password">비밀번호</label>
           <div class="password-input">
             <input
@@ -42,7 +54,23 @@
             </button>
           </div>
         </div>
-        <button type="submit" class="login-button">로그인</button>
+
+        <div class="form-group">
+          <label for="confirm-password">비밀번호 확인</label>
+          <div class="confirm-input">
+            <input
+              type="confirm-password"
+              id="confirm-password"
+              name="confirm-password"
+              required
+            />
+            <button type="button" class="toggle-password">
+              <img src="./img/btn_visibility_on_24px.svg" alt="비밀번호 보기" />
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="login-button">회원가입</button>
       </form>
       <section>
         <div class="ez-login-container">
@@ -65,8 +93,8 @@
       </section>
       <footer class="help-text">
         <p>
-          판다마켓이 처음이신가요?
-          <a href="./signup.html" role="button">회원가입</a>
+          이미 회원이신가요?
+          <a href="./login.html" role="button">로그인</a>
         </p>
       </footer>
     </main>
