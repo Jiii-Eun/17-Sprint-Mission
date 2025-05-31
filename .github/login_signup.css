@@ -19,12 +19,14 @@ body {
   height: 132px;
 }
 
-.login-container {
+.login-container,
+.register-container {
   border-radius: 12px;
   width: 640px;
 }
 
-.login-form {
+.login-form,
+.register-form {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -75,7 +77,8 @@ input[type="password"]::-ms-reveal {
   visibility: hidden;
 }
 
-.password-input {
+.password-input,
+.confirm-input {
   display: flex;
   width: 100%;
   height: 56px;
@@ -87,7 +90,8 @@ input[type="password"]::-ms-reveal {
   padding: 16px 24px;
 }
 
-.password-input input {
+.password-input input,
+.confirm-input input {
   flex: 1;
   border: none;
   padding-left: 0px;
