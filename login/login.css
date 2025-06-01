@@ -33,7 +33,7 @@ form {
 }
 
 label {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
 }
 
@@ -67,9 +67,25 @@ input {
     background-color: #E6F2FF;
     margin: 24px;
     border-radius: 8px;
+    position: relative;
 }
 
 .simple-text {
     padding-left: 23px;
     padding-top: 23px;
+}
+
+a {
+    color: #3692FF;
+}
+
+.social-container {
+    display: flex;
+    position: absolute;
+    right: 16px;
+    top: 15px;
+}
+
+.social-icon {
+    text-decoration: none;
 }
