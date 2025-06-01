@@ -25,13 +25,6 @@ body {
     margin-bottom: 40px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 16px;
-}
-
 .email-container {
     display: flex;
     flex-direction: column;
@@ -99,8 +92,4 @@ a {
     right: 16px;
     top: 15px;
     gap: 16px;
-}
-
-.social-icon {
-    text-decoration: none;
 }
