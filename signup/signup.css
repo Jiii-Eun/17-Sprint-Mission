@@ -1,0 +1,89 @@
+.pandalogo {
+    width: 266px;
+    height: 90px;
+    margin-bottom: 40px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+label {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+input {
+    width: 640px;
+    height: 56px;
+    background-color: #F3F4F6;
+    border: 1px solid #F3F4F6;
+    border-radius: 12px;
+    padding-left: 24px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.eyeclosed-icon {
+    position: absolute;
+    right: 24px;
+    top: 20px;
+    width: 21px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.eyeopen-icon {
+    position: absolute;
+    right: 24px;
+    top: 20px;
+    width: 21px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.signup-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 640px;
+    height: 56px;
+    background-color: #3692FF;
+    margin-top: 24px;
+    color: white;
+    font-size: 16px;
+    border-radius: 40px;
+    text-decoration: none;
+}
+
+.simple-login {
+    display: flex;
+    flex-direction: column;
+    width: 640px;
+    height: 74px;
+    background-color: #E6F2FF;
+    margin: 24px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.simple-text {
+    padding-left: 23px;
+    padding-top: 23px;
+}
+
+a {
+    color: #3692FF;
+}
+
+.social-container {
+    display: flex;
+    position: absolute;
+    right: 16px;
+    top: 15px;
+    gap: 16px;
+}

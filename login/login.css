@@ -1,41 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'Noto Sans KR', sans-serif;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .pandalogo {
     width: 266px;
     height: 90px;
     margin-bottom: 40px;
 }
 
-.email-container {
+.container {
     display: flex;
     flex-direction: column;
     gap: 16px;
-}
-
-.password-container {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;  
-    position: relative;
 }
 
 label {
@@ -50,6 +22,19 @@ input {
     border: 1px solid #F3F4F6;
     border-radius: 12px;
     padding-left: 24px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.eyeclosed-icon {
+    position: absolute;
+    right: 24px;
+    top: 20px;
+    width: 21px;
+    height: 18px;
+    cursor: pointer;
 }
 
 .login-button {
