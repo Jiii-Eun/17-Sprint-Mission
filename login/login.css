@@ -4,10 +4,11 @@
     margin-bottom: 40px;
 }
 
-.container {
+.email-container,
+.password-container {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 10px;
 }
 
 label {
@@ -65,10 +66,6 @@ input {
 .simple-text {
     padding-left: 23px;
     padding-top: 23px;
-}
-
-a {
-    color: #3692FF;
 }
 
 .social-container {
