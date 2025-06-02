@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../global.css">
+        <link rel="stylesheet" href="login.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <title>로그인</title>
+    </head>
+    <body>
+        <header>
+            <img class="pandalogo" src="login-image/pandalogo.png" alt="판다마켓로고">
+        </header>
+        <form>
+            <div class="email-container">
+                <label for="login-email">이메일<br></label>
+                <input id="login-email" name="email" type="email" placeholder="이메일을 입력하세요.">
+            </div>
+            <div class="password-container">
+                <label for="login-password">비밀번호<br></label>
+                <div class="input-wrapper">
+                <input id="login-password" name="password" type="password" placeholder="비밀번호를 입력하세요.">
+                <img src="/login/login-image/eyeclosed.png" alt="비밀번호 보기" class="eyeclosed-icon">
+                </div>
+            </div>
+        </form>
+        <a href="/login" class="login-button">로그인</a>
+        <div class="simple-login">
+            <p class="simple-text">간편 로그인하기</p>
+            <div class="social-container">
+                <a href="https://www.google.com/" target="_blank" class="social-icon">
+                    <img src="/login/login-image/google.png" target="_blank">
+                </a>
+                <a href="https://www.kakaocorp.com/page/" target="_blank">
+                    <img src="/login/login-image/kakaotalk.png" target="_blank" class="social-icon">
+                </a>
+            </div>
+        </div>
+        <footer>
+            <p>판다마켓이 처음이신가요? <a href="/signup">회원가입</a></p>
+        </footer>
+    </body>
+</html>
