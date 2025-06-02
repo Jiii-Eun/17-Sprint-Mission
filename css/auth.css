@@ -114,7 +114,7 @@
   
   .auth_wrapper{
     height: 100%;
-    padding: 5rem;
+    padding: 1rem;
   }
 
   .logo h1{
@@ -130,7 +130,5 @@
   
   .width_container{
     max-width: 25rem;
-    padding: 0 1rem;
-    box-sizing: unset;
   }
 }
