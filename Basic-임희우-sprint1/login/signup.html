@@ -18,23 +18,25 @@
         <div class="login-body">
           <form id="login-form" method="post">
             <div class="form-container">
-              <label class="input-type-txt">이메일</label>
+              <label class="input-type-txt" for="email">이메일</label>
               <input
                 id="email"
                 class="input-box"
                 type="email"
                 name="email"
                 placeholder="이메일 입력"
+                required
               />
-              <label class="input-type-txt">닉네임</label>
+              <label class="input-type-txt" for="nickname">닉네임</label>
               <input
                 id="nickname"
                 class="input-box"
                 type="text"
                 name="nickname"
                 placeholder="닉네임 입력"
+                required
               />
-              <label class="input-type-txt">비밀번호</label>
+              <label class="input-type-txt" for="password">비밀번호</label>
               <div class="password-wrap">
                 <input
                   id="password"
@@ -42,6 +44,7 @@
                   type="password"
                   name="password"
                   placeholder="비밀번호 입력"
+                  required
                 />
                 <button type="button" class="visibility-btn">
                   <img
@@ -52,7 +55,9 @@
                   />
                 </button>
               </div>
-              <label class="input-type-txt">비밀번호 확인</label>
+              <label class="input-type-txt" for="password-check"
+                >비밀번호 확인</label
+              >
               <div class="password-wrap">
                 <input
                   id="password-check"
@@ -60,13 +65,14 @@
                   type="text"
                   name="password-check"
                   placeholder="비밀번호 다시 입력"
+                  required
                 />
                 <button type="button" class="visibility-btn">
                   <img
                     class="visibility-img"
                     src="../images/btn_visibility_on.png
                   "
-                    alt="비밀번호 덮기기"
+                    alt="비밀번호 덮기"
                   />
                 </button>
               </div>
