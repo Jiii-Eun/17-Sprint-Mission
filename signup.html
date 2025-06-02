@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>판다마켓</title>
     <link rel="stylesheet" href="css/import.css" />
-    <link rel="icon" href="image/logo.png" />
     <link rel="stylesheet" href="css/auth.css" />
+    <link rel="icon" href="image/logo.png" />
   </head>
   <body>
     <section class="auth_container">
@@ -19,24 +19,22 @@
           <form action="/signup">
             <div class="user_input">
               <div class="email_input">
-                <label>이메일</label>
-                <input type="email" class="text_tall"/>
+                <label for="user_email">이메일</label>
+                <input class="text_tall" id="user_email" type="email" placeholder="이메일을 입력해주세요"/>
               </div>
               <div class="password_input">
-                <label>비밀번호</label>
+                <label for="user_password">비밀번호</label>
                 <div class="password_view">
-                  <input type="password" class="text_tall" />
-                  <span class="material-symbols-outlined password_icon">visibility_off</span>
-                </div>
+                  <input class="text_tall" id="user_password" type="password" placeholder="비밀번호를 입력해주세요"/>
               </div>
               <div class="password_input check">
-                <label>비밀번호 확인</label>
+                <label for="user_password_check">비밀번호 확인</label>
                 <div class="password_view">
-                  <input type="password" class="text_tall" />
+                  <input class="text_tall" id="user_password_check" type="password" placeholder="비밀번호를 다시 한 번 입력해주세요"/>
                   <span class="material-symbols-outlined password_icon">visibility_off</span>
                 </div>
               </div>
-              <button type="submit" class="auth btn text_tall">로그인</button>
+              <button type="submit" class="auth btn text_tall" disabled>로그인</button>
             </div>
           </form>
           <div class="simple_login">
