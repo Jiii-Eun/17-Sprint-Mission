@@ -1,9 +1,9 @@
 :root {
   --input-box-color: #f3f4f6;
   --input-box-border: 2px solid #3182f6;
-  --btn-color: #3692FF;
-  --btn-txt-color: #F3F4F6;
-  --simple-bg-color: #E6F2FF;
+  --btn-color: #3692ff;
+  --btn-txt-color: #f3f4f6;
+  --simple-bg-color: #e6f2ff;
 }
 
 * {
@@ -81,7 +81,9 @@
 
 .visibility-btn {
   margin-right: 15px;
+  padding: 12px;
   border: none;
+  background-color: var(--input-box-color);
   cursor: pointer;
 }
 
