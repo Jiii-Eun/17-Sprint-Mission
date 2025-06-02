@@ -1,0 +1,294 @@
+html {
+  background-color: #FCFCFC;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: "Pretendard", sans-serif;
+}
+
+.menu {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu img {
+  width: 153px;
+  height: 51px;
+}
+
+.logo_image {
+  margin-left: 400px;
+}
+
+.login_area {
+  margin-right: 400px;
+}
+
+.login_button {
+  width: 128px;
+  height: 48px;
+  background-color: #3692FF;
+  color: #F3F4F6;
+  font-size: 16px;
+  line-height: 26px;
+  vertical-align: middle;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.go_shopping {
+  width: 100%;
+  height: 540px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #CFE5FF;
+}
+
+.go_shopping_content {
+  margin: 200px 0 0;
+  display: flex;
+}
+
+.go_shopping_text {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 140%;
+  vertical-align: middle;
+  color: #374151;
+  margin: 32px 0;
+}
+
+.go_shopping_button {
+  width: 100%;
+  height: 100%;
+  max-width: 357px;
+  max-height: 56px;
+  background-color: #3692FF;
+  color: #F9FAFB;
+  font-size: 20px;
+  line-height: 32px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.main_menu {
+  width: 100%;
+  height: 2160px;
+}
+
+.sub_menu {
+  width: 100%;
+  height: 720px;
+  /* 각 이미지의 위치 : div로 나눈 구역의 중간에 있으므로 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+
+.hot_item {
+  display: flex;
+  width: 100%;
+  max-width: 988px;
+  height: 444px;
+  background-color: #FCFCFC;
+}
+
+.hot_item img {
+  margin: 0 0 0 23.5px;
+  width: 100%;
+  height: auto;
+  max-width: 579px; /* 원래 이미지 최대 크기 제한 */
+}
+
+.hot_item .sub_menu_area {
+  margin: 0 0 0 64px;
+}
+
+.sub_menu_title {
+  margin: 0 0 12px;
+  height: 26px;
+  color: #3692FF;
+  font-family: 'Abhaya Libre ExtraBold';
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 26px;
+  vertical-align: middle;
+}
+
+.sub_menu_info {
+  margin: 0 0 24px 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  letter-spacing: 2%;
+  vertical-align: middle;
+  color: #374151;
+}
+
+.search {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  max-width: 988px;
+  height: 444px;
+  background-color: #FCFCFC;
+}
+
+.search img {
+  margin: 0 14px 0 0;
+  width: 100%;
+  height: auto;
+  max-width: 579px; /* 원래 이미지 최대 크기 제한 */
+}
+
+.search p {
+  text-align: right;
+}
+
+.search .sub_menu_area {
+  margin: 0 64px 0 0;
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 988px;
+  height: 444px;
+  background-color: #FCFCFC;
+}
+
+.register img {
+  width: 100%;
+  height: auto;
+  max-width: 579px; /* 원래 이미지 최대 크기 제한 */
+}
+
+.register .sub_menu_area {
+  margin: 0 0 0 64px;
+}
+
+.sub_menu_area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.sub_menu_text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #374151;
+}
+
+.summary_menu {
+  width: 100%;
+  height: 540px;
+  display: flex;
+  justify-content: center;
+  background-color: #CFE5FF;
+}
+
+.summary_menu_info {
+  width: 1110px;
+  display: flex;
+  margin: 143px 0 0;
+  /* justify-content: center; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary_menu_text {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+footer {
+  width: 100%;
+  height: 160px;
+  background-color: #111827;
+}
+
+.footer_info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1120px;
+  padding: 32px 16px 0;
+  margin: 0 auto;
+  box-sizing: border-box; /* 반응형 */
+}
+
+.copyright {
+  color: #9CA3AF;
+}
+
+.policy {
+  display: flex;
+  gap: 30px;
+}
+
+.sns {
+  display: flex;
+  gap: 12px;
+}
+
+a:link {
+  color: #E5E7EB;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1919px) {
+  .logo_image {
+    margin-left: 200px;
+  }
+  
+  .login_area {
+    margin-right: 200px;
+  }
+
+  .login_button {
+    font-size: 14px;
+  }
+}
+
+/* 심화 PART 요소 반응형 */
+@media (max-width: 800px) {
+  .login_button {
+    font-size: 20px;
+  }
+
+  .go_shopping_text {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 140%;
+    vertical-align: middle;
+    color: #374151;
+    margin: 32px 0;
+  }
+
+  .go_shopping_img img {
+    width: 70%;
+    height: auto;
+  }
+}
