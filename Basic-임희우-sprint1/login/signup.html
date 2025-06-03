@@ -1,36 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>판다마켓 회원가입</title>
-    <link rel="stylesheet" href="style/reset.css" />
-    <link rel="stylesheet" href="style/login.css" />
+    <link rel="stylesheet" href="../common/reset.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <main id="login-page">
       <section class="login-container">
-        <img class="logo-img" src="images/logo_large.png" alt="판다마켓 로고" />
+        <img
+          class="logo-img"
+          src="../images/logo_large.png"
+          alt="판다마켓 로고"
+        />
         <div class="login-body">
           <form id="login-form" method="post">
             <div class="form-container">
-              <label class="input-type-txt">이메일</label>
+              <label class="input-type-txt" for="email">이메일</label>
               <input
                 id="email"
                 class="input-box"
                 type="email"
                 name="email"
                 placeholder="이메일 입력"
+                required
               />
-              <label class="input-type-txt">닉네임</label>
+              <label class="input-type-txt" for="nickname">닉네임</label>
               <input
                 id="nickname"
                 class="input-box"
                 type="text"
                 name="nickname"
                 placeholder="닉네임 입력"
+                required
               />
-              <label class="input-type-txt">비밀번호</label>
+              <label class="input-type-txt" for="password">비밀번호</label>
               <div class="password-wrap">
                 <input
                   id="password"
@@ -38,17 +44,20 @@
                   type="password"
                   name="password"
                   placeholder="비밀번호 입력"
+                  required
                 />
                 <button type="button" class="visibility-btn">
                   <img
                     class="visibility-img"
-                    src="images/btn_visibility_off.png
+                    src="../images/btn_visibility_off.png
                   "
                     alt="비밀번호 보기"
                   />
                 </button>
               </div>
-              <label class="input-type-txt">비밀번호 확인</label>
+              <label class="input-type-txt" for="password-check"
+                >비밀번호 확인</label
+              >
               <div class="password-wrap">
                 <input
                   id="password-check"
@@ -56,13 +65,14 @@
                   type="text"
                   name="password-check"
                   placeholder="비밀번호 다시 입력"
+                  required
                 />
                 <button type="button" class="visibility-btn">
                   <img
                     class="visibility-img"
-                    src="images/btn_visibility_on.png
+                    src="../images/btn_visibility_on.png
                   "
-                    alt="비밀번호 덮기기"
+                    alt="비밀번호 덮기"
                   />
                 </button>
               </div>
@@ -75,21 +85,21 @@
               <a class="sns-link" href="https://www.google.com/">
                 <img
                   class="sns-img"
-                  src="images/google_icon.png"
+                  src="../images/google_icon.png"
                   alt="구글 바로가기"
                 />
               </a>
               <a class="sns-link" href="https://www.kakaocorp.com/page/">
                 <img
                   class="sns-img"
-                  src="images/kakao_icon.png"
+                  src="../images/kakao_icon.png"
                   alt="카카오 바로가기"
                 />
               </a>
             </div>
           </div>
           <h6 class="signup-desc">
-            이미 회원이신가요?<a class="sign-up-link" href="./login.html"
+            이미 회원이신가요?<a class="sign-up-link" href="./index.html"
               >로그인</a
             >
           </h6>

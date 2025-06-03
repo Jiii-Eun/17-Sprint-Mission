@@ -1,9 +1,9 @@
 :root {
   --input-box-color: #f3f4f6;
   --input-box-border: 2px solid #3182f6;
-  --btn-color: #3692FF;
-  --btn-txt-color: #F3F4F6;
-  --simple-bg-color: #E6F2FF;
+  --btn-color: #3692ff;
+  --btn-txt-color: #f3f4f6;
+  --simple-bg-color: #e6f2ff;
 }
 
 * {
@@ -81,7 +81,9 @@
 
 .visibility-btn {
   margin-right: 15px;
+  padding: 12px;
   border: none;
+  background-color: var(--input-box-color);
   cursor: pointer;
 }
 
@@ -125,4 +127,32 @@
 .sign-up-link {
   text-decoration: underline;
   color: var(--btn-color);
+}
+
+/* 모바일 */
+@media (min-width: 375px) and (max-width: 767px) {
+  #login-page {
+    padding: 0 16px;
+  }
+
+  .login-container {
+    max-width: 400px;
+    width: 100%;
+  }
+  .logo-img {
+    width: 198px;
+  }
+
+  .login-body {
+    gap: 24px;
+  }
+
+  .input-type-txt {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .input-box {
+    padding: 16px 24px;
+  }
 }

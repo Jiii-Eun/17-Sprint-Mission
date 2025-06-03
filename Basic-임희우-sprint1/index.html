@@ -1,11 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 기본 -->
     <title>판다마켓</title>
-    <link rel="stylesheet" href="style/style.css" />
-    <link rel="stylesheet" href="style/reset.css" />
+    <meta name="description" content="일상의 모든 물건을 거래해보세요" />
+    <!-- 페이스북 최적화 -->
+    <meta property="og:image" content="./images/logo_large.png" />
+    <meta property="og:title" content="판다마켓" />
+    <meta property="og:description" content="일상의 모든 물건을 거래해보세요" />
+    <meta
+      property="og:url"
+      content="https://17-sprint-limheewoo.netlify.app/"
+    />
+    <!-- 트위터 최적화 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="./images/logo_large.png" />
+    <meta name="twitter:title" content="판다마켓" />
+    <meta
+      name="twitter:description"
+      content="일상의 모든 물건을 거래해보세요"
+    />
+    <link rel="stylesheet" href="./home/style.css" />
+    <link rel="stylesheet" href="./common/reset.css" />
     <link
       rel="stylesheet"
       as="style"
@@ -16,25 +34,22 @@
   <body>
     <header>
       <a class="header-icon" href="/">
-        <img src="images/logo_small.png" alt="판다마켓" />
+        <img src="./images/logo_small.png" alt="판다마켓" />
       </a>
-      <a class="header-login-link blue-btn" href="login.html">로그인</a>
+      <a class="header-login-link blue-btn" href="./login/index.html">로그인</a>
     </header>
     <main>
       <section class="banner">
         <div class="banner-inner-box">
           <div class="banner-text-and-btn-container">
-            <h1 class="banner-text">
-              일상의 모든 물건을<br />
-              거래해 보세요
-            </h1>
-            <a class="top-banner-items-link blue-btn" href="items.html"
+            <h1 class="banner-text">일상의 모든 물건을 거래해 보세요</h1>
+            <a class="top-banner-items-link blue-btn" href="./items/index.html"
               >구경하러 가기</a
             >
           </div>
           <img
             class="banner-img"
-            src="images/Img_home_top.png"
+            src="./images/Img_home_top.png"
             alt="Top banner image"
           />
         </div>
@@ -43,13 +58,14 @@
       <section class="cards">
         <div class="card-container">
           <div class="card">
-            <img class="card-img" src="images/Img_home_01.png" alt="Hot Item" />
+            <img
+              class="card-img"
+              src="./images/Img_home_01.png"
+              alt="Hot Item"
+            />
             <div class="card-right-part">
               <h6 class="card-title-type">Hot Item</h6>
-              <h1 class="card-title">
-                인기 상품을<br />
-                확인해 보세요
-              </h1>
+              <h1 class="card-title">인기 상품을 확인해 보세요</h1>
               <h3 class="card-text">
                 가장 HOT한 중고거래 물품을<br />
                 판다 마켓에서 확인해 보세요
@@ -59,13 +75,14 @@
         </div>
         <div class="card-container">
           <div class="card">
-            <img class="card-img" src="images/Img_home_02.png" alt="Hot Item" />
+            <img
+              class="card-img"
+              src="./images/Img_home_02.png"
+              alt="Hot Item"
+            />
             <div class="card-right-part">
               <h6 class="card-title-type">Search</h6>
-              <h1 class="card-title">
-                구매를 원하는<br />
-                상품을 검색하세요
-              </h1>
+              <h1 class="card-title">구매를 원하는 상품을 검색하세요</h1>
               <h3 class="card-text">
                 구매하고 싶은 물품은 검색해서<br />
                 쉽게 찾아보세요
@@ -76,13 +93,14 @@
 
         <div class="card-container">
           <div class="card">
-            <img class="card-img" src="images/Img_home_03.png" alt="Hot Item" />
+            <img
+              class="card-img"
+              src="./images/Img_home_03.png"
+              alt="Hot Item"
+            />
             <div class="card-right-part">
               <h6 class="card-title-type">Register</h6>
-              <h1 class="card-title">
-                판매를 원하는<br />
-                상품을 등록하세요
-              </h1>
+              <h1 class="card-title">판매를 원하는 상품을 등록하세요</h1>
               <h3 class="card-text">
                 어떤 물건이든 판매하고 싶은 상품을<br />
                 쉽게 등록하세요
@@ -102,7 +120,7 @@
           </div>
           <img
             class="banner-img"
-            src="images/Img_home_bottom.png"
+            src="./images/Img_home_bottom.png"
             alt="Bottom banner image"
           />
         </div>
@@ -112,21 +130,23 @@
       <div class="footer-container">
         <span class="footer-text-color">&copy;codeit - 2024</span>
         <div class="privacy-and-faq">
-          <a class="footer-text-color" href="privacy.html">Privacy Policy</a>
-          <a class="footer-text-color" href="faq.html">FAQ</a>
+          <a class="footer-text-color" href="./privacy/index.html"
+            >Privacy Policy</a
+          >
+          <a class="footer-text-color" href="./faq/index.html">FAQ</a>
         </div>
         <div class="sns">
           <a href="https://www.facebook.com/" target="_blank">
-            <img src="images/ic_facebook.png" alt="Facebook" />
+            <img src="./images/ic_facebook.png" alt="Facebook" />
           </a>
           <a href="https://x.com/" target="_blank">
-            <img src="images/ic_twitter.png" alt="Twitter" />
+            <img src="./images/ic_twitter.png" alt="Twitter" />
           </a>
           <a href="https://www.youtube.com/" target="_blank">
-            <img src="images/ic_youtube.png" alt="Youtube" />
+            <img src="./images/ic_youtube.png" alt="Youtube" />
           </a>
           <a href="https://www.instagram.com/" target="_blank">
-            <img src="images/ic_instagram.png" alt="Instagram" />
+            <img src="./images/ic_instagram.png" alt="Instagram" />
           </a>
         </div>
       </div>
