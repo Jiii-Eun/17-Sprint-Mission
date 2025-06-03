@@ -30,7 +30,7 @@
 
 .logo_btn img {
     display: block;
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -62,7 +62,6 @@
     width: 66%;
     height: 100%;
     margin: 0 auto;
-    position: relative;
 }
 
 .header_textbox {
@@ -70,7 +69,6 @@
     flex-direction: column;
     width: auto;
     height: auto;
-    position: absolute;
     z-index: 1;
 }
 
@@ -95,11 +93,6 @@
 
 .header_btn:hover {
     background-color: #1967D6;
-}
-
-.header_imgbox {
-    position: absolute;
-    right: 0;
 }
 
 .header_imgbox img{
@@ -131,7 +124,7 @@
     overflow: hidden;
 }
 
-.card_img {
+.card_imgbox img {
     max-width: 100%;
     height: auto;
     display: block;
@@ -181,7 +174,6 @@
     width: 66%;
     height: 100%;
     margin: 0 auto;
-    position: relative;
 }
 
 .marketing_txt {
@@ -189,13 +181,6 @@
     font-weight: 700;
     color: #374151;
     line-height: 1.4;
-    position: absolute;
-    z-index: 1;
-}
-
-.marketing_imgbox {
-    position: absolute;
-    right: 0;
 }
 
 .marketing_imgbox img{
@@ -214,7 +199,7 @@
     justify-content: space-between;
     width: 66%;
     margin: 0 auto;
-    padding: 30px;
+    padding-top: 30px;
 }
 
 .footer_info {
@@ -248,17 +233,18 @@
 
 /* 데스크탑용 CSS */
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
     .nav {
-        height: 68px;
+        height: 70px;
     }
 
     .logo_btn {
-        width: 14.5%;
+        width: 153px;
+        height: 51px;
     }
 
     .login_btn {
-        width: 11.5%;
+        width: 128px;
         height: 48px;
         font-size: 1rem;
     }
@@ -291,8 +277,8 @@
     }
 
     .contents_card {
-        width: 59%;
-        gap: 8%;
+        width: 988px;
+        gap: 7%;
         border-radius: 15px;
     }
 
@@ -319,11 +305,11 @@
     }
 
     .contents_card.card2 {
-        gap: 6%;
+        gap: 6.5%;
     }
 
     .contents_card.card3 {
-        gap: 3%;
+        gap: 4%;
     }
 
     .marketing {
