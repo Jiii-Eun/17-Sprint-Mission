@@ -2,20 +2,24 @@
 <html lang="ko">
     <head>
         <meta charset="utf-8">
-        <title>로그인</title>
+        <title>회원가입</title>
         <link rel="stylesheet" href="./css/reset.css">
         <link rel="stylesheet" href="./css/font.css">
-        <link rel="stylesheet" href="./css/login.css">
+        <link rel="stylesheet" href="./css/signup.css">
     </head>
     <body>
         <div id="wrapper">
             <a href="/" class="logo">
                 <img src="./image/panda_logo.png" alt="판다마켓 로고">
             </a>
-            <form class="login_formbox">
+            <form class="signup_formbox">
                 <label for="email" class="email_label">
                     <p class="email_label_p">이메일</p>
                     <input id="email" name="email" type="email" placeholder="codeit@email.com">
+                </label>
+                <label for="nickname" class="nickname_label">
+                    <p class="nickname_label_p">닉네임</p>
+                    <input id="nickname" name="nickname" type="text" placeholder="판다">
                 </label>
                 <label for="password" class="password_label">
                     <p class="password_label_p">비밀번호</p>
@@ -25,7 +29,15 @@
                         <img src="./image/password_on.png" alt="비밀번호 보기">
                     </div>
                 </label>
-                <button type="submit" class="login_btn">로그인</button>
+                <label for="password_re" class="password_re_label">
+                    <p class="password_re_label_p">비밀번호 확인</p>
+                    <input id="password_re" name="password_re" type="password" placeholder="asdffff">
+                    <div class="password_re_btn">
+                        <img src="./image/password_on.png" alt="비밀번호 보기">
+                        <img src="./image/password_off.png" alt="비밀번호 가리기">
+                    </div>
+                </label>
+                <button type="submit" class="signup_btn">회원가입</button>
             </form>
             <div class="simple_login">
                 <p>간편 로그인하기</p>
@@ -38,9 +50,9 @@
                     </a>
                 </div>
             </div>
-            <div class="sign_up">
-                <p>판다마켓이 처음이신가요?</p>
-                <a href="/signup.html">회원가입</a>
+            <div class="login">
+                <p>이미 회원이신가요?</p>
+                <a href="/login.html">로그인</a>
             </div>
         </div>
     </body>
