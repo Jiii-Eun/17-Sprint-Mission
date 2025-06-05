@@ -1,6 +1,35 @@
-@import url(../common/common.css);
-@import url(../common/header.css);
+@import url(/styles/common/global.css);
+@import url(/styles/common/tokens.css);
+@import url(/styles/components/header.css);
+@import url(/styles/components/footer.css);
 
+:root {
+  --sign-form-width: unset;
+  --sign-logo-width: 6.25rem;
+  --sign-title-font-size: 4.125rem;
+  --sign-input-width: 40rem;
+  --sign-input-height: 3.5rem;
+  --sign-sns-icon-width: 2.625rem;
+
+  --sign-form-padding: 0;
+  --sign-header-margin-bottom: 2.125rem;
+  --sign-input-padding: 0 20px;
+  --sign-btn-padding: 1rem 7.75rem;
+  --sign-sns-login-wrapper-padding: 1rem 1.5rem;
+}
+@media screen and (max-width: 75rem) {
+  :root {
+    --sign-form-width: 100%;
+    --sign-form-padding: 0 40px;
+  }
+}
+@media screen and (max-width: 48rem) {
+  :root {
+    --sign-form-padding: 0 var(--spacing-md);
+    --sign-form-width: min(100%, 25rem);
+    --sign-logo-width: 3.2rem;
+  }
+}
 .sign {
   display: flex;
   flex-direction: column;

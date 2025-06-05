@@ -1,6 +1,43 @@
-@import url(../common/common.css);
-@import url(../common/header.css);
-@import url(../common/footer.css);
+@import url(/styles/common/global.css);
+@import url(/styles/common/tokens.css);
+@import url(/styles/components/header.css);
+@import url(/styles/components/footer.css);
+
+:root {
+  --section-blue-container-width: 65rem;
+  --section-blue-info-max-width: auto;
+  --section-blue-height: 33.75rem;
+  --section-blue-img-width: 42rem;
+  --section-main-height: 45rem;
+  --section-main-wrapper-width: 62rem;
+  --section-main-img-width: 35.625rem;
+
+  --section-blue-info-margin: 0 0 3.75rem;
+  --section-blue-info-bottom-margin: 0 0 10rem;
+  --section-main-margin: 0;
+  --section-main_wrapper-padding: 0;
+}
+@media screen and (max-width: 75rem) {
+  :root {
+    --section-blue-height: 48rem;
+    --section-blue-container-margin: 5rem 0 0;
+    --section-blue-container-bottom-margin: 5rem 0 0;
+    --section-main-margin: 1.875rem 0;
+    --section-main_wrapper-padding: var(--spacing-xl);
+    --section-main-img-width: 43.5rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  :root {
+    --section-blue-img-width: min(100%, 32rem);
+    --section-blue-info-max-width: 15rem;
+    --section-blue-height: 33.75rem;
+    --section-blue-container-margin: 2.5rem 0 0;
+    --section-blue-container-bottom-margin: 0;
+    --section-main-img-width: 21.5rem;
+    --section-blue-info-bottom-margin: 0 0 5rem;
+  }
+}
 
 .section-blue {
   display: flex;
