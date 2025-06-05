@@ -139,7 +139,7 @@ button {
 .page {
   background-color: #FCFCFC;
   margin: 0 auto;
-  min-width: 988px;
+  width: 100%;
   max-width: 1024px;
   height: 444px;
   display: flex;
@@ -150,7 +150,9 @@ button {
 
 .page_image {
   max-width: 579px;
-  height: 444px;
+  width: 100%;
+  max-height: 444px;
+  height: auto;
 }
 
 h3 {
@@ -205,12 +207,15 @@ footer {
   font-size: 12px;
 }
 
-.foot_line {
-  min-width: 1024px;
+.foot_box {
   max-width: 1120px;
-  height: 100%;
+  width: 100%;
   margin: 0 auto;
-  padding: 30px 0;
+}
+
+.foot_line {
+  height: 100%;
+  padding: 30px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -264,4 +269,42 @@ footer {
     align-items: center;
   }
 
+  .page {
+    height: 708px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .page_image {
+    max-width: 95%;
+    height: auto;
+  }
+
+  .page_text {
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h1, h2, h3 {
+    margin : 10px 0;
+  }
+
+  #hot_item_title, #search_title, #register_title {
+    max-width: 450px;
+  }
+
+  #search.page_text {
+    order: 1;
+  }
+
+  .foot_line {
+    padding: 30px 100px;
+  }
 }
