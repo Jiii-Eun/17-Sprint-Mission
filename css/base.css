@@ -1,5 +1,6 @@
 /* 기본 리셋 및 공통 스타일 */
 @import './variables.css';
+@import './reset.css';
 
 html {
   font-size: 16px;
