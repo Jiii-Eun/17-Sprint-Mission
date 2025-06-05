@@ -63,7 +63,8 @@ header {
 }
 
 .banner-img {
-  width: 746px;
+  max-width: 746px;
+  width: 50%;
 }
 
 .cards {
@@ -189,7 +190,6 @@ footer {
 
   .banner-img {
     position: absolute;
-    left: 0;
     bottom: 0;
     width: 100%;
     z-index: 0;
