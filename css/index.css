@@ -21,15 +21,19 @@
   flex-shrink: 1;
 }
 
-.logo {
+.logo-large {
   display: block;
 }
 
-.logo img {
+.logo-large img {
   width: auto;
   height: auto;
   display: block;
   max-width: 100%;
+}
+
+.logo-small {
+  display: none;
 }
 
 .login-btn {
@@ -268,7 +272,7 @@
   opacity: 0.8;
 }
 
-/* 반응형 레이아웃 */
+/* 태블릿 */
 @media (max-width: 1199px) and (min-width: 768px) {
   .gnb-inner {
     padding: 0 24px;
@@ -331,10 +335,18 @@
 
 }
 
-
+/* 모바일 */
 @media (max-width: 767px) and (min-width: 375px) {
   .gnb-inner, .footer-inner {
     padding: 0 16px;
+  }
+
+  .logo-large {
+    display: none;
+  }
+
+  .logo-small {
+    display: block;
   }
 
   .hero-text h1, .trust-text h2 { 
@@ -371,15 +383,15 @@
 
   .footer-links {
   order: 1;
-}
+  }
 
-.social {
-  order: 1;
-}
+  .social {
+    order: 1;
+  }
 
-.copyright {
-  order: 2;
-  flex-basis: 100%;
-  
-}
+  .copyright {
+    order: 2;
+    flex-basis: 100%;
+    
+  }
 }
