@@ -11,4 +11,7 @@
   --input-box-border: 2px solid #3182f6;
   --simple-bg-color: #e6f2ff;
   --btn-txt-color: #f3f4f6;
+  --btn-inactive-bg-color: #9ca3af;
+  --required-info: #ff0000;
+  --required-info-border: 1px solid #ff0000;
 }

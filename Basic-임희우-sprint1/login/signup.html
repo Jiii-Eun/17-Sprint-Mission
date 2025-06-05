@@ -26,8 +26,9 @@
                 type="email"
                 name="email"
                 placeholder="이메일 입력"
-                required
+                autocomplete="off"
               />
+              <div class="hide-text"></div>
               <label class="input-type-txt" for="nickname">닉네임</label>
               <input
                 id="nickname"
@@ -35,48 +36,53 @@
                 type="text"
                 name="nickname"
                 placeholder="닉네임 입력"
-                required
+                autocomplete="off"
               />
+              <div class="hide-text"></div>
               <label class="input-type-txt" for="password">비밀번호</label>
-              <div class="password-wrap">
+              <div id="password-wrap" class="password-wrap">
                 <input
                   id="password"
                   class="input-box"
                   type="password"
                   name="password"
                   placeholder="비밀번호 입력"
-                  required
+                  autocomplete="off"
                 />
                 <button type="button" class="visibility-btn">
                   <img
+                    id="pwd-visibility-img"
                     class="visibility-img"
                     src="../images/btn_visibility_off.png
                   "
-                    alt="비밀번호 보기"
+                    alt="비밀번호 보기/가리기"
                   />
                 </button>
               </div>
+              <div class="hide-text"></div>
               <label class="input-type-txt" for="password-check"
                 >비밀번호 확인</label
               >
-              <div class="password-wrap">
+              <div id="password-check-wrap" class="password-wrap">
                 <input
                   id="password-check"
                   class="input-box"
-                  type="text"
+                  type="password"
                   name="password-check"
                   placeholder="비밀번호 다시 입력"
-                  required
+                  autocomplete="off"
                 />
                 <button type="button" class="visibility-btn">
                   <img
+                    id="pwd-check-visibility-img"
                     class="visibility-img"
-                    src="../images/btn_visibility_on.png
+                    src="../images/btn_visibility_off.png
                   "
-                    alt="비밀번호 덮기"
+                    alt="비밀번호 보기/가리기"
                   />
                 </button>
               </div>
+              <div class="hide-text"></div>
               <input class="login-submit-btn" type="submit" value="회원가입" />
             </div>
           </form>
@@ -107,5 +113,6 @@
         </div>
       </section>
     </main>
+    <script src="signup.js"></script>
   </body>
 </html>

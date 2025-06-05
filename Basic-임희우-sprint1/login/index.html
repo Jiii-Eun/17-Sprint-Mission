@@ -26,8 +26,8 @@
                 type="email"
                 name="email"
                 placeholder="이메일 입력"
-                required
               />
+              <div class="hide-text"></div>
               <label class="input-type-txt" for="password">비밀번호</label>
               <div class="password-wrap">
                 <input
@@ -36,10 +36,10 @@
                   type="password"
                   name="password"
                   placeholder="비밀번호 입력"
-                  required
                 />
                 <button type="button" class="visibility-btn">
                   <img
+                    id="visibility-img"
                     class="visibility-img"
                     src="../images/btn_visibility_off.png
                   "
@@ -47,6 +47,7 @@
                   />
                 </button>
               </div>
+              <div class="hide-text"></div>
               <input class="login-submit-btn" type="submit" value="로그인" />
             </div>
           </form>
@@ -77,5 +78,6 @@
         </div>
       </section>
     </main>
+    <script src="login.js"></script>
   </body>
 </html>

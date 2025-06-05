@@ -46,6 +46,10 @@
   border-radius: 12px;
 }
 
+.wrong-input-box {
+  border: var(--required-info-border);
+}
+
 .input-box:focus {
   outline: none;
 }
@@ -83,10 +87,27 @@
   padding: 16px 124px;
   border: none;
   border-radius: 40px;
-  background-color: var(--btn-bg-color);
+  background-color: var(--btn-inactive-bg-color);
   color: var(--btn-txt-color);
   font-size: 20px;
   font-weight: 600;
+}
+
+.login-submit-btn-active {
+  background-color: var(--btn-bg-color);
+}
+
+.hide-txt {
+  visibility: hidden;
+}
+
+.visible-txt {
+  width: 100%;
+  padding: 0 12px;
+  color: var(--required-info);
+  visibility: visible;
+  font-size: 10px;
+  font-weight: 500;
 }
 
 .simple-container {
