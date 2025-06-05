@@ -1,5 +1,16 @@
-@import url(./font.css);
-@import url(./common.css);
+@import url(/styles/common/global.css);
+@import url(/styles/common/tokens.css);
+
+:root {
+  --footer-container-padding: 2rem 6.5rem 6.75rem;
+  --footer-copyright-padding-top: 0;
+}
+@media screen and (max-width: 48rem) {
+  :root {
+    --footer-container-padding: var(--spacing-xl);
+    --footer-copyright-padding-top: 36px;
+  }
+}
 
 .footer {
   display: flex;

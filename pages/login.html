@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/pages/sign.css" />
+    <link rel="stylesheet" href="/styles/pages/sign.css" />
     <title>판다마켓</title>
-    <link rel="icon" href="./assets/icons/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="/assets/icons/favicon.png" type="image/x-icon" />
   </head>
   <body>
     <div class="sign">
       <div class="sign__header">
         <img
           class="sign__logo"
-          src="./assets/imgs/panda_icon_small.svg"
+          src="/assets/imgs/panda_icon_small.svg"
           alt="판다마켓 로고"
         />
         <h1 class="sign__title">
@@ -31,16 +31,6 @@
           />
         </div>
         <div class="sign__input-wrapper">
-          <label for="nickname" class="sign__label">닉네임</label>
-          <input
-            type="text"
-            id="nickname"
-            class="sign__input"
-            placeholder="닉네임을 입력하세요"
-            required
-          />
-        </div>
-        <div class="sign__input-wrapper">
           <label for="password" class="sign__label">비밀번호</label>
           <input
             type="password"
@@ -49,37 +39,26 @@
             placeholder="비밀번호를 입력하세요"
             required
           />
-          <img
-            class="sign__visibility-icon"
-            src="/assets/icons/ic_visibility_off.svg"
-            alt="비밀번호 보이기 아이콘"
-          />
-        </div>
-        <div class="sign__input-wrapper">
-          <label for="check-password" class="sign__label">비밀번호 확인</label>
-          <input
-            type="password"
-            id="check-password"
-            class="sign__input"
-            placeholder="비밀번호를 다시 입력하세요"
-            required
-          />
           <button
             class="sign__visibility-icon"
             aria-label="비밀번호 표시"
+            aria-pressed="false"
             type="button"
           ></button>
         </div>
-        <button type="submit" class="sign__btn">회원가입</button>
+        <button type="submit" class="sign__btn">로그인</button>
         <section class="sign__sns-login-wrapper">
           <span class="sign__sns-login-text">간편 로그인하기</span>
           <div>
-            <a href="https://www.google.com/" class="sign__sns-login-btn">
+            <a
+              href="https://www.google.com/"
+              class="sign__sns-login-btn"
+              aria-label="구글 계정으로 로그인"
+            >
               <img
                 class="sign__sns-icon"
-                src="./assets/icons/ic_google.svg"
+                src="/assets/icons/ic_google.svg"
                 alt="구글 아이콘"
-                aria-label="구글 계정으로 로그인"
               />
             </a>
             <a
@@ -89,19 +68,19 @@
             >
               <img
                 class="sign__sns-icon"
-                src="./assets/icons/ic_kakao.svg"
+                src="/assets/icons/ic_kakao.svg"
                 alt="카카오톡 아이콘"
               />
             </a>
           </div>
         </section>
         <div class="sign__signup-guide">
-          이미 회원이신가요?
+          판다마켓이 처음이신가요?
           <a
             class="sign__signup-link"
-            href="/login.html"
-            aria-label="로그인 화면으로 이동"
-            >로그인</a
+            href="/pages/signup.html"
+            aria-label="회원가입 화면으로 이동"
+            >회원가입</a
           >
         </div>
       </form>
