@@ -1,0 +1,14 @@
+:root {
+  --header-bg-color: #ffffff;
+  --banner-bg-color: #cfe5ff;
+  --btn-bg-color: #3692ff;
+  --card-bg-color: #fcfcfc;
+  --card-type-color: #3692ff;
+  --card-txt-color: #374151;
+  --footer-bg-color: #111827;
+
+  --input-box-color: #f3f4f6;
+  --input-box-border: 2px solid #3182f6;
+  --simple-bg-color: #e6f2ff;
+  --btn-txt-color: #f3f4f6;
+}
