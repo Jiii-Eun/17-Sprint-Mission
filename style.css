@@ -19,7 +19,6 @@ body, html {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden;
 }
 
 header {
@@ -101,11 +100,13 @@ button {
 }
 
 .banner_text {
+  width: 365px;
   font-size: 40px;
   font-weight: 700;
   color: #000000;
   flex-grow: 1;
   flex-shrink: 0;
+  white-space: pre;
 }
 
 .move_in_page {
@@ -226,7 +227,7 @@ footer {
 }
 
 .foot_text_link {
-  color: #FFFFFF;
+  color: var(--gray200);
   text-decoration: none;
 }
 
@@ -258,6 +259,15 @@ footer {
     height: 780px;
   }
 
+  .banner_text {
+    text-align: center;
+  }
+
+  .top .banner_text {
+    width: 600px;
+    white-space: nowrap;
+  }
+  
   .banner_components {
     flex-direction: column;
     justify-content: center;
@@ -267,6 +277,12 @@ footer {
 
   .banner_introduction {
     align-items: center;
+  }
+
+  .banner_img {
+    width: 100%;
+    max-width: 746px;
+    height: auto;
   }
 
   .page {
@@ -306,5 +322,51 @@ footer {
 
   .foot_line {
     padding: 30px 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .head_box {
+    padding: 0 16px;
+  }
+
+  .top .banner_text {
+    width: 365px;
+    white-space: pre;
+  }
+
+  .banner_img {
+    min-width: 375px;
+    width: 100%;
+    height: auto;
+  }
+
+  .foot_line {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 90px;
+    gap: 16px;
+  }
+
+  .foot_link {
+    order: 0;
+    flex: 1;
+    display: flex;
+    gap: 16px;
+  }
+
+  .icon_img {
+    order: 0;
+    display: flex;
+    gap: 16px;
+  }
+
+  .foot_text {
+    order: 1;
+    width: 100%;
+    text-align: left;
   }
 }
