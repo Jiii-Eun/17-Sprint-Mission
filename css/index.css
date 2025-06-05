@@ -360,6 +360,26 @@
     height: auto;          
   }
 
+  .btn-primary {
+    padding: 11px 71px;
+    font-family: Pretendard;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0%;
+    text-align: center;
+
+  }
+
+  .features {
+    gap: 40px;
+    padding: 52px 16px;
+  }
+
+  .feature {
+    padding: 0px;
+  }
+
   .feature h2 .linebreak{
     display: none;
   }
