@@ -1,13 +1,3 @@
-:root {
-  --header-bg-color: #ffffff;
-  --banner-bg-color: #cfe5ff;
-  --btn-bg-color: #3692ff;
-  --card-bg-color: #fcfcfc;
-  --card-type-color: #3692ff;
-  --card-txt-color: #374151;
-  --footer-bg-color: #111827;
-}
-
 header {
   display: flex;
   position: fixed;
@@ -42,6 +32,7 @@ header {
 .banner {
   display: flex;
   align-items: end;
+  margin-top: 70px;
   width: 100%;
   height: 540px;
   background-color: var(--banner-bg-color);
@@ -73,7 +64,8 @@ header {
 }
 
 .banner-img {
-  width: 746px;
+  max-width: 746px;
+  width: 50%;
 }
 
 .cards {
@@ -199,7 +191,6 @@ footer {
 
   .banner-img {
     position: absolute;
-    left: 0;
     bottom: 0;
     width: 100%;
     z-index: 0;
