@@ -2,34 +2,41 @@
 @import url(/styles/common/tokens.css);
 @import url(/styles/components/header.css);
 @import url(/styles/components/footer.css);
-
 :root {
-  --sign-form-width: unset;
-  --sign-logo-width: 6.25rem;
-  --sign-title-font-size: 4.125rem;
-  --sign-input-width: 40rem;
-  --sign-input-height: 3.5rem;
+  --sign-form-padding: 0 var(--spacing-md);
+  --sign-form-width: min(100%, 25rem);
+  --sign-title-font-size: var(--font-size-900);
+  --sign-label-font-size: var(--font-size-400);
   --sign-sns-icon-width: 2.625rem;
 
-  --sign-form-padding: 0;
+  --sign-header-gap: var(--spacing-sm);
+  --sign-logo-width: 3.2rem;
   --sign-header-margin-bottom: 2.125rem;
+  --sign-input-width: 100%;
   --sign-input-padding: 0 20px;
+  --sign-input-height: 3.5rem;
+
   --sign-btn-padding: 1rem 7.75rem;
   --sign-sns-login-wrapper-padding: 1rem 1.5rem;
 }
-@media screen and (max-width: 75rem) {
+@media screen and (min-width: 48rem) {
   :root {
+    --sign-title-font-size: 4.125rem;
     --sign-form-width: 100%;
     --sign-form-padding: 0 40px;
   }
 }
-@media screen and (max-width: 48rem) {
+@media screen and (min-width: 75rem) {
   :root {
-    --sign-form-padding: 0 var(--spacing-md);
-    --sign-form-width: min(100%, 25rem);
-    --sign-logo-width: 3.2rem;
+    --sign-form-width: unset;
+    --sign-logo-width: 6.25rem;
+    --sign-input-width: 40rem;
+    --sign-label-font-size: var(--font-size-500);
+    --sign-form-padding: 0;
+    --sign-header-gap: var(--spacing-lg);
   }
 }
+
 .sign {
   display: flex;
   flex-direction: column;
@@ -42,7 +49,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-lg);
+  gap: var(--sign-header-gap);
   width: 100%;
   margin-bottom: var(--sign-header-margin-bottom);
 }
@@ -68,6 +75,7 @@
 .sign__input-wrapper {
   position: relative;
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -75,7 +83,7 @@
   cursor: pointer;
 }
 .sign__label {
-  font-size: var(--font-size-500);
+  font-size: var(--sign-label-font-size);
   font-weight: 700;
   line-height: 1.5rem;
 }
@@ -88,25 +96,6 @@
   font-size: var(--font-size-400);
   font-weight: 400;
   background-color: var(--gray-100-color);
-}
-@media screen and (max-width: 75rem) {
-  .sign__input {
-    width: 100%;
-  }
-  .sign__input-wrapper {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 48rem) {
-  .sign__label {
-    font-size: var(--font-size-400);
-  }
-  .sign__title {
-    font-size: var(--font-size-900);
-  }
-  .sign__header {
-    gap: var(--spacing-sm);
-  }
 }
 .sign__visibility-icon {
   position: absolute;
