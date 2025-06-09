@@ -1,21 +1,21 @@
-@import url(/styles/common/global.css);
 @import url(/styles/common/tokens.css);
+
 :root {
-  --navbar-btn-width: 8rem;
-  --navbar-btn-height: 3rem;
-
-  --navbar-margin: 0 200px;
-  --header-padding: 9px 0;
+  --navbar-btn-width: auto;
+  --navbar-btn-height: auto;
+  --navbar-margin: 0 var(--spacing-md);
+  --header-padding: var(--spacing-sm) 0;
 }
-
-@media screen and (max-width: 75rem) {
+@media screen and (min-width: 48rem) {
   :root {
     --navbar-margin: 0 var(--spacing-lg);
   }
 }
-@media screen and (max-width: 48rem) {
+@media screen and (min-width: 75rem) {
   :root {
-    --navbar-margin: 0 var(--spacing-md);
+    --navbar-btn-width: 8rem;
+    --navbar-btn-height: 3rem;
+    --navbar-margin: 0 200px;
   }
 }
 
@@ -47,10 +47,11 @@
 .navbar__logo {
   width: 3.125rem;
   height: 3.125rem;
+  display: none;
 }
-@media screen and (max-width: 48rem) {
+@media screen and (min-width: 75rem) {
   .navbar__logo {
-    display: none;
+    display: block;
   }
 }
 .navbar__title {
