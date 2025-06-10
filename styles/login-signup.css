@@ -111,3 +111,23 @@
   color: #3692ff;
   text-decoration: underline;
 }
+
+/* Mobile 사이즈 */
+@media (max-width: 767px) {
+  .login-page,
+  .signup-page {
+    max-width: 400px;
+  }
+
+  .login-log,
+  .signup-logo {
+    width: 198px;
+    height: 66px;
+  }
+
+  .login-content,
+  .signup-content {
+    padding: 0 16px;
+    max-width: 400px;
+  }
+}
