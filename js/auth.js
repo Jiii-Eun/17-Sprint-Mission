@@ -1,11 +1,8 @@
 
-const inputs = document.querySelectorAll('.input_group');
-const pw = document.querySelector('#user_password');
-const pwCheck = document.querySelector('#user_password_check');
-const pwCheckError = pwCheck?.closest('.input_warp')?.querySelector('.error_text');
+const form = document.querySelector('#loginForm') || document.querySelector('#signupForm');
+const inputs = form.querySelectorAll('.input_group');
 
-const form = document.querySelector('#authForm');
-const authBtn = document.querySelector('.auth.btn');
+const authBtn = form.querySelector('.auth.btn');
 
 //forEach 공통 변수
 function groupInput(group){
@@ -23,53 +20,59 @@ function clearError(target, text){
 }
 
 //input값 오류
-inputs.forEach(group =>{
-  const {input, errorText, type} = groupInput(group);
-  
-  //focusout
-  input.addEventListener('focusout', (e) => {
-    const target = e.target;
-    const values = target.value.trim();
+function errorInput(){
+  inputs.forEach(group =>{
+    const {input, errorText, type} = groupInput(group);
+    
+    //focusout
+    input.addEventListener('focusout', (e) => {
+      const target = e.target;
+      const values = target.value.trim();
 
-    const label = target.closest('.input_group').querySelector('label');
-    const labelText = label.textContent.trim();
+      const label = target.closest('.input_group').querySelector('label');
+      const labelText = label.textContent.trim();
 
-    //빈 값
-    if(values === ''){
-      target.style.border = '1px solid #ff0000';
-      errorText.textContent = `${labelText}을(를) 입력해주세요.`
-      return;
-    }
+      const pw = document.querySelector('#user_password');
+      const pwCheck = document.querySelector('#user_password_check');
+      const pwCheckError = pwCheck?.closest('.input_warp')?.querySelector('.error_text');
 
-    //이메일
-    const emailPattern = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,}$/;
+      //빈 값
+      if(values === ''){
+        target.style.border = '1px solid #ff0000';
+        errorText.textContent = `${labelText}을(를) 입력해주세요.`
+        return;
+      }
 
-    if(type === 'email' && !(emailPattern.test(values))){
-      errorText.textContent = '잘못된 이메일 형식입니다.';
-      //비밀번호
-    }else if(type === 'password'){
-      if(values.length < 8){
-        errorText.textContent = '비밀번호를 8자 이상 입력해주세요.';
+      //이메일
+      const emailPattern = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,}$/;
+
+      if(type === 'email' && !(emailPattern.test(values))){
+        errorText.textContent = '잘못된 이메일 형식입니다.';
+        //비밀번호
+      }else if(type === 'password'){
+        if(values.length < 8){
+          errorText.textContent = '비밀번호를 8자 이상 입력해주세요.';
+        }else{
+          clearError(input, errorText);
+        }
+        
+        if(pwCheck && values !== pwCheck.value){
+          pwCheckError.textContent = '비밀번호가 일치하지 않습니다..';
+        }else{
+          clearError(pwCheck, pwCheckError);
+        }
+        
+        //비밀번호 확인
+      }else if(pw && type === 'password_check' && pw.value !== values){
+        errorText.textContent = '비밀번호가 일치하지 않습니다..';
       }else{
         clearError(input, errorText);
       }
-      if(values !== pwCheck.value){
-        pwCheckError.textContent = '비밀번호가 일치하지 않습니다..';
-      }else{
-        clearError(pwCheck, pwCheckError);
-      }
-      
-      //비밀번호 확인
-    }else if(type === 'password_check' && pw.value !== values){
-      errorText.textContent = '비밀번호가 일치하지 않습니다..';
-      //비밀번호 일치
-    }else{
-      clearError(input, errorText);
-    }
-    checkFormClick();
-  }); 
+      checkFormClick();
+    }); 
 
-})
+  })
+}
 
 //submit버튼 활성화
 function checkFormClick(){
@@ -78,14 +81,22 @@ function checkFormClick(){
   inputs.forEach(group =>{
     const {input, errorText} = groupInput(group);
 
-    if (errorText.textContent.trim() !== '' || input.value.trim() === '') {
+    const value = input.value.trim();
+    const error = errorText.textContent.trim();
+
+
+    if (error !== '' || value === '') {
       isClick = false;
     }
+
+    
   });
   authBtn.disabled = !isClick;
   authBtn.style.backgroundColor = isClick ? 'var(--primary-100)' : 'var(--gray-400)';
   authBtn.style.cursor = isClick ? 'pointer' : 'unset';
 }
+
+
 
 //패스워드 아이콘 활성화/비활성화
 const passwordIcon = document.querySelectorAll('.password_icon');
@@ -105,3 +116,5 @@ passwordIcon.forEach( icons => {
     }
   });
 });
+
+errorInput();
