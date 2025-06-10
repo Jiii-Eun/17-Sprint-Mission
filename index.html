@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum=1, maximum-scale, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="robots" content="noindex">
+        <link rel="stylesheet" href="/reset.css"/>
+        <title>판다마켓</title>
+        <style>
+            *{
+                text-decoration: none;
+            }
+            header{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 70px;
+                margin: 0 auto;
+            }
+            h1{
+                font-size: 40px;
+                font-weight: 700;
+                color: #374151;
+                line-height: 140%;
+            }
+            ul{
+                list-style: none;
+                display: flex;
+            }
+            ul > li > button{ 
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 26px;
+                width: 128px;
+                height: 48px;
+                border-radius: 8px;
+                color: #f3f4f6;
+            }
+            header > ul{
+                width: 1920px;
+                justify-content: space-between;
+            }
+            .login > a{
+                display: block;
+                background-color: #3692ff;
+                width: 128px;
+                height: 48px;
+                border-radius: 8px;
+                font-size: 16px;
+                color: #F3F4F6;
+                text-align: center;
+                line-height: 48px;
+            }
+            .mainTopBanner, 
+            .mainBottomBanner{
+                display: flex;
+                flex-wrap: wrap;
+                align-content: flex-end;
+                background: #cfe5ff;
+                height: 540px;
+            }
+            .mainTopBanner > div, 
+            .mainBottomBanner > div{
+                display: flex; 
+                justify-content: space-between; 
+                min-width: 1120px;
+                margin: 0 auto;
+            }
+            .mainTopBanner h1{
+                padding-top: 40px;
+                padding-bottom: 32px;
+            }
+            .mainTopBanner a{
+                display: block;
+                background: #3692ff;
+                width: 357px;
+                height: 56px;
+                border-radius: 40px;
+                color: #f9fafb;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 56px;
+                text-align: center;
+            }
+            .mainBottomBanner h1{
+                padding-top: 112.5px;
+            }
+            .mainItems{
+                width: 1120px; 
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 138px;
+            }
+            .hotItem, 
+            .search, 
+            .register{
+                width: 988px;
+                height: 444px;
+                margin: 138px 0;
+                display: flex;
+                background-color: #FCFCFC;
+                border-radius: 12px;
+                overflow: hidden;
+            }
+            .hotItem,
+            .register{
+                justify-content: flex-start;
+            }
+            .search{
+                justify-content: flex-end;
+            }
+            .hotItem > .itemText,
+            .register > .itemText{
+                padding-top: 103px;
+                padding-left: 64px;
+            }
+            .search > .itemText{
+                padding-top: 103px;
+                padding-right: 64px;
+            }
+            .itemText > span{
+                font-size: 18px;
+                font-weight: 800;
+                color: #3692ff;
+            }
+            .itemText > h1{
+                line-height: 140%;
+                padding-top: 12px;
+                padding-bottom: 24px;
+            }
+            .itemText > p{
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 32px;
+                color: #374151;
+            }
+            footer{
+                background-color: #111827;
+                color: #fff;
+                padding: 32px 0 108px 0;
+            }
+            footer > div{
+                width: 1120px;
+                display: flex;
+                justify-content: space-between;
+                margin: 0 auto;
+            }
+            footer > div > p{
+                font-size: 16px;
+                font-weight: 400;
+                color: #9ca3af;
+            }
+            .footerCenter{
+                width: 159px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .footerCenter > li > a{
+                color: #E5E7EB;
+                font-weight: 400;
+            }
+            .footerSns > li{
+                font-size: 16px;
+                font-weight: 400;
+                color: #e5e7eb;
+                margin-right: 12px;
+            }
+            .footerSns > li:last-child{
+                margin-right: 0;
+            }
+            @media (max-width: 1920px){
+                header > ul > li:first-child{
+                    padding-left: 200px;
+                }
+                header > ul > li:last-child{
+                    padding-right: 200px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img src="images/Group 19.png">
+                    </a>
+                </li>
+                <li class="login">
+                    <a href="login.html">로그인</a>
+                </li>
+            </ul>
+        </header>
+        <main>
+            <div class="mainTopBanner">
+                <div>
+                    <div>
+                        <h1>일상의 모든 물건을<br>거래해 보세요</h1>
+                        <a href="items.html">구경하러 가기</a>
+                    </div>
+                    <div>
+                        <img src="images/Img_home_top.png">
+                    </div>
+                </div>
+            </div>
+            <div class="mainItems">
+                <div class="hotItem">
+                    <div><img src="images/Img_home_01.png"></div>
+                    <div class="itemText">
+                        <span>Hot Item</span>
+                        <h1>인기 상품을<br>확인해 보세요</h1>
+                        <p>가장 HOT한 중고거래 물품을<br>판다 마켓에서 확인해 보세요</p>
+                    </div>
+                </div>
+                <div class="search">
+                    <div class="itemText">
+                        <span>Search</span>
+                        <h1>구매를 원하는<br>상품을 검색하세요</h1>
+                        <p>구매하고 싶은 물품은 검색해서<br>쉽게 찾아보세요</p>
+                    </div>
+                    <div><img src="images/Img_home_02.png"></div>
+                </div>
+                <div class="register">
+                    <div><img src="images/Img_home_03.png"></div>
+                    <div class="itemText">
+                        <span>Register</span>
+                        <h1>판매를 원하는<br>상품을 등록하세요</h1>
+                        <p>어떤 물건이든 판매하고 싶은 상품을<br>쉽게 등록하세요</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mainBottomBanner">
+                <div>
+                    <div>
+                        <h1>믿을 수 있는<br>판다마켓 중고 거래</h1>
+                    </div>
+                    <div>
+                        <img src="images/Img_home_bottom.png">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <p>codeit - 2024</p>
+                <ul class="footerCenter">
+                    <li>
+                        <a href="privacy.html">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+                <ul class="footerSns">
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <img src="images/ic_facebook.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com/" target="_blank">
+                        <img src="images/ic_twitter.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/" target="_blank">
+                        <img src="images/ic_youtube.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank">
+                        <img src="images/ic_instagram.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
