@@ -1,8 +1,5 @@
-
-const form = document.querySelector('#loginForm') || document.querySelector('#signupForm');
-const inputs = form.querySelectorAll('.input_group');
-
-const authBtn = form.querySelector('.auth.btn');
+const inputs = document.querySelectorAll('.input_group');
+const authBtn = document.querySelector('.auth.btn');
 
 //forEach 공통 변수
 function groupInput(group){
@@ -33,8 +30,6 @@ function errorInput(){
       const labelText = label.textContent.trim();
 
       const pw = document.querySelector('#user_password');
-      const pwCheck = document.querySelector('#user_password_check');
-      const pwCheckError = pwCheck?.closest('.input_warp')?.querySelector('.error_text');
 
       //빈 값
       if(values === ''){
@@ -56,14 +51,16 @@ function errorInput(){
           clearError(input, errorText);
         }
         
+        const pwCheck = document.querySelector('#user_password_check');
+        const pwCheckError = pwCheck?.closest('.input_warp')?.querySelector('.error_text');
         if(pwCheck && values !== pwCheck.value){
           pwCheckError.textContent = '비밀번호가 일치하지 않습니다..';
         }else{
-          clearError(pwCheck, pwCheckError);
+          if(pwCheck) clearError(pwCheck, pwCheckError);
         }
         
         //비밀번호 확인
-      }else if(pw && type === 'password_check' && pw.value !== values){
+      }else if(type === 'password_check' && pw.value !== values){
         errorText.textContent = '비밀번호가 일치하지 않습니다..';
       }else{
         clearError(input, errorText);
