@@ -2,7 +2,7 @@
 const inputs = document.querySelectorAll('.input_group');
 const pw = document.querySelector('#user_password');
 const pwCheck = document.querySelector('#user_password_check');
-const pwCheckError = pwCheck.closest('.input_warp').querySelector('.error_text');
+const pwCheckError = pwCheck?.closest('.input_warp')?.querySelector('.error_text');
 
 const form = document.querySelector('#authForm');
 const authBtn = document.querySelector('.auth.btn');
@@ -50,10 +50,12 @@ inputs.forEach(group =>{
     }else if(type === 'password'){
       if(values.length < 8){
         errorText.textContent = '비밀번호를 8자 이상 입력해주세요.';
-      }else if(values !== pwCheck.value){
-        pwCheckError.textContent = '비밀번호가 일치하지 않습니다..';
       }else{
         clearError(input, errorText);
+      }
+      if(values !== pwCheck.value){
+        pwCheckError.textContent = '비밀번호가 일치하지 않습니다..';
+      }else{
         clearError(pwCheck, pwCheckError);
       }
       
