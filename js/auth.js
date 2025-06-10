@@ -1,6 +1,8 @@
 
 const inputs = document.querySelectorAll('.input_group');
-const password = document.querySelector('#user_password');
+const pw = document.querySelector('#user_password');
+const pwCheck = document.querySelector('#user_password_check');
+
 const form = document.querySelector('#authForm');
 const authBtn = document.querySelector('.auth.btn');
 
@@ -42,18 +44,28 @@ inputs.forEach(group =>{
     const emailPattern = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,}$/;
 
     if(type === 'email' && !(emailPattern.test(values))){
-      errorText.textContent = `잘못된 ${labelText} 형식입니다.`;
+      errorText.textContent = '잘못된 이메일 형식입니다.';
       //비밀번호
-    }else if(type === 'password' && values.length < 8){
-      errorText.textContent = `${labelText}를 8자 이상 입력해주세요.`;
+    }else if(type === 'password'){
+      if(values.length < 8){
+        errorText.textContent = '비밀번호를 8자 이상 입력해주세요.';
+      }else if(values !== pwCheck.value){
+        const pwCheckError = pwCheck.closest('.input_warp').querySelector('.error_text');
+        pwCheckError.textContent = '비밀번호가 일치하지 않습니다..';
+      }else{
+        clearError(input, errorText);
+        clearError(pwCheck, pwCheckError);
+      }
+      
       //비밀번호 확인
-    }else if(type === 'password_check' && password.value !== values){
-      errorText.textContent = `${labelText}가 일치하지 않습니다..`;
+    }else if(type === 'password_check' && pw.value !== values){
+      errorText.textContent = '비밀번호가 일치하지 않습니다..';
+      //비밀번호 일치
     }else{
       clearError(input, errorText);
     }
     checkFormClick();
-  });
+  }); 
 
 })
 
