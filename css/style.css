@@ -74,7 +74,6 @@
     flex-direction: column;
     width: auto;
     height: auto;
-    z-index: 1;
 }
 
 .header_txt {
