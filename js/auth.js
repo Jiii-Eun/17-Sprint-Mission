@@ -16,7 +16,7 @@ function clearError(target, text){
   text.textContent = '';
 }
 
-//input값 오류
+//input 오류TEXT
 function errorInput(){
   inputs.forEach(group =>{
     const {input, errorText, type} = groupInput(group);
@@ -50,13 +50,13 @@ function errorInput(){
         }else{
           clearError(input, errorText);
         }
-        
+        //비밀번호 일치
         const pwCheck = document.querySelector('#user_password_check');
         const pwCheckError = pwCheck?.closest('.input_warp')?.querySelector('.error_text');
         if(pwCheck && values !== pwCheck.value){
           pwCheckError.textContent = '비밀번호가 일치하지 않습니다..';
         }else{
-          if(pwCheck) clearError(pwCheck, pwCheckError);
+          if(pwCheck && pwCheckError) clearError(pwCheck, pwCheckError);
         }
         
         //비밀번호 확인
@@ -81,12 +81,10 @@ function checkFormClick(){
     const value = input.value.trim();
     const error = errorText.textContent.trim();
 
-
     if (error !== '' || value === '') {
       isClick = false;
     }
 
-    
   });
   authBtn.disabled = !isClick;
   authBtn.style.backgroundColor = isClick ? 'var(--primary-100)' : 'var(--gray-400)';
@@ -100,8 +98,10 @@ const passwordIcon = document.querySelectorAll('.password_icon');
 
 passwordIcon.forEach( icons => {
   const prevInput = icons.previousElementSibling;
+
   icons.addEventListener('click', (e) => {
     const target = e.target;
+
     if(prevInput.type === 'password'){
       target.classList.add('show');
       prevInput.type = 'text'
