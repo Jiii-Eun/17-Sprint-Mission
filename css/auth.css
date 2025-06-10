@@ -55,14 +55,20 @@ html, body{
   padding: 0 1.5rem;
 }
 
+.error_text{
+  position: absolute;
+  bottom: -1rem; left: 0;
+  font-size: 0.875rem;
+  color: #ff0000;
+}
+
 .auth.btn{
   font-size: 1.25rem;
   font-weight: 600;
   background-color: var(--gray-400);
-  cursor: unset;
 }
 
-.password_view{
+.input_warp{
   position: relative;
 }
 .password_icon{

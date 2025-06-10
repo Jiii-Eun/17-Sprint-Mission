@@ -29,15 +29,21 @@
           </a>
           <form action="/login">
             <div class="user_input">
-              <div class="email_input">
+              <!-- 이메일 -->
+              <div class="input_group" data-type="email">
                 <label for="user_email">이메일</label>
-                <input class="text_tall" id="user_email" type="email" placeholder="이메일을 입력해주세요"/>
+                <div class="input_warp">
+                  <input class="text_tall input_text" id="user_email" type="email" placeholder="이메일을 입력해주세요" required/>
+                  <span class="error_text"></span>
+                </div>
               </div>
-              <div class="password_input">
+              <!-- 비밀번호 -->
+              <div class="input_group" data-type="password">
                 <label for="user_password">비밀번호</label>
-                <div class="password_view">
-                  <input class="text_tall" id="user_password" type="password" placeholder="비밀번호를 입력해주세요"/>
+                <div class="input_warp">
+                  <input class="text_tall input_text" id="user_password" type="password" placeholder="비밀번호를 입력해주세요" required/>
                   <span class="material-symbols-outlined password_icon">visibility_off</span>
+                  <span class="error_text"></span>
                 </div>
               </div>
               <button type="submit" class="auth btn text_tall" disabled>로그인</button>
@@ -57,5 +63,6 @@
           </div>
         </div>
     </section>
+    <script src="/js/auth.js"></script>
   </body>
 </html>
