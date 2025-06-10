@@ -14,18 +14,15 @@
                 <img src="./image/panda_logo.png" alt="판다마켓 로고">
             </a>
             <form class="login_formbox">
-                <label for="email" class="email_label">
-                    <p class="email_label_p">이메일</p>
-                    <input id="email" name="email" type="email" placeholder="codeit@email.com">
-                </label>
-                <label for="password" class="password_label">
-                    <p class="password_label_p">비밀번호</p>
-                    <input id="password" name="password" type="password" placeholder="●●●●●●●●">
-                    <div class="password_btn">
-                        <img src="./image/password_off.png" alt="비밀번호 가리기">
-                        <img src="./image/password_on.png" alt="비밀번호 보기">
-                    </div>
-                </label>
+                <label class="email_label" for="email_input">이메일</label>
+                <input id="email_input" name="email" type="email" placeholder="codeit@email.com">
+                <label class="password_label" for="password_input">비밀번호</label>
+                <div class="eye_wrapper">
+                    <input id="password_input" name="password" type="password" placeholder="●●●●●●●●">
+                    <button id="eye_icon" type="button" aria-label="비밀번호 보기 토글">
+                        <img src="./image/password_off.png" alt="비밀번호 보기">
+                    </button>
+                </div>
                 <button type="submit" class="login_btn">로그인</button>
             </form>
             <div class="simple_login">

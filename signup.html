@@ -14,30 +14,24 @@
                 <img src="./image/panda_logo.png" alt="판다마켓 로고">
             </a>
             <form class="signup_formbox">
-                <label for="email" class="email_label">
-                    <p class="email_label_p">이메일</p>
-                    <input id="email" name="email" type="email" placeholder="codeit@email.com">
-                </label>
-                <label for="nickname" class="nickname_label">
-                    <p class="nickname_label_p">닉네임</p>
-                    <input id="nickname" name="nickname" type="text" placeholder="판다">
-                </label>
-                <label for="password" class="password_label">
-                    <p class="password_label_p">비밀번호</p>
-                    <input id="password" name="password" type="password" placeholder="●●●●●●●●">
-                    <div class="password_btn">
-                        <img src="./image/password_off.png" alt="비밀번호 가리기">
-                        <img src="./image/password_on.png" alt="비밀번호 보기">
-                    </div>
-                </label>
-                <label for="password_re" class="password_re_label">
-                    <p class="password_re_label_p">비밀번호 확인</p>
-                    <input id="password_re" name="password_re" type="password" placeholder="asdffff">
-                    <div class="password_re_btn">
-                        <img src="./image/password_on.png" alt="비밀번호 보기">
-                        <img src="./image/password_off.png" alt="비밀번호 가리기">
-                    </div>
-                </label>
+                <label class="email_label" for="email_input">이메일</label>
+                <input id="email_input" name="email" type="email" placeholder="이메일을 입력해주세요">
+                <label class="nickname_label" for="nickname_input">닉네임</label>
+                <input id="nickname_input" name="nickname" type="text" placeholder="닉네임을 입력해주세요">
+                <label class="password_label" for="password_input">비밀번호</label>
+                <div class="eye_wrapper">
+                    <input id="password_input" name="password" type="password" placeholder="비밀번호를 입력해주세요">
+                    <button id="eye_icon" type="button" aria-label="비밀번호 보기 토글">
+                        <img src="./image/password_off.png" alt="비밀번호 보기">
+                    </button>
+                </div>
+                <label class="password_re_label" for="password_re_input">비밀번호 확인</label>
+                <div class="eye_wrapper_re">
+                    <input id="password_re_input" name="password" type="password" placeholder="비밀번호를 다시 한 번 입력해주세요">
+                    <button id="eye_icon_re" type="button" aria-label="비밀번호 보기 토글">
+                        <img src="./image/password_off.png" alt="비밀번호 보기">
+                    </button>
+                </div>
                 <button type="submit" class="signup_btn">회원가입</button>
             </form>
             <div class="simple_login">
