@@ -15,12 +15,12 @@
             </a>
             <form class="login_formbox">
                 <label class="email_label" for="email_input">이메일</label>
-                <input id="email_input" name="email" type="email" placeholder="이메일을 입력해주세요">
+                <input class="email_input" name="email" type="email" placeholder="이메일을 입력해주세요">
                 <label class="password_label" for="password_input">비밀번호</label>
                 <div class="eye_wrapper">
-                    <input id="password_input" name="password" type="password" placeholder="비밀번호를 입력해주세요">
-                    <button id="eye_icon" type="button" aria-label="비밀번호 보기 토글">
-                        <img src="./image/password_off.png" alt="비밀번호 보기">
+                    <input class="password_input" name="password" type="password" placeholder="비밀번호를 입력해주세요">
+                    <button class="eye_icon" type="button" aria-label="비밀번호 보기 토글">
+                        <img class="eye_icon_img" src="./image/password_off.png" alt="비밀번호 보기">
                     </button>
                 </div>
                 <button type="submit" class="login_btn">로그인</button>
@@ -41,5 +41,6 @@
                 <a href="/signup.html">회원가입</a>
             </div>
         </div>
+        <script src="./js/eye-icon.js"></script>
     </body>
 </html>

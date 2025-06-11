@@ -42,7 +42,7 @@ body {
     margin-bottom: 15px;
 }
 
-#email_input, #password_input {
+.email_input, .password_input {
     width: 100%;
     height: 56px;
     font-family: 'Pretendard', sans-serif;
@@ -60,7 +60,7 @@ body {
     position: relative;
 }
 
-#eye_icon {
+.eye_icon {
     width: 24px;
     height: 24px;
     position: absolute;
@@ -71,7 +71,7 @@ body {
     cursor: pointer;
 }
 
-#eye_icon img {
+.eye_icon_img {
     max-width: 100%;
     height: auto;
     display: block;
