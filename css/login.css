@@ -1,3 +1,5 @@
+/* 공통 CSS */
+
 body {
     display: flex;
     justify-content: center;
@@ -5,7 +7,9 @@ body {
 }
 
 #wrapper {
-    width: 640px;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
 }
 
 .logo {
@@ -136,4 +140,18 @@ body {
 .sign_up a {
     color: #3692FF;
 }
+
+/* 모바일용 CSS */
+
+@media (min-width: 375px) and (max-width: 767px) {
+   #wrapper {
+        max-width: 400px;
+        padding: 0 16px;
+   }
+
+   .logo {
+        width: 198px;
+    }
+}
+
 
