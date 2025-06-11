@@ -8,21 +8,19 @@
 
 .nav {
     display: flex;
-    order: 1;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 68px;
+    height: 70px;
     background-color: #ffffff;
     position: fixed;
-    z-index: 2;
+    z-index: 9999;
 }
 
 .gnb {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 66%;
     margin: 0 auto;
 }
 
@@ -45,6 +43,7 @@
     background-color: #3692FF;
     border-radius: 8px;
     font-family: 'Pretendard', sans-serif;
+    font-size: 1rem;
     font-weight: 600;
     color: #F3F4F6;
     text-decoration: none;
@@ -62,9 +61,6 @@
 
 .header_container {
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    width: 66%;
     height: 100%;
     margin: 0 auto;
 }
@@ -114,17 +110,12 @@
 
 .contents_box {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
 }
 
 .contents_card {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     margin: 0 auto;
-    background-color: #FCFCFC;
     overflow: hidden;
 }
 
@@ -141,11 +132,10 @@
 
 .card_textbox span {
     font-family: 'Pretendard', sans-serif;
-    font-weight: 800;
     color: #3692FF;
 }
 
-.card_textbox h2 {
+.card_txt_h2 {
     font-family: 'Pretendard', sans-serif;
     font-weight: 700;
     color: #374151;
@@ -173,9 +163,6 @@
 
 .marketing_container {
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    width: 66%;
     height: 100%;
     margin: 0 auto;
 }
@@ -200,14 +187,12 @@
 
 .footer_container {
     display: flex;
-    justify-content: space-between;
-    width: 66%;
     margin: 0 auto;
-    padding-top: 30px;
 }
 
 .footer_info {
     font-family: 'Pretendard', sans-serif;
+    font-size: 1rem;
     font-weight: 400;
     color: #9CA3AF;
 }
@@ -238,8 +223,8 @@
 /* 데스크탑용 CSS */
 
 @media (min-width: 1200px) {
-    .nav {
-        height: 70px;
+    .gnb {
+        width: 66%;
     }
 
     .logo_btn {
@@ -250,11 +235,16 @@
     .login_btn {
         width: 128px;
         height: 48px;
-        font-size: 1rem;
     }
 
     .header {
         height: 540px;
+    }
+
+    .header_container {
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 66%;
     }
 
     .header_textbox {
@@ -277,12 +267,17 @@
     }
 
     .contents_box {
+        justify-content: center;
+        align-items: center;
         height: 720px;
     }
 
     .contents_card {
+        justify-content: flex-start;
+        align-items: center;
         width: 988px;
         gap: 7%;
+        background-color: #FCFCFC;
         border-radius: 15px;
     }
 
@@ -295,10 +290,11 @@
     }
 
     .card_textbox span {
-        font-size: 1rem;
+        font-size: 1.125rem;
+        font-weight: 800;
     }
 
-    .card_textbox h2 {
+    .card_txt_h2 {
         font-size: 2.5rem;
         line-height: 1.4;
     }
@@ -320,6 +316,12 @@
         height: 540px;
     }
 
+    .marketing_container {
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 66%;
+    }
+
     .marketing_txt {
         font-size: 2.5rem;
         margin-bottom: 168px;
@@ -333,8 +335,10 @@
         height: 160px;
     }
 
-    .footer_info {
-        font-size: 1rem;
+    .footer_container {
+        justify-content: space-between;
+        width: 66%;
+        padding-top: 30px;
     }
 
     .footer_menu {
@@ -348,99 +352,140 @@
 
 /* 태블릿용 CSS */
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1199px) {
+    .nav {
+        padding: 0 24px;
+    }
+
+    .gnb {
+        width: 100%;
+    }
+
     .logo_btn {
-        width: 22.5%;
+        width: 153px;
+        height: 51px;
     }
 
     .login_btn {
-        width: 17.5%;
+        width: 128px;
         height: 48px;
-        font-size: 1rem;
     }
 
     .header {
-        height: 420px;
+        height: 771px;
+    }
+
+    .header_container {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
 
     .header_textbox {
-        gap: 18px;
-        margin-bottom: 95px;
+        align-items: center;
+        gap: 25px;
+        margin-top: 90px;
+    }
+
+    .header_textbox br {
+        display: none;
     }
 
     .header_txt {
-        font-size: 2.15rem;
+        font-size: 2.5rem;
     }
 
     .header_btn {
-        width: 264px;
-        height: 48px;
-        font-size: 1.125rem;
+        width: 357px;
+        height: 56px;
+        font-size: 1.25rem;
     }
 
     .header_imgbox {
-        width: 75%;
+        width: 100%;
     }
 
-    .contents_box {
-        height: 520px;
+    .contents_container {
+        padding: 0 24px;
     }
 
     .contents_card {
-        width: 66%;
-        gap: 10%;
-        border-radius: 15px;
+        flex-direction: column;
+        gap: 24px;
     }
 
     .card_imgbox {
-        width: 54%;
+        width: 100%;
+    }
+
+    .card_imgbox img {
+        border-radius: 14px;
     }
 
     .card_textbox {
-        gap: 27px;
+        gap: 20px;
     }
 
     .card_textbox span {
-        font-size: 0.9rem;
+        font-size: 1.125rem;
+        font-weight: 700;
     }
 
-    .card_textbox h2 {
-        font-size: 1.95rem;
-        line-height: 1.3;
+    .card_txt_h2 {
+        font-size: 2rem;
+    }
+
+    .card_txt_h2 br {
+        display: none;
     }
 
     .card_textbox p {
-        font-size: 1rem;
+        font-size: 1.125rem;
         line-height: 1.4;
     }
 
-    .contents_card.card2 {
-        gap: 6.5%;
+    .contents_card.card1, .contents_card.card3 {
+        margin: 52px 0;
     }
 
-    .contents_card.card3 {
-        gap: 6%;
+    .contents_card.card2>.card_imgbox {
+        order: 1;
+    }
+
+    .contents_card.card2>.card_textbox {
+        order: 2;
     }
 
     .marketing {
-        height: 420px;
+        height: 927px;
+    }
+
+    .marketing_container {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
 
     .marketing_txt {
-        font-size: 2.15rem;
-        margin-bottom: 168px;
+        text-align: center;
+        font-size: 2.5rem; 
+        margin-top: 175px ;
     }
 
     .marketing_imgbox {
-        width: 70%;
+        width: 100%;
     }
 
     .footer {
-        height: 150px;
+        height: 160px;
+        padding: 0 104px;
     }
 
-    .footer_info {
-        font-size: 1rem;
+    .footer_container {
+        justify-content: space-between;
+        padding-top: 35px;
     }
 
     .footer_menu {
@@ -454,107 +499,122 @@
 
 /* 모바일용 CSS */
 
-@media (max-width: 767px) {
+@media (min-width: 375px) and (max-width: 767px) {
+    .nav {
+        padding: 0 16px;
+    }
+
+    .gnb {
+        width: 100%;
+    }
+
     .logo_btn {
-        width: 27%;
+        width: 153px;
+        height: 51px;
     }
 
     .login_btn {
-        width: 19.5%;
-        height: 44px;
-        font-size: 0.95rem;
+        width: 128px;
+        height: 48px;
     }
 
     .header {
-        height: 430px;
+        height: 540px;
     }
-    
+
+    .header_container {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
     .header_textbox {
         align-items: center;
         gap: 18px;
-        width: 100%;
-        position: absolute;
-        top: 52px;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
+        margin-top: 55px;
     }
 
     .header_txt {
-        font-size: 1.8rem;
-    }
-
-    .header_txt br {
-        display: none;
+        font-size: 2rem;
+        text-align: center;
     }
 
     .header_btn {
-        width: 196px;
-        height: 44px;
-        font-size: 0.95rem;
+        width: 240px;
+        height: 48px;
+        font-size: 1.125rem;
     }
 
     .header_imgbox {
         width: 100%;
-        bottom: 0;
     }
 
-    .contents_box {
-        height: 420px;
+    .contents_container {
+        padding: 0 16px;
     }
 
     .contents_card {
-        width: 66%;
-        gap: 8.5%;
-        border-radius: 15px;
+        flex-direction: column;
+        gap: 24px;
     }
 
     .card_imgbox {
-        width: 52%;
+        width: 100%;
+    }
+
+    .card_imgbox img {
+        border-radius: 12px;
     }
 
     .card_textbox {
-        gap: 13px;
+        gap: 16px;
     }
 
     .card_textbox span {
-        font-size: 0.9rem;
+        font-size: 1rem;
+        font-weight: 700;
     }
 
-    .card_textbox h2 {
-        font-size: 1.65rem;
-        line-height: 1.3;
+    .card_txt_h2 {
+        font-size: 1.5rem;
+    }
+
+    .card_txt_h2 br {
+        display: none;
     }
 
     .card_textbox p {
-        font-size: 0.8rem;
+        font-size: 1rem;
         line-height: 1.4;
     }
 
-    .contents_card.card2 {
-        gap: 5%;
+    .contents_card.card1, .contents_card.card3 {
+        margin: 55px 0;
     }
 
-    .contents_card.card3 {
-        gap: 5%;
+    .contents_card.card2>.card_imgbox {
+        order: 1;
     }
 
-    .text_box2 h2, .text_box3 h2 {
-        font-size: 1.6rem;
+    .contents_card.card2>.card_textbox {
+        order: 2;
     }
 
     .marketing {
-        height: 430px;
+        height: 540px;
+    }
+
+    .marketing_container {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
     }
 
     .marketing_txt {
-        align-items: center;
-        position: absolute;
-        top: 43px;
-        left: 50%;
-        transform: translateX(-50%);
         text-align: center;
-        font-size: 1.95rem;
+        font-size: 2rem; 
+        margin-top: 90px;
     }
 
     .marketing_imgbox {
@@ -562,18 +622,29 @@
     }
 
     .footer {
-        height: 140px;
+        height: 180px;
+        padding: 40px 45px;
     }
 
-    .footer_info, .footer_menu a{
-        font-size: 0.95rem;
+    .footer_container {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .footer_info {
+        order: 3;
+        padding-top: 55px;
     }
 
     .footer_menu {
-        gap: 14px;
+        order: 1;
+        width: 50%;
     }
 
     .footer_sns {
-        gap: 9px;
+        order: 2;
+        justify-content: flex-end;
+        width: 50%;
+        gap: 15px;
     }
 }
