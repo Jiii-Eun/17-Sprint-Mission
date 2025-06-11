@@ -2,7 +2,7 @@ import * as validator from './validators.js';
 import { showError, clearError } from './ui.js';
 
 
-// 유효성 검사 객체
+// 유효성 검사용 데이터 객체
   const validationConfig = [
     {
       input: document.getElementById('email'),
@@ -46,7 +46,7 @@ const submitButton = document.querySelector('.login-button');
   };
 
 
-//개별 인풋 유효성 검사
+//개별 인풋 유효성 검사 함수
  const validateField = (field) => {
     if (!field.input) return;
 
@@ -71,3 +71,16 @@ const submitButton = document.querySelector('.login-button');
   });
 
 checkFormValidity(); // 페이지 처음 로드시 버튼 상태 확인
+
+//활성화된 버튼 클릭시 items로 이동
+  const loginForm = document.querySelector('.login-form');
+
+  if (loginForm) {
+    loginForm.addEventListener('submit', (event) => {
+      event.preventDefault(); //폼 기본동작 비활성화
+
+      if (!submitButton.disabled) {
+        window.location.href = '/items';
+      }
+    });
+  }
