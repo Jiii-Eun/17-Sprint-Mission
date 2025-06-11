@@ -1,18 +1,3 @@
-nav {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 70px;
-  background-color: var(--white);
-  margin: 0 auto;
-  padding: 9.5px 200px;
-  min-width: 375px;
-  display: flex;
-  align-items: center;
-}
-
 .logo {
   width: 40px;
   height: 40px;
@@ -28,7 +13,6 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 10px;
-
 }
 
 .title {
@@ -50,19 +34,6 @@ nav {
   justify-content: space-between;
 }
 
-
-
-header,
-.bottom-banner {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100%;
-  height: 540px;
-  background-color: #CFE5FF;
-  margin: 0 auto;
-}
-
 .header-all {
   display: flex;
   margin: 0 auto;
@@ -79,12 +50,6 @@ header,
   color: var(--gray700);
   
 }
-
-main {
-  margin-top: 138px;
-  margin-bottom: 120px;
-}
-
 
 .content {
   width: 988px;
@@ -105,7 +70,7 @@ main {
 }
 
 .content .content-header {
-  font-size: 18px;
+  font-size: var(--font-size-18);
   font-weight: 800;
   line-height: 26px;
   color: var(--blue);
@@ -152,12 +117,6 @@ main {
   line-height: 140%;
 }
 
-footer {
-  width: 100%;
-  background-color: #111827;
-  padding: 32px 0 108px; 
-}
-
 .footer {
   display: flex;
   justify-content: space-between;
@@ -193,54 +152,15 @@ footer {
   align-items: center;
 }
 
-@media (max-width:1920px) {
-  .sidebar,
-  .header-all,
-  .content,
-  .footer,
-  .bottom-all {
-    max-width: 1920px;
-  }
-
-  .content-title {
-    white-space: normal;
-  }
-}
-
 /* 최대 1199px 태블릿.ver  */ 
 
-@media (max-width: 1199px) {
-  nav {
-    padding: 10px 24px;
-  }
-
-  .login-btn {
-      padding: var(--login-btn-padding);
-    }
-
-  .title {
-    font-size: var(--nav-title);
-  }
-
-  header {
-    height: 771px;
-  }
-  
-  .header-all {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%; 
-    height: 100%;
+@media (min-width: 768px) and (max-width: 1199px) {
+  .header-all { 
     padding-top: 84px;
   }
 
-  .header-title {
-      margin-top: 0;
-      margin-bottom: 18px;
-      font-size: var(--font-size-40);
-      font-weight: 700;
+  .header-title { 
+    font-size: var(--font-size-40);
   }
 
   .tablet-hide-br,
@@ -248,12 +168,134 @@ footer {
     display: none;
   }
 
-  main {
-      margin: 52px 0 82px;  
-      display: flex;
-      flex-direction: column;
-      padding: 0 20px; 
-    }  
+  .content-title {
+      font-size: var(--font-size-32) !important;
+  } 
+
+  .content-description {
+    font-size: var(--font-size-18) !important;
+  }
+
+  .bottom-banner {
+    height: 927px;
+  }
+
+  .bottom-all {
+    padding-top: 201px; 
+  }
+
+  .bottom-title { 
+    font-size: var(--font-size-40);
+  }
+
+  #img-header-bottom {
+    height: 397px;
+  }
+
+  .footer p {
+    order: 1;   
+  }
+
+  .footer .middle {
+    order: 2;
+  }
+
+  .footer .sns {
+    order: 3;
+  }
+  
+}
+
+/* 최대 767px 모바일.ver  */ 
+@media (max-width: 767px) {
+    .logo {
+      display: none;
+    }
+
+    .header-all {
+      padding-top: 48px;
+    }
+
+    .header-title { 
+      font-size: var(--font-size-32); 
+    }
+
+    .tablet-hide-br {
+      display: block;
+    }
+
+    #img-header-top{ 
+      height: 204px;
+    }
+
+    .header-btn {
+      width: 240px;
+    }
+
+    .content-header {
+      font-size: var(--font-size-16) !important;
+    }
+
+    .content-title {
+      font-size: var(--font-size-24) !important;
+    }
+
+    .hide-br {
+      display: none;
+    }
+
+    .bottom-banner {
+      height: 540px;
+    }
+  
+    .bottom-all {
+      padding-top: 121px; 
+    }
+
+    .bottom-title {
+      font-size: var(--font-size-32);
+    }
+
+    #img-header-bottom {
+      height: 198px;
+    }
+
+    .footer .middle {
+      order: 1;
+    }
+
+    .footer .sns {
+      order: 2;
+    }
+
+    .footer p {
+      order: 3;  
+      width: 100%;
+    }
+}
+
+
+
+@media (max-width: 1199px) {
+  .title {
+    font-size: var(--nav-title);
+  }
+
+  .header-all {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+    height: 100%;
+  }
+
+  .header-title {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-weight: 700;
+  }
+
 
   .content {
       width: 100%;
@@ -264,15 +306,6 @@ footer {
       margin: auto;
       margin-bottom: 40px;
       gap: 2rem;
-
-  }
-
-  .content-title {
-      font-size: var(--font-size-32) !important;
-  } 
-
-  .content-description {
-    font-size: var(-font-size-18) !important;
   }
 
   .content .img {
@@ -288,210 +321,28 @@ footer {
     order: 1;
   } 
 
-  .bottom-banner {
-    height: 927px;
-  }
-
   .bottom-all {
     flex-direction: column;
     text-align: center;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 100%; 
-    padding-top: 201px; 
+    height: 100%;  
     padding-right: 0;
     padding-left: 0;
     margin: 0;
   }
 
+  
   .bottom-content {
     margin-bottom: 131px;
   }
 
-  .bottom-title { 
-    font-size: var(--font-size-40);
+  .footer {
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 0;
   }
-
-  #img-header-bottom {
-    height: 397px;
-  }
-
-    footer { 
-      width: 100%;
-      height: 160px;
-      padding: 32px 104px 108px 104px; 
-    }
-
-    .footer {
-      justify-content: space-between;
-      align-items: center;
-      height: auto;
-      flex-wrap: wrap;
-      padding: 0;
-    }
-
-    .footer p {
-      order: 1;   
-    }
-
-    .footer .middle {
-      order: 2;
-    }
-
-    .footer .sns {
-      order: 3;
-    }
-  
-}
-
-/* 최대 767px 모바일.ver  */ 
-@media (max-width: 767px) {
-    .logo {
-      display: none;
-    }
-    .title {
-      font-size: var(--nav-title);
-    }
-    nav {
-      padding: 10px 16px;
-    }
-
-    .login-btn {
-      padding: var(--login-btn-padding);
-    }
-
-    header {
-      height: 540px; 
-    }
-
-    .header-all {
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%; 
-      height: 100%;
-      padding-top: 48px;
-    }
-
-    .header-title {
-      margin-top: 0;
-      margin-bottom: 18px;
-      font-size: 2rem;
-      font-weight: 700;  
-    }
-
-    .tablet-hide-br {
-      display: block;
-    }
-
-    #img-header-top{ 
-      height: 204px;
-    }
-
-    .header-btn {
-      width: 240px;
-    }
-
-    main {
-      margin: 52px 0 82px;  
-      display: flex;
-      flex-direction: column;
-      padding: 0 20px; 
-    }
-
-    .content {
-      width: 100%;
-      display: flex;
-      height: auto;
-      flex-direction: column; 
-      padding: 0; 
-      margin: auto;
-      margin-bottom: 40px;
-      gap: 2rem;
-
-    }
-
-    .content-header {
-      font-size: 1rem !important;
-    }
-
-    .content-title {
-      font-size: 1.5rem !important;
-    }
-
-    .hide-br {
-      display: none;
-    }
-
-    .content .img {
-      width: 100%;
-      
-    }
-
-    .content-box {
-      padding: 0;
-      order: 2;
-    }
-
-    .content> .img {
-      order: 1;
-    } 
-
-    .bottom-banner {
-      height: 540px;
-    }
-
-    .bottom-all {
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      height: 100%; 
-      padding-top: 121px; 
-      padding-right: 0;
-      padding-left: 0;
-      margin: 0;
-    }
-
-    .bottom-content {
-      margin-bottom: 131px;
-    }
-
-    .bottom-title {
-      font-size: 2rem;
-    }
-
-    #img-header-bottom {
-      height: 198px;
-    }
-
-    footer { 
-      width: 100%;
-      height: 160px;
-      padding: 32px 32px 30px 32px; 
-    }
-
-    .footer {
-      justify-content: space-between;
-      align-items: center;
-      height: auto;
-      flex-wrap: wrap;
-      padding: 0;
-    }
-
-    .footer .middle {
-      order: 1;
-    }
-
-    .footer .sns {
-      order: 2;
-    }
-
-    .footer p {
-      order: 3;  
-      width: 100%;
-    }
 }

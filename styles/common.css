@@ -3,6 +3,43 @@ a {
   text-decoration: none;
 }
 
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  background-color: var(--white);
+  margin: 0 auto;
+  padding: 9.5px 200px;
+  min-width: 375px;
+  display: flex;
+  align-items: center;
+}
+
+header,
+.bottom-banner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 540px;
+  background-color: #CFE5FF;
+  margin: 0 auto;
+}
+
+main {
+  margin-top: 138px;
+  margin-bottom: 120px;
+}
+
+
+footer {
+  width: 100%;
+  background-color: #111827;
+  padding: 32px 0 108px; 
+}
 
 .login-btn {
   display: inline-flex;
@@ -53,4 +90,137 @@ a {
 
 .login-btn:disabled, .header-btn:disabled {
   background-color: var(--gray400);
+}
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  nav {
+    padding: 10px 24px;
+  }
+
+  .login-btn {
+    padding: var(--login-btn-padding);
+  }
+
+  header {
+    height: 771px;
+  }
+
+  main {
+    margin: 52px 0 82px;  
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px; 
+  }  
+
+  
+  footer { 
+    width: 100%;
+    height: 160px;
+    padding: 32px 104px 108px 104px; 
+  }
+
+
+}
+
+@media (max-width: 767px) {
+  nav {
+    padding: 10px 16px;
+  }
+
+  .login-btn {
+    padding: var(--login-btn-padding);
+  }
+
+  
+  header {
+    height: 540px; 
+  }
+
+  main {
+    margin: 52px 0 82px;  
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px; 
+  }
+  
+  footer { 
+    width: 100%;
+    height: 160px;
+    padding: 32px 32px 30px 32px; 
+  }
+
+}
+
+
+@media (max-width: 1199px) {
+  .title {
+    font-size: var(--nav-title);
+  }
+
+  .header-all {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+    height: 100%;
+  }
+
+  .header-title {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-weight: 700;
+  }
+
+
+  .content {
+      width: 100%;
+      display: flex;
+      height: auto;
+      flex-direction: column; 
+      padding: 0; 
+      margin: auto;
+      margin-bottom: 40px;
+      gap: 2rem;
+  }
+
+  .content .img {
+    width: 100%;
+  }
+
+  .content-box {
+    padding: 0;
+    order: 2;
+  }
+
+  .content> .img {
+    order: 1;
+  } 
+
+  .bottom-all {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;  
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  
+  .bottom-content {
+    margin-bottom: 131px;
+  }
+
+  
+  .footer {
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 0;
+  }
 }
