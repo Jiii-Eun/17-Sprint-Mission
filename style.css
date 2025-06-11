@@ -140,7 +140,7 @@ header {
     color: #4F4F4F;
 }
 
-.box1 {
+.itembox {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -152,7 +152,7 @@ header {
     border-radius: 12px;
 }
 
-.box2 {
+.searchbox {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -164,7 +164,7 @@ header {
     border-radius: 12px;
 }
 
-.box3 {
+.registerbox {
     display: flex;
     flex-direction: row;
     justify-content: center;
