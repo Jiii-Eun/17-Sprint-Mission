@@ -43,7 +43,8 @@ const validationConfig = [
     input: passwordConfirmInput,
     error: passwordConfirmError,
     rules: [
-      {
+      { validator: validator.isNotEmpty},
+      { 
         validator: (confirmValue) => validator.areValuesEqual(passwordInput.value, confirmValue),
         message: '비밀번호가 일치하지 않습니다.',
       },
@@ -76,15 +77,48 @@ const validateField = (field) => {
 
 // 이벤트 리스너 등록
 validationConfig.forEach((field) => {
-  if (field.input) {
-    const fieldValidator = () => {
-      validateField(field);
-      checkFormValidity();
-    };
-    field.input.addEventListener('focusout', fieldValidator);
-    field.input.addEventListener('input', fieldValidator);
+    if (field.input) {
+      // 인풋영역 focusout시 오류 표시
+      field.input.addEventListener('focusout', () => {
+        validateField(field);
+      });
+      
+      // 제출버튼 실시간 유효성 검사 후 상태 업데이트
+      field.input.addEventListener('input', () => {
+        checkFormValidity();
+      });
+    }
+  });
+
+// 비밀번호 필드를 focusout 할 때, 비밀번호 확인 필드를 다시 검사
+  if (passwordInput && passwordConfirmInput) {
+    passwordInput.addEventListener('focusout', () => {
+      if (passwordConfirmInput.value) {
+        const confirmFieldConfig = validationConfig.find(field => field.input === passwordConfirmInput); 
+        if (confirmFieldConfig) { // 비밀번호 확인 칸에 값이 값이 있는 경우만 검사
+          validateField(confirmFieldConfig);
+        }
+      }
+    });
   }
+
+// 비밀번호 보임/숨김 토글
+const toggleVisibilityButtons = document.querySelectorAll('.toggle-visibility');
+
+toggleVisibilityButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const passwordField = button.previousElementSibling;
+    const eyeIcon = button.querySelector('.eye-icon');
+    if (passwordField.type === 'password') {
+      passwordField.type = 'text';
+      eyeIcon.src = './icon/ic_visibility_on.svg'; 
+    } else {
+      passwordField.type = 'password';
+      eyeIcon.src = './icon/ic_visibility_off.svg'; 
+    }
+  });
 });
+
 
 // 제출버튼 클릭시 경로 이동
 if (loginForm) {
@@ -97,16 +131,6 @@ if (loginForm) {
         window.location.href = '/items.html';
       }
     }
-  });
-}
-
-// 비밀번호 바뀔 경우 실시간으로 비밀번호 확인과 비교
-if (passwordInput && passwordConfirmInput) {
-  passwordInput.addEventListener('input', () => {
-    const confirmFieldConfig = validationConfig.find(field => field.input === passwordConfirmInput);
-    if (confirmFieldConfig) {
-      validateField(confirmFieldConfig);
-    }git 
   });
 }
 
