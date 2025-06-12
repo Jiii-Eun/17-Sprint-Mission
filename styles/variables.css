@@ -16,6 +16,10 @@
   --font-size-32 : 2rem;
   --font-size-40 : 2.5rem;
 
+  --clamp-24: clamp(1rem, 2.5vw, 1.5rem);
+  --clamp-40: clamp(1.8rem, 3.5vw, 2.5rem);
+
+
 
   --nav-title: 25.63px;
   --login-btn-padding: 11px 43px;  
