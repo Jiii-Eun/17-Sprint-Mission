@@ -73,6 +73,13 @@
   color: var(--primary-100);
   text-decoration: underline;
 }
+
+/******************************
+********* 반응형 style *********
+******************************/
+
+/**** 모바일 사이즈 ****/
+
 @media (max-width: 767px) {
   .member-inner h2 {
     margin-bottom: 2.4rem;

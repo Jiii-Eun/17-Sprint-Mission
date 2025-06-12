@@ -276,7 +276,8 @@ footer ul.social {
   .main-section .inner .content .text-2xl {
     font-size: 1.6rem;
   }
-  /*  */
+
+  /* 메인 컨텐츠 하단 영역 */
   .main-bottom-section h3 {
     padding: 12.1rem 0rem 32.9rem;
     font-size: 3.2rem;
@@ -285,6 +286,7 @@ footer ul.social {
   .main-bottom-section .inner {
     background-size: contain;
   }
+
   /* footer */
   footer {
     position: relative;
