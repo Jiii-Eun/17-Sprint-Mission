@@ -68,7 +68,7 @@ html, body{
   background-color: var(--gray-400);
 }
 
-.input_warp{
+.input_wrap{
   position: relative;
 }
 .password_icon{
