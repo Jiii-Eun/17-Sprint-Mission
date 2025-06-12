@@ -1,0 +1,43 @@
+.footer {
+  background: #111827;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer__container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 0 5vw;
+}
+
+.footer__brand {
+  color: #9CA3AF;
+}
+
+.footer__links a {
+  color: #E5E7EB;
+  font-weight: 500;
+  margin: 0 0.75rem;
+}
+
+.footer__sns a {
+  margin: 0 0.5rem;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.footer__sns img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
