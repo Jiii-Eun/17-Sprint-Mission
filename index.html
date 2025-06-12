@@ -1,71 +1,87 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="style.css" rel="stylesheet">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link href="style.css" rel="stylesheet" />
   <title>판다마켓</title>
 </head>
 <body>
-  <header class="one">
-    <div class="two">
-      <p class="three"> <img src="images/favicon.ico" class="four"><span class="five">판다마켓</span></p>
-      <button class="six"><a href="login/login.html">로그인</a></button>
+  <header class="header-container">
+    <div class="header-content">
+      <p class="logo-wrapper">
+        <img src="images/favicon.ico" class="logo-icon" alt="Panda Market Logo" />
+        <span class="logo-text">판다마켓</span>
+      </p>
+      <a href="login/login.html" class="login-button">로그인</a>
     </div>
   </header>
-  <div class="seven">
-    <div class="eight">
-      <div class="nine">
-        <span class="ten">일상의 모든 물건을<br>
-        거래해 보세요</span>
-        <button class="first"><a href="items.html">구경하러 가기</a></button>
+
+  <main class="hero-wrapper">
+    <section class="hero-section">
+      <div class="hero-content">
+        <span class="hero-text">일상의 모든 물건을<br />거래해 보세요</span>
+        <a href="items.html" class="main-cta-button">구경하러 가기</a>
       </div>
-      <img src="images/jj.png" class="second">
+      <img src="images/jj.png" class="hero-image" alt="Main Promotion Image" />
+    </section>
+  </main>
+
+  <section class="feature-section">
+    <div class="feature-content">
+      <img src="images/feature1-image.png" class="feature-image" alt="Hot Item Image" />
+      <div class="feature-textbox">
+        <p class="feature-title">Hotitem</p>
+        <p class="feature-heading">인기 상품을 확인해 보세요</p>
+        <p class="feature-desc">가장 HOT한 중고거래 물품을 판다 마켓에서 확인해 보세요</p>
+      </div>
     </div>
-  </div>
-  <div class="big">
-   <div class="special">
-    <img src="images/feature1-image.png" class="thrid">
-    <div class="fourth">
-      <p class="fifth">Hotitem</p>
-      <p class="sixth">인기 상품을 확인해 보세요</p>
-      <p class="seventh">가장 HOT한 중고거래 물품을
-      판다 마켓에서 확인해 보세요</p>
-   </div>
-  </div>
-  <div class="big">
-   <div class="special">
-    <div class="fourth">
-      <p class="fifth">search</p>
-      <p class="sixth">구매를 원하는 상품을 검색하세요</p>
-      <p class="seventh">구매하고 싶은 물품은 검색해서 쉽게 찾아보세요
+  </section>
+
+  <section class="feature-section">
+    <div class="feature-content">
+      <div class="feature-textbox">
+        <p class="feature-title">search</p>
+        <p class="feature-heading">구매를 원하는 상품을 검색하세요</p>
+        <p class="feature-desc">구매하고 싶은 물품은 검색해서 쉽게 찾아보세요</p>
+      </div>
+      <img src="images/feature2-image.png" class="feature-image" alt="Search Item Image" />
+    </div>
+  </section>
+
+  <section class="feature-section">
+    <div class="feature-content">
+      <img src="images/feature3-image.png" class="feature-image" alt="Register Item Image" />
+      <div class="feature-textbox">
+        <p class="feature-title">regular</p>
+        <p class="feature-heading">판매를 원하는 상품을 등록하세요</p>
+        <p class="feature-desc">어떤 물건이든 판매하고 싶은 상품을 쉽게 등록하세요</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-section">
+    <div class="trust-content">
+      <p class="trust-text">믿을 수 있는<br />판다마켓 중고 거래</p>
+      <img src="images/bottom-banner-image.png" class="trust-image" alt="Trust Banner Image" />
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">codeit-2024</p>
+      <p class="footer-links">
+        <a href="privacy.html">privacy policy</a>
+        <a href="faq.html"> FAQ</a>
       </p>
-   </div>
-   <img src="images/feature2-image.png" class="thrid">
-  </div>
-  <div class="big">
-   <div class="special">
-    <img src="images/feature3-image.png" class="thrid">
-    <div class="fourth">
-      <p class="fifth">regular</p>
-      <p class="sixth">판매를 원하는 상품을 등록하세요</p>
-      <p class="seventh">어떤 물건이든 판매하고 싶은 상품을 쉽게 등록하세요</p>
-   </div>
-  </div>
-  <div class="eighth">
-    <div class="ninth">
-      <p class="tenth">믿을 수 있는<br>
-      판다마켓 중고 거래</p>
-      <img src="images/bottom-banner-image.png" class="last">
+      <div class="footer-sns">
+        <a href="https://www.facebook.com/"><img src="images/facebook-logo.svg" alt="Facebook Logo" /></a>
+        <a href="https://www.twitter.com"><img src="images/twitter-logo.svg" alt="Twitter Logo" /></a>
+        <a href="https://www.youtube.com"><img src="images/youtube-logo.svg" alt="YouTube Logo" /></a>
+        <a href="https://www.instagram.com"><img src="images/instagram-logo.svg" alt="Instagram Logo" /></a>
+      </div>
     </div>
-  </div>
-  <div class="lastone">
-    <div class="lasttwo">
-      <p class="word">codeit-2024</p>
-      <p class="wordtwo"><a href="privacy.html">privacy policy</a><a href="faq.html"> FAQ</a></p>
-      <div><a href="https://www.facebook.com/"><img src="images/facebook-logo.svg"></a><a href="https://www.twitter.com"><img src="images/twitter-logo.svg"></a><a href="https://www.youtube.com"><img src="images/youtube-logo.svg"></a><a href="https://www.instagram.com"><img src="images/instagram-logo.svg"></a></div>
-    </div>
-  </div> 
+  </footer>
 </body>
 </html>
