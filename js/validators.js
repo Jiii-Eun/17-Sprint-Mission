@@ -14,3 +14,8 @@ export function isEmailValid(email) {
 export function isPasswordLongEnough(password) {
   return password.length >= 8;
 }
+
+//비밀번호 일치 검사
+export function areValuesEqual(value1, value2) {
+  return value1 === value2;
+}
