@@ -26,61 +26,59 @@
         /></a>
       </h2>
       <form action="">
-        <fieldset>
-          <ul class="member-form">
+        <ul class="member-form">
+          <li>
+            <label for="email">이메일</label><input type="email" id="email" />
+          </li>
+          <li>
+            <label for="name">닉네임</label><input type="text" id="name" />
+          </li>
+          <li>
+            <label for="psword">비밀번호</label
+            ><input type="password" id="psword" />
+            <button class="btn_visibility">
+              <img
+                src="../../../public/img/icon/btn_visibility.svg"
+                alt="비밀번호 보이기"
+              />
+            </button>
+          </li>
+          <li>
+            <label for="psword-confirm">비밀번호 확인</label
+            ><input type="password" id="psword-confirm" />
+            <button class="btn_visibility">
+              <img
+                src="../../../public/img/icon/btn_visibility.svg"
+                alt="비밀번호 보이기"
+              />
+            </button>
+          </li>
+        </ul>
+        <button class="btn-member">로그인</button>
+        <div class="sns-member">
+          <p>간편 로그인하기</p>
+          <ul>
             <li>
-              <label for="email">이메일</label><input type="email" id="email" />
-            </li>
-            <li>
-              <label for="name">닉네임</label><input type="text" id="name" />
-            </li>
-            <li>
-              <label for="psword">비밀번호</label
-              ><input type="password" id="psword" />
-              <button class="btn_visibility">
+              <a href="https://www.google.com/">
                 <img
-                  src="../../../public/img/icon/btn_visibility.svg"
-                  alt="비밀번호 보이기"
+                  src="../../../public/img/icon/ic_google_login.svg"
+                  alt="구글 간편 로그인하기"
                 />
-              </button>
+              </a>
             </li>
             <li>
-              <label for="psword-confirm">비밀번호 확인</label
-              ><input type="password" id="psword-confirm" />
-              <button class="btn_visibility">
+              <a href="https://www.kakaocorp.com/page/">
                 <img
-                  src="../../../public/img/icon/btn_visibility.svg"
-                  alt="비밀번호 보이기"
+                  src="../../../public/img/icon/ic_kakao_login.svg"
+                  alt="카카오 간편 로그인 하기"
                 />
-              </button>
+              </a>
             </li>
           </ul>
-          <button class="btn-member">로그인</button>
-          <div class="sns-member">
-            <p>간편 로그인하기</p>
-            <ul>
-              <li>
-                <a href="https://www.google.com/">
-                  <img
-                    src="../../../public/img/icon/ic_google_login.svg"
-                    alt="구글 간편 로그인하기"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.kakaocorp.com/page/">
-                  <img
-                    src="../../../public/img/icon/ic_kakao_login.svg"
-                    alt="카카오 간편 로그인 하기"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
-          <p class="member-info">
-            이미 회원이신가요?<a href="login.html">로그인</a>
-          </p>
-        </fieldset>
+        </div>
+        <p class="member-info">
+          이미 회원이신가요?<a href="login.html">로그인</a>
+        </p>
       </form>
     </div>
   </body>
