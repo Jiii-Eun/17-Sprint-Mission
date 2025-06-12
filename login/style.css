@@ -20,6 +20,11 @@
   color: var(--blue);
 }
 
+.email {
+  display: flex;
+  flex-direction: column; 
+}
+
 
 .pwd {
   display: flex;
@@ -28,6 +33,13 @@
 
 .pwd-input {
   margin: 0;
+}
+
+.pwd-content {
+  position: relative; 
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 24px;
 }
 
 .eye {
@@ -45,6 +57,8 @@ label {
   font-size: var(--font-size-18);
   font-weight: 700;
 }
+
+
 
 .email-input, .pwd-input, .nickname-input {
   width: 100%;
