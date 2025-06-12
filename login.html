@@ -21,7 +21,7 @@
         <img src="images/logo.png" alt="판다마켓" class="login-log" />
       </a>
       <div class="login-content">
-        <form action="/login" method="POST" class="login-form">
+        <form action="items.html" method="get" class="login-form">
           <div class="form-group">
             <label for="userId">이메일</label>
             <input id="userId" type="email" name="email" />
@@ -35,7 +35,9 @@
               <p id="passwordError" style="display: none; color: red"></p>
             </div>
           </div>
-          <button class="login-btn button">로그인</button>
+          <button type="submit" id="loginBtn" class="login-btn button" disabled>
+            로그인
+          </button>
         </form>
         <div class="simple-login">
           간편 로그인하기
