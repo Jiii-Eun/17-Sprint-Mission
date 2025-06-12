@@ -1,0 +1,18 @@
+@import './reset.css';
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: #f7f8fd;
+    color: #0b1f66;
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+    ;
+}
