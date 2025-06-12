@@ -100,15 +100,13 @@ if (loginForm) {
   });
 }
 
-
-
 // 비밀번호 바뀔 경우 실시간으로 비밀번호 확인과 비교
 if (passwordInput && passwordConfirmInput) {
   passwordInput.addEventListener('input', () => {
     const confirmFieldConfig = validationConfig.find(field => field.input === passwordConfirmInput);
     if (confirmFieldConfig) {
       validateField(confirmFieldConfig);
-    }
+    }git 
   });
 }
 
