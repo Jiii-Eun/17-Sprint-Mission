@@ -3,6 +3,7 @@ const $IdError = document.querySelector('#IdError');
 const $password = document.querySelector('#password');
 const $passwordError = document.querySelector('#passwordError');
 const $loginBtn = document.querySelector('#loginBtn');
+const $viewIcon = document.querySelector('#viewIcon');
 let idCheck = false;
 let passwordCheck = false;
 
@@ -54,5 +55,14 @@ function handleFocutOutPassWord() {
   btnCheck();
 }
 
+function handlePassWordView() {
+  const isPassWordVisible = $password.type === 'text';
+  $password.type = isPassWordVisible ? 'password' : 'text';
+  $viewIcon.src = isPassWordVisible
+    ? 'images/eye-close.png'
+    : 'images/eye-open.png';
+}
+
 $userId.addEventListener('focusout', handleFocustOutId);
 $password.addEventListener('focusout', handleFocutOutPassWord);
+$viewIcon.addEventListener('click', handlePassWordView);
