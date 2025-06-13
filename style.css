@@ -55,35 +55,11 @@ header {
 
 .hometop {
     background-color: #dbeafe;
-    height: 400px;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     padding: 0 80px;
-}
-
-
-@media (min-width: 768px) and (max-width: 1199px) {
-
-  .hometop {
-    flex-direction: column;
-    align-items: center;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 100px;
-    height: auto;
-  }
-}
-
-@media (min-width: 375px) and (max-width: 767px) {
-  .hometop {
-    flex-direction: column;
-    align-items: center;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 100px;
-    height: auto;
-  }
 }
 
 .ppanda {
@@ -114,6 +90,46 @@ header {
     font-size: 24px;
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+
+  .hometop {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 100px;
+    height: auto;
+  }
+
+  .ppanda img {
+    width: 400px;
+  }
+
+  .top_text {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .hometop {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 100px;
+    height: auto;
+  }
+
+  .ppanda img {
+    width: 300px;
+  }
+
+  .top_text {
+    font-size: 16px;
+    text-align: center;
+  }
+}
 
 .looking-button {
     display: flex;
@@ -280,7 +296,12 @@ header {
   }
 
   .bottom_text {
-    font-size: 16px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .twoppanda img {
+    max-width: 400px;
   }
 }
 
@@ -302,11 +323,12 @@ header {
   }
 
   .bottom_text {
-    font-size: 16px;
+    font-size: 20px;
+    text-align: center;
   }
 
   .twoppanda img {
-    max-width: 240px;
+    max-width: 300px;
   }
 }
 
