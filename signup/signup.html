@@ -26,7 +26,7 @@
         required
         autocomplete="on"
       />
-
+      <p id="email-error"></p>
       <label for="nickname" class="form-label">닉네임</label>
       <input
         class="form-input"
@@ -36,7 +36,7 @@
         required
         autocomplete="on"
       />
-
+      <p id="nkerror"></p>
       <label for="password" class="form-label">비밀번호</label>
       <input
         class="form-input"
@@ -46,7 +46,7 @@
         required
         autocomplete="on"
       />
-
+      <p id="password-error"></p>
       <label for="passwordConfirm" class="form-label">비밀번호 확인</label>
       <input
         class="form-input"
@@ -56,9 +56,10 @@
         required
         autocomplete="on"
       />
+      <p id="pwconfirmerror"></p>
     </form>
 
-    <button class="signup-button">회원가입</button>
+   <button class="signup-button" type="button" disabled>회원가입</button>
 
     <section class="social-login-section">
       <div class="social-login-box">
@@ -79,5 +80,6 @@
       <a href="../login/login.html">로그인</a>
     </h1>
   </main>
+ <script src="signup.js" defer></script> 
 </body>
 </html>

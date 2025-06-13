@@ -26,6 +26,7 @@
         required
         autocomplete="on"
       />
+      <p id="email-error"></p>
 
       <label for="password" class="form-label">비밀번호</label>
       <input
@@ -36,9 +37,10 @@
         required
         autocomplete="on"
       />
+      <p id="password-error"></p>
     </form>
 
-    <button class="login-button">로그인</button>
+    <button class="login-button" type="button" disabled>로그인</button>
 
     <section class="social-login-section">
       <div class="social-login-box">
@@ -59,5 +61,7 @@
       <a href="../signup/signup.html">회원가입</a>
     </h1>
   </main>
+
+  <script src="login.js"></script>
 </body>
 </html>

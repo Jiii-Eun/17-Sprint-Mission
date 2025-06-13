@@ -140,3 +140,18 @@ input::placeholder {
     height: 618px;    
   }
 }
+#email-error{
+  color:red;
+  font-size:14px; 
+   margin-top: -16px; 
+  margin-bottom: 16px; 
+}
+#password-error{
+  color:red;
+  font-size:14px;
+   margin-top: -16px; 
+  margin-bottom: 16px; 
+}
+.login-button:hover{
+  cursor:pointer;
+}

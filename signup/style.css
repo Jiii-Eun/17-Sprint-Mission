@@ -139,3 +139,30 @@ input::placeholder {
     height: 857px;       
   }
 }
+#email-error {
+  color: red;
+  font-size: 14px;
+  margin-top: -16px; 
+  margin-bottom: 16px;
+}
+#password-error{
+  color:red;
+  font-size:14px;
+   margin-top: -16px; 
+  margin-bottom: 16px; 
+}
+#pwconfirmerror{
+  color:red;
+  font-size:14px;
+   margin-top: -16px; 
+  margin-bottom: 16px; 
+}
+#nkerror{
+  color:red;
+  font-size:14px;
+   margin-top: -16px; 
+  margin-bottom: 16px; 
+}
+.signup-button:hover{
+  cursor:pointer;
+}
