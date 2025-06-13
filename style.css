@@ -14,6 +14,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed; /* 상단에 붙이기 */
+  top: 0px;
+  left: 0px;
+  z-index: 1; /* 앞으로 빼기, 이것은 숫자 무엇으로 설정해야 좋을까? */
+  background-color: #FFFFFF;
 }
 
 .menu img {
@@ -45,6 +50,7 @@ body {
 .go_shopping {
   width: 100%;
   height: 540px;
+  margin-top: 70px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
