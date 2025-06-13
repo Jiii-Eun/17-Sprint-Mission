@@ -1,10 +1,44 @@
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 700px;
+    height: auto;
     margin-top: 150px;
+    margin-bottom: 150px;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 16px;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 16px;
+    width: 100%;
+    max-width: 700px;
+  }
+}
+
+/* @media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .container {
+    display: flex;
+
+  }
+} */
 
 .pandalogo {
     width: 266px;
@@ -17,6 +51,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
 }
 
 label {
@@ -25,7 +60,8 @@ label {
 }
 
 input {
-    width: 640px;
+    width: 100%;
+    /* width: 640px; */
     height: 56px;
     background-color: #F3F4F6;
     border: 1px solid #F3F4F6;
@@ -50,7 +86,8 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 640px;
+    width: 100%;
+    /* width: 640px; */
     height: 56px;
     background-color: #3692FF;
     margin-top: 24px;
@@ -63,7 +100,8 @@ input {
 .simple-login {
     display: flex;
     flex-direction: column;
-    width: 640px;
+    width: 100%;;
+    /* width: 640px; */
     height: 74px;
     background-color: #E6F2FF;
     margin: 24px;

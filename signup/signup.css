@@ -21,6 +21,14 @@
     gap: 10px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 16px;
+    width: 100%;
+}
+
 label {
     font-weight: 500;
     font-size: 16px;
