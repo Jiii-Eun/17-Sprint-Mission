@@ -5,14 +5,16 @@
 .header-container {
   margin: 0 auto;
   height: 70px;
-  padding: 9px 400px;
+  padding: 9px 120px;
 }
 
 .header-content {
-  width: 1120px;
+  max-width: 1120px;
+  width: 100%;
   height: 51px;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 .logo-wrapper {
@@ -49,7 +51,9 @@
 
 .hero-wrapper {
   height: 540px;
-  width: 1920px;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
   position: relative;
   background-color: #cfe5ff;
 }
@@ -103,11 +107,11 @@
 }
 
 .feature-content {
-  width: 988px;
+  max-width: 988px;
   height: 444px;
-  margin: 138px 466px;
+  margin: 138px auto;
   display: flex;
-  padding: 1px;
+  padding: 1px 24px;
 }
 
 .feature-image {
@@ -151,7 +155,8 @@
 
 .trust-section {
   margin-top: 138px;
-  width: 1920px;
+  max-width: 1920px;
+  width: 100%;
   height: 540px;
   background-color: #cfe5ff;
 }
@@ -160,7 +165,7 @@
   width: 1110px;
   height: 397px;
   display: flex;
-  margin: 143px auto 0px 405px;
+  margin: 143px auto 0 auto;
 }
 
 .trust-text {
@@ -177,17 +182,19 @@
 .footer {
   background-color: #111827;
   height: 160px;
-  width: 1920px;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
-  width: 1120px;
+  width: 100%;
+  max-width: 1120px;
   height: 20px;
-  margin: 32px 400px 108px 400px;
-  padding: 1px;
-  margin-top: 0px;
+  margin: 32px auto 108px auto;
+  padding: 0 24px;
   align-items: center;
 }
 
@@ -208,3 +215,23 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
+@media(min-width: 375px) {
+  .header-container {
+    padding: 9px 16px;
+  }
+   .footer-content {
+    padding: 0 16px;
+  }
+}
+
+@media(min-width: 768px) {
+  .header-container {
+    padding: 9px 24px;
+  }
+    .footer-content {
+    padding: 0 16px;
+  }
+}
+
+
