@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.navbar {
+  width: 1920px;
+  height: 70px;
+  border-bottom-width: 1px;
+  padding-top: 9px;
+  padding-right: 400px;
+  padding-bottom: 9px;
+  padding-left: 400px;
+  gap: 10px;
+}
+
+.nav {
+  display: flex;
+  width: 1120px;
+  height: 51px;
+  justify-content: space-between;
+}
+
+#logo {
+  width: 153px;
+  height: 51px;
+}
+
+#loginBtn {
+  background-color: #3692FF;
+  color: #FFFFFF;
+  border: none;
+  width: 128px;
+  height: 48px;
+  padding-top: 12px;
+  padding-right: 23px;
+  padding-bottom: 12px;
+  padding-left: 23px;
+  gap: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.top {
+  position: relative;
+}
+
+#rectangle {
+  width: 1920px;
+  height: 540px;
+}
+
+.rectangleBox {
+  position: absolute;
+  display: flex;
+  width: 1110px;
+  height: 340px;
+  top: 200px;
+  left: 405px;
+  gap: 7px;
+}
+
+#introduce {
+  color: #374151;
+  width: 295px;
+  height: 112px;
+  font-family: Pretendard;
+  font-weight: 700;
+  font-size: 37px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+#searchBtn {
+  background: #3692FF;
+  color: #FFFFFF;
+  border: none;
+  width: 357px;
+  height: 56px;
+  padding-top: 16px;
+  padding-right: 124px;
+  padding-bottom: 16px;
+  padding-left: 124px;
+  gap: 10px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+#rectangleLogo {
+  width: 746px;
+  height: 340px;
+}
+
+.section {
+  width: 1920px;
+  height: 720px;
+  padding-top: 138px;
+  padding-right: 466px;
+  padding-bottom: 138px;
+  padding-left: 466px;
+  gap: 10px;
+}
+
+.sectionNum {
+  display: flex;
+  background-color: #FCFCFC;
+  width: 988px;
+  height: 444px;
+  gap: 64px;
+  border-radius: 12px;
+}
+
+#sectionImg {
+  width: 579px;
+  height: 444px;
+}
+
+.sectionExplain {
+width: 298px;
+height: 238px;
+padding-top: 50px;
+padding-right: 24px;
+gap: 12px;
+
+}
+
+#category {
+  color: #3692FF;
+  width: 70px;
+  height: 26px;
+  font-family: Abhaya Libre ExtraBold;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+#smallExplain {
+  color: #374151;
+  width: 274px;
+  height: 64px;
+  font-family: Pretendard;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.sectionExplain2 {
+  width: 317px;
+  height: 238px;
+  padding-top: 50px;
+  padding-left: 24px;
+  gap: 12px;
+  text-align: right;
+}
+
+.bottom {
+  position: relative;
+}
+
+#bottomColor {
+  width: 1920px;
+  height: 540px;
+  top: 2908px;
+}
+
+.bottomBox {
+  position: absolute;
+  display: flex;
+  width: 1110px;
+  height: 397px;
+  top: 143px;
+  left: 405px;
+  gap: 69px;
+}
+
+.bottomBox #introduce {
+  width: 295px;
+  height: 172px;
+  padding-top: 90px;
+  padding-bottom: 60px;
+  gap: 10px;
+  font-size: 37px;
+}
+
+#bottomImg {
+  width: 746px;
+  height: 397px;
+}
+
+footer {
+  background-color: #111827;
+  width: 1920px;
+  height: 160px;
+  top: 3448px;
+  padding-top: 32px;
+  padding-right: 400px;
+  padding-bottom: 32px;
+  padding-left: 400px;
+  gap: 10px;
+}
+
+footer nav {
+  color: #9CA3AF;
+  width: 1120px;
+  height: 20px;
+  justify-content: space-between;
+}
+
+footer nav span {
+  display: flex;
+  float: left;
+  width: 112px;
+  height: 19px;
+  font-family: Pretendard;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footerLink {
+  display: flex;
+  text-decoration: none;
+  width: 159px;
+  height: 19px;
+  gap: 30px;
+  padding-left: 350px;
+}
+
+.footerLink a {
+  color: #9CA3AF;
+}
+
+.icon {
+  display: flex;
+  float: right;
+  width: 116px;
+  height: 20px;
+  gap: 12px;
+}
