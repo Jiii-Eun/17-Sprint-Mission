@@ -7,6 +7,8 @@ const $passwordError = document.querySelector('#passwordError');
 const $passwordCheck = document.querySelector('#passwordCheck');
 const $passwordCheckError = document.querySelector('#passwordCheckError');
 const $signupBtn = document.querySelector('#signupBtn');
+const $viewIcon = document.querySelector('#viewIcon');
+const $viewIcon2 = document.querySelector('#viewIcon2');
 let idCheck = false;
 let passwordCheck = false;
 let nicknameCheck = false;
@@ -91,7 +93,25 @@ function handleFocusOutPassWordCheck() {
   btnCheck();
 }
 
+function handlePassWordView() {
+  const isPassWordVisible = $password.type === 'text';
+  $password.type = isPassWordVisible ? 'password' : 'text';
+  $viewIcon.src = isPassWordVisible
+    ? 'images/eye-close.png'
+    : 'images/eye-open.png';
+}
+
+function handlePassWordView2() {
+  const isPassWordVisible = $passwordCheck.type === 'text';
+  $passwordCheck.type = isPassWordVisible ? 'password' : 'text';
+  $viewIcon2.src = isPassWordVisible
+    ? 'images/eye-close.png'
+    : 'images/eye-open.png';
+}
+
 $userId.addEventListener('focusout', handleFocustOutId);
 $password.addEventListener('focusout', handleFocutOutPassWord);
 $nickName.addEventListener('focusout', handleFocusOutNickName);
 $passwordCheck.addEventListener('focusout', handleFocusOutPassWordCheck);
+$viewIcon.addEventListener('click', handlePassWordView);
+$viewIcon2.addEventListener('click', handlePassWordView2);
