@@ -1,9 +1,17 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
+:root {
+  --primary-color: #3692ff;
+  --primary-color-hover: #1967d6;
+  --background-color: #ffffff;
+  --background-gray-color: #f3f4f6;
+  --section-text-color: #374151;
+}
+
 .top {
   position: sticky;
   top: 0;
-  background-color: #ffffff;
+  background-color: var(--background-color);
   display: flex;
   align-items: center;
   max-width: 1920px;
@@ -27,8 +35,8 @@
 }
 
 .loginbutton {
-  background-color: #3692ff;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--background-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +52,7 @@
 }
 
 .loginbutton:hover {
-  background-color: #1967d6;
+  background-color: var(--primary-color-hover);
 }
 
 .panda {
@@ -84,11 +92,11 @@
   align-items: center;
   color: #f9fafb;
   border-style: none;
-  background-color: #3692ff;
+  background-color: var(--primary-color);
 }
 
 .gotosee:hover {
-  background-color: #1967d6;
+  background-color: var(--primary-color-hover);
 }
 
 .section_card {
@@ -128,7 +136,7 @@
 }
 
 .section_text :nth-child(1) {
-  color: #3692ff;
+  color: var(--primary-color);
   font-size: 18px;
   font-family: "Abhaya Libre ExtraBold", sans-serif;
   font-weight: 800;
@@ -138,7 +146,7 @@
 
 .section_text :nth-child(2) {
   height: 112px;
-  color: #374151;
+  color: var(--section-text-color);
   font-size: 40px;
   font-family: Pretendard, sans-serif;
   font-weight: 700;
@@ -147,7 +155,7 @@
 }
 
 .section_text :nth-child(3) {
-  color: #374151;
+  color: var(--section-text-color);
   font-size: 24px;
   font-family: Pretendard, sans-serif;
   font-weight: 500;
