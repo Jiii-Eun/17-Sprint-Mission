@@ -21,7 +21,7 @@
         <img src="images/logo.png" alt="판다마켓" class="signup-logo" />
       </a>
       <div class="signup-content">
-        <form action="/signup" method="POST" class="signup-form">
+        <form action="login.html" method="POST" class="signup-form">
           <div class="form-group">
             <label for="userId">이메일</label>
             <input id="userId" type="email" name="email" />
@@ -48,7 +48,12 @@
               <p id="passwordCheckError" style="display: none; color: red"></p>
             </div>
           </div>
-          <button id="signupBtn" class="signup-btn button" disabled>
+          <button
+            type="submit"
+            id="signupBtn"
+            class="signup-btn button"
+            disabled
+          >
             회원가입
           </button>
         </form>
