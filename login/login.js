@@ -38,8 +38,12 @@ passwordInput.addEventListener("blur", () => {
   const value = passwordInput.value.trim();
     if (value === "") {
       passwordError.textContent = "비밀번호를 입력해주세요.";
+      passwordError.classList.add("input-error");
+      passwordInput.classList.add("error-text");
     } else if (value.length < 8) {
       passwordError.textContent = "비밀번호를 8자 이상 입력해주세요.";
+      passwordError.classList.add("input-error");
+      passwordError.classList.add("error-text")
     } else {
       passwordError.textContent = "";
       passwordInput.classList.remove("error");
@@ -50,7 +54,7 @@ passwordInput.addEventListener("blur", () => {
 loginBtn.addEventListener("click", (e) => {
   e.preventDefault(); //a 태그의 기본 이동 막음 
   const emailLogin = validateEmail(emailInput.value.trim());
-  const passwordLogin = passwordInput.value.length >= 8;
+  const passwordLogin = passwordInput.value.trim().length >= 8;
   const errorLogin = emailError.textContent || passwordError.textContent;
   
   if (emailInput.value && passwordInput.value && emailValid && passwordValid && !errors) {
