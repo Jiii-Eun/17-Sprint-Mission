@@ -1,0 +1,46 @@
+*{
+  box-sizing: border-box;
+}
+
+form {
+  margin: 16px auto;
+  width: 360px;
+}
+
+label {
+  color: #000000;
+  display: block;
+  margin:16px 0 8px;
+
+}
+
+input{
+  border: 1px solid #000000;
+  color: #000000;
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 8px 0;
+  padding: 16px 24px;
+  width: 100%;
+
+}
+
+button {
+  background-color: #ffffff;
+  border: none;
+  display: block;
+  font-size : 20px;
+  font-weight: 700;
+  margin: 24px 0;
+  padding: 16px;
+  width: 100%;
+}
+
+.login-title {
+  color: #000000;
+  font-size: 35px;
+  font-weight: 700;
+  margin: 24px 0;
+  text-align: center;
+}
