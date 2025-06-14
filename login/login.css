@@ -61,9 +61,9 @@ input {
     padding-left: 24px;
 }
 
-.input-error {
-  border: 1px solid #F74747;
-  background-color: #F3F4F6;
+#emailError,
+#passwordError {
+  color: #F74747;
 }
 
 .input-wrapper {
