@@ -18,14 +18,23 @@
         <form class="signin_container">
           <label for="email">이메일</label>
           <input type="email" id="email" placeholder="codeit@email.com">
+          <label for="nickname">닉네임</label>
+          <input type="text" id="nickname" placeholder="판다">
           <label for="password">비밀번호</label>
           <div class="password-wrapper">
-            <input type="password" name="password" id="password">
+            <input type="password" id="password">
             <span class="toggle-visibility">
               <img src="../images/login/btn_visibility_off_24px.png" alt="토글 버튼">
             </span>
           </div>
-          <a class="login-form-btn" href="/">로그인</a>
+          <label for="password_confirm">비밀번호 확인</label>
+          <div class="password-wrapper">
+            <input type="password" id="password_confirm">
+            <span class="toggle-visibility">
+              <img src="../images/login/btn_visibility_on_24px.png" alt="토글 버튼">
+            </span>
+          </div>
+          <a class="login-form-btn" href="/login">회원가입</a>
         </form>
         <div class="social-login">
           <span>간편 로그인하기</span>
@@ -39,8 +48,8 @@
           </div>
         </div>
         <div class="signup-text">
-          판다마켓이 처음이신가요?
-          <a href="/signup">회원가입</a>
+          이미 회원이신가요?
+          <a href="/login">로그인</a>
         </div>
       </div>
     </div>
