@@ -73,3 +73,28 @@
   color: var(--primary-100);
   text-decoration: underline;
 }
+
+/******************************
+********* 반응형 style *********
+******************************/
+
+/**** 모바일 사이즈 ****/
+
+@media (max-width: 767px) {
+  .member-inner h2 {
+    margin-bottom: 2.4rem;
+    width: 19.8rem;
+  }
+  .member-inner form {
+    width: 100%;
+    max-width: 40rem;
+    padding: 0rem 1.6rem;
+  }
+  .member-inner label {
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+  }
+  .member-inner ul.member-form li {
+    margin-bottom: 1.6rem;
+  }
+}

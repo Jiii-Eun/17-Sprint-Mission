@@ -1,0 +1,310 @@
+/***************************** 
+********* root style *********
+******************************/
+:root {
+  /* color */
+  --primary-100: #3692ff;
+  --primary-200: #1967d6;
+  --primary-300: #1251aa;
+
+  --Secondary-gray-900: #111827;
+  --Secondary-gray-800: #1f2937;
+  --Secondary-gray-700: #374151;
+  --Secondary-gray-600: #4b5563;
+  --Secondary-gray-500: #6b7280;
+  --Secondary-gray-400: #9ca3af;
+  --Secondary-gray-200: #e5e7eb;
+  --Secondary-gray-100: #f3f4f6;
+  --Secondary-gray-50: #f9fafb;
+
+  --error-red: #f74747;
+}
+
+* {
+  font-family: "Pretendard Variable", Pretendard, Arial, Helvetica, sans-serif;
+}
+
+html {
+  color: var(--Secondary-gray-700);
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+.inner {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/* header style */
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0px 20rem;
+  border-bottom: 1px solid #dfdfdf;
+  background-color: #fff;
+}
+header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7rem;
+}
+
+header .logo {
+  width: 15.3rem;
+}
+header .btn-login {
+  padding: 1.1rem 4.3rem;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+/* main style */
+.main-visual-section {
+  padding: 0rem 20rem;
+  background-color: #cfe5ff;
+}
+.main-visual-section .inner {
+  padding: 24rem 0rem 10rem;
+  background: #cfe5ff url(../../public/img/Img_home_top.svg) right bottom
+    no-repeat;
+}
+.main-visual-section .btn-large {
+  margin-top: 3.2rem;
+}
+
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-section .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6.4rem;
+  overflow: hidden;
+  width: 988px;
+  margin: 13.8rem 0rem;
+  border-radius: 1.2rem;
+  background-color: #fcfcfc;
+}
+.main-section .inner .content {
+  flex: 1 1 auto;
+}
+.main-section .inner h4 {
+  margin-bottom: 1.2rem;
+  color: var(--primary-100);
+  font-weight: 800;
+}
+.main-section .inner p {
+  margin-top: 2.4rem;
+  font-weight: 500;
+}
+.main-section:nth-child(2) .inner {
+  flex-direction: row-reverse;
+}
+
+.main-section:nth-child(2) .inner .content {
+  text-align: right;
+}
+
+.main-bottom-section {
+  padding: 0rem 20rem;
+  background-color: #cfe5ff;
+}
+.main-bottom-section .inner {
+  background: url(../../public/img/Img_home_bottom.svg) right bottom no-repeat;
+}
+.main-bottom-section h3 {
+  padding: 25.5rem 0rem 17.2rem;
+}
+
+/* footer */
+
+footer {
+  padding: 3.2rem 20rem 10.8rem;
+  background-color: var(--Secondary-gray-900);
+  color: var(--Secondary-gray-400);
+}
+footer .inner {
+  display: flex;
+  justify-content: space-between;
+}
+footer ul {
+  display: flex;
+  align-items: center;
+}
+footer ul.customer {
+  gap: 3rem;
+  color: var(--Secondary-gray-200);
+}
+
+footer ul.social {
+  gap: 1.2rem;
+}
+
+/******************************
+********* 반응형 style *********
+******************************/
+
+/**** 테블릿 사이즈 ****/
+
+@media (max-width: 1199px) {
+  /* header */
+  header {
+    padding: 0rem 2.4rem;
+  }
+
+  /* 메인 비주얼 영역 */
+  .main-visual-section {
+    padding: 0;
+  }
+  .main-visual-section .inner {
+    padding: 8.4rem 0rem 55.1rem;
+    background-position: center bottom;
+    text-align: center;
+  }
+  .main-visual-section .inner .text-4xl br {
+    display: none;
+  }
+  .main-visual-section .btn-large {
+    margin-top: 2.4rem;
+  }
+
+  /* 메인 컨텐츠 영역 */
+  .main-content-section {
+    padding: 2.4rem;
+  }
+  .main-section .inner {
+    flex-direction: column;
+    gap: 2.4rem;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0rem 0rem 5.2rem;
+    border: 0;
+    background-color: transparent;
+  }
+  .main-section .inner h4 {
+    margin-bottom: 1.6rem;
+  }
+  .main-section .inner img {
+    width: 100%;
+    border-radius: 1.4rem;
+  }
+  .main-section .inner .content .text-4xl {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+  }
+  .main-section .inner .content .text-4xl br {
+    display: none;
+  }
+  .main-section .inner .content .text-2xl {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
+  .main-section:nth-child(2) .inner {
+    flex-direction: column;
+  }
+  .main-section:nth-child(2) .inner .content {
+    margin-left: auto;
+    text-align: right;
+  }
+
+  /* 메인 컨텐츠 하단 영역*/
+  .main-bottom-section {
+    padding: 0;
+  }
+  .main-bottom-section .inner {
+    background-position: center bottom;
+    text-align: center;
+  }
+  .main-bottom-section h3 {
+    padding: 20.1rem 0rem 61.4rem;
+  }
+
+  /* footer */
+  footer {
+    padding: 3.2rem 10.4rem 10.8rem;
+  }
+}
+
+/* 모바일 사이즈 */
+@media (max-width: 767px) {
+  /* header */
+  header {
+    padding: 0rem 1.6rem;
+  }
+
+  /* 메인 비주얼 영역 */
+  .main-visual-section .inner .text-4xl {
+    font-size: 3.2rem;
+    line-height: 140%;
+  }
+  .main-visual-section .inner .text-4xl br {
+    display: block;
+  }
+  .main-visual-section .inner .btn-large {
+    margin-top: 1.8rem;
+    padding: 1.1rem 7.1rem;
+    border-radius: 4rem;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
+
+  /* 메인 컨텐츠 영역 */
+  .main-content-section {
+    padding: 5.2rem 1.6rem 4.3rem 1.5rem;
+  }
+  .main-section .inner {
+    margin: 0rem 0rem 4rem;
+  }
+  .main-section .inner h4 {
+    margin-bottom: 0.8rem;
+  }
+  .main-section .inner p {
+    margin-top: 1.6rem;
+  }
+  .main-section .inner .content .text-4xl {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+  .main-section .inner .content .text-2xl {
+    font-size: 1.6rem;
+  }
+
+  /* 메인 컨텐츠 하단 영역 */
+  .main-bottom-section h3 {
+    padding: 12.1rem 0rem 32.9rem;
+    font-size: 3.2rem;
+    line-height: 140%;
+  }
+  .main-bottom-section .inner {
+    background-size: contain;
+  }
+
+  /* footer */
+  footer {
+    position: relative;
+    padding: 3.2rem 3.2rem 10.9rem;
+  }
+  footer .inner > span {
+    position: absolute;
+    left: 3.2rem;
+    bottom: 3rem;
+  }
+  footer ul {
+    flex: 1 1 auto;
+  }
+  footer ul.customer {
+    justify-content: space-between;
+    gap: 0;
+  }
+  footer ul.social {
+    justify-content: end;
+  }
+}
