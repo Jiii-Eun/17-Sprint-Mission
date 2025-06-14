@@ -17,31 +17,36 @@
     <form class="login-form">
       <div class="input-wrapper">
         <label for="email">이메일</label>
-        <input type="email" id="email" value="codeit@email.com" />
+        <input type="email" id="email" placeholder="이메일을 입력해주세요" />
+        <p class="error-message" id="email-error"></p>
       </div>
       <div class="input-wrapper">
       <label for="nickname">닉네임</label>
-      <input type="text" id="nickname" value="판다" />
+      <input type="text" id="nickname" placeholder="닉네임을 입력해주세요" />
+      <p class="error-message" id="nickname-error"></p>
       </div>
       <div class="input-wrapper">
         <label for="password">비밀번호</label>
         <div class="password-wrapper">
-          <input type="password" id="password" value="12345678" />
+          <input type="password" id="password" placeholder="비밀번호를 입력해주세요" />
           <button type="button" class="toggle-visibility">
             <img src="icon/ic_visibility_off.svg" alt="비밀번호 보기" class="eye-icon" />
           </button>
+          <p class="error-message" id="password-error"></p>
         </div>
       </div>
       <div class="input-wrapper">
         <label for="password-confirm">비밀번호 확인</label>
         <div class="password-wrapper">
-          <input type="password" id="password-confirm" value="asdfffff" />
+          <input type="password" id="password-confirm" placeholder="비밀번호 확인을 입력해주세요" />
           <button type="button" class="toggle-visibility">
-            <img src="icon/ic_visibility_on.svg" alt="비밀번호 보기" class="eye-icon" />
+            <img src="icon/ic_visibility_off.svg" alt="비밀번호 보기" class="eye-icon" />
           </button>
+          <p class="error-message" id="password-confirm-error"></p>
+
         </div>
      </div>
-      <button type="submit" class="login-button">로그인</button>
+      <button type="submit" class="login-button">회원가입</button>
     </form>
 
     <div class="social-login">
@@ -58,5 +63,6 @@
 
     <p class="signup">판다마켓이 처음이신가요? <a href="/login.html">로그인</a></p>
   </div>
+  <script type="module" src="js/auth.js"></script>
 </body>
 </html>

@@ -29,9 +29,10 @@ body {
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 0%;
+  margin-bottom: 8px;
 }
 
-.login-form input {
+input {
   box-sizing: border-box;
   width: 100%;
   gap: 10px;
@@ -39,7 +40,7 @@ body {
   background-color: var(--gray-100);
   box-shadow: none;
   outline: none;
-  border: none;
+  border: 1px solid var(--gray-100);
   padding: 16px 24px;
   font-weight: 400;
   font-size: 16px;
@@ -48,21 +49,42 @@ body {
   vertical-align: middle;
 }
 
-.login-form input::placeholder {
+input::placeholder {
   color: var(--gray-400);
 }
 
 .input-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
+}
+
+/* input error */
+.input-error {
+  border: 1px solid var(--error);
+}
+
+.error-message {
+  visibility: hidden;
+  color: var(--error);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0%;
+  line-height: 1.5rem;
+  padding-left: 1rem;
+  min-height: 1.5rem;
+}
+
+.error-message.visible {
+  visibility: visible; 
 }
 
 .password-wrapper {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  gap: 8px;
 }
 
 .password-wrapper input {
@@ -77,7 +99,8 @@ body {
   cursor: pointer;
   position: absolute;
   right: 16px;
-  z-index: 10;
+  top: 16px;
+  z-index: 10;;
 }
 
 .eye-icon {
@@ -91,7 +114,7 @@ body {
 .login-button {
   margin-top: 16px;
   width: 100%;
-  background-color: var(--gray-400);
+  background-color: var(--primary);
   color: var(--gray-100);
   padding: 16px 124px;
   border-radius: 40px;
@@ -106,8 +129,13 @@ body {
 
 .login-button:active {
   background-color: var(--primary);
-  color: var(--gray-100);
 } 
+
+.login-button:disabled {
+  background-color: var(--gray-400);
+  color: var(--gray-100);
+  cursor: not-allowed;
+}
 
 .social-login {
   margin-top: 24px;

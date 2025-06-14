@@ -12,4 +12,7 @@
 
   /* Primary */
   --primary: #3692FF;
+
+  /* error */
+  --error: #F74747;
 }
