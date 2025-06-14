@@ -18,10 +18,12 @@
             <div class="email-container">
                 <label for="login-email">이메일<br></label>
                 <input id="login-email" name="email" type="email" placeholder="이메일을 입력하세요.">
+                <p id="emailError" class="error-message"></p>
             </div>
             <div class="nickname-container">
                 <label for="nickname">닉네임<br></label>
-                <input for="nickname" name="id" type="name" placeholder="닉네임을 입력하세요.">
+                <input id="nickname" name="id" type="name" placeholder="닉네임을 입력하세요.">
+                <p id="nicknameError" class="error-message"></p>
             </div>
             <div class="password-container">
                 <label for="signup-password">비밀번호<br></label>
@@ -29,6 +31,7 @@
                     <input id="signup-password" name="password" type="password" placeholder="비밀번호를 입력하세요.">
                     <img src="/image/icon/eyeclosed_icon.png" alt="비밀번호 보기" class="eyeclosed-icon">
                 </div>
+                <p id="passwordError" class="error-message"></p>
             </div>
             <div class="password-check-container">
                 <label for="signup-password-check">비밀번호 확인<br></label>
@@ -36,9 +39,10 @@
                     <input id="signup-password-check" name="password-check" type="password" placeholder="비밀번호를 확인해주세요.">
                     <img src="/image/icon/eyeopen_icon.png" alt="비밀번호 확인하기" class="eyeopen-icon">
                 </div>
+                <p id="passwordDoubleError" class="error-message"></p>
             </div>
         </form>
-        <a href="/signup" class="signup-button">회원가입</a>
+        <a href="/signup" id="signup-button" class="signup-button disabled">회원가입</a>
         <div class="simple-login">
             <p class="simple-text">간편 로그인하기</p>
             <div class="social-container">
@@ -54,5 +58,6 @@
             <p>이미 회원이신가요? <a href="/login">로그인</a></p>
         </footer>
       </div>
+      <script src="signup.js"></script>
     </body>
 </html>
