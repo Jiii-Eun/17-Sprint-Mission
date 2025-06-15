@@ -25,9 +25,14 @@
   flex-direction: column; 
 }
 
+
 .pwd {
   display: flex;
   flex-direction: column;
+}
+
+.pwd-input {
+  margin: 0;
 }
 
 .pwd-content {
@@ -35,10 +40,6 @@
   width: 100%;
   margin-top: 16px;
   margin-bottom: 24px;
-}
-
-.pwd-input {
-  margin: 0;
 }
 
 .eye {
@@ -53,10 +54,11 @@
 
 label {
   margin: 0;
-  font-size: 1.125rem;
+  font-size: var(--font-size-18);
   font-weight: 700;
-
 }
+
+
 
 .email-input, .pwd-input, .nickname-input {
   width: 100%;
@@ -64,7 +66,7 @@ label {
   background-color: var(--gray100);
   border: none;
   border-radius: 12px; 
-  font-size: 1rem;
+  font-size: var(--font-size-16);
   padding: 16px 24px 14px;
 }
 
@@ -77,7 +79,7 @@ label {
   width: 100%;
   border-radius: 40px;
   height: 3.5rem;
-  font-size: 1.25rem;
+  font-size: var(--font-size-20);
 }
 
 .section {
@@ -91,7 +93,7 @@ label {
   border-radius: 8px;
 }
 .section h3 {
-  font-size: 1rem;
+  font-size: var(--font-size-16);
   font-weight: 500;
 }
 
@@ -107,10 +109,60 @@ label {
 }
 
 .message {
-  font-size: 14px;
+  font-size: var(--font-size-14);
   font-weight: 500;
 }
 
 .message a {
   color: var(--blue);
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .content {
+    margin: 190px auto; 
+    height: 618px;  
+  }
+
+  .logo {
+    width: 103.53px;
+    height: 103.88px;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  .title h1 {
+    font-size: 66.34px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .content {
+    margin: 80px auto; 
+    height: 501px; 
+    max-width: 400px;
+  }
+
+  .logo {
+    width: 51.76px;
+    height: 51.94px;
+  }
+
+  .title {
+    margin-bottom: 24px;
+  }
+
+  .title h1 {
+    font-size: 33.17px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .content {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100% ;
+  }
 }
