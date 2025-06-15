@@ -1,3 +1,9 @@
+@import url(./fonts.css);
+@import url(./tokens.css);
+
+body {
+  font-family: var(--font-primary);
+}
 * {
   box-sizing: border-box;
   margin: 0;

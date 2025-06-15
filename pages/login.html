@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/pages/sign.css" />
+    <link rel="stylesheet" href="/styles/pages/sign.css" />
     <title>판다마켓</title>
-    <link rel="icon" href="./assets/icons/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="/assets/icons/favicon.png" type="image/x-icon" />
   </head>
   <body>
     <div class="sign">
       <div class="sign__header">
         <img
           class="sign__logo"
-          src="./assets/imgs/panda_icon_small.svg"
+          src="/assets/imgs/panda_icon_small.svg"
           alt="판다마켓 로고"
         />
         <h1 class="sign__title">
@@ -20,33 +20,53 @@
         </h1>
       </div>
       <form class="sign__form">
-        <div class="sign__input-wrapper">
+        <div class="sign__input-container">
           <label for="email" class="sign__label">이메일</label>
           <input
             type="email"
             id="email"
             class="sign__input"
             placeholder="이메일을 입력하세요"
+            autocomplete="email"
             required
           />
+          <span class="sign__input-error" id="email-error"
+            >이메일을 입력해주세요.</span
+          >
         </div>
-        <div class="sign__input-wrapper">
+        <div class="sign__input-container">
           <label for="password" class="sign__label">비밀번호</label>
-          <input
-            type="password"
-            id="password"
-            class="sign__input"
-            placeholder="비밀번호를 입력하세요"
-            required
-          />
-          <button
-            class="sign__visibility-icon"
-            aria-label="비밀번호 표시"
-            aria-pressed="false"
-            type="button"
-          ></button>
+          <div class="sign__input-wrapper">
+            <input
+              type="password"
+              id="password"
+              class="sign__input"
+              placeholder="비밀번호를 입력하세요"
+              autocomplete="current-password"
+              required
+            />
+            <button
+              class="sign__visibility-icon"
+              id="password-visibility-btn"
+              aria-label="비밀번호 표시"
+              aria-pressed="false"
+              type="button"
+            ></button>
+          </div>
+          <span class="sign__input-error" id="password-error"
+            >비밀번호를 입력해주세요.</span
+          >
         </div>
-        <button type="submit" class="sign__btn">로그인</button>
+        <button
+          class="sign__btn"
+          id="form-btn"
+          type="button"
+          onclick="location.href='/pages/items.html'"
+          aria-label="로그인 및 제품 목록으로 이동"
+          disabled
+        >
+          로그인
+        </button>
         <section class="sign__sns-login-wrapper">
           <span class="sign__sns-login-text">간편 로그인하기</span>
           <div>
@@ -57,7 +77,7 @@
             >
               <img
                 class="sign__sns-icon"
-                src="./assets/icons/ic_google.svg"
+                src="/assets/icons/ic_google.svg"
                 alt="구글 아이콘"
               />
             </a>
@@ -68,7 +88,7 @@
             >
               <img
                 class="sign__sns-icon"
-                src="./assets/icons/ic_kakao.svg"
+                src="/assets/icons/ic_kakao.svg"
                 alt="카카오톡 아이콘"
               />
             </a>
@@ -78,12 +98,13 @@
           판다마켓이 처음이신가요?
           <a
             class="sign__signup-link"
-            href="/signup.html"
+            href="/pages/signup.html"
             aria-label="회원가입 화면으로 이동"
             >회원가입</a
           >
         </div>
       </form>
     </div>
+    <script type="module" src="/scripts/pages/login.js"></script>
   </body>
 </html>

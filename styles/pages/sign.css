@@ -1,5 +1,41 @@
-@import url(../common/common.css);
-@import url(../common/header.css);
+@import url(/styles/common/global.css);
+@import url(/styles/common/tokens.css);
+@import url(/styles/components/header.css);
+@import url(/styles/components/footer.css);
+:root {
+  --sign-form-padding: 0 var(--spacing-md);
+  --sign-form-width: min(100%, 25rem);
+  --sign-title-font-size: var(--font-size-900);
+  --sign-label-font-size: var(--font-size-400);
+  --sign-sns-icon-width: 2.625rem;
+
+  --sign-header-gap: var(--spacing-sm);
+  --sign-logo-width: 3.2rem;
+  --sign-header-margin-bottom: 2.125rem;
+  --sign-input-width: 100%;
+  --sign-input-padding: 0 20px;
+  --sign-input-height: 3.5rem;
+
+  --sign-btn-padding: 1rem 7.75rem;
+  --sign-sns-login-wrapper-padding: 1rem 1.5rem;
+}
+@media screen and (min-width: 48rem) {
+  :root {
+    --sign-title-font-size: 4.125rem;
+    --sign-form-width: 100%;
+    --sign-form-padding: 0 40px;
+  }
+}
+@media screen and (min-width: 75rem) {
+  :root {
+    --sign-form-width: unset;
+    --sign-logo-width: 6.25rem;
+    --sign-input-width: 40rem;
+    --sign-label-font-size: var(--font-size-500);
+    --sign-form-padding: 0;
+    --sign-header-gap: var(--spacing-lg);
+  }
+}
 
 .sign {
   display: flex;
@@ -13,7 +49,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-lg);
+  gap: var(--sign-header-gap);
   width: 100%;
   margin-bottom: var(--sign-header-margin-bottom);
 }
@@ -36,17 +72,20 @@
   gap: var(--spacing-lg);
   padding: var(--sign-form-padding);
 }
-.sign__input-wrapper {
-  position: relative;
+.sign__input-container {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: var(--spacing-sm);
-  cursor: pointer;
+}
+.sign__input-wrapper {
+  position: relative;
+  width: 100%;
 }
 .sign__label {
-  font-size: var(--font-size-500);
+  font-size: var(--sign-label-font-size);
   font-weight: 700;
   line-height: 1.5rem;
 }
@@ -60,35 +99,21 @@
   font-weight: 400;
   background-color: var(--gray-100-color);
 }
-@media screen and (max-width: 75rem) {
-  .sign__input {
-    width: 100%;
-  }
-  .sign__input-wrapper {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 48rem) {
-  .sign__label {
-    font-size: var(--font-size-400);
-  }
-  .sign__title {
-    font-size: var(--font-size-900);
-  }
-  .sign__header {
-    gap: var(--spacing-sm);
-  }
+.sign__input__error {
+  border: 2px solid var(--error-red-color);
 }
 .sign__visibility-icon {
   position: absolute;
-  background-image: url("/assets/icons/ic_visibility_off.svg");
-  background-position: center;
-  background-size: cover;
-  right: 1rem;
-  bottom: 1rem;
+  background: url("/assets/icons/ic_visibility_off.svg") no-repeat center;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 24px;
   width: var(--font-size-600);
   height: var(--font-size-600);
   cursor: pointer;
+}
+.sign__visibility-icon__visible {
+  background: url("/assets/icons/ic_visibility_on.svg") no-repeat center;
 }
 .sign__btn {
   width: 100%;
@@ -102,7 +127,13 @@
   background-color: var(--primary-color);
   cursor: pointer;
 }
-
+.sign__btn:disabled {
+  background-color: var(--gray-400-color);
+  cursor: not-allowed;
+}
+.sign__btn > a {
+  width: 100%;
+}
 .sign__sns-login-wrapper {
   display: flex;
   justify-content: space-between;
@@ -135,4 +166,10 @@
   color: var(--primary-color);
   text-decoration: underline;
   margin-left: var(--spacing-xs);
+}
+.sign__input-error {
+  display: none;
+  color: var(--error-red-color);
+  font-size: var(--font-size-400);
+  margin-left: var(--spacing-md);
 }
