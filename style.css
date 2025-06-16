@@ -26,6 +26,7 @@ header {
     position: fixed;
     width: 100%;
     height: 55px;
+    z-index: 10;
 }
 
 .logo-container {
@@ -54,11 +55,24 @@ header {
 
 .hometop {
     background-color: #dbeafe;
-    height: 400px;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     padding: 0 80px;
+}
+
+.ppanda {
+  max-width: 600px;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hi {
+    width: 100%;
+    height: auto;
 }
 
 .hometop-left {
@@ -68,11 +82,53 @@ header {
     gap: 20px;
     position: relative;
     bottom: 80px;
+    padding-top: 80px;
 }
 
 .top_text {
     color: #4F4F4F;
     font-size: 24px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+  .hometop {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 100px;
+    height: auto;
+  }
+
+  .ppanda img {
+    width: 400px;
+  }
+
+  .top_text {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .hometop {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 100px;
+    height: auto;
+  }
+
+  .ppanda img {
+    width: 300px;
+  }
+
+  .top_text {
+    font-size: 16px;
+    text-align: center;
+  }
 }
 
 .looking-button {
@@ -91,10 +147,6 @@ header {
     cursor: pointer;
 }
 
-.hi {
-    width: 500px;
-    height: 250px;
-}
 
 .middle {
     margin-top: 85px;
@@ -139,7 +191,7 @@ header {
     color: #4F4F4F;
 }
 
-.box1 {
+.itembox {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -151,7 +203,7 @@ header {
     border-radius: 12px;
 }
 
-.box2 {
+.searchbox {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -163,7 +215,7 @@ header {
     border-radius: 12px;
 }
 
-.box3 {
+.registerbox {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -195,6 +247,20 @@ header {
     padding: 0 80px;
 }
 
+.twoppanda {
+  max-width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  }
+
+.bye {
+    width: 100%;
+    height: auto;
+  }
+
 .bottom-center {
     display: flex;
     flex-direction: row;
@@ -206,6 +272,9 @@ header {
     color: #4F4F4F;
     font-size: 24px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
     bottom: 40px;
 }
@@ -213,6 +282,54 @@ header {
 .twopanda {
     width: 500px;
     height: 255px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 100px;
+    height: auto;
+  }
+
+  .bottom_text {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .twoppanda img {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 100px;
+    height: auto;
+  }
+
+  .bottom-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bottom_text {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .twoppanda img {
+    max-width: 300px;
+  }
 }
 
 footer {

@@ -1,7 +1,30 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    margin-top: 120px;
+}
+
 .pandalogo {
     width: 266px;
     height: 90px;
     margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 16px;
+    width: 100%;
+    max-width: 700px;
+  }
 }
 
 .email-container,
@@ -13,13 +36,22 @@
     gap: 10px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 16px;
+    width: 100%;
+}
+
 label {
     font-weight: 500;
     font-size: 16px;
 }
 
 input {
-    width: 640px;
+    width: 100%;
+    /* width: 640px; */
     height: 56px;
     background-color: #F3F4F6;
     border: 1px solid #F3F4F6;
@@ -53,7 +85,8 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 640px;
+    width: 100%;
+    /* width: 640px; */
     height: 56px;
     background-color: #3692FF;
     margin-top: 24px;
@@ -66,7 +99,8 @@ input {
 .simple-login {
     display: flex;
     flex-direction: column;
-    width: 640px;
+    width: 100%;
+    /* width: 640px; */
     height: 74px;
     background-color: #E6F2FF;
     margin: 24px;
