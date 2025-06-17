@@ -299,9 +299,9 @@ a:link {
 
 .login-page {
   height: 100vh;
+  margin-top: 231px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .login-container {
@@ -451,9 +451,9 @@ a:link {
 
 .signup-page {
   height: 100vh;
+  margin-top: 231px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .signup-container {
