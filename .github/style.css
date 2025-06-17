@@ -18,16 +18,17 @@
   height: 70px;
   border-bottom: #dfdfdf solid 1px;
   padding: 9px 200px;
+  z-index: 10;
 }
 
 .topheader {
   display: flex;
-  width: 1120px;
-  margin: 0 auto;
+  width: 100%;
+  /* margin: 0 auto; */
   height: 51px;
   justify-content: space-between;
   align-items: center;
-  padding: 9px 0px;
+  /* padding: 9px 0px; */
 }
 
 .top img {
@@ -58,7 +59,7 @@
 .panda {
   display: flex;
   justify-content: center;
-  margin: 0 auto 0 0;
+  margin: auto;
   padding-top: 200px;
   gap: 7px;
   max-width: 1920px;
@@ -75,6 +76,11 @@
   flex-direction: column;
   padding-bottom: 60px;
   gap: 32px;
+}
+
+.panda_left p {
+  width: 295px;
+  height: 112px;
 }
 
 .gotosee {
@@ -104,7 +110,7 @@
   width: 988px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   border-radius: 12px;
 }
 
@@ -118,17 +124,18 @@
 .section_text {
   display: flex;
   flex-direction: column;
+  max-width: 362px;
   gap: 12px;
   padding-right: 24px;
 }
 
 .first {
-  padding-right: 66px;
+  padding-right: 24px;
 }
 
 .middle {
   align-items: flex-end;
-  padding: 0 0 0 66px;
+  padding: 0 0 0 24px;
 }
 
 .middle p {
@@ -145,7 +152,8 @@
 }
 
 .section_text :nth-child(2) {
-  height: 112px;
+  width: auto;
+  height: auto;
   color: var(--section-text-color);
   font-size: 40px;
   font-family: Pretendard, sans-serif;
@@ -168,14 +176,15 @@
   align-items: center;
   justify-content: center;
   padding-top: 143px;
-  margin: 0px auto 0 0;
+  /* margin: 0px auto 0 0; */
   gap: 69px;
   max-width: 1920px;
 }
 
 .panda_bottom_left p {
-  padding-bottom: 60px;
-  gap: 10px;
+  width: auto;
+  height: auto;
+  color: var(--section-text-color);
 }
 
 .panda_bottom img {
@@ -210,4 +219,151 @@
   display: flex;
   width: 116px;
   gap: 12px;
+}
+
+/* Tablet (768~1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .top {
+    padding: 10px 0px;
+  }
+  .topheader {
+    margin: 0px 24px;
+    width: 100%;
+  }
+  .loginbutton {
+    height: 44px;
+    width: 104px;
+    font-size: 15px;
+  }
+  .panda {
+    padding-top: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .panda img {
+    width: 100%;
+    height: auto;
+  }
+  .panda_left {
+    align-items: center;
+    padding-bottom: 40px;
+  }
+  .panda_left p {
+    width: auto;
+    height: auto;
+  }
+  .section_card {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .section_card img {
+    width: 100%;
+    height: auto;
+  }
+  section:nth-of-type(2) .section_card {
+    flex-direction: column-reverse;
+  }
+  .section_card p {
+    width: 100%;
+    height: auto;
+  }
+  .section_text {
+    text-align: left; /* 좌측정렬 기본 */
+  }
+  .section_text.middle {
+    text-align: right; /* 두번째 카드만 우측정렬 */
+  }
+  .panda_bottom {
+    flex-direction: column;
+    width: auto;
+  }
+  .panda_bottom p {
+    width: auto;
+    height: auto;
+    text-align: center;
+  }
+  .panda_bottom img {
+    margin-top: 40px;
+    width: 100%;
+    height: auto;
+  }
+  .footer {
+    padding: 32px 104px 64px;
+  }
+}
+
+/* Mobile (375~767px) */
+@media (max-width: 767px) and (min-width: 375px) {
+  .top {
+    padding: 10px 0px;
+  }
+  .topheader {
+    margin: 0px 16px;
+    width: 100%;
+  }
+  .loginbutton {
+    height: 44px;
+    width: 104px;
+    font-size: 15px;
+  }
+  .panda {
+    padding-top: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .panda img {
+    width: 100%;
+    height: auto;
+  }
+  .panda_left {
+    align-items: center;
+    padding-bottom: 40px;
+  }
+  .panda_left p {
+    width: auto;
+    height: auto;
+  }
+  .section_card {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .section_card img {
+    width: 100%;
+    height: auto;
+  }
+  section:nth-of-type(2) .section_card {
+    flex-direction: column-reverse;
+  }
+  .section_card p {
+    width: 100%;
+    height: auto;
+  }
+  .section_text {
+    text-align: left; /* 좌측정렬 기본 */
+  }
+  .section_text.middle {
+    text-align: right; /* 두번째 카드만 우측정렬 */
+  }
+  .panda_bottom {
+    flex-direction: column;
+    width: auto;
+  }
+  .panda_bottom p {
+    width: auto;
+    height: auto;
+    text-align: center;
+  }
+  .panda_bottom img {
+    width: 100%;
+    height: auto;
+  }
+  .footer {
+    padding: 32px 32px 64px;
+  }
 }
