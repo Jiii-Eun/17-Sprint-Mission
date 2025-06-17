@@ -1,28 +1,85 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="style.css">
-    <title>로그인</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <title>회원가입</title>
 </head>
 <body>
- <div class="one">
-    <h1 class="two"><a href="../index.html"><img class="three" src="../images/panda-market-logo.png"></a></h1>
-     <form class="four">
-         <label for="email" class="five">이메일</label>
-         <input class="six" id="email" name="username" type="email" placeholder="codeit@email.com" required automoplete="on">
-         <label for="nickname"class="five">비밀번호</label>
-         <input  class="six" id="nickname" name="nickname" type="text" required automoplete="on">
-         <label for="password"class="five">비밀번호</label>
-         <input  class="six" id="password" name="password" type="password" required automoplete="on">
-          <label for="password"class="five">비밀번호 확인</label>
-         <input  class="six" id="password" name="password" type="password" required automoplete="on">
-     </form>
-    <button class="seven">로그인</button>
-    <div class="eight"><div class="nine"><h1 class="ten">간편 로그인하기</h1><div class="eleven"><a href="https://www.google.com/"><img src="../images/google.png"></a><a href="https://www.kakaocorp.com/page/"><img src="../images/kakao.png"></a></div></div></div>
-    <h1 class="last">이미 회원이신가요?<a href="../login/login.html">로그인</a></h1>
- </div>
+  <main class="signup-container">
+    <h1 class="logo-title">
+      <a href="../index.html">
+        <img class="logo-image" src="../images/panda-market-logo.png" alt="판다마켓 로고" />
+      </a>
+    </h1>
+
+    <form class="signup-form">
+      <label for="email" class="form-label">이메일</label>
+      <input
+        class="form-input"
+        id="email"
+        name="username"
+        type="email"
+        placeholder="codeit@email.com"
+        required
+        autocomplete="on"
+      />
+      <p id="email-error"></p>
+      <label for="nickname" class="form-label">닉네임</label>
+      <input
+        class="form-input"
+        id="nickname"
+        name="nickname"
+        type="text"
+        required
+        autocomplete="on"
+      />
+      <p id="nkerror"></p>
+      <label for="password" class="form-label">비밀번호</label>
+      <input
+        class="form-input"
+        id="password"
+        name="password"
+        type="password"
+        required
+        autocomplete="on"
+      />
+      <p id="password-error"></p>
+      <label for="passwordConfirm" class="form-label">비밀번호 확인</label>
+      <input
+        class="form-input"
+        id="passwordConfirm"
+        name="passwordConfirm"
+        type="password"
+        required
+        autocomplete="on"
+      />
+      <p id="pwconfirmerror"></p>
+    </form>
+
+   <button class="signup-button" type="button" disabled>회원가입</button>
+
+    <section class="social-login-section">
+      <div class="social-login-box">
+        <h1 class="social-login-title">간편 로그인하기</h1>
+        <div class="social-icons">
+          <a href="https://www.google.com/">
+            <img src="../images/google.png" alt="Google 로그인" />
+          </a>
+          <a href="https://www.kakaocorp.com/page/">
+            <img src="../images/kakao.png" alt="Kakao 로그인" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <h1 class="login-prompt">
+      이미 회원이신가요?
+      <a href="../login/login.html">로그인</a>
+    </h1>
+  </main>
+ <script src="signup.js" defer></script> 
 </body>
 </html>
