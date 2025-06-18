@@ -18,16 +18,21 @@
             <div class="email-container">
                 <label for="login-email">이메일<br></label>
                 <input id="login-email" name="email" type="email" placeholder="이메일을 입력하세요.">
+                <p id="emailError" class="error-message"></p>
             </div>
             <div class="password-container">
                 <label for="login-password">비밀번호<br></label>
                 <div class="input-wrapper">
                 <input id="login-password" name="password" type="password" placeholder="비밀번호를 입력하세요.">
-                <img src="/image/icon/eyeclosed_icon.png" alt="비밀번호 보기" class="eyeclosed-icon">
+                <img id="togglePassword"
+                  src="/image/icon/eyeclosed_icon.png" 
+                  alt="비밀번호 보기" 
+                  class="eyeclosed-icon">
                 </div>
+                <p id="passwordError" class="error-message"></p>
             </div>
         </form>
-        <a href="/login" class="login-button">로그인</a>
+        <a href="/login" id="loginBtn" class="login-button disabled">로그인</a>
         <div class="simple-login">
             <p class="simple-text">간편 로그인하기</p>
             <div class="social-container">
@@ -43,5 +48,6 @@
             <p>판다마켓이 처음이신가요? <a href="/signup">회원가입</a></p>
         </footer>
       </div>
+      <script src="login.js"></script>
     </body>
 </html>

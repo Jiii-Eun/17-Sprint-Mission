@@ -11,6 +11,7 @@ body {
     align-items: center;
     width: 700px;
     margin-top: 120px;
+    margin-bottom: 120px;
 }
 
 .pandalogo {
@@ -63,6 +64,20 @@ input {
     position: relative;
 }
 
+#emailError,
+#nicknameError,
+#passwordError,
+#passwordDoubleError {
+  color: #F74747;
+  font-size: 14px;
+  padding-left: 8px;
+}
+
+.input-error {
+  border: 1px solid #F74747;
+  background-color: #F3F4F6;
+}
+
 .eyeclosed-icon {
     position: absolute;
     right: 24px;
@@ -94,6 +109,13 @@ input {
     font-size: 16px;
     border-radius: 40px;
     text-decoration: none;
+}
+
+.signup-button.disabled {
+  background-color: #D1D5DB;
+  color: white;
+  pointer-events: none; /* 클릭 비활성화 */
+  opacity: 0.6;
 }
 
 .simple-login {
