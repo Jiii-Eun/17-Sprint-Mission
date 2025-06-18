@@ -1,4 +1,4 @@
-@import '../common.css';
+@import '../common/common.css';
 
 .container {
     width: 100%;
@@ -62,7 +62,9 @@ input {
     padding: 12px;
     text-align: center;
     text-decoration: none;
+    border-width: 0px;
     border-radius: 40px;
+    cursor: pointer;
 }
 
 .social-login {
