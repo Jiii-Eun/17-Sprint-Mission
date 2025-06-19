@@ -1,11 +1,10 @@
 
-*{
-  box-sizing: border-box;
-  margin:0;
-}
 
 /*헤더 부분*/
 .main-header {
+  position:fixed;
+  top:0;
+  z-index: 100;
   display: flex;
   align-items: center;
   background-color: #ffffff;
@@ -27,7 +26,6 @@
 
 
 .login{
-  background-size: cover;
   height: 45px;
   width: 140px;
   font-size: medium;
@@ -36,7 +34,6 @@
   background-color:#3692FF;
   color:#ffffff;
   cursor: pointer;
-  background-size: cover;
 
 }
 /*첫번째 섹션부분*/
