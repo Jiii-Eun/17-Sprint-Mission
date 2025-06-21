@@ -9,7 +9,7 @@ a{
   text-decoration: none;
 }
 
-.login_header{
+.join_header{
  display: flex;
  justify-content: center;
  padding-top: 150px;
@@ -18,7 +18,7 @@ a{
  gap: 30px
 }
 
-.login_title{
+.join_title{
 font-size:67px;
 font-weight: 700;
 color:#3692FF;
@@ -68,6 +68,19 @@ width: 640px;
   position: absolute;
   bottom:20px;
   left:600px;
+  cursor: pointer;
+}
+
+
+.repass_box{
+  position: relative;
+}
+
+.icon2{
+  position: absolute;
+  bottom:20px;
+  left:600px;
+  cursor: pointer;
 }
 
 .easy_login{
@@ -99,7 +112,7 @@ line-height:26px;
   height: 42px;
 }
 
-.new_ppl{
+.already_ppl{
   margin-top:30px;
   margin-bottom: 100px;
   display:flex;
@@ -110,11 +123,11 @@ line-height:26px;
   font-size:14px;
 }
 
-#new_ppl_info{
+#already_ppl_info{
   color:#1F2937;
 }
 
-#new_ppl_join{
+#already_ppl_log{
   color:#3692FF;
   text-decoration: underline;
 }
