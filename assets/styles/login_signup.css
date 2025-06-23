@@ -1,0 +1,90 @@
+.login-form,
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  width: 640px;
+  height: 100%;
+  margin-top: 231px;
+}
+
+.title-img {
+  width: 396px;
+  height: 132px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 18px;
+  color: #1F2937;
+}
+
+.auth-input {
+  width: 640px;
+  height: 56px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  padding: 24px; 
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 12px;
+}
+
+.password-wrapper,
+.password-check-wrapper {
+  position: relative;
+}
+
+.fa-solid {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+  color: #4B5563;
+  cursor: pointer; 
+}
+
+button {
+  height: 56px;
+  margin-bottom: 24px;
+  font-size: 20px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 40px;
+}
+
+.simple-login-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 23px;
+  background-color: #E6F2FF;
+  height: 74px;
+  color: #1F2937;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.signup-desc {
+  color: #1F2937;
+  font-size: 14px;
+}
+
+.signup-button,
+.login-button {
+  color: var(--primary-color);
+  font-size: 14px;
+}

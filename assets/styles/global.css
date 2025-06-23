@@ -1,0 +1,13 @@
+html {
+  font-family: Pretendard, sans-serif;
+}
+
+body {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+:root {
+  --primary-color: #3692ff;
+  --secondary-color: #F3F4F6;
+}
