@@ -63,7 +63,7 @@ input {
   width: 100%;
   height: 56px;
   padding: 16px 24px;
-  border: none;
+  border: 1.5px solid transparent;
   background-color: var(--background-color);
   border-radius: 12px;
   font-size: 16px;
@@ -191,6 +191,20 @@ input[type="password"]::-ms-reveal {
   color: var(--primary-color);
   text-decoration: underline;
   text-decoration-style: solid;
+}
+
+input.error {
+  border-color: #ff4d4f;
+}
+.error-message {
+  color: #ff4d4f;
+  font-size: 13px;
+  margin-top: 4px;
+  min-height: 18px;
+}
+.login-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
 }
 
 @media (max-width: 767px) and (min-width: 375px) {
