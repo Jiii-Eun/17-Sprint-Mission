@@ -24,11 +24,9 @@
 .topheader {
   display: flex;
   width: 100%;
-  /* margin: 0 auto; */
   height: 51px;
   justify-content: space-between;
   align-items: center;
-  /* padding: 9px 0px; */
 }
 
 .top img {
@@ -176,13 +174,11 @@
   align-items: center;
   justify-content: center;
   padding-top: 143px;
-  /* margin: 0px auto 0 0; */
   gap: 69px;
   max-width: 1920px;
 }
 
 .panda_bottom_left p {
-  width: auto;
   height: auto;
   color: var(--section-text-color);
 }
@@ -281,8 +277,6 @@
     width: auto;
   }
   .panda_bottom p {
-    width: auto;
-    height: auto;
     text-align: center;
   }
   .panda_bottom img {
