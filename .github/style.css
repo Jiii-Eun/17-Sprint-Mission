@@ -8,6 +8,7 @@
   --section-text-color: #374151;
 }
 
+/* ====== 공통(모바일 우선) ====== */
 .top {
   position: sticky;
   top: 0;
@@ -17,7 +18,7 @@
   max-width: 1920px;
   height: 70px;
   border-bottom: #dfdfdf solid 1px;
-  padding: 9px 200px;
+  padding: 10px 0px;
   z-index: 10;
 }
 
@@ -27,6 +28,7 @@
   height: 51px;
   justify-content: space-between;
   align-items: center;
+  margin: 0px 16px;
 }
 
 .top img {
@@ -42,12 +44,12 @@
   border-radius: 8px;
   border: none;
   font-family: pretendard, sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 26px;
   letter-spacing: 0;
-  width: 128px;
-  height: 48px;
+  width: 104px;
+  height: 44px;
 }
 
 .loginbutton:hover {
@@ -56,29 +58,32 @@
 
 .panda {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   margin: auto;
-  padding-top: 200px;
+  padding-top: auto;
   gap: 7px;
   max-width: 1920px;
   height: 540px;
 }
 
 .panda img {
-  width: 746px;
-  height: 340px;
+  width: 100%;
+  height: auto;
 }
 
 .panda_left {
   display: flex;
   flex-direction: column;
-  padding-bottom: 60px;
+  align-items: center;
+  padding-bottom: 40px;
   gap: 32px;
 }
 
 .panda_left p {
-  width: 295px;
-  height: 112px;
+  width: auto;
+  height: auto;
 }
 
 .gotosee {
@@ -105,17 +110,19 @@
 
 .section_card {
   background-color: #fcfcfc;
-  width: 988px;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
   border-radius: 12px;
+  padding: 20px;
 }
 
 .section_card img {
   border-radius: 12px;
-  width: 579px;
-  height: 444px;
+  width: 100%;
+  height: auto;
   overflow: hidden;
 }
 
@@ -125,6 +132,7 @@
   max-width: 362px;
   gap: 12px;
   padding-right: 24px;
+  text-align: left;
 }
 
 .first {
@@ -138,6 +146,11 @@
 
 .middle p {
   text-align: right;
+}
+
+.section_card p {
+  width: 100%;
+  height: auto;
 }
 
 .section_text :nth-child(1) {
@@ -169,11 +182,17 @@
   letter-spacing: 0%;
 }
 
+section:nth-of-type(2) .section_card {
+  flex-direction: column-reverse;
+}
+
 .panda_bottom {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 143px;
+  width: auto;
+  padding-top: 0;
   gap: 69px;
   max-width: 1920px;
 }
@@ -183,15 +202,22 @@
   color: var(--section-text-color);
 }
 
+.panda_bottom p {
+  width: auto;
+  height: auto;
+  text-align: center;
+}
+
 .panda_bottom img {
-  width: 746px;
-  height: 397px;
+  width: 100%;
+  height: auto;
+  margin-top: 0;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 32px 400px;
+  padding: 32px 32px 64px;
   gap: 10px;
   width: 1920px;
 }
@@ -217,147 +243,83 @@
   gap: 12px;
 }
 
-/* Tablet (768~1199px) */
-@media (max-width: 1199px) and (min-width: 768px) {
-  .top {
-    padding: 10px 0px;
-  }
+/* ====== 태블릿 & PC 공통(768px 이상) ====== */
+@media (min-width: 768px) {
   .topheader {
     margin: 0px 24px;
-    width: 100%;
-  }
-  .loginbutton {
-    height: 44px;
-    width: 104px;
-    font-size: 15px;
-  }
-  .panda {
-    padding-top: auto;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  .panda img {
-    width: 100%;
-    height: auto;
-  }
-  .panda_left {
-    align-items: center;
-    padding-bottom: 40px;
-  }
-  .panda_left p {
-    width: auto;
-    height: auto;
-  }
-  .section_card {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  .section_card img {
-    width: 100%;
-    height: auto;
-  }
-  section:nth-of-type(2) .section_card {
-    flex-direction: column-reverse;
-  }
-  .section_card p {
-    width: 100%;
-    height: auto;
-  }
-  .section_text {
-    text-align: left; /* 좌측정렬 기본 */
-  }
-  .section_text.middle {
-    text-align: right; /* 두번째 카드만 우측정렬 */
-  }
-  .panda_bottom {
-    flex-direction: column;
-    width: auto;
-  }
-  .panda_bottom p {
-    text-align: center;
-  }
-  .panda_bottom img {
-    margin-top: 40px;
-    width: 100%;
-    height: auto;
   }
   .footer {
     padding: 32px 104px 64px;
   }
 }
 
-/* Mobile (375~767px) */
-@media (max-width: 767px) and (min-width: 375px) {
+/* ====== PC(1200px~) ====== */
+@media (min-width: 1200px) {
   .top {
-    padding: 10px 0px;
+    padding: 9px 200px;
   }
   .topheader {
-    margin: 0px 16px;
+    margin: 0;
     width: 100%;
   }
   .loginbutton {
-    height: 44px;
-    width: 104px;
-    font-size: 15px;
+    height: 48px;
+    width: 128px;
+    font-size: 16px;
   }
   .panda {
-    padding-top: auto;
-    flex-direction: column;
+    padding-top: 200px;
+    flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
   }
   .panda img {
-    width: 100%;
-    height: auto;
+    width: 746px;
+    height: 340px;
   }
   .panda_left {
-    align-items: center;
-    padding-bottom: 40px;
+    align-items: flex-start;
+    padding-bottom: 60px;
   }
   .panda_left p {
-    width: auto;
-    height: auto;
+    width: 295px;
+    height: 112px;
   }
   .section_card {
-    width: 100%;
-    flex-direction: column;
+    width: 988px;
+    flex-direction: row;
     align-items: center;
-    padding: 20px;
+    padding: 0;
   }
   .section_card img {
-    width: 100%;
-    height: auto;
-  }
-  section:nth-of-type(2) .section_card {
-    flex-direction: column-reverse;
+    width: 579px;
+    height: 444px;
   }
   .section_card p {
-    width: 100%;
+    width: auto;
     height: auto;
   }
   .section_text {
-    text-align: left; /* 좌측정렬 기본 */
+    text-align: left;
   }
   .section_text.middle {
-    text-align: right; /* 두번째 카드만 우측정렬 */
+    text-align: right;
   }
   .panda_bottom {
-    flex-direction: column;
+    flex-direction: row;
     width: auto;
+    padding-top: 143px;
+    gap: 69px;
   }
   .panda_bottom p {
-    width: auto;
-    height: auto;
-    text-align: center;
+    text-align: left;
   }
   .panda_bottom img {
-    width: 100%;
-    height: auto;
+    width: 746px;
+    height: 397px;
+    margin-top: 0;
   }
   .footer {
-    padding: 32px 32px 64px;
+    padding: 32px 400px;
   }
 }
