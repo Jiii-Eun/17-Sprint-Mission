@@ -1,5 +1,18 @@
-import { Validate, passwordToggleHandler } from "../signFormValidation.js";
+import {
+  hideErrorMessage,
+  showErrorMessage,
+  passwordToggleHandler,
+  validateAndToggleFormButton,
+} from "../form/dom.js";
+import {
+  validateEmail,
+  validatePassword,
+  validateNickName,
+  validateConfirmPassword,
+} from "../form/validations.js";
 
+const form = document.querySelector(".sign__form");
+const formBtn = document.querySelector("#form-btn");
 const emailInput = document.querySelector("#email");
 const nicknameInput = document.querySelector("#nickname");
 const confirmPasswordInput = document.querySelector("#confirm-password");
@@ -7,47 +20,32 @@ const passwordInput = document.querySelector("#password");
 const passwordVisibilityBtn = document.querySelectorAll(
   ".sign__visibility-icon"
 );
-function emailInputHandler(event) {
-  const validate = new Validate(
-    event.target,
-    document.querySelector("#email-error")
-  );
-  validate.validateEmailInput();
-  validate.validateForm();
-}
-function nicknameInputHandler(event) {
-  const validate = new Validate(
-    event.target,
-    document.querySelector("#nickname-error")
-  );
-  validate.validateNicknameInput();
-  validate.validateForm();
-}
-function confirmPasswordInputHandler(event) {
-  const validate = new Validate(
-    event.target,
-    document.querySelector("#confirm-password-error")
-  );
-  validate.validateConfirmPasswordInput();
-  validate.validateForm();
-}
-function passwordInputHandler(event) {
-  const validate = new Validate(
-    event.target,
-    document.querySelector("#password-error")
-  );
-  const validateForConfirmPassword = new Validate(
-    confirmPasswordInput,
-    document.querySelector("#confirm-password-error")
-  );
-  validateForConfirmPassword.validateConfirmPasswordInput();
-  validate.validatePasswordInput();
-  validate.validateForm();
-}
-emailInput.addEventListener("focusout", emailInputHandler);
-nicknameInput.addEventListener("focusout", nicknameInputHandler);
-confirmPasswordInput.addEventListener("focusout", confirmPasswordInputHandler);
-passwordInput.addEventListener("focusout", passwordInputHandler);
 
+emailInput.addEventListener("blur", () => {
+  const message = validateEmail(emailInput.value);
+  if (message) showErrorMessage(emailInput, message);
+  else hideErrorMessage(emailInput);
+});
+passwordInput.addEventListener("blur", () => {
+  const message = validatePassword(passwordInput.value);
+  if (message) showErrorMessage(passwordInput, message);
+  else hideErrorMessage(passwordInput);
+});
+nicknameInput.addEventListener("blur", () => {
+  const message = validateNickName(nicknameInput.value);
+  if (message) showErrorMessage(nicknameInput, message);
+  else hideErrorMessage(nicknameInput);
+});
+confirmPasswordInput.addEventListener("blur", () => {
+  const message = validateConfirmPassword(
+    passwordInput.value,
+    confirmPasswordInput.value
+  );
+  if (message) showErrorMessage(confirmPasswordInput, message);
+  else hideErrorMessage(confirmPasswordInput);
+});
+form.addEventListener("focusout", () => {
+  validateAndToggleFormButton(form, formBtn);
+});
 passwordVisibilityBtn[0].addEventListener("click", passwordToggleHandler);
 passwordVisibilityBtn[1].addEventListener("click", passwordToggleHandler);
