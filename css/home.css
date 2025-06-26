@@ -1,0 +1,325 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+:root {
+  --primary-color: #3692ff;
+  --primary-color-hover: #1967d6;
+  --background-color: #ffffff;
+  --background-gray-color: #f3f4f6;
+  --section-text-color: #374151;
+}
+
+/* ====== 공통(모바일 우선) ====== */
+.top {
+  position: sticky;
+  top: 0;
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  max-width: 1920px;
+  height: 70px;
+  border-bottom: #dfdfdf solid 1px;
+  padding: 10px 0px;
+  z-index: 10;
+}
+
+.topheader {
+  display: flex;
+  width: 100%;
+  height: 51px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 16px;
+}
+
+.top img {
+  height: 51px;
+}
+
+.loginbutton {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: none;
+  font-family: pretendard, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0;
+  width: 104px;
+  height: 44px;
+}
+
+.loginbutton:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.panda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin: auto;
+  padding-top: auto;
+  gap: 7px;
+  max-width: 1920px;
+  height: 540px;
+}
+
+.panda img {
+  width: 100%;
+  height: auto;
+}
+
+.panda_left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+  gap: 32px;
+}
+
+.panda_left p {
+  width: auto;
+  height: auto;
+}
+
+.gotosee {
+  border-radius: 40px;
+  width: 357px;
+  height: 56px;
+  padding: 16px 124px;
+  font-family: pretendard, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #f9fafb;
+  border-style: none;
+  background-color: var(--primary-color);
+}
+
+.gotosee:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.section_card {
+  background-color: #fcfcfc;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.section_card img {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.section_text {
+  display: flex;
+  flex-direction: column;
+  max-width: 362px;
+  gap: 12px;
+  padding-right: 24px;
+  text-align: left;
+}
+
+.first {
+  padding-right: 24px;
+}
+
+.middle {
+  align-items: flex-end;
+  padding: 0 0 0 24px;
+}
+
+.middle p {
+  text-align: right;
+}
+
+.section_card p {
+  width: 100%;
+  height: auto;
+}
+
+.section_text :nth-child(1) {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-family: "Abhaya Libre ExtraBold", sans-serif;
+  font-weight: 800;
+  line-height: 26px;
+  letter-spacing: 0%;
+}
+
+.section_text :nth-child(2) {
+  width: auto;
+  height: auto;
+  color: var(--section-text-color);
+  font-size: 40px;
+  font-family: Pretendard, sans-serif;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: 12px;
+}
+
+.section_text :nth-child(3) {
+  color: var(--section-text-color);
+  font-size: 24px;
+  font-family: Pretendard, sans-serif;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0%;
+}
+
+section:nth-of-type(2) .section_card {
+  flex-direction: column-reverse;
+}
+
+.panda_bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding-top: 0;
+  gap: 69px;
+  max-width: 1920px;
+}
+
+.panda_bottom_left p {
+  height: auto;
+  color: var(--section-text-color);
+}
+
+.panda_bottom p {
+  width: auto;
+  height: auto;
+  text-align: center;
+}
+
+.panda_bottom img {
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 32px 64px;
+  gap: 10px;
+  width: 1920px;
+}
+
+.footer div,
+.footer a {
+  font-family: Pretendard, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: center;
+  color: #9ca3af;
+}
+
+.footer :nth-child(2) {
+  display: flex;
+  gap: 30px;
+}
+
+.footer :nth-child(3) {
+  display: flex;
+  width: 116px;
+  gap: 12px;
+}
+
+/* ====== 태블릿 & PC 공통(768px 이상) ====== */
+@media (min-width: 768px) {
+  .topheader {
+    margin: 0px 24px;
+  }
+  .footer {
+    padding: 32px 104px 64px;
+  }
+}
+
+/* ====== PC(1200px~) ====== */
+@media (min-width: 1200px) {
+  .top {
+    padding: 9px 200px;
+  }
+  .topheader {
+    margin: 0;
+    width: 100%;
+  }
+  .loginbutton {
+    height: 48px;
+    width: 128px;
+    font-size: 16px;
+  }
+  .panda {
+    padding-top: 200px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .panda img {
+    width: 746px;
+    height: 340px;
+  }
+  .panda_left {
+    align-items: flex-start;
+    padding-bottom: 60px;
+  }
+  .panda_left p {
+    width: 295px;
+    height: 112px;
+  }
+  .section_card {
+    width: 988px;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+  }
+  .section_card img {
+    width: 579px;
+    height: 444px;
+  }
+  .section_card p {
+    width: auto;
+    height: auto;
+  }
+  .section_text {
+    text-align: left;
+  }
+  .section_text.middle {
+    text-align: right;
+  }
+  .panda_bottom {
+    flex-direction: row;
+    width: auto;
+    padding-top: 143px;
+    gap: 69px;
+  }
+  .panda_bottom p {
+    text-align: left;
+  }
+  .panda_bottom img {
+    width: 746px;
+    height: 397px;
+    margin-top: 0;
+  }
+  .footer {
+    padding: 32px 400px;
+  }
+}
