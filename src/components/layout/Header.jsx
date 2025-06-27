@@ -1,8 +1,13 @@
-import { Link } from "react-router-dom";
-// @ts-ignore
+import { Link, NavLink } from "react-router-dom";
 import navbarLogo from "@/assets/imgs/panda_icon_small.svg";
-
 import "@/styles/components/Header.css";
+import "@/styles/common/tokens.css";
+
+function getLinkStyle({ isActive }) {
+  return {
+    color: isActive ? "#3692FF" : "#4b5563",
+  };
+}
 export default function Header() {
   return (
     <header className="header">
@@ -15,6 +20,14 @@ export default function Header() {
             </Link>
           </h1>
         </div>
+        <ul className="navbar__list">
+          <li>자유게시판</li>
+          <li>
+            <NavLink to="/items" style={getLinkStyle}>
+              중고마켓
+            </NavLink>
+          </li>
+        </ul>
         <Link
           className="navbar__login-btn"
           to="/login"

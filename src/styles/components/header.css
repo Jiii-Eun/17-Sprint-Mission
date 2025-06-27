@@ -60,7 +60,16 @@
   font-family: var(--font-secondary);
   color: var(--primary-color);
 }
-
+.navbar__list {
+  flex: 1 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: var(--spacing-xxxl);
+  gap: var(--spacing-xl);
+  font-size: var(--font-size-450);
+  color: var(--gray-600-color);
+}
 .navbar__login-btn {
   width: var(--navbar-btn-width);
   height: var(--navbar-btn-height);
