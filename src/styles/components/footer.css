@@ -1,4 +1,4 @@
-@import url(@styles/common/tokens.css);
+@import url(@/styles/common/tokens.css);
 
 :root {
   --footer-container-padding: var(--spacing-xl);

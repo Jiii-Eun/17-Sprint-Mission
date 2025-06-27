@@ -1,4 +1,4 @@
-@import url(@styles/common/tokens.css);
+@import url(@/styles/common/tokens.css);
 
 :root {
   --sign-form-padding: 0 var(--spacing-md);

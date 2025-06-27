@@ -3,15 +3,15 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
-import MainLayout from "@layouts/MainLayout.jsx";
-import Items from "@pages/Items.jsx";
-import AddItems from "@pages/AddItems.jsx";
-import Login from "@pages/Login.jsx";
-import Signup from "@pages/Signup.jsx";
-import NotFound from "@pages/NotFound.jsx";
-import Home from "@pages/Home.jsx";
-import Privacy from "@pages/Privacy.jsx";
-import Faq from "@pages/Faq.jsx";
+import MainLayout from "@/layouts/MainLayout.jsx";
+import Items from "@/pages/Items.jsx";
+import AddItems from "@/pages/AddItems.jsx";
+import Login from "@/pages/Login.jsx";
+import Signup from "@/pages/Signup.jsx";
+import NotFound from "@/pages/NotFound.jsx";
+import Home from "@/pages/Home.jsx";
+import Privacy from "@/pages/Privacy.jsx";
+import Faq from "@/pages/Faq.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
