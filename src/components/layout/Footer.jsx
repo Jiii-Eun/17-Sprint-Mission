@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
-import "@styles/components/Footer.css";
+import "@/styles/components/Footer.css";
+import FacebookIcon from "@/assets/icons/ic_facebook.svg";
+import TwitterIcon from "@/assets/icons/ic_twitter.svg";
+import InstagramIcon from "@/assets/icons/ic_instagram.svg";
+import YoutubeIcon from "@/assets/icons/ic_youtube.svg";
 
 export default function Footer() {
   return (
@@ -23,7 +27,7 @@ export default function Footer() {
           >
             <img
               className="footer__sns-icon"
-              src="@assets/icons/ic_facebook.svg"
+              src={FacebookIcon}
               alt="페이스북 아이콘"
             />
           </Link>
@@ -35,7 +39,7 @@ export default function Footer() {
           >
             <img
               className="footer__sns-icon"
-              src="@assets/icons/ic_twitter.svg"
+              src={TwitterIcon}
               alt="트위터 아이콘"
             />
           </Link>
@@ -47,7 +51,7 @@ export default function Footer() {
           >
             <img
               className="footer__sns-icon"
-              src="@assets/icons/ic_youtube.svg"
+              src={YoutubeIcon}
               alt="유튜브 아이콘"
             />
           </Link>
@@ -59,7 +63,7 @@ export default function Footer() {
           >
             <img
               className="footer__sns-icon"
-              src="@assets/icons/ic_instagram.svg"
+              src={InstagramIcon}
               alt="인스타그램 아이콘"
             />
           </Link>

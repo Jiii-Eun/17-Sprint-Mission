@@ -1,4 +1,4 @@
-@import url(@styles/common/tokens.css);
+@import url(@/styles/common/tokens.css);
 
 :root {
   --navbar-btn-width: auto;
