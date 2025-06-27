@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../../styles/components/Footer.css";
+import "@styles/components/Footer.css";
 
 export default function Footer() {
   return (
@@ -23,7 +23,7 @@ export default function Footer() {
           >
             <img
               className="footer__sns-icon"
-              src="./assets/icons/ic_facebook.svg"
+              src="@assets/icons/ic_facebook.svg"
               alt="페이스북 아이콘"
             />
           </Link>
@@ -35,7 +35,7 @@ export default function Footer() {
           >
             <img
               className="footer__sns-icon"
-              src="./assets/icons/ic_twitter.svg"
+              src="@assets/icons/ic_twitter.svg"
               alt="트위터 아이콘"
             />
           </Link>
@@ -47,7 +47,7 @@ export default function Footer() {
           >
             <img
               className="footer__sns-icon"
-              src="./assets/icons/ic_youtube.svg"
+              src="@assets/icons/ic_youtube.svg"
               alt="유튜브 아이콘"
             />
           </Link>
@@ -59,7 +59,7 @@ export default function Footer() {
           >
             <img
               className="footer__sns-icon"
-              src="./assets/icons/ic_instagram.svg"
+              src="@assets/icons/ic_instagram.svg"
               alt="인스타그램 아이콘"
             />
           </Link>
