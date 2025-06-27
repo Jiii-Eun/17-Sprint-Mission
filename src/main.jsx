@@ -10,6 +10,8 @@ import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import Home from "./pages/Home.jsx";
+import Privacy from "./pages/Privacy.jsx";
+import Faq from "./pages/Faq.js";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -21,6 +23,8 @@ createRoot(document.getElementById("root")).render(
           <Route path="additem" element={<AddItems />} />
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
+          <Route path="privacy" element={<Privacy />} />
+          <Route path="faq" element={<Faq />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
