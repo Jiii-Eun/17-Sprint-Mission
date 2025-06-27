@@ -1,7 +1,4 @@
-@import url(/styles/common/global.css);
-@import url(/styles/common/tokens.css);
-@import url(/styles/components/header.css);
-@import url(/styles/components/footer.css);
+@import url(@styles/common/tokens.css);
 
 :root {
   --section-blue-container-width: 65rem;
