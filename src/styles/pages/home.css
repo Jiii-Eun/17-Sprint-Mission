@@ -4,7 +4,7 @@
   --section-blue-container-width: 65rem;
   --section-blue-container-margin: 2.5rem 0 0;
   --section-blue-title-font-size: var(--font-size-800);
-  --section-blue-height: 33.75rem;
+  --section-blue-height: 29.375rem;
   --section-blue-info-margin: 0 0 3rem;
   --section-blue-info-bottom-margin: 0 0 5rem;
   --section-blue-btn-padding: 12px;
@@ -18,7 +18,7 @@
 }
 @media screen and (min-width: 48rem) {
   :root {
-    --section-blue-height: 48rem;
+    --section-blue-height: 43rem;
     --section-blue-title-font-size: var(--font-size-1000);
     --section-blue-container-margin: 5rem 0 0;
     --section-blue-container-bottom-margin: 5rem 0 0;
@@ -32,7 +32,7 @@
 }
 @media screen and (min-width: 75rem) {
   :root {
-    --section-blue-height: 33.75rem;
+    --section-blue-height: 29.375rem;
     --section-blue-info-margin: 0 0 3.75rem;
     --section-blue-info-bottom-margin: 0 0 10rem;
 
