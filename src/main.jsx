@@ -5,7 +5,7 @@ import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import MainTemplate from "@/templates/MainTemplate";
 import Items from "@/pages/Items.jsx";
-import AddItems from "@/pages/AddItems.jsx";
+import AddItem from "@/pages/AddItem.jsx";
 import Login from "@/pages/Login.jsx";
 import Signup from "@/pages/Signup.jsx";
 import NotFound from "@/pages/NotFound.jsx";
@@ -20,7 +20,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/" element={<MainTemplate />}>
           <Route index element={<Home />} />
           <Route path="items" element={<Items />} />
-          <Route path="additem" element={<AddItems />} />
+          <Route path="additem" element={<AddItem />} />
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="privacy" element={<Privacy />} />
