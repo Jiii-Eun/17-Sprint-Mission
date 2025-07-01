@@ -2,7 +2,7 @@ import styled from "styled-components";
 import ItemImg from "../common/ItemImg";
 import LikeIcon from "@/assets/icons/ic_heart.svg";
 
-export default function Item({ title, price, like, imgUrl }) {
+export default function ItemBox({ title, price, like, imgUrl }) {
   const localePriceString = Number(price).toLocaleString("ko-KR");
   return (
     <Container>
