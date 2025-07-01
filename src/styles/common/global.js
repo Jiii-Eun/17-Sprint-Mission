@@ -9,6 +9,8 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     border: none;
+    font-size: inherit;
+    font-weight: inherit;
   }
   a {
     text-decoration: none;
@@ -16,6 +18,10 @@ export const GlobalStyle = createGlobalStyle`
   }
   button {
     font-family: inherit;
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
   }
   li {
     list-style: none;
@@ -31,6 +37,7 @@ export const GlobalStyle = createGlobalStyle`
     --gray-200-color: #e5e7eb;
     --gray-100-color: #f3f4f6;
     --gray-50-color: #f9fafb;
+    --white-color: #ffffff;
     --error-red-color: #f74747;
 
     /* Typography */
