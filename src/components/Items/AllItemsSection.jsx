@@ -1,21 +1,28 @@
+import { useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
-import Item from "./Item";
+import ItemBox from "./ItemBox";
 import Button from "../common/Button";
-import { useState } from "react";
 import { getProducts } from "@/apis/Items";
 import useAsync from "@/hooks/useAsync";
-import { useEffect } from "react";
-import { useCallback } from "react";
 import { DEFAULT_VALUES, ORDER_BY } from "./constants";
 import DropdownButton from "./DropdownButton";
 import Pagination from "./PaginationBar";
 import Search from "./Search";
+import { screenSizeNumber } from "@/styles/common/media";
+import { useResizeEffect } from "@/hooks/useResizeEffect";
 
-export default function AllItems() {
+const getItemDisplayLimit = () => {
+  const width = window.innerWidth;
+  if (width > screenSizeNumber.desktop) return 10;
+  if (width > screenSizeNumber.tablet) return 6;
+  return 4;
+};
+export default function AllItemsSection() {
   const [items, setItems] = useState([]);
   const [totalCount, setTotalCount] = useState(1);
   const [page, setPage] = useState(1);
   const [orderBy, setOrderBy] = useState(ORDER_BY.RECENT);
+  const [pageSize, setPageSize] = useState(getItemDisplayLimit());
   const [isLoading, loadingError, getProductsAsync] = useAsync(getProducts);
   const handleLoad = useCallback(
     async (options) => {
@@ -30,8 +37,13 @@ export default function AllItems() {
     handleLoad({ ...DEFAULT_VALUES, orderBy, page, keyword: value });
   };
   useEffect(() => {
-    handleLoad({ ...DEFAULT_VALUES, orderBy, page });
-  }, [handleLoad, orderBy, page]);
+    handleLoad({ ...DEFAULT_VALUES, orderBy, page, pageSize });
+  }, [handleLoad, orderBy, page, pageSize]);
+
+  useResizeEffect(() => {
+    setPageSize(getItemDisplayLimit());
+  });
+
   return (
     <Container>
       <Head>
@@ -45,7 +57,7 @@ export default function AllItems() {
       <Items>
         {items.map((item) => (
           <ItemWrapper key={item.id}>
-            <Item
+            <ItemBox
               title={item.name}
               price={item.price}
               like={item.favoriteCount}

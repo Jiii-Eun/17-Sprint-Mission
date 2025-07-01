@@ -1,14 +1,23 @@
 import styled from "styled-components";
-import Item from "./Item";
+import ItemBox from "./ItemBox";
 import { useState } from "react";
 import { useEffect } from "react";
 import { getProducts } from "@/apis/Items";
 import useAsync from "@/hooks/useAsync";
 import { useCallback } from "react";
 import { BEST_ITEMS_DEFAULT_VALUES } from "./constants";
+import { useResizeEffect } from "@/hooks/useResizeEffect";
+import { screenSizeNumber } from "@/styles/common/media";
 
-export default function BestItems() {
+const getItemDisplayLimit = () => {
+  const width = window.innerWidth;
+  if (width > screenSizeNumber.desktop) return 4;
+  if (width > screenSizeNumber.tablet) return 2;
+  return 1;
+};
+export default function BestItemsSection() {
   const [items, setItems] = useState([]);
+  const [pageSize, setPageSize] = useState(getItemDisplayLimit());
   const [isLoading, loadingError, getProductsAsync] = useAsync(getProducts);
   const handleLoad = useCallback(
     async (options) => {
@@ -19,15 +28,20 @@ export default function BestItems() {
     [getProductsAsync]
   );
   useEffect(() => {
-    handleLoad(BEST_ITEMS_DEFAULT_VALUES);
-  }, [handleLoad]);
+    handleLoad({ ...BEST_ITEMS_DEFAULT_VALUES, pageSize });
+  }, [handleLoad, pageSize]);
+
+  useResizeEffect(() => {
+    setPageSize(getItemDisplayLimit());
+  });
+
   return (
     <Container>
       <Title>베스트 상품</Title>
       <Items>
         {items.map((item) => (
           <ItemWrapper key={item.id}>
-            <Item
+            <ItemBox
               title={item.name}
               price={item.price}
               like={item.favoriteCount}
