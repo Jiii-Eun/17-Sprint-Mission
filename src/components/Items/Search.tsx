@@ -13,6 +13,7 @@ export default function Search({ onSubmit }) {
   };
   return (
     <Form onSubmit={handleSubmit}>
+      <SearchIcon />
       <Input
         name="itemSearch"
         value={value}
@@ -23,18 +24,22 @@ export default function Search({ onSubmit }) {
   );
 }
 const Form = styled.form`
+  position: relative;
   max-width: 24rem;
   height: 2.625rem;
+  & > svg {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    width: var(--font-size-600);
+    height: var(--font-size-600);
+  }
 `;
 const Input = styled.input`
   width: 100%;
-  background-color: var(--gray-100-color);
-  background-image: url("${SearchIcon}");
-  background-position: 12px 50%;
-  background-repeat: no-repeat;
-  background-size: 20px;
   border-radius: var(--border-radius-sm);
-  padding: var(--spacing-sm) var(--spacing-xl);
+  background-color: var(--gray-100-color);
+  padding: var(--spacing-sm) 40px;
   &::placeholder {
     color: var(--gray-400-color);
   }

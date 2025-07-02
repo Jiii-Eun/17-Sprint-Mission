@@ -26,11 +26,11 @@ export default function DropdownButton({ orderBy, setOrderBy }) {
     <Container>
       <CurrentOption onClick={handleClick}>
         {isMobile ? (
-          <img src={SortIcon} />
+          <SortIcon />
         ) : (
           <>
             <span>{ORDER_BY_ENG_TO_KOR[orderBy]}</span>
-            <img src={ArrowDownIcon} />
+            <ArrowDownIcon />
           </>
         )}
       </CurrentOption>

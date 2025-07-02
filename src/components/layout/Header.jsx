@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
-import navbarLogo from "@/assets/imgs/panda_icon_small.svg";
-import defaultProfileImg from "@/assets/imgs/img_default_profile.png";
+import PandaLogo from "@/assets/icons/panda_icon_small.svg";
+import defaultProfileImg from "@/assets/imgs/default_profile.png";
 import { device } from "@/styles/common/media";
 
 function getLinkStyle({ isActive }) {
@@ -14,7 +14,7 @@ export default function Header() {
     <StyledHeader>
       <NavBar>
         <LogoWrapper>
-          <Logo src={navbarLogo} alt="판다마켓 로고" />
+          <Logo aria-label="판다마켓 로고" />
           <Title>
             <Link to={"/"} aria-label="홈으로 이동">
               판다마켓
@@ -82,7 +82,7 @@ const LogoWrapper = styled.div`
   align-items: center;
   gap: 10px;
 `;
-const Logo = styled.img`
+const Logo = styled(PandaLogo)`
   width: 3.125rem;
   height: 3.125rem;
   display: none;

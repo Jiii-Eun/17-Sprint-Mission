@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "@/styles/pages/sign.css";
-import PandaIconSmall from "@/assets/imgs/panda_icon_small.svg";
+import PandaLogo from "@/assets/icons/panda_icon_small.svg";
 import GoogleIcon from "@/assets/icons/ic_google.svg";
 import KakaoTalkIcon from "@/assets/icons/ic_kakao.svg";
 
@@ -9,11 +9,7 @@ export default function Signup() {
     <div>
       <div className="sign">
         <div className="sign__header">
-          <img
-            className="sign__logo"
-            src={PandaIconSmall}
-            alt="판다마켓 로고"
-          />
+          <PandaLogo aria-label="판다마켓 로고" />
           <h1 className="sign__title">
             <Link to="/" aria-label="홈으로 이동">
               판다마켓

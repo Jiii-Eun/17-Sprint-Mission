@@ -29,7 +29,9 @@ export default function PaginationBar({ totalCount = 1, page, setPage }) {
   return (
     <Container>
       <Counter onClick={handleLeftArrowClick} disabled={page === 1}>
-        <Icon src={LeftArrowIcon} alt="이전 페이지 보기 버튼" />
+        <IconWrapper>
+          <LeftArrowIcon aria-label="이전 페이지 보기 버튼" />
+        </IconWrapper>
       </Counter>
       {countArray.map((count) => {
         return (
@@ -45,7 +47,9 @@ export default function PaginationBar({ totalCount = 1, page, setPage }) {
         );
       })}
       <Counter onClick={handleRightArrowClick} disabled={page === pagesCount}>
-        <Icon src={RightArrowIcon} alt="다음 페이지 보기 버튼" />
+        <IconWrapper>
+          <RightArrowIcon aria-label="다음 페이지 보기 버튼" />
+        </IconWrapper>
       </Counter>
     </Container>
   );
@@ -74,7 +78,7 @@ const Counter = styled.button`
   font-size: var(--font-size-400);
 `;
 
-const Icon = styled.img`
+const IconWrapper = styled.div`
   width: 16px;
   height: 16px;
 `;
