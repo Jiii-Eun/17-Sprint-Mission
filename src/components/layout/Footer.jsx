@@ -4,7 +4,7 @@ import TwitterIcon from "@/assets/icons/ic_twitter.svg";
 import InstagramIcon from "@/assets/icons/ic_instagram.svg";
 import YoutubeIcon from "@/assets/icons/ic_youtube.svg";
 import styled from "styled-components";
-import { device } from "@/styles/common/media";
+import { device } from "@/styles/media";
 
 export default function Footer() {
   return (

@@ -8,7 +8,7 @@ import { DEFAULT_VALUES, ORDER_BY } from "./constants";
 import DropdownButton from "./DropdownButton";
 import Pagination from "./PaginationBar";
 import Search from "./Search";
-import { device, screenSizeNumber } from "@/styles/common/media";
+import { device, screenSizeNumber } from "@/styles/media";
 import useResizeEffect from "@/hooks/useResizeEffect";
 import useIsMobile from "@/hooks/useIsMobile";
 

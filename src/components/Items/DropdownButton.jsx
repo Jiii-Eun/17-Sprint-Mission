@@ -5,7 +5,7 @@ import SortIcon from "@/assets/icons/ic_sort.svg";
 import { useState } from "react";
 import { ORDER_BY } from "./constants";
 import useIsMobile from "@/hooks/useIsMobile";
-import { device } from "@/styles/common/media";
+import { device } from "@/styles/media";
 
 const ORDER_BY_ENG_TO_KOR = {
   favorite: "인기순",

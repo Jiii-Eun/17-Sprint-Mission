@@ -7,7 +7,7 @@ import useAsync from "@/hooks/useAsync";
 import { useCallback } from "react";
 import { BEST_ITEMS_DEFAULT_VALUES } from "./constants";
 import useResizeEffect from "@/hooks/useResizeEffect";
-import { device, screenSizeNumber } from "@/styles/common/media";
+import { device, screenSizeNumber } from "@/styles/media";
 
 const getItemDisplayLimit = () => {
   const width = window.innerWidth;

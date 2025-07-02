@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import "@/styles/pages/sign.css";
 import PandaLogo from "@/assets/icons/panda_icon_small.svg";
 import GoogleIcon from "@/assets/icons/ic_google.svg";
 import KakaoTalkIcon from "@/assets/icons/ic_kakao.svg";

@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import styled from "styled-components";
-import { GlobalStyle } from "@/styles/common/global";
+import { GlobalStyle } from "@/styles/global";
 
 export default function MainTemplate() {
   return (
