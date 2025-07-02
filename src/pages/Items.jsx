@@ -1,6 +1,6 @@
 import AllItems from "@/components/Items/AllItemsSection";
 import BestItems from "@/components/Items/BestItemsSection";
-import { device } from "@/styles/common/media";
+import { device } from "@/styles/media";
 import styled from "styled-components";
 
 export default function Items() {

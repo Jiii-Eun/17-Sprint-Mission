@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import "@/styles/pages/home.css";
 import HomeTopImg from "@/assets/imgs/Img_home_top.png";
 import MainSectionImg from "@/assets/imgs/Img_home_01.png";
 import MainSectionImg2 from "@/assets/imgs/Img_home_02.png";

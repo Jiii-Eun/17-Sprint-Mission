@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import PandaLogo from "@/assets/icons/panda_icon_small.svg";
 import defaultProfileImg from "@/assets/imgs/default_profile.png";
-import { device } from "@/styles/common/media";
+import { device } from "@/styles/media";
 
 function getLinkStyle({ isActive }) {
   return {
@@ -91,7 +91,7 @@ const Logo = styled(PandaLogo)`
   }
 `;
 const Title = styled.h1`
-  font-size: var(--font-size-450);
+  font-size: var(--font-size-600);
   font-weight: 700;
   font-family: var(--font-secondary);
   color: var(--primary-color);
