@@ -6,8 +6,8 @@ import { getProducts } from "@/apis/Items";
 import useAsync from "@/hooks/useAsync";
 import { useCallback } from "react";
 import { BEST_ITEMS_DEFAULT_VALUES } from "./constants";
-import { useResizeEffect } from "@/hooks/useResizeEffect";
-import { screenSizeNumber } from "@/styles/common/media";
+import useResizeEffect from "@/hooks/useResizeEffect";
+import { device, screenSizeNumber } from "@/styles/common/media";
 
 const getItemDisplayLimit = () => {
   const width = window.innerWidth;
@@ -40,20 +40,21 @@ export default function BestItemsSection() {
       <Title>베스트 상품</Title>
       <Items>
         {items.map((item) => (
-          <ItemWrapper key={item.id}>
-            <ItemBox
-              title={item.name}
-              price={item.price}
-              like={item.favoriteCount}
-              imgUrl={item.images[0] ?? item.images[1]}
-            />
-          </ItemWrapper>
+          <ItemBox
+            key={item.id}
+            title={item.name}
+            price={item.price}
+            like={item.favoriteCount}
+            imgUrl={item.images[0] ?? item.images[1]}
+          />
         ))}
       </Items>
     </Container>
   );
 }
-const Container = styled.div``;
+const Container = styled.div`
+  width: 100%;
+`;
 const Title = styled.h2`
   margin-bottom: var(--spacing-lg);
   font-size: var(--font-size-500);
@@ -61,12 +62,13 @@ const Title = styled.h2`
 `;
 
 const Items = styled.ul`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 15px;
-`;
-const ItemWrapper = styled.div`
-  width: 282px;
+  @media ${device.tablet} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media ${device.desktop} {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `;

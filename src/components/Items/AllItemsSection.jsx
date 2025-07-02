@@ -8,8 +8,9 @@ import { DEFAULT_VALUES, ORDER_BY } from "./constants";
 import DropdownButton from "./DropdownButton";
 import Pagination from "./PaginationBar";
 import Search from "./Search";
-import { screenSizeNumber } from "@/styles/common/media";
-import { useResizeEffect } from "@/hooks/useResizeEffect";
+import { device, screenSizeNumber } from "@/styles/common/media";
+import useResizeEffect from "@/hooks/useResizeEffect";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const getItemDisplayLimit = () => {
   const width = window.innerWidth;
@@ -24,6 +25,8 @@ export default function AllItemsSection() {
   const [orderBy, setOrderBy] = useState(ORDER_BY.RECENT);
   const [pageSize, setPageSize] = useState(getItemDisplayLimit());
   const [isLoading, loadingError, getProductsAsync] = useAsync(getProducts);
+  const isMobile = useIsMobile();
+
   const handleLoad = useCallback(
     async (options) => {
       const result = await getProductsAsync(options);
@@ -47,23 +50,32 @@ export default function AllItemsSection() {
   return (
     <Container>
       <Head>
-        <Title>모든 상품</Title>
         <Control>
-          <Search onSubmit={handleSearchSubmit} />
-          <Button text="상품 등록하기" as="a" link="/additem" />
+          <Title>전체 상품</Title>
+          {isMobile ? (
+            <Button text="상품 등록하기" as="a" link="/additem" />
+          ) : (
+            <Search onSubmit={handleSearchSubmit} />
+          )}
+        </Control>
+        <Control>
+          {isMobile ? (
+            <Search onSubmit={handleSearchSubmit} />
+          ) : (
+            <Button text="상품 등록하기" as="a" link="/additem" />
+          )}
           <DropdownButton orderBy={orderBy} setOrderBy={setOrderBy} />
         </Control>
       </Head>
       <Items>
         {items.map((item) => (
-          <ItemWrapper key={item.id}>
-            <ItemBox
-              title={item.name}
-              price={item.price}
-              like={item.favoriteCount}
-              imgUrl={item.images[0] ?? item.images[1]}
-            />
-          </ItemWrapper>
+          <ItemBox
+            key={item.id}
+            title={item.name}
+            price={item.price}
+            like={item.favoriteCount}
+            imgUrl={item.images[0] ?? item.images[1]}
+          />
         ))}
       </Items>
       <Pagination totalCount={totalCount} page={page} setPage={setPage} />
@@ -77,9 +89,20 @@ const Container = styled.div`
   gap: var(--spacing-lg);
 `;
 const Head = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--spacing-sm);
+  @media ${device.tablet} {
+    display: flex;
+    & > div:first-child {
+      flex-grow: 1;
+    }
+    & > div:last-child {
+      justify-content: flex-end;
+    }
+  }
+  @media ${device.desktop} {
+  }
 `;
 const Title = styled.h2`
   font-size: var(--font-size-500);
@@ -89,14 +112,20 @@ const Control = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: var(--spacing-sm);
+  & > form {
+    flex: 1 1;
+  }
 `;
 
 const Items = styled.ul`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-xxl) var(--spacing-lg);
-`;
-const ItemWrapper = styled.div`
-  width: 221px;
+  @media ${device.tablet} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media ${device.desktop} {
+    grid-template-columns: repeat(5, 1fr);
+  }
 `;
