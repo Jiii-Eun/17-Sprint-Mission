@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import "@/styles/pages/home.css";
-import HomeTopImg from "@/assets/imgs/Img_home_top.svg";
-import MainSectionImg from "@/assets/imgs/Img_home_01.svg";
-import MainSectionImg2 from "@/assets/imgs/Img_home_02.svg";
-import MainSectionImg3 from "@/assets/imgs/Img_home_03.svg";
-import HomeBottomImg from "@/assets/imgs/Img_home_bottom.svg";
+import HomeTopImg from "@/assets/imgs/img_home_top.svg";
+import MainSectionImg from "@/assets/imgs/img_home_01.svg";
+import MainSectionImg2 from "@/assets/imgs/img_home_02.svg";
+import MainSectionImg3 from "@/assets/imgs/img_home_03.svg";
+import HomeBottomImg from "@/assets/imgs/img_home_bottom.svg";
 
 export default function Home() {
   return (

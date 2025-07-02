@@ -46,6 +46,7 @@ export default function BestItemsSection() {
             price={item.price}
             like={item.favoriteCount}
             imgUrl={item.images[0] ?? item.images[1]}
+            imgAlt={item.name}
           />
         ))}
       </Items>

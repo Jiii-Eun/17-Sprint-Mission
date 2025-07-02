@@ -75,6 +75,7 @@ export default function AllItemsSection() {
             price={item.price}
             like={item.favoriteCount}
             imgUrl={item.images[0] ?? item.images[1]}
+            imgAlt={item.name}
           />
         ))}
       </Items>
