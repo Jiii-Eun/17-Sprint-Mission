@@ -1,8 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const commonStyled = `height: auto;
+const commonStyles = `
+  height: auto;
   padding: var(--spacing-sm) var(--spacing-lg);
   background-color: var(--primary-color);
   border-radius: var(--border-radius-xs);
@@ -10,25 +10,34 @@ const commonStyled = `height: auto;
   text-align: center;
   font-weight: 600;
   font-size: var(--font-size-400);
-  color: var(--gray-100-color);`;
-
+  color: var(--gray-100-color);
+`;
 const StyledButton = styled.button`
-  ${commonStyled}
+  ${commonStyles}
 `;
 const StyledLink = styled(Link)`
-  ${commonStyled}
+  ${commonStyles}
 `;
-const StyledDiv = styled.div`
-  ${commonStyled}
-`;
-
-export default function Button({ text, onClick, as = "button", link = "" }) {
+export default function Button({
+  text,
+  onClick = () => {},
+  as = "button",
+  link = "",
+}) {
   switch (as) {
     case "button":
-      return <StyledButton>{text}</StyledButton>;
+      return <StyledButton onClick={onClick}>{text}</StyledButton>;
     case "a":
-      return <StyledLink to={link}>{text}</StyledLink>;
+      return (
+        <StyledLink to={link} aria-label={text}>
+          {text}
+        </StyledLink>
+      );
     case "div":
-      return <StyledDiv>{text}</StyledDiv>;
+      return (
+        <StyledButton as={"div"} onClick={onClick}>
+          {text}
+        </StyledButton>
+      );
   }
 }

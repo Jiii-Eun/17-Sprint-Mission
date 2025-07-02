@@ -29,7 +29,7 @@ export default function PaginationBar({ totalCount = 1, page, setPage }) {
   return (
     <Container>
       <Counter onClick={handleLeftArrowClick} disabled={page === 1}>
-        <Icon src={LeftArrowIcon} />
+        <Icon src={LeftArrowIcon} alt="이전 페이지 보기 버튼" />
       </Counter>
       {countArray.map((count) => {
         return (
@@ -38,14 +38,14 @@ export default function PaginationBar({ totalCount = 1, page, setPage }) {
             onClick={handleClick}
             value={count}
             aria-current={count === page ? "page" : undefined}
-            isactive={(count === page).toString()}
+            $isactive={(count === page).toString()}
           >
             {count}
           </Counter>
         );
       })}
       <Counter onClick={handleRightArrowClick} disabled={page === pagesCount}>
-        <Icon src={RightArrowIcon} />
+        <Icon src={RightArrowIcon} alt="다음 페이지 보기 버튼" />
       </Counter>
     </Container>
   );
@@ -61,10 +61,10 @@ const Counter = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${({ isactive }) =>
-    isactive === "true" ? "var(--primary-color)" : "var(--white-color)"};
-  color: ${({ isactive }) =>
-    isactive === "true" ? "var(--gray-50-color)" : "var(--gray-500-color)"};
+  background-color: ${({ $isactive }) =>
+    $isactive === "true" ? "var(--primary-color)" : "var(--white-color)"};
+  color: ${({ $isactive }) =>
+    $isactive === "true" ? "var(--gray-50-color)" : "var(--gray-500-color)"};
   border-radius: var(--border-radius-lg);
   border: 1px solid var(--gray-200-color);
   width: 2.5rem;

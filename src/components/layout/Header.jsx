@@ -22,16 +22,28 @@ export default function Header() {
           </Title>
         </LogoWrapper>
         <NavList>
-          <li>자유게시판</li>
           <li>
-            <NavLink to="/items" style={getLinkStyle}>
+            <NavLink
+              to="/community"
+              style={getLinkStyle}
+              aria-label="자유게시판으로 이동"
+            >
+              자유게시판
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/items"
+              style={getLinkStyle}
+              aria-label="중고마켓 페이지로 이동"
+            >
               중고마켓
             </NavLink>
           </li>
         </NavList>
         <ProfileImgWrapper>
           <Link to="/login" aria-label="로그인 화면으로 이동">
-            <img src={defaultProfileImg} />
+            <img src={defaultProfileImg} alt="회색 기본 프로필 이미지" />
           </Link>
         </ProfileImgWrapper>
       </NavBar>
