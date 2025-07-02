@@ -15,5 +15,5 @@ export default function MainTemplate() {
   );
 }
 const Container = styled.div`
-  margin-top: 70px;
+  margin-top: var(--spacing-xxxl);
 `;

@@ -22,10 +22,12 @@ export default function Search({ onSubmit }) {
     </Form>
   );
 }
-const Form = styled.form``;
-const Input = styled.input`
-  width: 20rem;
+const Form = styled.form`
+  max-width: 24rem;
   height: 2.625rem;
+`;
+const Input = styled.input`
+  width: 100%;
   background-color: var(--gray-100-color);
   background-image: url("${SearchIcon}");
   background-position: 12px 50%;

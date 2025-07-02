@@ -5,7 +5,8 @@ export default function ItemImg({ imgUrl }) {
 }
 
 const Image = styled.img`
-  border-radius: 17px;
+  border-radius: var(--border-radius-md);
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: auto;
+  aspect-ratio: 1;
 `;

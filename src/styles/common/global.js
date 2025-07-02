@@ -71,5 +71,6 @@ export const GlobalStyle = createGlobalStyle`
     --border-radius-md: 16px;
     --border-radius-lg: 20px;
     --border-radius-xl: 40px;
+    --border-radius-circle: 9999px;
   }
 `;
