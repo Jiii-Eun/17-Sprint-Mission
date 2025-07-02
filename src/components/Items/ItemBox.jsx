@@ -10,7 +10,7 @@ export default function ItemBox({ title, price, like, imgUrl, imgAlt }) {
       <Title>{title}</Title>
       <Price>{localePriceString}원</Price>
       <LikeWrapper>
-        <img src={LikeIcon} alt={"좋아요 버튼"} />
+        <LikeIcon aria-label="좋아요 버튼" />
         <Like>{like}</Like>
       </LikeWrapper>
     </Container>

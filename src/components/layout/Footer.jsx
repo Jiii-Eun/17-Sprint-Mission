@@ -26,11 +26,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             aria-label="페이스북 페이지로 이동"
           >
-            <Icon
-              className="footer__sns-icon"
-              src={FacebookIcon}
-              alt="페이스북 아이콘"
-            />
+            <FacebookIcon aria-label="트위터 아이콘" />
           </Link>
           <Link
             to="https://www.x.com"
@@ -38,11 +34,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             aria-label="트위터 페이지로 이동"
           >
-            <Icon
-              className="footer__sns-icon"
-              src={TwitterIcon}
-              alt="트위터 아이콘"
-            />
+            <TwitterIcon aria-label="트위터 아이콘" />
           </Link>
           <Link
             to="https://www.youtube.com"
@@ -50,11 +42,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             aria-label="유튜브 페이지로 이동"
           >
-            <Icon
-              className="footer__sns-icon"
-              src={YoutubeIcon}
-              alt="유튜브 아이콘"
-            />
+            <YoutubeIcon aria-label="유튜브 아이콘" />
           </Link>
           <Link
             to="https://www.instagram.com"
@@ -62,11 +50,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             aria-label="인스타그램 페이지로 이동"
           >
-            <Icon
-              className="footer__sns-icon"
-              src={InstagramIcon}
-              alt="인스타그램 아이콘"
-            />
+            <InstagramIcon aria-label="인스타그램 아이콘" />
           </Link>
         </Icons>
       </Container>
@@ -121,8 +105,8 @@ const Icons = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: var(--spacing-sm);
-`;
-const Icon = styled.img`
-  width: var(--font-size-500);
-  height: var(--font-size-500);
+  & svg {
+    width: var(--font-size-500);
+    height: var(--font-size-500);
+  }
 `;

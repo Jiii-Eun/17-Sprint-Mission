@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import defaultBox from "@/assets/imgs/img_default_box.png";
+import defaultBox from "@/assets/imgs/default_box.png";
 
 export default function ItemImg({ imgUrl = "", alt = "" }) {
   const onErrorImg = (e) => {
