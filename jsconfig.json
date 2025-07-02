@@ -14,7 +14,8 @@
     "src/**/*.js",
     "src/**/*.jsx",
     "src/**/*.ts",
-    "src/**/*.tsx"
+    "src/**/*.tsx",
+    "src/**/*.svg"
   ],
   "exclude": ["node_modules", "**/node_modules", "dist"]
 }
