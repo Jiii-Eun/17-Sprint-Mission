@@ -1,8 +1,9 @@
-import { Outlet } from "react-router-dom";
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
-import styled from "styled-components";
-import { GlobalStyle } from "@/styles/global";
+import { Outlet } from 'react-router-dom';
+import styled from 'styled-components';
+
+import Footer from '@/components/layout/Footer';
+import Header from '@/components/layout/Header';
+import { GlobalStyle } from '@/styles/global';
 
 export default function MainTemplate() {
   return (

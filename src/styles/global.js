@@ -1,5 +1,6 @@
-import { createGlobalStyle } from "styled-components";
-import "./fonts.css";
+import { createGlobalStyle } from 'styled-components';
+
+import '@/styles/fonts.css';
 
 export const GlobalStyle = createGlobalStyle`
   body {

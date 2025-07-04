@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 const commonStyles = `
   height: auto;
@@ -21,21 +21,21 @@ const StyledLink = styled(Link)`
 export default function Button({
   text,
   onClick = () => {},
-  as = "button",
-  link = "",
+  as = 'button',
+  link = '',
 }) {
   switch (as) {
-    case "button":
+    case 'button':
       return <StyledButton onClick={onClick}>{text}</StyledButton>;
-    case "a":
+    case 'a':
       return (
         <StyledLink to={link} aria-label={text}>
           {text}
         </StyledLink>
       );
-    case "div":
+    case 'div':
       return (
-        <StyledButton as={"div"} onClick={onClick}>
+        <StyledButton as={'div'} onClick={onClick}>
           {text}
         </StyledButton>
       );

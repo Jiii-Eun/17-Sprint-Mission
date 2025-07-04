@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
-import FacebookIcon from "@/assets/icons/ic_facebook.svg";
-import TwitterIcon from "@/assets/icons/ic_twitter.svg";
-import InstagramIcon from "@/assets/icons/ic_instagram.svg";
-import YoutubeIcon from "@/assets/icons/ic_youtube.svg";
-import styled from "styled-components";
-import { device } from "@/styles/media";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+import FacebookIcon from '@/assets/icons/ic_facebook.svg';
+import InstagramIcon from '@/assets/icons/ic_instagram.svg';
+import TwitterIcon from '@/assets/icons/ic_twitter.svg';
+import YoutubeIcon from '@/assets/icons/ic_youtube.svg';
+import { device } from '@/styles/media';
 
 export default function Footer() {
   return (
@@ -12,45 +13,45 @@ export default function Footer() {
       <Container>
         <Copyright>©codeit - 2024</Copyright>
         <Info>
-          <Link to="privacy" aria-label="개인정보 관리 정책 화면으로 이동">
+          <Link to='privacy' aria-label='개인정보 관리 정책 화면으로 이동'>
             Privacy Policy
           </Link>
-          <Link to="faq" aria-label="FAQ 화면으로 이동">
+          <Link to='faq' aria-label='FAQ 화면으로 이동'>
             FAQ
           </Link>
         </Info>
         <Icons>
           <Link
-            to="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="페이스북 페이지로 이동"
+            to='https://www.facebook.com'
+            target='_blank'
+            rel='noopener noreferrer'
+            aria-label='페이스북 페이지로 이동'
           >
-            <FacebookIcon aria-label="트위터 아이콘" />
+            <FacebookIcon aria-label='트위터 아이콘' />
           </Link>
           <Link
-            to="https://www.x.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="트위터 페이지로 이동"
+            to='https://www.x.com'
+            target='_blank'
+            rel='noopener noreferrer'
+            aria-label='트위터 페이지로 이동'
           >
-            <TwitterIcon aria-label="트위터 아이콘" />
+            <TwitterIcon aria-label='트위터 아이콘' />
           </Link>
           <Link
-            to="https://www.youtube.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="유튜브 페이지로 이동"
+            to='https://www.youtube.com'
+            target='_blank'
+            rel='noopener noreferrer'
+            aria-label='유튜브 페이지로 이동'
           >
-            <YoutubeIcon aria-label="유튜브 아이콘" />
+            <YoutubeIcon aria-label='유튜브 아이콘' />
           </Link>
           <Link
-            to="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="인스타그램 페이지로 이동"
+            to='https://www.instagram.com'
+            target='_blank'
+            rel='noopener noreferrer'
+            aria-label='인스타그램 페이지로 이동'
           >
-            <InstagramIcon aria-label="인스타그램 아이콘" />
+            <InstagramIcon aria-label='인스타그램 아이콘' />
           </Link>
         </Icons>
       </Container>
