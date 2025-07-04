@@ -1,16 +1,17 @@
-import { useState, useEffect, useCallback } from "react";
-import styled from "styled-components";
-import ItemBox from "./ItemBox";
-import Button from "../common/Button";
-import { getProducts } from "@/apis/Items";
-import useAsync from "@/hooks/useAsync";
-import { DEFAULT_VALUES, ORDER_BY } from "./constants";
-import DropdownButton from "./DropdownButton";
-import Pagination from "./PaginationBar";
-import Search from "./Search";
-import { device, screenSizeNumber } from "@/styles/media";
-import useResizeEffect from "@/hooks/useResizeEffect";
-import useIsMobile from "@/hooks/useIsMobile";
+import { useCallback, useEffect, useState } from 'react';
+import styled from 'styled-components';
+
+import { getProducts } from '@/apis/Items';
+import Button from '@/components/common/Button';
+import { DEFAULT_VALUES, ORDER_BY } from '@/components/Items/constants';
+import DropdownButton from '@/components/Items/DropdownButton';
+import ItemBox from '@/components/Items/ItemBox';
+import Pagination from '@/components/Items/PaginationBar';
+import Search from '@/components/Items/Search';
+import useAsync from '@/hooks/useAsync';
+import useIsMobile from '@/hooks/useIsMobile';
+import useResizeEffect from '@/hooks/useResizeEffect';
+import { device, screenSizeNumber } from '@/styles/media';
 
 const getItemDisplayLimit = () => {
   const width = window.innerWidth;
@@ -53,7 +54,7 @@ export default function AllItemsSection() {
         <Control>
           <Title>전체 상품</Title>
           {isMobile ? (
-            <Button text="상품 등록하기" as="a" link="/additem" />
+            <Button text='상품 등록하기' as='a' link='/additem' />
           ) : (
             <Search onSubmit={handleSearchSubmit} />
           )}
@@ -62,7 +63,7 @@ export default function AllItemsSection() {
           {isMobile ? (
             <Search onSubmit={handleSearchSubmit} />
           ) : (
-            <Button text="상품 등록하기" as="a" link="/additem" />
+            <Button text='상품 등록하기' as='a' link='/additem' />
           )}
           <DropdownButton orderBy={orderBy} setOrderBy={setOrderBy} />
         </Control>

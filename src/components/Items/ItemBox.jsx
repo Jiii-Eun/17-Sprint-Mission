@@ -1,16 +1,17 @@
-import styled from "styled-components";
-import ItemImg from "../common/ItemImg";
-import LikeIcon from "@/assets/icons/ic_heart.svg";
+import styled from 'styled-components';
+
+import LikeIcon from '@/assets/icons/ic_heart.svg';
+import ItemImg from '@/components/common/ItemImg';
 
 export default function ItemBox({ title, price, like, imgUrl, imgAlt }) {
-  const localePriceString = Number(price).toLocaleString("ko-KR");
+  const localePriceString = Number(price).toLocaleString('ko-KR');
   return (
     <Container>
       <ItemImg imgUrl={imgUrl} alt={imgAlt} />
       <Title>{title}</Title>
       <Price>{localePriceString}원</Price>
       <LikeWrapper>
-        <LikeIcon aria-label="좋아요 버튼" />
+        <LikeIcon aria-label='좋아요 버튼' />
         <Like>{like}</Like>
       </LikeWrapper>
     </Container>
