@@ -1,7 +1,8 @@
-import AllItems from "@/components/Items/AllItemsSection";
-import BestItems from "@/components/Items/BestItemsSection";
-import { device } from "@/styles/media";
-import styled from "styled-components";
+import styled from 'styled-components';
+
+import AllItems from '@/components/Items/AllItemsSection';
+import BestItems from '@/components/Items/BestItemsSection';
+import { device } from '@/styles/media';
 
 export default function Items() {
   return (

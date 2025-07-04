@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 const useResizeEffect = (callback, delay = 300) => {
   let timer;
@@ -10,9 +10,9 @@ const useResizeEffect = (callback, delay = 300) => {
         callback();
       }, delay);
     };
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
       if (timer) clearTimeout(timer);
     };
   }, [callback, delay]);

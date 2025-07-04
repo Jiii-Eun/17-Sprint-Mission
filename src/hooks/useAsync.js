@@ -1,5 +1,4 @@
-import { useCallback } from "react";
-import { useState } from "react";
+import { useCallback, useState } from 'react';
 
 export default function useAsync(asyncFunction) {
   const [pending, setPending] = useState(false);

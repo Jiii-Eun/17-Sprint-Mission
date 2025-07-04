@@ -1,12 +1,13 @@
-import { Link, NavLink } from "react-router-dom";
-import styled from "styled-components";
-import PandaLogo from "@/assets/icons/panda_icon_small.svg";
-import defaultProfileImg from "@/assets/imgs/default_profile.png";
-import { device } from "@/styles/media";
+import { Link, NavLink } from 'react-router-dom';
+import styled from 'styled-components';
+
+import PandaLogo from '@/assets/icons/panda_icon_small.svg';
+import defaultProfileImg from '@/assets/imgs/default_profile.png';
+import { device } from '@/styles/media';
 
 function getLinkStyle({ isActive }) {
   return {
-    color: isActive ? "#3692FF" : "#4b5563",
+    color: isActive ? '#3692FF' : '#4b5563',
   };
 }
 export default function Header() {
@@ -14,9 +15,9 @@ export default function Header() {
     <StyledHeader>
       <NavBar>
         <LogoWrapper>
-          <Logo aria-label="판다마켓 로고" />
+          <Logo aria-label='판다마켓 로고' />
           <Title>
-            <Link to={"/"} aria-label="홈으로 이동">
+            <Link to={'/'} aria-label='홈으로 이동'>
               판다마켓
             </Link>
           </Title>
@@ -24,26 +25,26 @@ export default function Header() {
         <NavList>
           <li>
             <NavLink
-              to="/community"
+              to='/community'
               style={getLinkStyle}
-              aria-label="자유게시판으로 이동"
+              aria-label='자유게시판으로 이동'
             >
               자유게시판
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/items"
+              to='/items'
               style={getLinkStyle}
-              aria-label="중고마켓 페이지로 이동"
+              aria-label='중고마켓 페이지로 이동'
             >
               중고마켓
             </NavLink>
           </li>
         </NavList>
         <ProfileImgWrapper>
-          <Link to="/login" aria-label="로그인 화면으로 이동">
-            <img src={defaultProfileImg} alt="회색 기본 프로필 이미지" />
+          <Link to='/login' aria-label='로그인 화면으로 이동'>
+            <img src={defaultProfileImg} alt='회색 기본 프로필 이미지' />
           </Link>
         </ProfileImgWrapper>
       </NavBar>
