@@ -49,7 +49,7 @@ export default function AllItemsSection() {
   });
 
   return (
-    <Container>
+    <Section>
       <Head>
         <Control>
           <Title>전체 상품</Title>
@@ -81,10 +81,10 @@ export default function AllItemsSection() {
         ))}
       </Items>
       <Pagination totalCount={totalCount} page={page} setPage={setPage} />
-    </Container>
+    </Section>
   );
 }
-const Container = styled.div`
+const Section = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;

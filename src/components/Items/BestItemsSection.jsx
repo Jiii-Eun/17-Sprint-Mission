@@ -41,7 +41,7 @@ export default function BestItemsSection() {
   });
 
   return (
-    <Container>
+    <Section>
       <Title>베스트 상품</Title>
       <Items>
         {items.map((item) => (
@@ -55,10 +55,10 @@ export default function BestItemsSection() {
           />
         ))}
       </Items>
-    </Container>
+    </Section>
   );
 }
-const Container = styled.div`
+const Section = styled.section`
   width: 100%;
 `;
 const Title = styled.h2`

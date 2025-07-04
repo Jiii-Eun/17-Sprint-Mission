@@ -11,23 +11,22 @@ import Login from '@/pages/Login.jsx';
 import NotFound from '@/pages/NotFound.jsx';
 import Privacy from '@/pages/Privacy.jsx';
 import Signup from '@/pages/Signup.jsx';
-import MainTemplate from '@/templates/MainTemplate';
+import { GlobalStyle } from '@/styles/global';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
+      <GlobalStyle />
       <Routes>
-        <Route path='/' element={<MainTemplate />}>
-          <Route index element={<Home />} />
-          <Route path='items' element={<Items />} />
-          <Route path='additem' element={<AddItem />} />
-          <Route path='login' element={<Login />} />
-          <Route path='signup' element={<Signup />} />
-          <Route path='privacy' element={<Privacy />} />
-          <Route path='community' element={<Community />} />
-          <Route path='faq' element={<Faq />} />
-          <Route path='*' element={<NotFound />} />
-        </Route>
+        <Route path='/' index element={<Home />} />
+        <Route path='items' element={<Items />} />
+        <Route path='additem' element={<AddItem />} />
+        <Route path='login' element={<Login />} />
+        <Route path='signup' element={<Signup />} />
+        <Route path='privacy' element={<Privacy />} />
+        <Route path='community' element={<Community />} />
+        <Route path='faq' element={<Faq />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
