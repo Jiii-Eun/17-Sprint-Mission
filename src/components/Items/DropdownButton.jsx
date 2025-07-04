@@ -1,15 +1,15 @@
-import styled from "styled-components";
-import ArrowDownIcon from "@/assets/icons/ic_arrow_down.svg";
-import SortIcon from "@/assets/icons/ic_sort.svg";
+import { useState } from 'react';
+import styled from 'styled-components';
 
-import { useState } from "react";
-import { ORDER_BY } from "./constants";
-import useIsMobile from "@/hooks/useIsMobile";
-import { device } from "@/styles/media";
+import ArrowDownIcon from '@/assets/icons/ic_arrow_down.svg';
+import SortIcon from '@/assets/icons/ic_sort.svg';
+import { ORDER_BY } from '@/components/Items/constants';
+import useIsMobile from '@/hooks/useIsMobile';
+import { device } from '@/styles/media';
 
 const ORDER_BY_ENG_TO_KOR = {
-  favorite: "인기순",
-  recent: "최신순",
+  favorite: '인기순',
+  recent: '최신순',
 };
 
 export default function DropdownButton({ orderBy, setOrderBy }) {

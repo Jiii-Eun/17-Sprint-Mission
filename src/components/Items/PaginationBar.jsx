@@ -1,6 +1,7 @@
-import styled from "styled-components";
-import LeftArrowIcon from "@/assets/icons/ic_arrow_left.svg";
-import RightArrowIcon from "@/assets/icons/ic_arrow_right.svg";
+import styled from 'styled-components';
+
+import LeftArrowIcon from '@/assets/icons/ic_arrow_left.svg';
+import RightArrowIcon from '@/assets/icons/ic_arrow_right.svg';
 
 export default function PaginationBar({ totalCount = 1, page, setPage }) {
   const pagesCount = Math.ceil(totalCount / 10);
@@ -30,7 +31,7 @@ export default function PaginationBar({ totalCount = 1, page, setPage }) {
     <Container>
       <Counter onClick={handleLeftArrowClick} disabled={page === 1}>
         <IconWrapper>
-          <LeftArrowIcon aria-label="이전 페이지 보기 버튼" />
+          <LeftArrowIcon aria-label='이전 페이지 보기 버튼' />
         </IconWrapper>
       </Counter>
       {countArray.map((count) => {
@@ -39,7 +40,7 @@ export default function PaginationBar({ totalCount = 1, page, setPage }) {
             key={count}
             onClick={handleClick}
             value={count}
-            aria-current={count === page ? "page" : undefined}
+            aria-current={count === page ? 'page' : undefined}
             $isactive={(count === page).toString()}
           >
             {count}
@@ -48,7 +49,7 @@ export default function PaginationBar({ totalCount = 1, page, setPage }) {
       })}
       <Counter onClick={handleRightArrowClick} disabled={page === pagesCount}>
         <IconWrapper>
-          <RightArrowIcon aria-label="다음 페이지 보기 버튼" />
+          <RightArrowIcon aria-label='다음 페이지 보기 버튼' />
         </IconWrapper>
       </Counter>
     </Container>
@@ -66,9 +67,9 @@ const Counter = styled.button`
   justify-content: center;
   align-items: center;
   background-color: ${({ $isactive }) =>
-    $isactive === "true" ? "var(--primary-color)" : "var(--white-color)"};
+    $isactive === 'true' ? 'var(--primary-color)' : 'var(--white-color)'};
   color: ${({ $isactive }) =>
-    $isactive === "true" ? "var(--gray-50-color)" : "var(--gray-500-color)"};
+    $isactive === 'true' ? 'var(--gray-50-color)' : 'var(--gray-500-color)'};
   border-radius: var(--border-radius-lg);
   border: 1px solid var(--gray-200-color);
   width: 2.5rem;

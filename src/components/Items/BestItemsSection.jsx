@@ -1,14 +1,19 @@
-import styled from "styled-components";
-import ItemBox from "./ItemBox";
-import { useState } from "react";
-import { useEffect } from "react";
-import { getProducts } from "@/apis/Items";
-import useAsync from "@/hooks/useAsync";
-import { useCallback } from "react";
-import { BEST_ITEMS_DEFAULT_VALUES } from "./constants";
-import useResizeEffect from "@/hooks/useResizeEffect";
-import { device, screenSizeNumber } from "@/styles/media";
+import { useCallback, useEffect, useState } from 'react';
+import styled from 'styled-components';
 
+import { getProducts } from '@/apis/Items';
+import { ORDER_BY } from '@/components/Items/constants';
+import ItemBox from '@/components/Items/ItemBox';
+import useAsync from '@/hooks/useAsync';
+import useResizeEffect from '@/hooks/useResizeEffect';
+import { device, screenSizeNumber } from '@/styles/media';
+
+const _ITEMS_DEFAULT_VALUES = {
+  page: 1,
+  pageSize: 5,
+  orderBy: ORDER_BY.FAVORITE,
+  keyword: '',
+};
 const getItemDisplayLimit = () => {
   const width = window.innerWidth;
   if (width > screenSizeNumber.desktop) return 4;
@@ -28,7 +33,7 @@ export default function BestItemsSection() {
     [getProductsAsync]
   );
   useEffect(() => {
-    handleLoad({ ...BEST_ITEMS_DEFAULT_VALUES, pageSize });
+    handleLoad({ ..._ITEMS_DEFAULT_VALUES, pageSize });
   }, [handleLoad, pageSize]);
 
   useResizeEffect(() => {

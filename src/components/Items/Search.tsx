@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import SearchIcon from "@/assets/icons/ic_search.svg";
-import { useState } from "react";
+import styled from 'styled-components';
+import SearchIcon from '@/assets/icons/ic_search.svg';
+import { useState } from 'react';
 
 export default function Search({ onSubmit }) {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
   const handleChange = (e) => {
     setValue(e.target.value);
   };
@@ -15,10 +15,10 @@ export default function Search({ onSubmit }) {
     <Form onSubmit={handleSubmit}>
       <SearchIcon />
       <Input
-        name="itemSearch"
+        name='itemSearch'
         value={value}
         onChange={handleChange}
-        placeholder="검색할 상품을 입력해주세요"
+        placeholder='검색할 상품을 입력해주세요'
       />
     </Form>
   );
