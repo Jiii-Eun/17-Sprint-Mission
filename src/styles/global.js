@@ -58,6 +58,7 @@ export const GlobalStyle = createGlobalStyle`
     --font-size-1000: 2.5rem; /* 40px */
 
     /* spacing */
+    --spacing-header: 60px;
     --spacing-xs: 5px;
     --spacing-sm: 10px;
     --spacing-md: 16px;
