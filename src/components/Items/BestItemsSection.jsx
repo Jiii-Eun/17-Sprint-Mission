@@ -1,28 +1,30 @@
 import { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import { getProducts } from '@/apis/Items';
+import { getProducts } from '@/apis/items';
 import { ORDER_BY } from '@/components/Items/constants';
 import ItemBox from '@/components/Items/ItemBox';
+import { getItemDisplayLimitByscreenSize } from '@/components/Items/utils';
 import useAsync from '@/hooks/useAsync';
 import useResizeEffect from '@/hooks/useResizeEffect';
-import { device, screenSizeNumber } from '@/styles/media';
+import { device } from '@/styles/media';
 
-const _ITEMS_DEFAULT_VALUES = {
+const _BEST_ITEMS_DEFAULT_VALUES = {
   page: 1,
   pageSize: 5,
   orderBy: ORDER_BY.FAVORITE,
   keyword: '',
 };
-const getItemDisplayLimit = () => {
-  const width = window.innerWidth;
-  if (width > screenSizeNumber.desktop) return 4;
-  if (width > screenSizeNumber.tablet) return 2;
-  return 1;
-};
+
 export default function BestItemsSection() {
   const [items, setItems] = useState([]);
-  const [pageSize, setPageSize] = useState(getItemDisplayLimit());
+  const [pageSize, setPageSize] = useState(
+    getItemDisplayLimitByscreenSize({
+      mobile: 1,
+      tablet: 2,
+      desktop: 4,
+    })
+  );
   const [isLoading, loadingError, getProductsAsync] = useAsync(getProducts);
   const handleLoad = useCallback(
     async (options) => {
@@ -33,11 +35,17 @@ export default function BestItemsSection() {
     [getProductsAsync]
   );
   useEffect(() => {
-    handleLoad({ ..._ITEMS_DEFAULT_VALUES, pageSize });
+    handleLoad({ ..._BEST_ITEMS_DEFAULT_VALUES, pageSize });
   }, [handleLoad, pageSize]);
 
   useResizeEffect(() => {
-    setPageSize(getItemDisplayLimit());
+    setPageSize(
+      getItemDisplayLimitByscreenSize({
+        mobile: 1,
+        tablet: 2,
+        desktop: 4,
+      })
+    );
   });
 
   return (
@@ -50,7 +58,7 @@ export default function BestItemsSection() {
             title={item.name}
             price={item.price}
             like={item.favoriteCount}
-            imgUrl={item.images[0] ?? item.images[1]}
+            imgUrl={item.images[0]}
             imgAlt={item.name}
           />
         ))}

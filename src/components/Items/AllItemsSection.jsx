@@ -1,30 +1,32 @@
 import { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import { getProducts } from '@/apis/Items';
+import { getProducts } from '@/apis/items';
 import Button from '@/components/common/Button';
 import { DEFAULT_VALUES, ORDER_BY } from '@/components/Items/constants';
 import DropdownButton from '@/components/Items/DropdownButton';
 import ItemBox from '@/components/Items/ItemBox';
 import Pagination from '@/components/Items/PaginationBar';
 import Search from '@/components/Items/Search';
+import { getItemDisplayLimitByscreenSize } from '@/components/Items/utils';
 import useAsync from '@/hooks/useAsync';
 import useIsMobile from '@/hooks/useIsMobile';
 import useResizeEffect from '@/hooks/useResizeEffect';
-import { device, screenSizeNumber } from '@/styles/media';
+import { device } from '@/styles/media';
 
-const getItemDisplayLimit = () => {
-  const width = window.innerWidth;
-  if (width > screenSizeNumber.desktop) return 10;
-  if (width > screenSizeNumber.tablet) return 6;
-  return 4;
-};
 export default function AllItemsSection() {
   const [items, setItems] = useState([]);
   const [totalCount, setTotalCount] = useState(1);
-  const [page, setPage] = useState(1);
   const [orderBy, setOrderBy] = useState(ORDER_BY.RECENT);
-  const [pageSize, setPageSize] = useState(getItemDisplayLimit());
+  const [searchInput, setSearchInput] = useState('');
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(
+    getItemDisplayLimitByscreenSize({
+      mobile: 4,
+      tablet: 6,
+      desktop: 10,
+    })
+  );
   const [isLoading, loadingError, getProductsAsync] = useAsync(getProducts);
   const isMobile = useIsMobile();
 
@@ -37,15 +39,19 @@ export default function AllItemsSection() {
     },
     [getProductsAsync]
   );
-  const handleSearchSubmit = (value) => {
-    handleLoad({ ...DEFAULT_VALUES, orderBy, page, keyword: value });
-  };
+
   useEffect(() => {
-    handleLoad({ ...DEFAULT_VALUES, orderBy, page, pageSize });
-  }, [handleLoad, orderBy, page, pageSize]);
+    handleLoad({ orderBy, page, pageSize, keyword: searchInput });
+  }, [handleLoad, orderBy, page, pageSize, searchInput]);
 
   useResizeEffect(() => {
-    setPageSize(getItemDisplayLimit());
+    setPageSize(
+      getItemDisplayLimitByscreenSize({
+        mobile: 4,
+        tablet: 6,
+        desktop: 10,
+      })
+    );
   });
 
   return (
@@ -56,12 +62,12 @@ export default function AllItemsSection() {
           {isMobile ? (
             <Button text='상품 등록하기' as='a' link='/additem' />
           ) : (
-            <Search onSubmit={handleSearchSubmit} />
+            <Search onSubmit={setSearchInput} />
           )}
         </Control>
         <Control>
           {isMobile ? (
-            <Search onSubmit={handleSearchSubmit} />
+            <Search onSubmit={setSearchInput} />
           ) : (
             <Button text='상품 등록하기' as='a' link='/additem' />
           )}
@@ -75,7 +81,7 @@ export default function AllItemsSection() {
             title={item.name}
             price={item.price}
             like={item.favoriteCount}
-            imgUrl={item.images[0] ?? item.images[1]}
+            imgUrl={item.images[0] || undefined}
             imgAlt={item.name}
           />
         ))}
