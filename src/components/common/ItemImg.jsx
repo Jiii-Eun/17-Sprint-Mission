@@ -13,15 +13,15 @@ export default function ItemImg({ imgUrl = '', alt = '' }) {
 }
 
 const Image = styled.img`
-  border-radius: var(--border-radius-md);
+  border-radius: ${({ theme }) => theme.borderRadius.md};
   width: 100%;
   height: auto;
   aspect-ratio: 1;
 `;
 const ImageSkeleton = styled.div`
-  border-radius: var(--border-radius-md);
+  border-radius: ${({ theme }) => theme.borderRadius.md};
   width: 100%;
   height: auto;
   aspect-ratio: 1;
-  background-color: var(--gray-100-color);
+  background-color: ${({ theme }) => theme.colors.gray100};
 `;

@@ -1,12 +1,12 @@
 const screenSize = {
-  tablet: "48rem",
-  desktop: "80rem",
+  TABLET: '48rem',
+  DESKTOP: '80rem',
 };
 export const screenSizeNumber = {
-  tablet: 768,
-  desktop: 1280,
+  TABLET: 768,
+  DESKTOP: 1280,
 };
 export const device = {
-  tablet: `(min-width: ${screenSize.tablet})`,
-  desktop: `(min-width: ${screenSize.desktop})`,
+  TABLET: `(min-width: ${screenSize.TABLET})`,
+  DESKTOP: `(min-width: ${screenSize.DESKTOP})`,
 };

@@ -59,24 +59,24 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-xs);
-  margin: var(--spacing-lg) 0;
+  gap: ${({ theme }) => theme.spacing.xs};
+  margin: ${({ theme }) => theme.spacing.lg} 0;
 `;
 const Counter = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${({ $isactive }) =>
-    $isactive === 'true' ? 'var(--primary-color)' : 'var(--white-color)'};
-  color: ${({ $isactive }) =>
-    $isactive === 'true' ? 'var(--gray-50-color)' : 'var(--gray-500-color)'};
-  border-radius: var(--border-radius-lg);
-  border: 1px solid var(--gray-200-color);
+  background-color: ${({ $isactive, theme }) =>
+    $isactive === 'true' ? theme.colors.primary : theme.colors.white};
+  color: ${({ $isactive, theme }) =>
+    $isactive === 'true' ? theme.colors.gray100 : theme.colors.gray500};
+  border-radius: ${({ theme }) => theme.borderRadius.lg};
+  border: 1px solid ${({ theme }) => theme.colors.gray200};
   width: 2.5rem;
   height: 2.5rem;
   padding: 12.5px;
   font-weight: 600;
-  font-size: var(--font-size-400);
+  font-size: ${({ theme }) => theme.fontSize.sm};
 `;
 
 const IconWrapper = styled.div`

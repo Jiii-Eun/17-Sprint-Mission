@@ -51,27 +51,27 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: var(--spacing-xxl);
-  padding: var(--spacing-xxl) var(--spacing-xl);
-  margin-top: var(--spacing-header);
-  @media ${device.tablet} {
+  gap: ${({ theme }) => theme.spacing['2xl']};
+  padding: ${({ theme }) => `${theme.spacing['2xl']} + ${theme.spacing.xl}`};
+  margin-top: ${({ theme }) => theme.spacing.header};
+  @media ${device.TABLET} {
     width: 100%;
   }
-  @media ${device.desktop} {
+  @media ${device.DESKTOP} {
     margin-left: auto;
     margin-right: auto;
-    padding: var(--spacing-xxl) 0;
+    padding: ${({ theme }) => theme.spacing['2xl']} 0;
     max-width: 1200px;
   }
 `;
 const Title = styled.h1`
-  margin-bottom: var(--spacing-lg);
-  font-size: var(--font-size-500);
+  margin-bottom: ${({ theme }) => theme.spacing.lg};
+  font-size: ${({ theme }) => theme.fontSize.md};
   font-weight: 700;
 `;
 const SectionTitle = styled.h2`
-  margin-bottom: var(--spacing-md);
-  font-size: var(--font-size-400);
+  margin-bottom: ${({ theme }) => theme.spacing.md};
+  font-size: ${({ theme }) => theme.fontSize.sm};
   font-weight: 700;
 `;
 const AddImageBox = styled.div``;
@@ -80,7 +80,7 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: var(--spacing-xl);
+  gap: ${({ theme }) => theme.spacing.xl};
 `;
 const Head = styled.div`
   display: flex;

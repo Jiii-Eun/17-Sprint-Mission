@@ -1,16 +1,16 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const commonStyles = `
+const commonStyles = css`
   height: auto;
-  padding: var(--spacing-sm) var(--spacing-lg);
-  background-color: var(--primary-color);
-  border-radius: var(--border-radius-xs);
+  padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.lg};
+  background-color: ${({ theme }) => theme.colors.primary};
+  border-radius: ${({ theme }) => theme.borderRadius.xs};
   border: none;
   text-align: center;
   font-weight: 600;
-  font-size: var(--font-size-400);
-  color: var(--gray-100-color);
+  font-size: ${({ theme }) => theme.fontSize.sm};
+  color: ${({ theme }) => theme.colors.gray100};
 `;
 const StyledButton = styled.button`
   ${commonStyles}

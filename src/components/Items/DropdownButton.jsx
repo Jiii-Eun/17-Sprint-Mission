@@ -49,7 +49,7 @@ export default function DropdownButton({ orderBy, setOrderBy }) {
 }
 const Container = styled.div`
   font-weight: 400;
-  font-size: var(--font-size-400);
+  font-size: ${({ theme }) => theme.fontSize.sm};
   position: relative;
 `;
 const Options = styled.div`
@@ -70,10 +70,10 @@ const Options = styled.div`
   }
 `;
 const Option = styled.button`
-  background-color: var(--white-color);
-  border: 1px solid var(--gray-200-color);
-  border-radius: var(--border-radius-sm);
-  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: ${({ theme }) => theme.colors.white};
+  border: 1px solid ${({ theme }) => theme.colors.gray200};
+  border-radius: ${({ theme }) => theme.borderRadius.sm};
+  padding: ${({ theme }) => theme.spacing.xs} ${({ theme }) => theme.spacing.sm};
   width: 8rem;
   padding: 12px 20px;
 `;
@@ -82,7 +82,7 @@ const CurrentOption = styled(Option)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media ${device.tablet} {
+  @media ${device.TABLET} {
     width: 8rem;
   }
 `;

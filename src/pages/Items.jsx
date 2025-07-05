@@ -21,16 +21,16 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: var(--spacing-xxl);
-  padding: var(--spacing-xxl) var(--spacing-xl);
-  margin-top: var(--spacing-header);
-  @media ${device.tablet} {
+  gap: ${({ theme }) => theme.spacing['2xl']};
+  padding: ${({ theme }) => `${theme.spacing['2xl']} ${theme.spacing.xl}`};
+  margin-top: ${({ theme }) => theme.spacing.header};
+  @media ${device.TABLET} {
     width: 100%;
   }
-  @media ${device.desktop} {
+  @media ${device.DESKTOP} {
     margin-left: auto;
     margin-right: auto;
-    padding: var(--spacing-xxl) 0;
+    padding: ${({ theme }) => `${theme.spacing['2xl']} 0`};
     max-width: 1200px;
   }
 `;

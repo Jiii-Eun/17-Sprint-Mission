@@ -6,10 +6,10 @@ export default function Input({ placeholder }) {
 const StyledInput = styled.input`
   height: 2.625rem;
   width: 100%;
-  border-radius: var(--border-radius-sm);
-  background-color: var(--gray-100-color);
-  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: ${({ theme }) => theme.borderRadius.sm};
+  background-color: ${({ theme }) => theme.colors.gray100};
+  padding: ${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing.lg};
   &::placeholder {
-    color: var(--gray-400-color);
+    color: ${({ theme }) => theme.colors.gray400};
   }
 `;
