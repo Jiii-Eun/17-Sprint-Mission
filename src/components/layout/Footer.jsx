@@ -73,22 +73,22 @@ const Container = styled.div`
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  padding: var(--spacing-xl);
-  font-size: var(--font-size-400);
+  padding: ${({ theme }) => theme.spacing.xl};
+  font-size: ${({ theme }) => theme.fontSize.sm};
   font-weight: 400;
-  @media ${device.tablet} {
+  @media ${device.TABLET} {
     flex-wrap: nowrap;
   }
-  @media ${device.desktop} {
+  @media ${device.DESKTOP} {
     padding: 2rem 6.5rem 6.75rem;
   }
 `;
 const Copyright = styled.span`
-  color: var(--gray-400-color);
+  color: ${({ theme }) => theme.colors.gray400};
   padding-top: 36px;
   order: 3;
   width: 100%;
-  @media ${device.tablet} {
+  @media ${device.TABLET} {
     padding-top: 0;
     order: 1;
     width: auto;
@@ -98,16 +98,16 @@ const Info = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(--spacing-xl);
-  color: var(--gray-200-color);
+  gap: ${({ theme }) => theme.spacing.xl};
+  color: ${({ theme }) => theme.colors.gray200};
 `;
 const Icons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: ${({ theme }) => theme.spacing.sm};
   & svg {
-    width: var(--font-size-500);
-    height: var(--font-size-500);
+    width: ${({ theme }) => theme.fontSize.md};
+    height: ${({ theme }) => theme.fontSize.md};
   }
 `;

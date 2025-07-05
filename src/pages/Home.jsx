@@ -113,5 +113,5 @@ export default function Home() {
   );
 }
 const Container = styled.div`
-  margin-top: var(--spacing-header);
+  margin-top: ${({ theme }) => theme.spacing.header};
 `;

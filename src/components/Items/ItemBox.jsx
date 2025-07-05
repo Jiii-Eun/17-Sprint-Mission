@@ -22,17 +22,17 @@ const Container = styled.li`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  gap: var(--spacing-sm);
+  gap: ${({ theme }) => theme.spacing.sm};
   width: 100%;
-  color: var(--gray-800-color);
+  color: ${({ theme }) => theme.colors.gray800};
 `;
 const Title = styled.span`
-  margin-top: var(--spacing-xs);
-  font-size: var(--font-size-350);
+  margin-top: ${({ theme }) => theme.spacing.xs};
+  font-size: ${({ theme }) => theme.fontSize.sm};
   font-weight: 500;
 `;
 const Price = styled.span`
-  font-size: var(--font-size-400);
+  font-size: ${({ theme }) => theme.fontSize.sm};
   font-weight: 700;
 `;
 const LikeWrapper = styled.div`
@@ -41,11 +41,11 @@ const LikeWrapper = styled.div`
   align-items: center;
   gap: 4px;
   & > img {
-    width: var(--font-size-400);
+    width: ${({ theme }) => theme.fontSize.sm};
   }
 `;
 const Like = styled.div`
-  font-size: var(--font-size-300);
+  font-size: ${({ theme }) => theme.fontSize.xs};
   font-weight: 500;
-  color: var(--gray-600-color);
+  color: ${({ theme }) => theme.colors.gray600};
 `;

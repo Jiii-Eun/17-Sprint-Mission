@@ -70,8 +70,8 @@ const Section = styled.section`
   width: 100%;
 `;
 const Title = styled.h2`
-  margin-bottom: var(--spacing-lg);
-  font-size: var(--font-size-500);
+  margin-bottom: ${({ theme }) => theme.spacing.lg};
+  font-size: ${({ theme }) => theme.fontSize.md};
   font-weight: 700;
 `;
 
@@ -79,10 +79,10 @@ const Items = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
-  @media ${device.tablet} {
+  @media ${device.TABLET} {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media ${device.desktop} {
+  @media ${device.DESKTOP} {
     grid-template-columns: repeat(4, 1fr);
   }
 `;

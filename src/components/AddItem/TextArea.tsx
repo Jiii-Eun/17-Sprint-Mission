@@ -7,11 +7,11 @@ export default function TextArea({ placeholder }) {
 const StyledTextArea = styled.textarea`
   height: 17.625rem;
   width: 100%;
-  border-radius: var(--border-radius-sm);
-  background-color: var(--gray-100-color);
-  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: ${({ theme }) => theme.borderRadius.sm};
+  background-color: ${({ theme }) => theme.colors.gray100};
+  padding: ${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing.lg};
   &::placeholder {
-    color: var(--gray-400-color);
-    font-size: var(--font-size-400);
+    color: ${({ theme }) => theme.colors.gray400};
+    font-size: ${({ theme }) => theme.fontSize.sm};
   }
 `;

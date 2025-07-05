@@ -94,13 +94,13 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: var(--spacing-lg);
+  gap: ${({ theme }) => theme.spacing.lg};
 `;
 const Head = styled.div`
   display: grid;
   grid-template-rows: 1fr 1fr;
-  gap: var(--spacing-sm);
-  @media ${device.tablet} {
+  gap: ${({ theme }) => theme.spacing.sm};
+  @media ${device.TABLET} {
     display: flex;
     & > div:first-child {
       flex-grow: 1;
@@ -109,18 +109,18 @@ const Head = styled.div`
       justify-content: flex-end;
     }
   }
-  @media ${device.desktop} {
+  @media ${device.DESKTOP} {
   }
 `;
 const Title = styled.h2`
-  font-size: var(--font-size-500);
+  font-size: ${({ theme }) => theme.fontSize.md};
   font-weight: 700;
 `;
 const Control = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: ${({ theme }) => theme.spacing.sm};
   & > form {
     flex: 1 1;
   }
@@ -129,11 +129,11 @@ const Control = styled.div`
 const Items = styled.ul`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-xxl) var(--spacing-lg);
-  @media ${device.tablet} {
+  gap: ${({ theme }) => theme.spacing['2xl']} ${({ theme }) => theme.spacing.lg};
+  @media ${device.TABLET} {
     grid-template-columns: repeat(3, 1fr);
   }
-  @media ${device.desktop} {
+  @media ${device.DESKTOP} {
     grid-template-columns: repeat(5, 1fr);
   }
 `;

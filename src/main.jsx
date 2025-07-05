@@ -1,6 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
 import AddItem from '@/pages/AddItem.jsx';
 import Community from '@/pages/Community';
@@ -12,22 +13,25 @@ import NotFound from '@/pages/NotFound.jsx';
 import Privacy from '@/pages/Privacy.jsx';
 import Signup from '@/pages/Signup.jsx';
 import { GlobalStyle } from '@/styles/global';
+import theme from '@/styles/theme';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Routes>
-        <Route path='/' index element={<Home />} />
-        <Route path='items' element={<Items />} />
-        <Route path='additem' element={<AddItem />} />
-        <Route path='login' element={<Login />} />
-        <Route path='signup' element={<Signup />} />
-        <Route path='privacy' element={<Privacy />} />
-        <Route path='community' element={<Community />} />
-        <Route path='faq' element={<Faq />} />
-        <Route path='*' element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' index element={<Home />} />
+          <Route path='items' element={<Items />} />
+          <Route path='additem' element={<AddItem />} />
+          <Route path='login' element={<Login />} />
+          <Route path='signup' element={<Signup />} />
+          <Route path='privacy' element={<Privacy />} />
+          <Route path='community' element={<Community />} />
+          <Route path='faq' element={<Faq />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   </StrictMode>
 );

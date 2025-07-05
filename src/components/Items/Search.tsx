@@ -22,16 +22,16 @@ const Form = styled.form`
     position: absolute;
     left: 7px;
     top: 7px;
-    width: var(--font-size-600);
-    height: var(--font-size-600);
+    width: ${({ theme }) => theme.fontSize.lg};
+    height: ${({ theme }) => theme.fontSize.lg};
   }
 `;
 const Input = styled.input`
   width: 100%;
-  border-radius: var(--border-radius-sm);
-  background-color: var(--gray-100-color);
-  padding: var(--spacing-sm) 40px;
+  border-radius: ${({ theme }) => theme.borderRadius.sm};
+  background-color: ${({ theme }) => theme.colors.gray100};
+  padding: ${({ theme }) => theme.spacing.sm} 40px;
   &::placeholder {
-    color: var(--gray-400-color);
+    color: ${({ theme }) => theme.colors.gray400};
   }
 `;
