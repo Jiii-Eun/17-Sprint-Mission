@@ -3,15 +3,15 @@ import styled from 'styled-components';
 
 import { getProducts } from '@/apis/items';
 import Button from '@/components/common/Button';
-import { DEFAULT_VALUES, ORDER_BY } from '@/components/Items/constants';
+import { ORDER_BY } from '@/components/Items/constants';
 import DropdownButton from '@/components/Items/DropdownButton';
 import ItemBox from '@/components/Items/ItemBox';
 import Pagination from '@/components/Items/PaginationBar';
 import Search from '@/components/Items/Search';
-import { getItemDisplayLimitByscreenSize } from '@/components/Items/utils';
+import { getItemLimitByscreenSize } from '@/components/Items/utils';
 import useAsync from '@/hooks/useAsync';
+import useDebouncedResizeEffect from '@/hooks/useDebouncedResizeEffect';
 import useIsMobile from '@/hooks/useIsMobile';
-import useResizeEffect from '@/hooks/useResizeEffect';
 import { device } from '@/styles/media';
 
 export default function AllItemsSection() {
@@ -21,7 +21,7 @@ export default function AllItemsSection() {
   const [searchInput, setSearchInput] = useState('');
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(
-    getItemDisplayLimitByscreenSize({
+    getItemLimitByscreenSize({
       mobile: 4,
       tablet: 6,
       desktop: 10,
@@ -44,9 +44,9 @@ export default function AllItemsSection() {
     handleLoad({ orderBy, page, pageSize, keyword: searchInput });
   }, [handleLoad, orderBy, page, pageSize, searchInput]);
 
-  useResizeEffect(() => {
+  useDebouncedResizeEffect(() => {
     setPageSize(
-      getItemDisplayLimitByscreenSize({
+      getItemLimitByscreenSize({
         mobile: 4,
         tablet: 6,
         desktop: 10,

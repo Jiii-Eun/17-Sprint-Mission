@@ -1,10 +1,6 @@
 import { screenSizeNumber } from '@/styles/media';
 
-export const getItemDisplayLimitByscreenSize = ({
-  mobile,
-  tablet,
-  desktop,
-}) => {
+export const getItemLimitByscreenSize = ({ mobile, tablet, desktop }) => {
   const width = window.innerWidth;
   if (width > screenSizeNumber.desktop) return desktop;
   if (width > screenSizeNumber.tablet) return tablet;

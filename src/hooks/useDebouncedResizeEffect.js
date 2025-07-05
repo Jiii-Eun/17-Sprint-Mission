@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const useResizeEffect = (callback, delay = 300) => {
+const useDebouncedResizeEffect = (callback, delay = 300) => {
   let timer;
   useEffect(() => {
     const handleResize = () => {
@@ -17,4 +17,4 @@ const useResizeEffect = (callback, delay = 300) => {
     };
   }, [callback, delay]);
 };
-export default useResizeEffect;
+export default useDebouncedResizeEffect;
