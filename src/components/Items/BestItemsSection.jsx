@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import { getProducts } from '@/apis/items';
 import { ORDER_BY } from '@/components/Items/constants';
 import ItemBox from '@/components/Items/ItemBox';
-import { getItemDisplayLimitByscreenSize } from '@/components/Items/utils';
+import { getItemLimitByscreenSize } from '@/components/Items/utils';
 import useAsync from '@/hooks/useAsync';
-import useResizeEffect from '@/hooks/useResizeEffect';
+import useDebouncedResizeEffect from '@/hooks/useDebouncedResizeEffect';
 import { device } from '@/styles/media';
 
 const _BEST_ITEMS_DEFAULT_VALUES = {
@@ -19,7 +19,7 @@ const _BEST_ITEMS_DEFAULT_VALUES = {
 export default function BestItemsSection() {
   const [items, setItems] = useState([]);
   const [pageSize, setPageSize] = useState(
-    getItemDisplayLimitByscreenSize({
+    getItemLimitByscreenSize({
       mobile: 1,
       tablet: 2,
       desktop: 4,
@@ -38,9 +38,9 @@ export default function BestItemsSection() {
     handleLoad({ ..._BEST_ITEMS_DEFAULT_VALUES, pageSize });
   }, [handleLoad, pageSize]);
 
-  useResizeEffect(() => {
+  useDebouncedResizeEffect(() => {
     setPageSize(
-      getItemDisplayLimitByscreenSize({
+      getItemLimitByscreenSize({
         mobile: 1,
         tablet: 2,
         desktop: 4,
