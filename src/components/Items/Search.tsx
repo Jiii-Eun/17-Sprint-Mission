@@ -3,23 +3,14 @@ import SearchIcon from '@/assets/icons/ic_search.svg';
 import { useState } from 'react';
 
 export default function Search({ onSubmit }) {
-  const [value, setValue] = useState('');
-  const handleChange = (e) => {
-    setValue(e.target.value);
-  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(value);
+    onSubmit(e.target['search'].value);
   };
   return (
     <Form onSubmit={handleSubmit}>
       <SearchIcon />
-      <Input
-        name='itemSearch'
-        value={value}
-        onChange={handleChange}
-        placeholder='검색할 상품을 입력해주세요'
-      />
+      <Input name='search' placeholder='검색할 상품을 입력해주세요' />
     </Form>
   );
 }

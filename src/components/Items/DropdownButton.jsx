@@ -7,16 +7,16 @@ import { ORDER_BY } from '@/components/Items/constants';
 import useIsMobile from '@/hooks/useIsMobile';
 import { device } from '@/styles/media';
 
-const ORDER_BY_ENG_TO_KOR = {
+const _ORDER_BY_ENG_TO_KOR = {
   favorite: '인기순',
   recent: '최신순',
 };
 
 export default function DropdownButton({ orderBy, setOrderBy }) {
-  const [isClicked, setIsClicked] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const isMobile = useIsMobile();
   const handleClick = () => {
-    setIsClicked((prev) => !prev);
+    setIsDropdownOpen((prev) => !prev);
   };
   const handleOptionClick = (e) => {
     setOrderBy(e.target.name);
@@ -29,12 +29,12 @@ export default function DropdownButton({ orderBy, setOrderBy }) {
           <SortIcon />
         ) : (
           <>
-            <span>{ORDER_BY_ENG_TO_KOR[orderBy]}</span>
+            <span>{_ORDER_BY_ENG_TO_KOR[orderBy]}</span>
             <ArrowDownIcon />
           </>
         )}
       </CurrentOption>
-      {isClicked && (
+      {isDropdownOpen && (
         <Options>
           <Option onClick={handleOptionClick} name={ORDER_BY.RECENT}>
             최신순
