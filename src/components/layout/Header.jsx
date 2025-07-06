@@ -4,10 +4,11 @@ import styled from 'styled-components';
 import PandaLogo from '@/assets/icons/panda_icon_small.svg';
 import defaultProfileImg from '@/assets/imgs/default_profile.png';
 import { device } from '@/styles/media';
+import theme from '@/styles/theme';
 
 function getLinkStyle({ isActive }) {
   return {
-    color: isActive ? '#3692FF' : '#4b5563',
+    color: isActive ? theme.colors.primary : theme.colors.gray600,
   };
 }
 export default function Header() {
@@ -56,6 +57,7 @@ const StyledHeader = styled.header`
   top: 0;
   left: 0;
   right: 0;
+  z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
