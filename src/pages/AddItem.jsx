@@ -5,6 +5,7 @@ import Input from '@/components/AddItem/Input';
 import TextArea from '@/components/AddItem/TextArea';
 import Button from '@/components/common/Button';
 import ItemImg from '@/components/common/ItemImg';
+import Tag from '@/components/common/Tag';
 import Header from '@/components/layout/Header';
 import { device } from '@/styles/media';
 
@@ -20,10 +21,11 @@ export default function AddItem() {
           </Head>
           <Section>
             <SectionTitle>상품 이미지</SectionTitle>
-            <AddImageBox>
-              <ItemImg />
-              <img src={AddImageIcon} alt='이미지 등록 버튼' />
-            </AddImageBox>
+            <ItemsGrid>
+              <FileInput>
+                <ItemImg />
+              </FileInput>
+            </ItemsGrid>
           </Section>
           <Section>
             <SectionTitle>상품명</SectionTitle>
@@ -40,6 +42,10 @@ export default function AddItem() {
           <Section>
             <SectionTitle>태그</SectionTitle>
             <Input placeholder={'태그를 입력해주세요'} />
+            <Tags>
+              <Tag text={'티셔츠'} canDelete={true} />
+              <Tag text={'상의'} canDelete={true} />
+            </Tags>
           </Section>
         </Form>
       </Container>
@@ -66,16 +72,39 @@ const Container = styled.div`
 `;
 const Title = styled.h1`
   margin-bottom: ${({ theme }) => theme.spacing.lg};
-  font-size: ${({ theme }) => theme.fontSize.md};
+  font-size: ${({ theme }) => theme.fontSize.xl};
   font-weight: 700;
 `;
 const SectionTitle = styled.h2`
-  margin-bottom: ${({ theme }) => theme.spacing.md};
-  font-size: ${({ theme }) => theme.fontSize.sm};
+  font-size: ${({ theme }) => theme.fontSize.lg};
   font-weight: 700;
 `;
-const AddImageBox = styled.div``;
-const Section = styled.section``;
+const ItemsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: ${({ theme }) => theme.spacing.sm};
+`;
+const FileInput = styled.div`
+  width: 100%;
+  cursor: pointer;
+  & > div {
+    background-image: url(${AddImageIcon});
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+`;
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: ${({ theme }) => theme.spacing.md};
+`;
+const Tags = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+`;
 const Form = styled.form`
   display: flex;
   flex-direction: column;
