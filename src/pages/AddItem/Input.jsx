@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
-export default function Input({ placeholder }) {
-  return <StyledInput placeholder={placeholder}></StyledInput>;
+export default function Input({ placeholder, onEnter = () => {} }) {
+  return (
+    <StyledInput placeholder={placeholder} onKeyDown={onEnter}></StyledInput>
+  );
 }
 const StyledInput = styled.input`
   height: 2.625rem;

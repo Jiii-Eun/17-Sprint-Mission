@@ -1,52 +1,26 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 
-import AddImageIcon from '@/assets/imgs/add_image.png';
 import Header from '@/components/layout/Header';
 import Button from '@/components/ui/Button';
-import ItemImg from '@/components/ui/ItemImg';
-import Tag from '@/components/ui/Tag';
-import Input from '@/pages/AddItem/Input';
-import TextArea from '@/pages/AddItem/TextArea';
+import InputSection from '@/pages/AddItem/InputSection';
 import { device } from '@/styles/media';
 
 export default function AddItem() {
+  const [tags, SetTags] = useState([]);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <>
       <Header />
       <Container>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Head>
             <Title>상품 등록하기</Title>
             <Button text={'등록'} />
           </Head>
-          <Section>
-            <SectionTitle>상품 이미지</SectionTitle>
-            <ItemsGrid>
-              <FileInput>
-                <ItemImg />
-              </FileInput>
-            </ItemsGrid>
-          </Section>
-          <Section>
-            <SectionTitle>상품명</SectionTitle>
-            <Input placeholder={'상품명을 입력해주세요'} />
-          </Section>
-          <Section>
-            <SectionTitle>상품 소개</SectionTitle>
-            <TextArea placeholder={'상품 소개를 입력해주세요'} />
-          </Section>
-          <Section>
-            <SectionTitle>판매가격</SectionTitle>
-            <Input placeholder={'판매가격을 입력해주세요'} />
-          </Section>
-          <Section>
-            <SectionTitle>태그</SectionTitle>
-            <Input placeholder={'태그를 입력해주세요'} />
-            <Tags>
-              <Tag text={'티셔츠'} canDelete={true} />
-              <Tag text={'상의'} canDelete={true} />
-            </Tags>
-          </Section>
+          <InputSection tags={tags} setTags={SetTags} />
         </Form>
       </Container>
     </>
@@ -74,36 +48,6 @@ const Title = styled.h1`
   margin-bottom: ${({ theme }) => theme.spacing.lg};
   font-size: ${({ theme }) => theme.fontSize.xl};
   font-weight: 700;
-`;
-const SectionTitle = styled.h2`
-  font-size: ${({ theme }) => theme.fontSize.lg};
-  font-weight: 700;
-`;
-const ItemsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: ${({ theme }) => theme.spacing.sm};
-`;
-const FileInput = styled.div`
-  width: 100%;
-  cursor: pointer;
-  & > div {
-    background-image: url(${AddImageIcon});
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-`;
-const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: ${({ theme }) => theme.spacing.md};
-`;
-const Tags = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 12px;
 `;
 const Form = styled.form`
   display: flex;

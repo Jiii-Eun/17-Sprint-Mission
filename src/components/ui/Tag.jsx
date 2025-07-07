@@ -5,13 +5,13 @@ import DeleteIcon from '@/assets/icons/ic_X.svg';
 export default function Tag({
   text = '',
   canDelete = false,
-  onClick = () => {},
+  onDeleteClick = () => {},
 }) {
   return (
     <Container>
       <span>#{text}</span>
       {canDelete && (
-        <Button onClick={onClick}>
+        <Button onClick={onDeleteClick}>
           <DeleteIcon />
         </Button>
       )}
