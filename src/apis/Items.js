@@ -1,6 +1,6 @@
 import { BASE_API_URL } from '@/apis/constants';
 import { customFetch } from '@/apis/customFetch';
-import { DEFAULT_VALUES } from '@/components/Items/constants';
+import { DEFAULT_VALUES } from '@/pages/Items/constants';
 
 export const getProducts = async ({
   page = DEFAULT_VALUES.page,

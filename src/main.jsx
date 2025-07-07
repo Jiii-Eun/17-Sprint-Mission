@@ -3,11 +3,11 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-import AddItem from '@/pages/AddItem.jsx';
+import AddItem from '@/pages/AddItem';
 import Community from '@/pages/Community';
 import Faq from '@/pages/Faq.jsx';
 import Home from '@/pages/Home.jsx';
-import Items from '@/pages/Items.jsx';
+import Items from '@/pages/Items';
 import Login from '@/pages/Login.jsx';
 import NotFound from '@/pages/NotFound.jsx';
 import Privacy from '@/pages/Privacy.jsx';

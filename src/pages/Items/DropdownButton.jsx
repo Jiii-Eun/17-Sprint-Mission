@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 import ArrowDownIcon from '@/assets/icons/ic_arrow_down.svg';
 import SortIcon from '@/assets/icons/ic_sort.svg';
-import { ORDER_BY } from '@/components/Items/constants';
 import useIsMobile from '@/hooks/useIsMobile';
+import { ORDER_BY } from '@/pages/Items/constants';
 import { device } from '@/styles/media';
 
 const _ORDER_BY_ENG_TO_KOR = {

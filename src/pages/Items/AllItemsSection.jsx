@@ -2,16 +2,16 @@ import { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import { getProducts } from '@/apis/items';
-import Button from '@/components/common/Button';
-import { ORDER_BY } from '@/components/Items/constants';
-import DropdownButton from '@/components/Items/DropdownButton';
-import ItemBox from '@/components/Items/ItemBox';
-import Pagination from '@/components/Items/PaginationBar';
-import Search from '@/components/Items/Search';
-import { getItemLimitByscreenSize } from '@/components/Items/utils';
+import Button from '@/components/ui/Button';
 import useAsync from '@/hooks/useAsync';
 import useDebouncedResizeEffect from '@/hooks/useDebouncedResizeEffect';
 import useIsMobile from '@/hooks/useIsMobile';
+import { ORDER_BY } from '@/pages/Items/constants';
+import DropdownButton from '@/pages/Items/DropdownButton';
+import ItemBox from '@/pages/Items/ItemBox';
+import Pagination from '@/pages/Items/Pagination';
+import Search from '@/pages/Items/Search';
+import { getItemLimitByscreenSize } from '@/pages/Items/utils';
 import { device } from '@/styles/media';
 
 export default function AllItemsSection() {

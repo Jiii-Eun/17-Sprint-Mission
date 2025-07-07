@@ -2,11 +2,11 @@ import { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import { getProducts } from '@/apis/items';
-import { ORDER_BY } from '@/components/Items/constants';
-import ItemBox from '@/components/Items/ItemBox';
-import { getItemLimitByscreenSize } from '@/components/Items/utils';
 import useAsync from '@/hooks/useAsync';
 import useDebouncedResizeEffect from '@/hooks/useDebouncedResizeEffect';
+import { ORDER_BY } from '@/pages/Items/constants';
+import ItemBox from '@/pages/Items/ItemBox';
+import { getItemLimitByscreenSize } from '@/pages/Items/utils';
 import { device } from '@/styles/media';
 
 const _BEST_ITEMS_DEFAULT_VALUES = {

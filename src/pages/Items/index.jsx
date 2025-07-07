@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import AllItems from '@/components/Items/AllItemsSection';
-import BestItems from '@/components/Items/BestItemsSection';
 import Header from '@/components/layout/Header';
+import AllItemsSection from '@/pages/Items/AllItemsSection';
+import BestItemsSection from '@/pages/Items/BestItemsSection';
 import { device } from '@/styles/media';
 
 export default function Items() {
@@ -10,8 +10,8 @@ export default function Items() {
     <>
       <Header />
       <Container>
-        <BestItems />
-        <AllItems />
+        <BestItemsSection />
+        <AllItemsSection />
       </Container>
     </>
   );

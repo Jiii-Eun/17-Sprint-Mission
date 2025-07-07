@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 import AddImageIcon from '@/assets/imgs/add_image.png';
-import Input from '@/components/AddItem/Input';
-import TextArea from '@/components/AddItem/TextArea';
-import Button from '@/components/common/Button';
-import ItemImg from '@/components/common/ItemImg';
-import Tag from '@/components/common/Tag';
 import Header from '@/components/layout/Header';
+import Button from '@/components/ui/Button';
+import ItemImg from '@/components/ui/ItemImg';
+import Tag from '@/components/ui/Tag';
+import Input from '@/pages/AddItem/Input';
+import TextArea from '@/pages/AddItem/TextArea';
 import { device } from '@/styles/media';
 
 export default function AddItem() {
