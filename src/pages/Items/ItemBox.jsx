@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import LikeIcon from '@/assets/icons/ic_heart.svg';
-import ItemImg from '@/components/common/ItemImg';
+import ItemImg from '@/components/ui/ItemImg';
 
 export default function ItemBox({ title, price, like, imgUrl, imgAlt }) {
   const localePriceString = Number(price).toLocaleString('ko-KR');

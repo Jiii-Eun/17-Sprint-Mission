@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import SearchIcon from '@/assets/icons/ic_search.svg';
-import { useState } from 'react';
 
 export default function Search({ onSubmit }) {
   const handleSubmit = (e) => {

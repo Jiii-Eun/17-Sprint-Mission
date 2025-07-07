@@ -1,9 +1,10 @@
+// @ts-nocheck
 import styled from 'styled-components';
 
 import LeftArrowIcon from '@/assets/icons/ic_arrow_left.svg';
 import RightArrowIcon from '@/assets/icons/ic_arrow_right.svg';
 
-export default function PaginationBar({ totalCount = 1, page, setPage }) {
+export default function Pagination({ totalCount = 1, page, setPage }) {
   const pagesCount = Math.ceil(totalCount / 10);
   const pageGroup = Math.ceil(page / 5);
   const firstPage = (pageGroup - 1) * 5 + 1;
