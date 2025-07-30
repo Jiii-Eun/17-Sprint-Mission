@@ -11,9 +11,9 @@ const INITIAL_VALUES = {
   title: '',
   description: '',
   price: 0,
+  tags: [],
 };
 export default function AddItem() {
-  const [tags, SetTags] = useState([]);
   const [values, setValues] = useState(INITIAL_VALUES);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -28,12 +28,7 @@ export default function AddItem() {
             <Title>상품 등록하기</Title>
             <Button text={'등록'} disabled={!hasEveryInput} />
           </Head>
-          <InputSection
-            values={values}
-            tags={tags}
-            setValues={setValues}
-            setTags={SetTags}
-          />
+          <InputSection values={values} setValues={setValues} />
         </Form>
       </Container>
     </>
