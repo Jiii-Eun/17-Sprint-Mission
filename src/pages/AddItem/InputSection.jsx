@@ -1,32 +1,19 @@
 import styled from 'styled-components';
-import { v4 as uuidv4 } from 'uuid';
 
-import Tag from '@/components/ui/Tag';
 import FileInput from '@/pages/AddItem/FileInput';
+import TagInput from '@/pages/AddItem/TagInput';
 import getNumberOnly from '@/utils/getNumberOnly';
 
-export default function InputSection({ values, setValues, tags, setTags }) {
-  const handleTagEnter = (e) => {
-    const value = e.target.value;
-    if (e.nativeEvent.isComposing) return; // 한글 조합 중이면 무시
-    if (e.key === 'Enter' && value !== '') {
-      setTags((prev) => [...prev, { id: `${uuidv4()}-${value}`, text: value }]);
-      e.target.value = '';
-      e.preventDefault(); // 입력 후 focus 이동 방지
-    }
-  };
-  const handleTagDeleteById = (id) => {
-    setTags((prev) => prev.filter((tag) => tag.id !== id));
-  };
-  const handleInputChange = (e) => {
-    let { name, value } = e.target;
-    if (name === 'price') value = Number(value);
+export default function InputSection({ values, setValues }) {
+  const handleFileInputChange = (name, value) => {
     setValues((prev) => ({
       ...prev,
       [name]: value,
     }));
   };
-  const handleFileInputChange = (name, value) => {
+  const handleInputChange = (e) => {
+    let { name, value } = e.target;
+    if (name === 'price') value = Number(value);
     setValues((prev) => ({
       ...prev,
       [name]: value,
@@ -74,25 +61,7 @@ export default function InputSection({ values, setValues, tags, setTags }) {
           required
         />
       </Section>
-      <Section>
-        <Label htmlFor='태그'>태그</Label>
-        <Input
-          id='태그'
-          placeholder={'태그를 입력해주세요'}
-          type='text'
-          onKeyDown={handleTagEnter}
-        />
-        <Tags>
-          {tags.map((tag) => (
-            <Tag
-              key={tag.id}
-              text={tag.text}
-              canDelete={true}
-              onDeleteClick={() => handleTagDeleteById(tag.id)}
-            />
-          ))}
-        </Tags>
-      </Section>
+      <TagInput values={values} setValues={setValues} />
     </>
   );
 }
@@ -106,12 +75,6 @@ const Section = styled.section`
   flex-direction: column;
   justify-content: flex-start;
   gap: ${({ theme }) => theme.spacing.md};
-`;
-const Tags = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 12px;
 `;
 const Input = styled.input`
   height: 2.625rem;
