@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import { getProducts } from '@/apis/items';
+import { getProducts } from '@/apis/Items';
 import Button from '@/components/ui/Button';
 import useAsync from '@/hooks/useAsync';
 import useDebouncedResizeEffect from '@/hooks/useDebouncedResizeEffect';
