@@ -7,6 +7,7 @@ const colors = {
   gray400: '#9ca3af',
   gray200: '#e5e7eb',
   gray100: '#f3f4f6',
+  gray50: '#F9FAFB',
   errorRed: '#f74747',
   white: '#ffffff',
 };

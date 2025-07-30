@@ -5,19 +5,18 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import eslintConfigPrettier from "eslint-config-prettier/flat";
 import { defineConfig, globalIgnores } from 'eslint/config'
-import importPlugin from 'eslint-plugin-import'    // import/export 규칙
-import jsxA11y from 'eslint-plugin-jsx-a11y'      // 접근성 규칙
+import importPlugin from 'eslint-plugin-import'
+import jsxA11y from 'eslint-plugin-jsx-a11y'
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 
 export default defineConfig([
   globalIgnores(['dist/ ','build/', 'node_modules/', '.eslintrc.cjs', 'npm-debug.log', 
     'yarn-debug.log', 'yarn-error.log', 'public/', 'coverage/', '.vscode/', '.idea/', 
-    '.DS_Store', '*.config.js', 'package-lock.json',]),
+    '.DS_Store', '*.config.js', 'package-lock.json',]), // 규칙 예외 파일
 
   js.configs.recommended, // Js (권장옵션)
   react.configs.flat.recommended, // react (권장옵션)
   jsxA11y.flatConfigs.recommended, // 접근성 검사 (권장옵션)
-
   eslintConfigPrettier,
   {
     files: ['**/*.{js,jsx}'],
