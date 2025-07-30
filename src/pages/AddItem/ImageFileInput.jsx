@@ -6,7 +6,7 @@ import ClearIcon from '@/assets/icons/ic_X.svg';
 import ItemImg from '@/components/ui/ItemImg';
 import { device } from '@/styles/media';
 
-export default function FileInput({ imgFile, onChange }) {
+export default function ImageFileInput({ imgFile, onChange }) {
   const inputRef = useRef(null);
   const [preview, setPreview] = useState(null);
   const [error, setError] = useState(false);
@@ -22,7 +22,7 @@ export default function FileInput({ imgFile, onChange }) {
   const handleChange = (e) => {
     const file = e.target.files?.[0];
     if (file) {
-      onChange('imgFile', file);
+      onChange(e.target.name, file);
     }
   };
   const handleClearClick = () => {
@@ -44,7 +44,7 @@ export default function FileInput({ imgFile, onChange }) {
 
   return (
     <>
-      <FilesGrid>
+      <FileSection>
         <FileInputWrapper onClick={handleClick}>
           <PlusIcon />
           <Label htmlFor='imgFile'>이미지 등록</Label>
@@ -66,7 +66,7 @@ export default function FileInput({ imgFile, onChange }) {
             </ClearButton>
           </PreviewWrapper>
         )}
-      </FilesGrid>
+      </FileSection>
       {error && (
         <ErrorMessage>*이미지 등록은 최대 1개까지 가능합니다.</ErrorMessage>
       )}
@@ -100,15 +100,15 @@ const Label = styled.label`
 `;
 const PreviewWrapper = styled.div`
   position: relative;
-  width: 168px;
+  width: 10.5rem;
 
   @media ${device.TABLET} {
     width: 100%;
   }
 `;
 const PlusIcon = styled(PlusIconSvg)`
-  width: 48px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
 `;
 const ClearButton = styled.button`
   background: none;
@@ -117,7 +117,7 @@ const ClearButton = styled.button`
   top: 10px;
   cursor: pointer;
 `;
-const FilesGrid = styled.div`
+const FileSection = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: ${({ theme }) => theme.spacing.sm};
