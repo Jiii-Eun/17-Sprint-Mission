@@ -1,29 +1,35 @@
 import styled from 'styled-components';
 
-import FileInput from '@/pages/AddItem/FileInput';
+import ImageFileInput from '@/pages/AddItem/ImageFileInput';
 import TagInput from '@/pages/AddItem/TagInput';
 import getNumberOnly from '@/utils/getNumberOnly';
 
 export default function InputSection({ values, setValues }) {
-  const handleFileInputChange = (name, value) => {
+  const setValuesWithParemeter = (name, value) => {
     setValues((prev) => ({
       ...prev,
       [name]: value,
     }));
   };
-  const handleInputChange = (e) => {
+  const handleTextChange = (e) => {
     let { name, value } = e.target;
-    if (name === 'price') value = Number(value);
-    setValues((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setValuesWithParemeter(name, value);
   };
+  const handlePriceChange = (e) => {
+    let { name, value } = e.target;
+    const cleanedValue = Number(getNumberOnly(value));
+    setValuesWithParemeter(name, cleanedValue);
+  };
+  const priceValue =
+    values.price === 0 ? '' : values.price.toLocaleString('ko-KR');
   return (
     <>
       <Section>
         <Label>상품 이미지</Label>
-        <FileInput imgFile={values.imgFile} onChange={handleFileInputChange} />
+        <ImageFileInput
+          imgFile={values.imgFile}
+          onChange={setValuesWithParemeter}
+        />
       </Section>
       <Section>
         <Label htmlFor='상품명'>상품명</Label>
@@ -33,7 +39,7 @@ export default function InputSection({ values, setValues }) {
           placeholder={'상품명을 입력해주세요'}
           value={values.title}
           type='text'
-          onChange={handleInputChange}
+          onChange={handleTextChange}
           required
         />
       </Section>
@@ -44,7 +50,7 @@ export default function InputSection({ values, setValues }) {
           name='description'
           placeholder={'상품 소개를 입력해주세요'}
           value={values.description}
-          onChange={handleInputChange}
+          onChange={handleTextChange}
           required
         />
       </Section>
@@ -55,9 +61,9 @@ export default function InputSection({ values, setValues }) {
           name='price'
           placeholder={'판매가격을 입력해주세요'}
           type='text'
-          value={values.price}
-          onChange={handleInputChange}
-          onKeyUp={getNumberOnly}
+          inputMode='numeric'
+          value={priceValue}
+          onChange={handlePriceChange}
           required
         />
       </Section>

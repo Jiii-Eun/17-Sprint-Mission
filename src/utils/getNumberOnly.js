@@ -1,5 +1,5 @@
-const getNumberOnly = (event) => {
-  const input = event.target;
-  input.value = input.value.replace(/[^0-9]/g, '');
+const getNumberOnly = (value) => {
+  const cleaned = value.replace(/[^0-9]/g, '');
+  return cleaned;
 };
 export default getNumberOnly;

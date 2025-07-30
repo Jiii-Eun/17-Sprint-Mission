@@ -18,7 +18,11 @@ export default function AddItem() {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-  const hasEveryInput = values.title && values.description && values.price > 0;
+  const hasEveryInput =
+    values.title &&
+    values.description &&
+    values.price > 0 &&
+    values.tags.length > 0;
   return (
     <>
       <Header />
@@ -53,7 +57,6 @@ const Container = styled.div`
   }
 `;
 const Title = styled.h1`
-  margin-bottom: ${({ theme }) => theme.spacing.lg};
   font-size: ${({ theme }) => theme.fontSize.xl};
   font-weight: 700;
 `;
