@@ -14,6 +14,12 @@ const commonStyles = css`
 `;
 const StyledButton = styled.button`
   ${commonStyles}
+  &:disabled {
+    background-color: ${({ theme }) => theme.colors.gray400};
+  }
+`;
+const StyledDiv = styled.div`
+  ${commonStyles}
 `;
 const StyledLink = styled(Link)`
   ${commonStyles}
@@ -23,10 +29,15 @@ export default function Button({
   onClick = () => {},
   as = 'button',
   link = '',
+  disabled = false,
 }) {
   switch (as) {
     case 'button':
-      return <StyledButton onClick={onClick}>{text}</StyledButton>;
+      return (
+        <StyledButton onClick={onClick} disabled={disabled}>
+          {text}
+        </StyledButton>
+      );
     case 'a':
       return (
         <StyledLink to={link} aria-label={text}>
@@ -34,10 +45,6 @@ export default function Button({
         </StyledLink>
       );
     case 'div':
-      return (
-        <StyledButton as={'div'} onClick={onClick}>
-          {text}
-        </StyledButton>
-      );
+      return <StyledDiv onClick={onClick}>{text}</StyledDiv>;
   }
 }

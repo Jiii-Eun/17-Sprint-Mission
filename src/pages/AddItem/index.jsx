@@ -6,11 +6,19 @@ import Button from '@/components/ui/Button';
 import InputSection from '@/pages/AddItem/InputSection';
 import { device } from '@/styles/media';
 
+const INITIAL_VALUES = {
+  imgFile: null,
+  title: '',
+  description: '',
+  price: 0,
+};
 export default function AddItem() {
   const [tags, SetTags] = useState([]);
+  const [values, setValues] = useState(INITIAL_VALUES);
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+  const hasEveryInput = values.title && values.description && values.price > 0;
   return (
     <>
       <Header />
@@ -18,9 +26,14 @@ export default function AddItem() {
         <Form onSubmit={handleSubmit}>
           <Head>
             <Title>상품 등록하기</Title>
-            <Button text={'등록'} />
+            <Button text={'등록'} disabled={!hasEveryInput} />
           </Head>
-          <InputSection tags={tags} setTags={SetTags} />
+          <InputSection
+            values={values}
+            tags={tags}
+            setValues={setValues}
+            setTags={SetTags}
+          />
         </Form>
       </Container>
     </>

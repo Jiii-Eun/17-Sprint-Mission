@@ -28,4 +28,8 @@ export const GlobalStyle = createGlobalStyle`
   li {
     list-style: none;
   }
+  textarea{
+    font-family: "pretendard", sans-serif;
+    font-size: 1rem;
+  } 
 `;
