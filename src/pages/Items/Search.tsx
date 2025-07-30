@@ -19,8 +19,8 @@ const Form = styled.form`
   height: 2.625rem;
   & > svg {
     position: absolute;
-    left: 7px;
-    top: 7px;
+    left: 10px;
+    top: 10px;
     width: ${({ theme }) => theme.fontSize.lg};
     height: ${({ theme }) => theme.fontSize.lg};
   }
