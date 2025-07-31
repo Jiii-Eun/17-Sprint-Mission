@@ -18,15 +18,9 @@ export default defineConfig({
       include: "**/*.svg",
     }),
   ],
-  build: {
-    minify: "terser",
-    terserOptions: {
-      compress: {
-        //build 시에 모든 console.log를 제거
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
+  esbuild: {
+    //build에 console, debugger 제거
+    drop: ["debugger", "console"],
   },
   resolve: {
     alias: [{ find: "@", replacement: "/src" }],

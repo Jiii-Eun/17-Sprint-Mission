@@ -1,6 +1,5 @@
 dist/
 build/
-node_modules/
 .prettierrc
 .eslintrc.cjs
 npm-debug.log
