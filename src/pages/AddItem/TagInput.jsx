@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { v4 as uuidv4 } from 'uuid';
 
 import Tag from '@/components/ui/Tag';
 
@@ -43,7 +42,7 @@ export default function TagInput({ values, setValues }) {
       <Tags>
         {values.tags.map((tag) => (
           <Tag
-            key={`${uuidv4()}-${tag}`}
+            key={`${crypto.randomUUID()}-${tag}`}
             text={tag}
             canDelete={true}
             onDeleteClick={() => removeTag(tag)}
