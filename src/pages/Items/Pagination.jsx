@@ -1,8 +1,10 @@
-import styled from "styled-components";
-import LeftArrowIcon from "@/assets/icons/ic_arrow_left.svg";
-import RightArrowIcon from "@/assets/icons/ic_arrow_right.svg";
+// @ts-nocheck
+import styled from 'styled-components';
 
-export default function PaginationBar({ totalCount = 1, page, setPage }) {
+import LeftArrowIcon from '@/assets/icons/ic_arrow_left.svg';
+import RightArrowIcon from '@/assets/icons/ic_arrow_right.svg';
+
+export default function Pagination({ totalCount = 1, page, setPage }) {
   const pagesCount = Math.ceil(totalCount / 10);
   const pageGroup = Math.ceil(page / 5);
   const firstPage = (pageGroup - 1) * 5 + 1;
@@ -30,7 +32,7 @@ export default function PaginationBar({ totalCount = 1, page, setPage }) {
     <Container>
       <Counter onClick={handleLeftArrowClick} disabled={page === 1}>
         <IconWrapper>
-          <LeftArrowIcon aria-label="이전 페이지 보기 버튼" />
+          <LeftArrowIcon aria-label='이전 페이지 보기 버튼' />
         </IconWrapper>
       </Counter>
       {countArray.map((count) => {
@@ -39,7 +41,7 @@ export default function PaginationBar({ totalCount = 1, page, setPage }) {
             key={count}
             onClick={handleClick}
             value={count}
-            aria-current={count === page ? "page" : undefined}
+            aria-current={count === page ? 'page' : undefined}
             $isactive={(count === page).toString()}
           >
             {count}
@@ -48,7 +50,7 @@ export default function PaginationBar({ totalCount = 1, page, setPage }) {
       })}
       <Counter onClick={handleRightArrowClick} disabled={page === pagesCount}>
         <IconWrapper>
-          <RightArrowIcon aria-label="다음 페이지 보기 버튼" />
+          <RightArrowIcon aria-label='다음 페이지 보기 버튼' />
         </IconWrapper>
       </Counter>
     </Container>
@@ -58,24 +60,24 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-xs);
-  margin: var(--spacing-lg) 0;
+  gap: ${({ theme }) => theme.spacing.xs};
+  margin: ${({ theme }) => theme.spacing.lg} 0;
 `;
 const Counter = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${({ $isactive }) =>
-    $isactive === "true" ? "var(--primary-color)" : "var(--white-color)"};
-  color: ${({ $isactive }) =>
-    $isactive === "true" ? "var(--gray-50-color)" : "var(--gray-500-color)"};
-  border-radius: var(--border-radius-lg);
-  border: 1px solid var(--gray-200-color);
+  background-color: ${({ $isactive, theme }) =>
+    $isactive === 'true' ? theme.colors.primary : theme.colors.white};
+  color: ${({ $isactive, theme }) =>
+    $isactive === 'true' ? theme.colors.gray100 : theme.colors.gray500};
+  border-radius: ${({ theme }) => theme.borderRadius.lg};
+  border: 1px solid ${({ theme }) => theme.colors.gray200};
   width: 2.5rem;
   height: 2.5rem;
   padding: 12.5px;
   font-weight: 600;
-  font-size: var(--font-size-400);
+  font-size: ${({ theme }) => theme.fontSize.sm};
 `;
 
 const IconWrapper = styled.div`
