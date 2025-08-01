@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 import PandaLogo from '@/assets/icons/panda_icon_small.svg';
@@ -11,7 +11,9 @@ function getLinkStyle({ isActive }) {
     color: isActive ? theme.colors.primary : theme.colors.gray600,
   };
 }
+
 export default function Header() {
+  const { pathname } = useLocation();
   return (
     <StyledHeader>
       <NavBar>
@@ -36,13 +38,21 @@ export default function Header() {
           <li>
             <NavLink
               to='/items'
-              style={getLinkStyle}
+              style={({ isActive }) => {
+                const isItemsPage = isActive || pathname === '/additem';
+                return {
+                  color: isItemsPage
+                    ? theme.colors.primary
+                    : theme.colors.gray600,
+                };
+              }}
               aria-label='중고마켓 페이지로 이동'
             >
               중고마켓
             </NavLink>
           </li>
         </NavList>
+        {/* <LoginButton>로그인</LoginButton> */}
         <ProfileImgWrapper>
           <Link to='/login' aria-label='로그인 화면으로 이동'>
             <img src={defaultProfileImg} alt='회색 기본 프로필 이미지' />
@@ -120,18 +130,18 @@ const ProfileImgWrapper = styled.div`
   width: 40px;
   height: 40px;
 `;
-const LoginButton = styled.button`
-  font-weight: 600;
-  font-size: ${({ theme }) => theme.fontSize.sm};
-  line-height: 26px;
-  text-align: center;
-  padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.lg};
-  color: ${({ theme }) => theme.colors.gray100};
-  background-color: ${({ theme }) => theme.colors.primary};
-  border-radius: ${({ theme }) => theme.borderRadius.xs};
-  border: none;
-  @media ${device.DESKTOP} {
-    width: 8rem;
-    height: 3rem;
-  }
-`;
+// const LoginButton = styled.button`
+//   font-weight: 600;
+//   font-size: ${({ theme }) => theme.fontSize.md};
+//   line-height: 26px;
+//   text-align: center;
+//   padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.lg};
+//   color: ${({ theme }) => theme.colors.gray100};
+//   background-color: ${({ theme }) => theme.colors.primary};
+//   border-radius: ${({ theme }) => theme.borderRadius.xs};
+//   border: none;
+//   @media ${device.DESKTOP} {
+//     width: 8rem;
+//     height: 3rem;
+//   }
+// `;

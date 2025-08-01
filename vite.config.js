@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import svgr from "vite-plugin-svgr";
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({mode}) => ({
   plugins: [
     react(),
     svgr({
@@ -18,11 +18,12 @@ export default defineConfig({
       include: "**/*.svg",
     }),
   ],
+
   esbuild: {
     //build에 console, debugger 제거
-    drop: ["debugger", "console"],
+    drop: mode === 'production'? ["debugger", "console"] : [],
   },
   resolve: {
     alias: [{ find: "@", replacement: "/src" }],
   },
-});
+}));
