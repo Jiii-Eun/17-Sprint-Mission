@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styled from "styled-components";
 
 export default function ItemsSearch({ setSearchInput }) {
   const [inputValue, setInputValue] = useState("");
@@ -16,11 +17,22 @@ export default function ItemsSearch({ setSearchInput }) {
   };
 
   return (
-    <input
-      type="text"
-      placeholder="검색할 상품을 입력해주세요."
-      onChange={handleChange}
-      onKeyDown={handleKeyDown}
-    />
+    <Div>
+      <input
+        type="text"
+        placeholder="검색할 상품을 입력해주세요."
+        onChange={handleChange}
+        onKeyDown={handleKeyDown}
+      />
+      <button onClick={handleKeyDown}>검색</button>
+    </Div>
   );
 }
+
+const Div = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Input = styled.input``;

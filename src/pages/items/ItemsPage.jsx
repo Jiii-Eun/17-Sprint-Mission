@@ -23,8 +23,8 @@ function ItemsPage() {
     return handleFetch({
       fetchFn: () => getProducts(params),
       onSuccess: setData,
+      //all, best 각각 에러 메시지 추가
       onError: (msg) => setError((prev) => ({ ...prev, [error]: msg })),
-      errorMessage: "상품을 불러오지 못했습니다.",
     });
   };
 
@@ -62,7 +62,7 @@ function ItemsPage() {
     <>
       {error ? (
         <>
-          <p>{error}</p>
+          <p>상품을 불러오는데 실패했습니다</p>
           <button>
             <Link to="/">돌아가기</Link>
           </button>
