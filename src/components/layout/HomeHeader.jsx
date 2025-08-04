@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import pandaLogo from "@/assets/logo.png";
+import { HeaderStyle } from "@/components/layout/Header.style";
 
 function HomeHeader() {
   return (
-    <header>
+    <HeaderStyle>
       <div className="width_container">
         <Link to="/" className="logo">
           <img src={pandaLogo} alt="판다로고" className="logo_img" />
@@ -13,7 +14,7 @@ function HomeHeader() {
           로그인
         </Link>
       </div>
-    </header>
+    </HeaderStyle>
   );
 }
 

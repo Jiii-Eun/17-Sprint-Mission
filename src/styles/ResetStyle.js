@@ -1,6 +1,6 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-const ResetStyle = styled.div`
+export const ResetStyle = createGlobalStyle`
   /* 리셋 스타일 */
   html,
   body,
@@ -81,6 +81,12 @@ const ResetStyle = styled.div`
   }
   ul {
     line-height: normal;
+  }
+  li {
+    list-style: none;
+  }
+  li::marker {
+  content: none;
   }
   body {
     line-height: 1;

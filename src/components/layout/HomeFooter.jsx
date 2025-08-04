@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { snsImages } from "@/components/header_footer/snsData";
+import { snsImages } from "@/components/layout/snsData";
+import { FooterStyle } from "@/components/layout/Footer.style";
 
 function HomeFooter() {
   return (
-    <footer>
+    <FooterStyle>
       <div className="width_container footer_container">
         <p className="company_since">©codeit - 2024</p>
         <div className="faq">
@@ -21,7 +22,7 @@ function HomeFooter() {
           ))}
         </ol>
       </div>
-    </footer>
+    </FooterStyle>
   );
 }
 
