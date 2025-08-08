@@ -175,6 +175,11 @@ export const ResetStyle = createGlobalStyle`
   button {
     border: none;
   }
+  button{
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
   input,
   select {
     vertical-align: middle;

@@ -43,7 +43,7 @@ export const HeaderStyle = styled.header`
     text-align: center;
     flex-basis: 8rem;
     padding: 0.7rem 2.1rem;
-    border-radius: 0.5rem;
+    border-radius: var(--border-8);
   }
 
   /* Header */

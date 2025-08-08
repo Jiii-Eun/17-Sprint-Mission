@@ -1,5 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
+
 import pandaLogo from "@/assets/logo.png";
+import userIcon from "@/assets/user_icon.png";
 import { HeaderStyle } from "@/components/layout/Header.style";
 
 function Header() {
@@ -32,7 +34,7 @@ function Header() {
             </ol>
           </nav>
         </div>
-        <img src="" alt="사용자 이미지" className="user_img" />
+        <img src={userIcon} alt="사용자 이미지" className="user_img" />
       </div>
     </HeaderStyle>
   );

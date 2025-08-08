@@ -1,3 +1,4 @@
+import { pxToRem } from "@/utils/pxToRem";
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
@@ -7,8 +8,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Pretendard", sans-serif;
   }
 
-  /* 색상 */
   :root {
+    /* 색상 */
     --primary-100: #3692ff;
     --primary-200: #1967d6;
     --primary-300: #1251aa;
@@ -22,6 +23,12 @@ export const GlobalStyle = createGlobalStyle`
     --gray-800: #1f2937;
     --gray-900: #111827;
     --error-red: #f74747;
+
+    /* border-radius */
+    --border-8: ${pxToRem(8)};
+    --border-10: ${pxToRem(10)};
+    --border-16: ${pxToRem(16)};
+
   }
 
   /* pc기준 */
