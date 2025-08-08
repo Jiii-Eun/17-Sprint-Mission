@@ -41,6 +41,7 @@ export default function ItemsOrder({ orderBy, setOrderBy }) {
 const Div = styled.div`
   .listBox {
     position: relative;
+    cursor: pointer;
   }
 
   .listLabel,
@@ -76,7 +77,6 @@ const Div = styled.div`
 
   .listOption:hover {
     background-color: var(--gray-200);
-    cursor: pointer;
   }
 
   .listOption {
