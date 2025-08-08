@@ -1,5 +1,8 @@
 import LArrow from "@/assets/left_arrow.png";
 import RArrow from "@/assets/right_arrow.png";
+import { flexCenter } from "@/styles/commomStyle";
+import { pxToRem } from "@/utils/pxToRem";
+import styled from "styled-components";
 
 export default function PageList({ totalCount, page, setPage, getAllList }) {
   const PAGE_GROUP = 5;
@@ -23,7 +26,7 @@ export default function PageList({ totalCount, page, setPage, getAllList }) {
   };
 
   return (
-    <>
+    <PageListStyle>
       <ol className="pages_list">
         <li className="page_list">
           <button
@@ -57,6 +60,40 @@ export default function PageList({ totalCount, page, setPage, getAllList }) {
           </button>
         </li>
       </ol>
-    </>
+    </PageListStyle>
   );
 }
+
+const PageListStyle = styled.div`
+  .pages_list {
+    ${flexCenter}
+    gap: ${pxToRem(4)};
+  }
+
+  .page_btn {
+    border: 1px solid var(--gray-200);
+  }
+
+  .page_list,
+  .page_btn {
+    outline: none;
+    width: ${pxToRem(40)};
+    height: ${pxToRem(40)};
+    border-radius: 50%;
+    background-color: #fff;
+  }
+
+  .page_list:hover .page_btn,
+  .active {
+    background-color: var(--primary-100);
+    color: #fff;
+  }
+  .page_list:hover .page_btn.arrow {
+    background-color: transparent;
+  }
+
+  .page_arrow_img {
+    width: ${pxToRem(7)};
+    height: ${pxToRem(12)};
+  }
+`;

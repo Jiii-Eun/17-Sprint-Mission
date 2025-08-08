@@ -77,37 +77,6 @@ export const ItemsStyle = styled.div`
     }
   }
 
-  .pages_list{
-    ${flexCenter}
-    gap: ${pxToRem(4)};
-  }
-  
-  .page_btn{
-    border: 1px solid var(--gray-200);
-  }
-
-  .page_list, 
-  .page_btn{
-    outline: none;
-    width: ${pxToRem(40)};
-    height: ${pxToRem(40)};
-    border-radius: 50%;
-    background-color: #fff;
-  }
-
-  .page_list:hover .page_btn, .active{
-    background-color: var(--primary-100);
-    color: #fff;
-  }
-  .page_list:hover .page_btn.arrow{
-    background-color: transparent;
-  }
-
-  .page_arrow_img{
-    width: ${pxToRem(7)};
-    height: ${pxToRem(12)};
-  }
-
   ${media.tablet} {
     max-width: ${pxToRem(696)};
   }
