@@ -4,7 +4,7 @@ import HomePage from "@/pages/home";
 import ItemsPage from "@/pages/items";
 import LoginPage from "@/pages/LoginPage";
 import SignupPage from "@/pages/SignupPage";
-import AddItem from "@/pages/AddItem";
+import AddItem from "@/pages/addItem";
 
 import HomeLayout from "@/layout/HomeLayout.jsx";
 import DefaultLayout from "@/layout/DefaultLayout.jsx";

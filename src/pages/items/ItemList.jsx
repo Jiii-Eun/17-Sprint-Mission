@@ -1,15 +1,9 @@
 import { useEffect, useState } from "react";
-import {
-  deleteFavorite,
-  getProductById,
-  getProducts,
-  patchProduct,
-  postFavorite,
-} from "@/apis/products";
+import { deleteFavorite, getProductById, postFavorite } from "@/apis/products";
 import { Link } from "react-router-dom";
 
 import { ItemListStyle } from "@/pages/items/ItemList.style";
-import noImage from "@/assets/NoImage.png";
+import noImage from "@/assets/noImage.png";
 import FavoriteIcon from "@/assets/ic_favorit_Icon.svg";
 import FavoriteFillIcon from "@/assets/ic_favorit_fill_Icon.svg";
 
