@@ -1,10 +1,15 @@
 import { css } from "styled-components";
 
 // pc, tablet, mobie
+export const breakpoints = {
+  pc: 1200,
+  tablet: 768,
+  mobile: 375,
+};
+
 export const media = {
-  pc: "@media (min-width: 1200px)",
-  tablet: "@media (min-width: 768px) and (max-width: 1199px)",
-  mobile: "@media (min-width: 375px) and (max-width: 767px)",
+  tablet: `@media (max-width: ${breakpoints.pc - 1}px)`,
+  mobile: `@media (max-width: ${breakpoints.tablet - 1}px)`,
 };
 
 //공통 스타일

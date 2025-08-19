@@ -4,12 +4,21 @@ const BASE_URL = "https://panda-market-api.vercel.app";
 
 async function apiRequest(path, options = {}, isJson = true) {
   try {
+    const token = localStorage.getItem("accessToken");
+
+    console.log(localStorage.getItem("accessToken"));
+    const headers = {
+      "Content-Type": "application/json",
+      ...(options.headers || {}),
+    };
+
+    if (token) {
+      headers["Authorization"] = `Bearer ${token}`;
+    }
+
     const res = await fetch(`${BASE_URL}${path}`, {
       ...options,
-      headers: {
-        "Content-Type": "application/json",
-        ...(options.headers || {}),
-      },
+      headers,
     });
 
     if (!res.ok) {

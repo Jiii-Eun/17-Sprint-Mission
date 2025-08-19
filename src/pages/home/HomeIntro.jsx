@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import IntroImage from "@/assets/img_home_top.png";
+import IntroImage from "@/assets/home_top.png";
 
 function HomeIntro() {
   return (

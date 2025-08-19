@@ -1,4 +1,4 @@
-import EndingImage from "@/assets/Img_home_bottom.png";
+import EndingImage from "@/assets/home_bottom.png";
 
 function HomeEnding() {
   return (

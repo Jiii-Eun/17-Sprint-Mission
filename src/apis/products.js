@@ -27,3 +27,12 @@ export const patchProduct = (id, data) =>
 //상품 삭제
 export const deleteProduct = (id) =>
   apiRequest(`/products/${id}`, { method: "DELETE" }, false);
+
+//favorite 추가
+export const postFavorite = (id, data) =>
+  apiRequest(`/products/${id}/favorite`, { method: "POST" });
+
+//facorite 삭제
+
+export const deleteFavorite = (id) =>
+  apiRequest(`/products/${id}/favorite`, { method: "DELETE" }, false);

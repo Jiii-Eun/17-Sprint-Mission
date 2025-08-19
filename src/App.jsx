@@ -8,10 +8,14 @@ import AddItem from "@/pages/AddItem";
 
 import HomeLayout from "@/layout/HomeLayout.jsx";
 import DefaultLayout from "@/layout/DefaultLayout.jsx";
-import NoLayout from "@/layout/NoLayout.jsx";
 import { ResetStyle } from "@/styles/ResetStyle";
 import { GlobalStyle } from "@/styles/GlobalStyle";
 import { ToastContainer } from "react-toastify";
+
+localStorage.setItem(
+  "accessToken",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInNjb3BlIjoiYWNjZXNzIiwiaWF0IjoxNzU1NTA3NzYzLCJleHAiOjE3NTU1MDk1NjMsImlzcyI6InNwLXBhbmRhLW1hcmtldCJ9.fokQOGmn88BAiEAzEQOd028p8BvlSULVM74a7BAvzhA"
+);
 
 function App() {
   return (
@@ -29,10 +33,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
         </Route>
 
-        <Route element={<NoLayout />}>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignupPage />} />
-        </Route>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
 
         <Route element={<DefaultLayout />}>
           <Route path="/items" element={<ItemsPage />} />

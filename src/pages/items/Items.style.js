@@ -1,4 +1,4 @@
-import { flexCenter, fullSize, media, textStyles } from "@/styles/commomStyle";
+import { flexCenter, fullSize, media, textStyles } from "@/styles/commonStyle";
 import { pxToRem } from "@/utils/pxToRem";
 import styled from "styled-components";
 
@@ -7,8 +7,10 @@ export const ItemsStyle = styled.div`
   margin: 0 auto;
   padding: ${pxToRem(24)} 0 ${pxToRem(58)};
 
-  h3 {
+  .itmes_title {
     ${textStyles["text-xl-bold"]}
+    line-height: ${pxToRem(42)};
+    margin-bottom: 0.5rem;
   }
 
   /* 상품 nav */
@@ -18,11 +20,21 @@ export const ItemsStyle = styled.div`
     align-items: center;
     margin-bottom: ${pxToRem(24)};
     line-height: ${pxToRem(42)};
+
+    ${media.mobile} {
+      position: relative;
+      flex-wrap: wrap;
+    }
   }
 
   .item_order {
     ${flexCenter};
     gap: ${pxToRem(12)};
+
+    ${media.mobile} {
+      width: 100%;
+      justify-content: space-between;
+    }
   }
 
   .item_all_list {
@@ -36,12 +48,28 @@ export const ItemsStyle = styled.div`
     border-radius: var(--border-10);
     background-color: var(--primary-100);
     padding: 0 ${pxToRem(23)};
+
+    ${media.mobile} {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
   }
 
   /* 상품 이미지 */
   .best_items {
     ${flexCenter};
     gap: ${pxToRem(24)};
+  }
+
+  .product_img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .best_items > li {
+    flex: 1;
   }
 
   .all_items {
@@ -55,25 +83,6 @@ export const ItemsStyle = styled.div`
 
     ${media.mobile} {
       grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  .best_item .product_img {
-    width: ${pxToRem(282)};
-    height: ${pxToRem(282)};
-
-    ${media.tablet} {
-      width: ${pxToRem(343)};
-      height: ${pxToRem(343)};
-    }
-  }
-
-  .all_items .product_img {
-    width: ${pxToRem(221)};
-    height: ${pxToRem(221)};
-    ${media.mobile} {
-      width: ${pxToRem(168)};
-      height: ${pxToRem(168)};
     }
   }
 
