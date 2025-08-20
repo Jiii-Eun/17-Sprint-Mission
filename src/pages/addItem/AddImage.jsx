@@ -40,7 +40,7 @@ export default function AddImage({ imgTitle = "상품이미지" }) {
       <label htmlFor="item_img">{imgTitle}</label>
       <div id="item_img" onClick={handleClick}>
         {imageUrl ? (
-          <div className="pcik_image">
+          <div className="pick_image">
             <img src={imageUrl} alt={imgTitle} />
             <button
               type="button"
