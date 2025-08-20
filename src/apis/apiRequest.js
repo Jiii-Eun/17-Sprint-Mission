@@ -8,12 +8,16 @@ async function apiRequest(path, options = {}, isJson = true) {
 
     console.log(localStorage.getItem("accessToken"));
     const headers = {
-      "Content-Type": "application/json",
       ...(options.headers || {}),
     };
 
     if (token) {
       headers["Authorization"] = `Bearer ${token}`;
+    }
+
+    let body = options.body;
+    if (!(body instanceof FormData)) {
+      headers["Content-Type"] = "application/json";
     }
 
     const res = await fetch(`${BASE_URL}${path}`, {
@@ -22,8 +26,8 @@ async function apiRequest(path, options = {}, isJson = true) {
     });
 
     if (!res.ok) {
-      const errorText = await res.text();
-      throw new Error(`[${res.status}] ${errorText}`);
+      const error_text = await res.text();
+      throw new Error(`[${res.status}] ${error_text}`);
     }
 
     return isJson ? await res.json() : true;

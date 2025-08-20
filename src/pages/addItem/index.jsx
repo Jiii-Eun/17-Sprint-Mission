@@ -25,7 +25,7 @@ export default function AddItem() {
         <ul>
           <AddImage />
           <InputField
-            id="itemName"
+            id="item_name"
             name="itemName"
             label="상품명"
             placeholder="상품명을 입력해주세요"
@@ -34,7 +34,7 @@ export default function AddItem() {
           />
 
           <InputField
-            id="itemIntroduction"
+            id="item_introduction"
             name="itemIntroduction"
             label="상품소개"
             placeholder="상품 소개를 입력해주세요"
@@ -43,7 +43,7 @@ export default function AddItem() {
           />
 
           <InputField
-            id="itemPrice"
+            id="item_price"
             name="itemPrice"
             label="판매가격"
             placeholder="판매 가격을 입력해주세요"

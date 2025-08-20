@@ -8,11 +8,11 @@ export default function InputTag() {
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && inputValue.trim()) {
       e.preventDefault();
-      const newTag = {
+      const new_tag = {
         id: crypto.randomUUID(),
         label: inputValue.trim(),
       };
-      setTags([...tags, newTag]);
+      setTags([...tags, new_tag]);
       setInputValue("");
     }
   };
@@ -23,9 +23,9 @@ export default function InputTag() {
 
   return (
     <li>
-      <label htmlFor="itemTag">태그</label>
+      <label htmlFor="item_tag">태그</label>
       <input
-        id="itemTag"
+        id="item_tag"
         type="text"
         placeholder="태그를 입력해주세요"
         value={inputValue}
@@ -37,13 +37,12 @@ export default function InputTag() {
         {tags.map((tag) => (
           <li key={tag.id} className="tag">
             <span className="tag_title">{tag}</span>
-            <span className="tagIcon" onClick={() => removeTag(tag.id)}>
+            <button className="tag_icon" onClick={() => removeTag(tag.id)}>
               <XIcon />
-            </span>
+            </button>
           </li>
         ))}
       </ol>
-      <div></div>
     </li>
   );
 }
