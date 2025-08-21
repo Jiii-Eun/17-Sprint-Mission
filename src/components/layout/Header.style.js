@@ -66,6 +66,7 @@ export const HeaderStyle = styled.header`
     text-decoration: underline;
     text-underline-offset: 4px;
     text-decoration-thickness: 2px;
+    color: var(--primary-100);
   }
 
   .user_img {
