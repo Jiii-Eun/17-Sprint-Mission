@@ -21,7 +21,7 @@ export const postProduct = (data) =>
   });
 
 //특정 상품
-export const getProductById = () => apiRequest(`/products/${id}`);
+export const getProductById = (id) => apiRequest(`/products/${id}`);
 
 //상품 수정
 export const patchProduct = (id, data) =>
