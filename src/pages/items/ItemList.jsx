@@ -58,9 +58,9 @@ export default function ItemList({ id, images, name, price, favoriteCount }) {
         />
       </Link>
       <div className="item_info">
-        <h3 className="item_name">
+        <span className="item_name">
           <Link to={`/items/${id}`}>{name}</Link>
-        </h3>
+        </span>
         <span className="item_price">{Number(price).toLocaleString()} 원</span>
         <span className="item_favorit" onClick={handleFavoriteClick}>
           {isClick ? (
