@@ -3,11 +3,12 @@ import { Link, NavLink } from "react-router-dom";
 import pandaLogo from "@/assets/logo.png";
 import UserIcon from "@/assets/ic_user.svg";
 import { HeaderStyle } from "@/components/layout/Header.style";
+import { WidthContainer } from "@/styles/commonStyle";
 
 function Header() {
   return (
     <HeaderStyle>
-      <div className="width_container">
+      <WidthContainer>
         <div className="header_left">
           <Link to="/" className="logo">
             <img src={pandaLogo} alt="판다로고" className="logo_img" />
@@ -35,7 +36,7 @@ function Header() {
           </nav>
         </div>
         <UserIcon className="user_img" />
-      </div>
+      </WidthContainer>
     </HeaderStyle>
   );
 }

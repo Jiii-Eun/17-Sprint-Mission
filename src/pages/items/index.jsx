@@ -7,7 +7,7 @@ import { handleFetch } from "@/utils/handleFetch";
 import ItemList from "@/pages/items/ItemList";
 import ItemsSearch from "@/pages/items/ItemsSearch";
 import ItemsOrder from "@/pages/items/ItemsOrder";
-import { ItemsStyle } from "@/pages/items/Items.style";
+import { ItemsStyle } from "@/pages/items/index.style";
 import PageList from "@/pages/items/PageList";
 import { breakpoints, media } from "@/styles/commonStyle";
 

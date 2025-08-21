@@ -1,4 +1,5 @@
-import { css } from "styled-components";
+import { pxToRem } from "@/utils/pxToRem";
+import styled, { css } from "styled-components";
 
 // pc, tablet, mobie
 export const breakpoints = {
@@ -21,6 +22,17 @@ export const flexCenter = css`
 export const fullSize = css`
   width: 100%;
   height: 100%;
+`;
+
+export const WidthContainer = styled.div`
+  max-width: 70rem;
+  margin: 0 auto;
+  ${media.tablet} {
+    max-width: ${pxToRem(696)};
+  }
+  ${media.mobile} {
+    max-width: ${pxToRem(344)};
+  }
 `;
 
 //폰트 스타일

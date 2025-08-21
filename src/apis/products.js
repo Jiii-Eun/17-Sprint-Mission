@@ -14,8 +14,14 @@ export const getProducts = ({
   );
 };
 
+export const postProduct = (data) =>
+  apiRequest(`/products`, {
+    method: "POST",
+    body: JSON.stringify(data),
+  });
+
 //특정 상품
-export const getProductById = (id) => apiRequest(`/products/${id}`);
+export const getProductById = () => apiRequest(`/products/${id}`);
 
 //상품 수정
 export const patchProduct = (id, data) =>

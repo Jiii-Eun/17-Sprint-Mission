@@ -15,6 +15,7 @@ async function apiRequest(path, options = {}, isJson = true) {
       headers["Authorization"] = `Bearer ${token}`;
     }
 
+    // FormData 이미지는 json이 아니다.
     let body = options.body;
     if (!(body instanceof FormData)) {
       headers["Content-Type"] = "application/json";
