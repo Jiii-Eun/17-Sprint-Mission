@@ -8,7 +8,13 @@ export default function InputField({
   return (
     <li>
       <label htmlFor={id}>{label}</label>
-      <input id={id} type={type} placeholder={placeholder} {...inputProps} />
+      <input
+        id={id}
+        className="input_style"
+        type={type}
+        placeholder={placeholder}
+        {...inputProps}
+      />
     </li>
   );
 }

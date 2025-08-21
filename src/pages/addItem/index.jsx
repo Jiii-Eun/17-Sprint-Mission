@@ -15,12 +15,19 @@ export default function AddItem() {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
+  const isFormValid =
+    form.itemName.trim() &&
+    form.itemIntroduction.trim() &&
+    form.itemPrice.trim();
+
   return (
     <div>
       <form action="/items">
-        <div>
+        <div className="item_image">
           <h2>상품 등록하기</h2>
-          <button type="submit">등록</button>
+          <button type="submit" disabled={!isFormValid}>
+            등록
+          </button>
         </div>
         <ul>
           <AddImage />

@@ -1,4 +1,4 @@
-import { flexCenter, fullSize, media, textStyles } from "@/styles/commonStyle";
+import { flexCenter, media, textStyles } from "@/styles/commonStyle";
 import { pxToRem } from "@/utils/pxToRem";
 import styled from "styled-components";
 

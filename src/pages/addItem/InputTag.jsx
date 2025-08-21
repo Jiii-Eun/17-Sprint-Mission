@@ -33,6 +33,7 @@ export default function InputTag() {
       <label htmlFor="item_tag">태그</label>
       <input
         id="item_tag"
+        className="input_style"
         type="text"
         placeholder="태그를 입력해주세요"
         value={inputValue}
@@ -44,7 +45,7 @@ export default function InputTag() {
       <ol id="tags">
         {tags.map((tag) => (
           <li key={tag.id} className="tag">
-            <span className="tag_title">{tag.label}</span>
+            <span className="tag_title">#{tag.label}</span>
             <button className="tag_icon" onClick={() => removeTag(tag.id)}>
               <XIcon />
             </button>
